@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>纯CSS样式控制折叠展开菜单效果特效演示</title>
+<meta name="description" content="纯CSS样式控制折叠展开菜单效果特效演示。" />
+<meta name="keywords" content="纯CSS,样式控制,折叠展开,菜单,效果,特效演示" />
+<meta name="author" content="jQuery插件库" />
+<meta name="Copyright" content="jQuery插件库" />
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+a {
+text-decoration: none;
+}
+#conter {
+width: 1000px;
+margin: auto;
+}
+#help-left {
+width: auto;
+font-family: 'microsoft YaHei';
+float: left;
+}
+.menu {
+border-left: 1px solid #3cbfb3;
+border-right: 1px solid #3cbfb3;
+}
+.menu:last-child {
+border-bottom: 1px solid #3cbfb3;
+}
+.menu summary {
+height: 40px;
+line-height: 40px;
+text-indent: 10px;
+outline: none;
+font-size: 14px;
+font-weight: 700;
+border-top: 1px solid #3cbfb3;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #fff0));
+cursor: pointer;
+display: flex;
+}
+/*使用下面这个，可以去掉小三角，神奇的菜单就可以完成了*/
+.menu summary::-webkit-details-marker {
+}
+.menu summary:before {
+content: "🌸";
+display: inline-block;
+width: 16px;
+height: 16px;
+margin-right: 10px;
+font-size: 18px;
+font-weight: 700;
+}
+.menu[open] summary:before {
+content: "🕊️";
+}
+.menu ul {
+padding: 10px 0;
+}
+.menu ul li {
+list-style: none;
+text-indent: 25px;
+font-size: 12px;
+height: 30px;
+line-height: 30px;
+}
+.menu ul li a {
+display: block;
+color: #096868;
+}
+.menu ul li a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<section id="conter">
+<section id="help-left">
+<!--open为展开菜单，close为折叠菜单-->
+<details class="menu" close>
+<summary>Olivier Messiaen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10010-Olivier_Messiaen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Octave Mirbeau Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10186-Octave_Mirbeau.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlando Aloysius Battista Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1045-Orlando_Aloysius_Battista.html" target="A">1</a></li>
+<li><a href="../../azquotes/1045-Orlando_Aloysius_Battista@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oswald Mosley Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10470-Oswald_Mosley.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Munn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10561-Olivia_Munn.html" target="A">1</a></li>
+<li><a href="../../azquotes/10561-Olivia_Munn@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Newton-John Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10789-Olivia_Newton_John.html" target="A">1</a></li>
+<li><a href="../../azquotes/10789-Olivia_Newton_John@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/10789-Olivia_Newton_John@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Niemeyer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10821-Oscar_Niemeyer.html" target="A">1</a></li>
+<li><a href="../../azquotes/10821-Oscar_Niemeyer@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver North Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10884-Oliver_North.html" target="A">1</a></li>
+<li><a href="../../azquotes/10884-Oliver_North@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olusegun Obasanjo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11025-Olusegun_Obasanjo.html" target="A">1</a></li>
+<li><a href="../../azquotes/11025-Olusegun_Obasanjo@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ozzy Osbourne Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11155-Ozzy_Osbourne.html" target="A">1</a></li>
+<li><a href="../../azquotes/11155-Ozzy_Osbourne@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11155-Ozzy_Osbourne@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/11155-Ozzy_Osbourne@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/11155-Ozzy_Osbourne@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/11155-Ozzy_Osbourne@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/11155-Ozzy_Osbourne@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/11155-Ozzy_Osbourne@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/11155-Ozzy_Osbourne@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/11155-Ozzy_Osbourne@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ouida Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11186-Ouida.html" target="A">1</a></li>
+<li><a href="../../azquotes/11186-Ouida@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11186-Ouida@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/11186-Ouida@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/11186-Ouida@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orhan Pamuk Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11281-Orhan_Pamuk.html" target="A">1</a></li>
+<li><a href="../../azquotes/11281-Orhan_Pamuk@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11281-Orhan_Pamuk@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/11281-Orhan_Pamuk@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/11281-Orhan_Pamuk@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/11281-Orhan_Pamuk@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/11281-Orhan_Pamuk@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/11281-Orhan_Pamuk@p=8.html" target="A">8</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Octavio Paz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11444-Octavio_Paz.html" target="A">1</a></li>
+<li><a href="../../azquotes/11444-Octavio_Paz@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11444-Octavio_Paz@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/11444-Octavio_Paz@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/11444-Octavio_Paz@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oren Peli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11479-Oren_Peli.html" target="A">1</a></li>
+<li><a href="../../azquotes/11479-Oren_Peli@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Pistorius Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11704-Oscar_Pistorius.html" target="A">1</a></li>
+<li><a href="../../azquotes/11704-Oscar_Pistorius@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orson Pratt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11847-Orson_Pratt.html" target="A">1</a></li>
+<li><a href="../../azquotes/11847-Orson_Pratt@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Rank Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12083-Otto_Rank.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orville Redenbacher Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12148-Orville_Redenbacher.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Reed Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12172-Oliver_Reed.html" target="A">1</a></li>
+<li><a href="../../azquotes/12172-Oliver_Reed@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar de la Renta Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12238-Oscar_de_la_Renta.html" target="A">1</a></li>
+<li><a href="../../azquotes/12238-Oscar_de_la_Renta@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/12238-Oscar_de_la_Renta@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/12238-Oscar_de_la_Renta@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oral Roberts Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12448-Oral_Roberts.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Schily Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13094-Otto_Schily.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oskar Schindler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13095-Oskar_Schindler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olive Schreiner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13139-Olive_Schreiner.html" target="A">1</a></li>
+<li><a href="../../azquotes/13139-Olive_Schreiner@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13139-Olive_Schreiner@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>O. J. Simpson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13629-O_J_Simpson.html" target="A">1</a></li>
+<li><a href="../../azquotes/13629-O_J_Simpson@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olympia Snowe Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13844-Olympia_Snowe.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Octavia Spencer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13945-Octavia_Spencer.html" target="A">1</a></li>
+<li><a href="../../azquotes/13945-Octavia_Spencer@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13945-Octavia_Spencer@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/13945-Octavia_Spencer@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oswald Spengler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13947-Oswald_Spengler.html" target="A">1</a></li>
+<li><a href="../../azquotes/13947-Oswald_Spengler@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13947-Oswald_Spengler@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Stone Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14184-Oliver_Stone.html" target="A">1</a></li>
+<li><a href="../../azquotes/14184-Oliver_Stone@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/14184-Oliver_Stone@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/14184-Oliver_Stone@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/14184-Oliver_Stone@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/14184-Oliver_Stone@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/14184-Oliver_Stone@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/14184-Oliver_Stone@p=8.html" target="A">8</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto von Bismarck Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1426-Otto_von_Bismarck.html" target="A">1</a></li>
+<li><a href="../../azquotes/1426-Otto_von_Bismarck@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/1426-Otto_von_Bismarck@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/1426-Otto_von_Bismarck@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/1426-Otto_von_Bismarck@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Tambo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14431-Oliver_Tambo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Thirlby Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14576-Olivia_Thirlby.html" target="A">1</a></li>
+<li><a href="../../azquotes/14576-Olivia_Thirlby@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Obie Trice Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14789-Obie_Trice.html" target="A">1</a></li>
+<li><a href="../../azquotes/14789-Obie_Trice@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlando Bloom Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1535-Orlando_Bloom.html" target="A">1</a></li>
+<li><a href="../../azquotes/1535-Orlando_Bloom@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/1535-Orlando_Bloom@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/1535-Orlando_Bloom@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orson Welles Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15479-Orson_Welles.html" target="A">1</a></li>
+<li><a href="../../azquotes/15479-Orson_Welles@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15479-Orson_Welles@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15479-Orson_Welles@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/15479-Orson_Welles@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/15479-Orson_Welles@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/15479-Orson_Welles@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/15479-Orson_Welles@p=8.html" target="A">8</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Wilde Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15643-Olivia_Wilde.html" target="A">1</a></li>
+<li><a href="../../azquotes/15643-Olivia_Wilde@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15643-Olivia_Wilde@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15643-Olivia_Wilde@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/15643-Olivia_Wilde@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/15643-Olivia_Wilde@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Wilde Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15644-Oscar_Wilde.html" target="A">1</a></li>
+<li><a href="../../azquotes/15644-Oscar_Wilde@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15644-Oscar_Wilde@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15644-Oscar_Wilde@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/15644-Oscar_Wilde@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/15644-Oscar_Wilde@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/15644-Oscar_Wilde@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/15644-Oscar_Wilde@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/15644-Oscar_Wilde@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/15644-Oscar_Wilde@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otis Williams Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15709-Otis_Williams.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oprah Winfrey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15820-Oprah_Winfrey.html" target="A">1</a></li>
+<li><a href="../../azquotes/15820-Oprah_Winfrey@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15820-Oprah_Winfrey@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15820-Oprah_Winfrey@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/15820-Oprah_Winfrey@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/15820-Oprah_Winfrey@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/15820-Oprah_Winfrey@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/15820-Oprah_Winfrey@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/15820-Oprah_Winfrey@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/15820-Oprah_Winfrey@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Wister Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15862-Owen_Wister.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Bongo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1635-Omar_Bongo.html" target="A">1</a></li>
+<li><a href="../../azquotes/1635-Omar_Bongo@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Sacks Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17295-Oliver_Sacks.html" target="A">1</a></li>
+<li><a href="../../azquotes/17295-Oliver_Sacks@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/17295-Oliver_Sacks@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/17295-Oliver_Sacks@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/17295-Oliver_Sacks@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Os Guinness Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17661-Os_Guinness.html" target="A">1</a></li>
+<li><a href="../../azquotes/17661-Os_Guinness@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/17661-Os_Guinness@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver James Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17676-Oliver_James.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osip Mandelstam Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17750-Osip_Mandelstam.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar N. Bradley Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1786-Omar_N_Bradley.html" target="A">1</a></li>
+<li><a href="../../azquotes/1786-Omar_N_Bradley@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>O.R. Melling Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17951-O_R_Melling.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osamu Dazai Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18155-Osamu_Dazai.html" target="A">1</a></li>
+<li><a href="../../azquotes/18155-Osamu_Dazai@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/18155-Osamu_Dazai@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orson F. Whitney Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18188-Orson_F_Whitney.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Obert Skye Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18215-Obert_Skye.html" target="A">1</a></li>
+<li><a href="../../azquotes/18215-Obert_Skye@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olive Ann Burns Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18416-Olive_Ann_Burns.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osamu Tezuka Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18441-Osamu_Tezuka.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olaf Stapledon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19163-Olaf_Stapledon.html" target="A">1</a></li>
+<li><a href="../../azquotes/19163-Olaf_Stapledon@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ohtaka Shinobu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19581-Ohtaka_Shinobu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oswald Avery Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19667-Oswald_Avery.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ovid Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19767-Ovid.html" target="A">1</a></li>
+<li><a href="../../azquotes/19767-Ovid@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/19767-Ovid@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/19767-Ovid@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/19767-Ovid@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/19767-Ovid@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/19767-Ovid@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/19767-Ovid@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/19767-Ovid@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/19767-Ovid@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ole Hallesby Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19811-Ole_Hallesby.html" target="A">1</a></li>
+<li><a href="../../azquotes/19811-Ole_Hallesby@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/19811-Ole_Hallesby@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Okakura Kakuzo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19847-Okakura_Kakuzo.html" target="A">1</a></li>
+<li><a href="../../azquotes/19847-Okakura_Kakuzo@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Arias Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20275-Oscar_Arias.html" target="A">1</a></li>
+<li><a href="../../azquotes/20275-Oscar_Arias@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen D. Young Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20280-Owen_D_Young.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orson Squire Fowler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20449-Orson_Squire_Fowler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ossie Davis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20525-Ossie_Davis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orrin Hatch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20621-Orrin_Hatch.html" target="A">1</a></li>
+<li><a href="../../azquotes/20621-Orrin_Hatch@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>O. Carl Simonton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20670-O_Carl_Simonton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Arthur Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20678-Owen_Arthur.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Peterson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21170-Oscar_Peterson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osbert Sitwell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21319-Osbert_Sitwell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Heaviside Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21473-Oliver_Heaviside.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otomo no Yakamochi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21606-Otomo_no_Yakamochi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Origen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21887-Origen.html" target="A">1</a></li>
+<li><a href="../../azquotes/21887-Origen@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Romero Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22135-Oscar_Romero.html" target="A">1</a></li>
+<li><a href="../../azquotes/22135-Oscar_Romero@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/22135-Oscar_Romero@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omid Kordestani Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22173-Omid_Kordestani.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Ameringer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22355-Oscar_Ameringer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olga Korbut Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22673-Olga_Korbut.html" target="A">1</a></li>
+<li><a href="../../azquotes/22673-Olga_Korbut@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ozzie Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22678-Ozzie_Smith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Octavia Butler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2271-Octavia_Butler.html" target="A">1</a></li>
+<li><a href="../../azquotes/2271-Octavia_Butler@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/2271-Octavia_Butler@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/2271-Octavia_Butler@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/2271-Octavia_Butler@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ozzie Guillen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22728-Ozzie_Guillen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otl Aicher Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22862-Otl_Aicher.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Neurath Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22980-Otto_Neurath.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Octave Chanute Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23029-Octave_Chanute.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Lilienthal Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23031-Otto_Lilienthal.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Torrijos Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23156-Omar_Torrijos.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orel Hershiser Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23254-Orel_Hershiser.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oleg Cassini Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23467-Oleg_Cassini.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Octavian Paler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23629-Octavian_Paler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>O. Leslie Stone Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23749-O_Leslie_Stone.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Handlin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23796-Oscar_Handlin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olga Masters Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23969-Olga_Masters.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orderic Vitalis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24150-Orderic_Vitalis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ol' Dirty Bastard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24313-Ol_Dirty_Bastard.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ole Ivar Lovaas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24345-Ole_Ivar_Lovaas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Hardy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24359-Oliver_Hardy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Kerner, Jr. Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24414-Otto_Kerner_Jr.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osonye Tess Onwueme Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24428-Osonye_Tess_Onwueme.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ousmane Sembene Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24446-Ousmane_Sembene.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orson Scott Card Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2450-Orson_Scott_Card.html" target="A">1</a></li>
+<li><a href="../../azquotes/2450-Orson_Scott_Card@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/2450-Orson_Scott_Card@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/2450-Orson_Scott_Card@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/2450-Orson_Scott_Card@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/2450-Orson_Scott_Card@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/2450-Orson_Scott_Card@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/2450-Orson_Scott_Card@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/2450-Orson_Scott_Card@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/2450-Orson_Scott_Card@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oskar Schlemmer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24981-Oskar_Schlemmer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otis Skinner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25204-Otis_Skinner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ondino Viera Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25211-Ondino_Viera.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver P. Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25270-Oliver_P_Smith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Hazard Perry Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25276-Oliver_Hazard_Perry.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olavo de Carvalho Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25311-Olavo_de_Carvalho.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ondrej Pavelec Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25474-Ondrej_Pavelec.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oksana Chusovitina Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25515-Oksana_Chusovitina.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oren Lyons Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25765-Oren_Lyons.html" target="A">1</a></li>
+<li><a href="../../azquotes/25765-Oren_Lyons@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25896-Oliver_Smith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orville Moody Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25951-Orville_Moody.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olena Vitrychenko Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26018-Olena_Vitrychenko.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oswald J. Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26117-Oswald_J_Smith.html" target="A">1</a></li>
+<li><a href="../../azquotes/26117-Oswald_J_Smith@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia de Havilland Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26466-Olivia_de_Havilland.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otis Blackwell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26816-Otis_Blackwell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>On Joo-wan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26822-On_Joo_wan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oswald Chambers Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2691-Oswald_Chambers.html" target="A">1</a></li>
+<li><a href="../../azquotes/2691-Oswald_Chambers@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/2691-Oswald_Chambers@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/2691-Oswald_Chambers@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/2691-Oswald_Chambers@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/2691-Oswald_Chambers@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/2691-Oswald_Chambers@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/2691-Oswald_Chambers@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/2691-Oswald_Chambers@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/2691-Oswald_Chambers@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ostad Elahi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27053-Ostad_Elahi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Herring Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27167-Oliver_Herring.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orison S. Marden Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27168-Orison_S_Marden.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Gamble Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27352-Oscar_Gamble.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Robertson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27383-Oscar_Robertson.html" target="A">1</a></li>
+<li><a href="../../azquotes/27383-Oscar_Robertson@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ordway Tead Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27602-Ordway_Tead.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oswald Barron Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27805-Oswald_Barron.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivier Clement Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27989-Olivier_Clement.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Robert Frisch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28119-Otto_Robert_Frisch.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Lua Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28421-Oscar_Lua.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orville Dewey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28423-Orville_Dewey.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Odell Shepard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28518-Odell_Shepard.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Odilon Redon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28540-Odilon_Redon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Florianus Bluemner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28598-Oscar_Florianus_Bluemner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oskar Kokoschka Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28620-Oskar_Kokoschka.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Preminger Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28704-Otto_Preminger.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Hermann Kahn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28934-Otto_Hermann_Kahn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Othniel Charles Marsh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29028-Othniel_Charles_Marsh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osborne Reynolds Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29031-Osborne_Reynolds.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Hertwig Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29285-Oscar_Hertwig.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Ellsworth Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29458-Oliver_Ellsworth.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Gingerich Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29575-Owen_Gingerich.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivier Theyskens Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29599-Olivier_Theyskens.html" target="A">1</a></li>
+<li><a href="../../azquotes/29599-Olivier_Theyskens@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olympia Dukakis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29831-Olympia_Dukakis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Williams Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29834-Olivia_Williams.html" target="A">1</a></li>
+<li><a href="../../azquotes/29834-Olivia_Williams@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/29834-Olivia_Williams@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ottorino Respighi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29945-Ottorino_Respighi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omraam Mikhael Aivanhov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30004-Omraam_Mikhael_Aivanhov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ovadia Yosef Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30007-Ovadia_Yosef.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Suleiman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30070-Omar_Suleiman.html" target="A">1</a></li>
+<li><a href="../../azquotes/30070-Omar_Suleiman@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Berman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30194-Otto_Berman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Loewi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30485-Otto_Loewi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Perez Molina Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30495-Otto_Perez_Molina.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Graham Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30619-Otto_Graham.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ottmar Edenhofer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30831-Ottmar_Edenhofer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otomo no Tabito Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30930-Otomo_no_Tabito.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Odysseas Elytis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30982-Odysseas_Elytis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oseola McCarty Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31016-Oseola_McCarty.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ornette Coleman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3103-Ornette_Coleman.html" target="A">1</a></li>
+<li><a href="../../azquotes/3103-Ornette_Coleman@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owain Glyndwr Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31100-Owain_Glyndwr.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Hahn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31139-Otto_Hahn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Goldsmith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31287-Olivia_Goldsmith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olaus Murie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31768-Olaus_Murie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olof Palme Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32024-Olof_Palme.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver E. Williamson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32099-Oliver_E_Williamson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Lodge Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32276-Oliver_Lodge.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlando Patterson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32347-Orlando_Patterson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Odo of Cluny Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32521-Odo_of_Cluny.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Frank Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32915-Otto_Frank.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Octavius Black Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33025-Octavius_Black.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osric Chau Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33453-Osric_Chau.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Opal Whiteley Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33542-Opal_Whiteley.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oskar Fischinger Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33681-Oskar_Fischinger.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ozzie Newsome Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33701-Ozzie_Newsome.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ohad Naharin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33922-Ohad_Naharin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivier Giroud Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33933-Olivier_Giroud.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Culpo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34059-Olivia_Culpo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otsuichi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34073-Otsuichi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Cromwell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3416-Oliver_Cromwell.html" target="A">1</a></li>
+<li><a href="../../azquotes/3416-Oliver_Cromwell@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/3416-Oliver_Cromwell@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Sharif Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34521-Omar_Sharif.html" target="A">1</a></li>
+<li><a href="../../azquotes/34521-Omar_Sharif@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oskar Werner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34522-Oskar_Werner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Isaac Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34744-Oscar_Isaac.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Wilson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34756-Owen_Wilson.html" target="A">1</a></li>
+<li><a href="../../azquotes/34756-Owen_Wilson@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/34756-Owen_Wilson@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oded Fehr Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35007-Oded_Fehr.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Nunez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35012-Oscar_Nunez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Platt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35049-Oliver_Platt.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Odeya Rush Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35245-Odeya_Rush.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omarosa Manigault Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35289-Omarosa_Manigault.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olaudah Equiano Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35627-Olaudah_Equiano.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlando Hernandez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35778-Orlando_Hernandez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlando Figes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35782-Orlando_Figes.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orianthi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35785-Orianthi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olen Steinhauer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35973-Olen_Steinhauer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osmel Sousa Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36110-Osmel_Sousa.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Hargreaves Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36151-Owen_Hargreaves.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Jones Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36193-Owen_Jones.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olaf Tyaransen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36362-Olaf_Tyaransen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Obafemi Awolowo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36619-Obafemi_Awolowo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Octave Pirmez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36631-Octave_Pirmez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osbert Lancaster Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36838-Osbert_Lancaster.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orji Uzor Kalu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36861-Orji_Uzor_Kalu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Mukhtar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36987-Omar_Mukhtar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orestes Brownson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37003-Orestes_Brownson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Jeffers Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37038-Oliver_Jeffers.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olympe de Gouges Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37118-Olympe_de_Gouges.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olive Wyon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37247-Olive_Wyon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Dix Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37570-Otto_Dix.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Old Tom Morris Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37628-Old_Tom_Morris.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oriah Dreamer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37997-Oriah_Dreamer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Johnson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38878-Oliver_Johnson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Kiam Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38981-Omar_Kiam.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olara Otunnu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39420-Olara_Otunnu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ono no Komachi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40408-Ono_no_Komachi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>One Be Lo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40561-One_Be_Lo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>OJ da Juiceman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40644-OJ_da_Juiceman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlando Rodriguez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40800-Orlando_Rodriguez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlando Figueroa Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40828-Orlando_Figueroa.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ogyu Sorai Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41010-Ogyu_Sorai.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>O. P. Kretzmann Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41182-O_P_Kretzmann.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ollanta Humala Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41939-Ollanta_Humala.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olli Rehn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42009-Olli_Rehn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Odetta Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42202-Odetta.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ollie Johnston Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42379-Ollie_Johnston.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oswald Grubel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42566-Oswald_Grubel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oswald Boelcke Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43168-Oswald_Boelcke.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otis Rush Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43208-Otis_Rush.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otis Redding Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43402-Otis_Redding.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ole Gunnar Solskjaer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43474-Ole_Gunnar_Solskjaer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Weininger Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43516-Otto_Weininger.html" target="A">1</a></li>
+<li><a href="../../azquotes/43516-Otto_Weininger@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Zeta Acosta Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43548-Oscar_Zeta_Acosta.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Smithies Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43879-Oliver_Smithies.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omer Simeon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43965-Omer_Simeon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Stewart Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44065-Oliver_Stewart.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Palermo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44192-Olivia_Palermo.html" target="A">1</a></li>
+<li><a href="../../azquotes/44192-Olivia_Palermo@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ofra Haza Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44273-Ofra_Haza.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olafur Eliasson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44397-Olafur_Eliasson.html" target="A">1</a></li>
+<li><a href="../../azquotes/44397-Olafur_Eliasson@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oenomaus Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44525-Oenomaus.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar De La Hoya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44631-Oscar_De_La_Hoya.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>O. J. Brigance Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44728-O_J_Brigance.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Odette Annable Quotes</summary>
+<ul>
+<li><a href="../../azquotes/449-Odette_Annable.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Ichazo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45211-Oscar_Ichazo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Gross Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45255-Otto_Gross.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Epps Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4531-Omar_Epps.html" target="A">1</a></li>
+<li><a href="../../azquotes/4531-Omar_Epps@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Penzler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45330-Otto_Penzler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owsley Stanley Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45389-Owsley_Stanley.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oli Thompson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45656-Oli_Thompson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otoman Zar-Adusht Ha'nish Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45748-Otoman_Zar_Adusht_Ha_nish.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orosius Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45761-Orosius.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Straus Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46016-Oscar_Straus.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Bierhoff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46103-Oliver_Bierhoff.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Milosz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46221-Oscar_Milosz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oriana Fallaci Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4645-Oriana_Fallaci.html" target="A">1</a></li>
+<li><a href="../../azquotes/4645-Oriana_Fallaci@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/4645-Oriana_Fallaci@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/4645-Oriana_Fallaci@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olav H. Hauge Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46613-Olav_H_Hauge.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Wolcott Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46679-Oliver_Wolcott.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Marshall Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46761-Owen_Marshall.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Barfield Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46781-Owen_Barfield.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olga Broumas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46888-Olga_Broumas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oda Nobunaga Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46924-Oda_Nobunaga.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivier Sarkozy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46955-Olivier_Sarkozy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Micheaux Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46964-Oscar_Micheaux.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliverio Girondo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47027-Oliverio_Girondo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Vizquel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47195-Omar_Vizquel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Feltham Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4727-Owen_Feltham.html" target="A">1</a></li>
+<li><a href="../../azquotes/4727-Owen_Feltham@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/4727-Owen_Feltham@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/4727-Owen_Feltham@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Goodman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47285-Oscar_Goodman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ogden Nash Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47473-Ogden_Nash.html" target="A">1</a></li>
+<li><a href="../../azquotes/47473-Ogden_Nash@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/47473-Ogden_Nash@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/47473-Ogden_Nash@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/47473-Ogden_Nash@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/47473-Ogden_Nash@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/47473-Ogden_Nash@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/47473-Ogden_Nash@p=8.html" target="A">8</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orrin Woodward Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47506-Orrin_Woodward.html" target="A">1</a></li>
+<li><a href="../../azquotes/47506-Orrin_Woodward@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/47506-Orrin_Woodward@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/47506-Orrin_Woodward@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/47506-Orrin_Woodward@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oskar Homolka Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47533-Oskar_Homolka.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Harbach Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47663-Otto_Harbach.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oh Eun-young Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47835-Oh_Eun_young.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omer Bartov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48166-Omer_Bartov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Pell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48209-Oliver_Pell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oribe Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48220-Oribe.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oleg Romanishin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48363-Oleg_Romanishin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Panno Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48411-Oscar_Panno.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Samra Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48437-Omar_Samra.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olympia Brown Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48438-Olympia_Brown.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar N. Onyema Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48582-Oscar_N_Onyema.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Burkeman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48611-Oliver_Burkeman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Chamberlain Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48616-Owen_Chamberlain.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orson Bean Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48649-Orson_Bean.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orny Adams Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48660-Orny_Adams.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Odile Decq Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48673-Odile_Decq.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Octavius Winslow Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48787-Octavius_Winslow.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Hijuelos Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48872-Oscar_Hijuelos.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Wagner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48889-Otto_Wagner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oodgeroo Noonuccal Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48985-Oodgeroo_Noonuccal.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Brown Jr. Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48999-Oscar_Brown_Jr.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia De Berardinis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49121-Olivia_De_Berardinis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oskar Lafontaine Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49159-Oskar_Lafontaine.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivier Dahan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49214-Olivier_Dahan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olavo Bilac Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49453-Olavo_Bilac.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Hussey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49605-Olivia_Hussey.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otep Shamaya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49666-Otep_Shamaya.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ong Teng Cheong Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50219-Ong_Teng_Cheong.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliviero Toscani Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50234-Oliviero_Toscani.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Scharmer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50288-Otto_Scharmer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ossian Everett Mills Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50401-Ossian_Everett_Mills.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ozwald Boateng Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50609-Ozwald_Boateng.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Odd Nerdrum Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50917-Odd_Nerdrum.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oil Can Boyd Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50974-Oil_Can_Boyd.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orly Taitz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50995-Orly_Taitz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Gutierrez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51260-Oscar_Gutierrez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlando Gibbons Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51653-Orlando_Gibbons.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>O. Winston Link Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51683-O_Winston_Link.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Obert C. Tanner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51713-Obert_C_Tanner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oveta Culp Hobby Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51903-Oveta_Culp_Hobby.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orit Gadiesh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52154-Orit_Gadiesh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar W. Firkins Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53345-Oscar_W_Firkins.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Colman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53964-Olivia_Colman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlando Cruz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54161-Orlando_Cruz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otis Chandler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54413-Otis_Chandler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54556-Olivia.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Gleiberman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54666-Owen_Gleiberman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Gaspirtz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54776-Oliver_Gaspirtz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver B. Greene Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54862-Oliver_B_Greene.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver DeMille Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54885-Oliver_DeMille.html" target="A">1</a></li>
+<li><a href="../../azquotes/54885-Oliver_DeMille@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/54885-Oliver_DeMille@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Benson Miller Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55332-Omar_Benson_Miller.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Rodriguez-Lopez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55340-Omar_Rodriguez_Lopez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ofir Drori Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55393-Ofir_Drori.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ormond McGill Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55551-Ormond_McGill.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Goldsmith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5662-Oliver_Goldsmith.html" target="A">1</a></li>
+<li><a href="../../azquotes/5662-Oliver_Goldsmith@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/5662-Oliver_Goldsmith@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/5662-Oliver_Goldsmith@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/5662-Oliver_Goldsmith@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/5662-Oliver_Goldsmith@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/5662-Oliver_Goldsmith@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/5662-Oliver_Goldsmith@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/5662-Oliver_Goldsmith@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/5662-Oliver_Goldsmith@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ori Hofmekler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58294-Ori_Hofmekler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlando Jones Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58797-Orlando_Jones.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oleg Deripaska Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59028-Oleg_Deripaska.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Okey Ndibe Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59099-Okey_Ndibe.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omid Safi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59467-Omid_Safi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Octavia St. Laurent Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60644-Octavia_St_Laurent.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omali Yeshitela Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61203-Omali_Yeshitela.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Cowdery Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61260-Oliver_Cowdery.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Hammerstein II Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6183-Oscar_Hammerstein_II.html" target="A">1</a></li>
+<li><a href="../../azquotes/6183-Oscar_Hammerstein_II@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osman Baydemir Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63206-Osman_Baydemir.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Evans Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63278-Oliver_Evans.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omari Hardwick Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63306-Omari_Hardwick.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Hamoui Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63426-Omar_Hamoui.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oren Arnold Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63439-Oren_Arnold.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Hart Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6347-Owen_Hart.html" target="A">1</a></li>
+<li><a href="../../azquotes/6347-Owen_Hart@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>O. S. Hawkins Quotes</summary>
+<ul>
+<li><a href="../../azquotes/64421-O_S_Hawkins.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>O.C. Quotes</summary>
+<ul>
+<li><a href="../../azquotes/65406-O_C.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>O. Henry Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6575-O_Henry.html" target="A">1</a></li>
+<li><a href="../../azquotes/6575-O_Henry@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/6575-O_Henry@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/6575-O_Henry@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oren Moverman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/65880-Oren_Moverman.html" target="A">1</a></li>
+<li><a href="../../azquotes/65880-Oren_Moverman@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Herford Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6596-Oliver_Herford.html" target="A">1</a></li>
+<li><a href="../../azquotes/6596-Oliver_Herford@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Holt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/65979-Olivia_Holt.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Om Puri Quotes</summary>
+<ul>
+<li><a href="../../azquotes/66219-Om_Puri.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Okky Madasari Quotes</summary>
+<ul>
+<li><a href="../../azquotes/66419-Okky_Madasari.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osborn Elliott Quotes</summary>
+<ul>
+<li><a href="../../azquotes/67665-Osborn_Elliott.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Wendell Holmes Sr.  Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6845-Oliver_Wendell_Holmes_Sr.html" target="A">1</a></li>
+<li><a href="../../azquotes/6845-Oliver_Wendell_Holmes_Sr@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/6845-Oliver_Wendell_Holmes_Sr@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/6845-Oliver_Wendell_Holmes_Sr@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/6845-Oliver_Wendell_Holmes_Sr@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Wendell Holmes, Jr. Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6846-Oliver_Wendell_Holmes_Jr.html" target="A">1</a></li>
+<li><a href="../../azquotes/6846-Oliver_Wendell_Holmes_Jr@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/6846-Oliver_Wendell_Holmes_Jr@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/6846-Oliver_Wendell_Holmes_Jr@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/6846-Oliver_Wendell_Holmes_Jr@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/6846-Oliver_Wendell_Holmes_Jr@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/6846-Oliver_Wendell_Holmes_Jr@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/6846-Oliver_Wendell_Holmes_Jr@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/6846-Oliver_Wendell_Holmes_Jr@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Mellan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/69052-Olivia_Mellan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Hudson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6995-Oliver_Hudson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olesya Rulin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70336-Olesya_Rulin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Cooke Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70373-Olivia_Cooke.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Onew Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70843-Onew.html" target="A">1</a></li>
+<li><a href="../../azquotes/70843-Onew@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Ohlendorf Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71111-Otto_Ohlendorf.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oswald Pohl Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71116-Oswald_Pohl.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Skorzeny Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71151-Otto_Skorzeny.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ove Arup Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71756-Ove_Arup.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Odilo Globocnik Quotes</summary>
+<ul>
+<li><a href="../../azquotes/72214-Odilo_Globocnik.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Octave Feuillet Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73113-Octave_Feuillet.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ophira Eisenberg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73911-Ophira_Eisenberg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Robertson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/74091-Olivia_Robertson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Sykes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/74828-Oliver_Sykes.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Wallach Quotes</summary>
+<ul>
+<li><a href="../../azquotes/75679-Otto_Wallach.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Sy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/76353-Omar_Sy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/76366-Orlan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Kahn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7695-Oliver_Kahn.html" target="A">1</a></li>
+<li><a href="../../azquotes/7695-Oliver_Kahn@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orville Prescott Quotes</summary>
+<ul>
+<li><a href="../../azquotes/77203-Orville_Prescott.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omarion Quotes</summary>
+<ul>
+<li><a href="../../azquotes/78366-Omarion.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto E. Neugebauer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/78391-Otto_E_Neugebauer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oksana Baiul Quotes</summary>
+<ul>
+<li><a href="../../azquotes/788-Oksana_Baiul.html" target="A">1</a></li>
+<li><a href="../../azquotes/788-Oksana_Baiul@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ottessa Moshfegh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/79586-Ottessa_Moshfegh.html" target="A">1</a></li>
+<li><a href="../../azquotes/79586-Ottessa_Moshfegh@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Khayyam Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7978-Omar_Khayyam.html" target="A">1</a></li>
+<li><a href="../../azquotes/7978-Omar_Khayyam@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/7978-Omar_Khayyam@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/7978-Omar_Khayyam@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>One9 Quotes</summary>
+<ul>
+<li><a href="../../azquotes/79792-One9.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otis Moss III Quotes</summary>
+<ul>
+<li><a href="../../azquotes/79987-Otis_Moss_III.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ondi Timoner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80213-Ondi_Timoner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oh Land Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80235-Oh_Land.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oleta Adams Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80269-Oleta_Adams.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Zuniga Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80359-Omar_Zuniga.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Torre Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80888-Oscar_Torre.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivier Rousteing Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81691-Olivier_Rousteing.html" target="A">1</a></li>
+<li><a href="../../azquotes/81691-Olivier_Rousteing@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Lopez Rivera Quotes</summary>
+<ul>
+<li><a href="../../azquotes/82314-Oscar_Lopez_Rivera.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olga Kurylenko Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8334-Olga_Kurylenko.html" target="A">1</a></li>
+<li><a href="../../azquotes/8334-Olga_Kurylenko@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivier Zahm Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83360-Olivier_Zahm.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivier Megaton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83469-Olivier_Megaton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Owen Pallett Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83724-Owen_Pallett.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Parker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/85406-Oliver_Parker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Jackson-Cohen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/86200-Oliver_Jackson_Cohen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Otto Rehhagel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/86504-Otto_Rehhagel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oscar Levant Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8764-Oscar_Levant.html" target="A">1</a></li>
+<li><a href="../../azquotes/8764-Oscar_Levant@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Lyttelton, 1st Viscount Chandos Quotes</summary>
+<ul>
+<li><a href="../../azquotes/88704-Oliver_Lyttelton_1st_Viscount_Chandos.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivo Barbieri Quotes</summary>
+<ul>
+<li><a href="../../azquotes/89086-Olivo_Barbieri.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Okkyung Lee Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90898-Okkyung_Lee.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olof Arnalds Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91061-Olof_Arnalds.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>O'Shea Jackson, Jr. Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91187-O_Shea_Jackson_Jr.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ofeibea Quist-Arcton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91207-Ofeibea_Quist_Arcton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Stuck Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91388-Olivia_Stuck.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Sim Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91461-Oliver_Sim.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver $ Quotes</summary>
+<ul>
+<li><a href="../../azquotes/92074-Oliver.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Og Mandino Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9370-Og_Mandino.html" target="A">1</a></li>
+<li><a href="../../azquotes/9370-Og_Mandino@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9370-Og_Mandino@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/9370-Og_Mandino@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/9370-Og_Mandino@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/9370-Og_Mandino@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/9370-Og_Mandino@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/9370-Og_Mandino@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/9370-Og_Mandino@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orison Swett Marden Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9452-Orison_Swett_Marden.html" target="A">1</a></li>
+<li><a href="../../azquotes/9452-Orison_Swett_Marden@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9452-Orison_Swett_Marden@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/9452-Orison_Swett_Marden@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/9452-Orison_Swett_Marden@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/9452-Orison_Swett_Marden@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/9452-Orison_Swett_Marden@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/9452-Orison_Swett_Marden@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/9452-Orison_Swett_Marden@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Harris Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94527-Oliver_Harris.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Omar Chaparro Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95245-Omar_Chaparro.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver D. Crisp Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95385-Oliver_D_Crisp.html" target="A">1</a></li>
+<li><a href="../../azquotes/95385-Oliver_D_Crisp@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/95385-Oliver_D_Crisp@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivier Martinez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9555-Olivier_Martinez.html" target="A">1</a></li>
+<li><a href="../../azquotes/9555-Olivier_Martinez@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivier Assayas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95785-Olivier_Assayas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oz Perkins Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95856-Oz_Perkins.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orlando Salido Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95998-Orlando_Salido.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Osama Alomar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96161-Osama_Alomar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ottmar Liebert Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96391-Ottmar_Liebert.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Merilahti Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96553-Olivia_Merilahti.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Oliver Robinson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96873-Oliver_Robinson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Orian Williams Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96888-Orian_Williams.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Olivia Arthur Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97099-Olivia_Arthur.html" target="A">1</a></li>
+</ul>
+</details>
+</section>
+<section id="help-right"></section>
+</section>
+</body>
+</html>

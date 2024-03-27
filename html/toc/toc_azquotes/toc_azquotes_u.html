@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>纯CSS样式控制折叠展开菜单效果特效演示</title>
+<meta name="description" content="纯CSS样式控制折叠展开菜单效果特效演示。" />
+<meta name="keywords" content="纯CSS,样式控制,折叠展开,菜单,效果,特效演示" />
+<meta name="author" content="jQuery插件库" />
+<meta name="Copyright" content="jQuery插件库" />
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+a {
+text-decoration: none;
+}
+#conter {
+width: 1000px;
+margin: auto;
+}
+#help-left {
+width: auto;
+font-family: 'microsoft YaHei';
+float: left;
+}
+.menu {
+border-left: 1px solid #3cbfb3;
+border-right: 1px solid #3cbfb3;
+}
+.menu:last-child {
+border-bottom: 1px solid #3cbfb3;
+}
+.menu summary {
+height: 40px;
+line-height: 40px;
+text-indent: 10px;
+outline: none;
+font-size: 14px;
+font-weight: 700;
+border-top: 1px solid #3cbfb3;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #fff0));
+cursor: pointer;
+display: flex;
+}
+/*使用下面这个，可以去掉小三角，神奇的菜单就可以完成了*/
+.menu summary::-webkit-details-marker {
+}
+.menu summary:before {
+content: "🌸";
+display: inline-block;
+width: 16px;
+height: 16px;
+margin-right: 10px;
+font-size: 18px;
+font-weight: 700;
+}
+.menu[open] summary:before {
+content: "🕊️";
+}
+.menu ul {
+padding: 10px 0;
+}
+.menu ul li {
+list-style: none;
+text-indent: 25px;
+font-size: 12px;
+height: 30px;
+line-height: 30px;
+}
+.menu ul li a {
+display: block;
+color: #096868;
+}
+.menu ul li a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<section id="conter">
+<section id="help-left">
+<!--open为展开菜单，close为折叠菜单-->
+<details class="menu" close>
+<summary>Ulrich Beck Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1113-Ulrich_Beck.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Usher Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12842-Usher.html" target="A">1</a></li>
+<li><a href="../../azquotes/12842-Usher@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/12842-Usher@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ugo Betti Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1357-Ugo_Betti.html" target="A">1</a></li>
+<li><a href="../../azquotes/1357-Ugo_Betti@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Upton Sinclair Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13641-Upton_Sinclair.html" target="A">1</a></li>
+<li><a href="../../azquotes/13641-Upton_Sinclair@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13641-Upton_Sinclair@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>U Thant Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14551-U_Thant.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uma Thurman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14652-Uma_Thurman.html" target="A">1</a></li>
+<li><a href="../../azquotes/14652-Uma_Thurman@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/14652-Uma_Thurman@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uwe Boll Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1608-Uwe_Boll.html" target="A">1</a></li>
+<li><a href="../../azquotes/1608-Uwe_Boll@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Usain Bolt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1612-Usain_Bolt.html" target="A">1</a></li>
+<li><a href="../../azquotes/1612-Usain_Bolt@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/1612-Usain_Bolt@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/1612-Usain_Bolt@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/1612-Usain_Bolt@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/1612-Usain_Bolt@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Utah Phillips Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17809-Utah_Phillips.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>U.G. Krishnamurti Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17848-U_G_Krishnamurti.html" target="A">1</a></li>
+<li><a href="../../azquotes/17848-U_G_Krishnamurti@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/17848-U_G_Krishnamurti@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursula Hegi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17923-Ursula_Hegi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursula Vernon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17970-Ursula_Vernon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Umera Ahmed Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19415-Umera_Ahmed.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uthman ibn Affan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21856-Uthman_ibn_Affan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uell Stanley Andersen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22826-Uell_Stanley_Andersen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uwe Reinhardt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22885-Uwe_Reinhardt.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Urvashi Vaid Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24452-Urvashi_Vaid.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Urbain Dubois Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25332-Urbain_Dubois.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Urban Meyer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26173-Urban_Meyer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Um Ki-joon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26931-Um_Ki_joon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Umberto Guidoni Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27325-Umberto_Guidoni.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uljana Semjonova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27393-Uljana_Semjonova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ulisses Soares Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27808-Ulisses_Soares.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Umar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28404-Umar.html" target="A">1</a></li>
+<li><a href="../../azquotes/28404-Umar@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/28404-Umar@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/28404-Umar@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/28404-Umar@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ulpian Fulwell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28427-Ulpian_Fulwell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Umberto Boccioni Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28604-Umberto_Boccioni.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>U-God Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28742-U_God.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Udny Yule Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29355-Udny_Yule.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Urbain Le Verrier Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29370-Urbain_Le_Verrier.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uri Shulevitz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31308-Uri_Shulevitz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ugo Ehiogu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31370-Ugo_Ehiogu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ujjwal Nikam Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31903-Ujjwal_Nikam.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursula Nordstrom Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34038-Ursula_Nordstrom.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uwem Akpan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34044-Uwem_Akpan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Una Stubbs Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35255-Una_Stubbs.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Usha Uthup Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35387-Usha_Uthup.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Usamaru Furuya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36368-Usamaru_Furuya.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ulysses G. Weatherly Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36785-Ulysses_G_Weatherly.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uday Hussein Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37708-Uday_Hussein.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Una Stannard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38227-Una_Stannard.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uzo Aduba Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38922-Uzo_Aduba.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uta Pippig Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39210-Uta_Pippig.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Umair Haque Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40082-Umair_Haque.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uma Krishnaswami Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40149-Uma_Krishnaswami.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursula Goodenough Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40685-Ursula_Goodenough.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uma Bharti Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40917-Uma_Bharti.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ugo Monye Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41639-Ugo_Monye.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uche Okafor Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41682-Uche_Okafor.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Urie Bronfenbrenner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41955-Urie_Bronfenbrenner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursula Andress Quotes</summary>
+<ul>
+<li><a href="../../azquotes/420-Ursula_Andress.html" target="A">1</a></li>
+<li><a href="../../azquotes/420-Ursula_Andress@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uri Avnery Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42374-Uri_Avnery.html" target="A">1</a></li>
+<li><a href="../../azquotes/42374-Uri_Avnery@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursula Bethell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43308-Ursula_Bethell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Umberto Eco Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4342-Umberto_Eco.html" target="A">1</a></li>
+<li><a href="../../azquotes/4342-Umberto_Eco@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/4342-Umberto_Eco@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/4342-Umberto_Eco@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/4342-Umberto_Eco@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/4342-Umberto_Eco@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/4342-Umberto_Eco@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/4342-Umberto_Eco@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/4342-Umberto_Eco@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/4342-Umberto_Eco@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>U. R. Ananthamurthy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43773-U_R_Ananthamurthy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ulf Merbold Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43936-Ulf_Merbold.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uesugi Kenshin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44897-Uesugi_Kenshin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Umberto Giordano Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45093-Umberto_Giordano.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Urijah Faber Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45629-Urijah_Faber.html" target="A">1</a></li>
+<li><a href="../../azquotes/45629-Urijah_Faber@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Umberto Saba Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46250-Umberto_Saba.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Una Vincenzo, Lady Troubridge Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46691-Una_Vincenzo_Lady_Troubridge.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ustad Bismillah Khan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47110-Ustad_Bismillah_Khan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Umar II Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47855-Umar_II.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ulric Neisser Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48196-Ulric_Neisser.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursula Burns Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48908-Ursula_Burns.html" target="A">1</a></li>
+<li><a href="../../azquotes/48908-Ursula_Burns@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uriah Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48945-Uriah_Smith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Urs Holzle Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50195-Urs_Holzle.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Upamanyu Chatterjee Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50413-Upamanyu_Chatterjee.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uncle Kracker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51336-Uncle_Kracker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ugo Cavallero Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51886-Ugo_Cavallero.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uta Barth Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54145-Uta_Barth.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uri Geller Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5421-Uri_Geller.html" target="A">1</a></li>
+<li><a href="../../azquotes/5421-Uri_Geller@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ueda Akinari Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57146-Ueda_Akinari.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ueli Steck Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57712-Ueli_Steck.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ulysses S. Grant Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5814-Ulysses_S_Grant.html" target="A">1</a></li>
+<li><a href="../../azquotes/5814-Ulysses_S_Grant@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/5814-Ulysses_S_Grant@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/5814-Ulysses_S_Grant@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/5814-Ulysses_S_Grant@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursus Wehrli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58322-Ursus_Wehrli.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ulpian Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58407-Ulpian.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursula K. Le Guin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6003-Ursula_K_Le_Guin.html" target="A">1</a></li>
+<li><a href="../../azquotes/6003-Ursula_K_Le_Guin@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/6003-Ursula_K_Le_Guin@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/6003-Ursula_K_Le_Guin@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/6003-Ursula_K_Le_Guin@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/6003-Ursula_K_Le_Guin@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/6003-Ursula_K_Le_Guin@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/6003-Ursula_K_Le_Guin@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/6003-Ursula_K_Le_Guin@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/6003-Ursula_K_Le_Guin@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Urs Fischer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60768-Urs_Fischer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uta Hagen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6080-Uta_Hagen.html" target="A">1</a></li>
+<li><a href="../../azquotes/6080-Uta_Hagen@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ulrich Walter Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61037-Ulrich_Walter.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uriah Hall Quotes</summary>
+<ul>
+<li><a href="../../azquotes/65668-Uriah_Hall.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Utada Hikaru Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6687-Utada_Hikaru.html" target="A">1</a></li>
+<li><a href="../../azquotes/6687-Utada_Hikaru@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ugo Mochi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/68184-Ugo_Mochi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursula Bloom Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71321-Ursula_Bloom.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uta Ranke-Heinemann Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71353-Uta_Ranke_Heinemann.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Unita Blackwell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73722-Unita_Blackwell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursula Parrott Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73748-Ursula_Parrott.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ursula Curtiss Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73938-Ursula_Curtiss.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uri Orbach Quotes</summary>
+<ul>
+<li><a href="../../azquotes/79096-Uri_Orbach.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Udo Di Fabio Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81361-Udo_Di_Fabio.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Usama Fayyad Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81430-Usama_Fayyad.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Udo Kier Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83578-Udo_Kier.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ubaldo Jimenez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/85647-Ubaldo_Jimenez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Udo Dirkschneider Quotes</summary>
+<ul>
+<li><a href="../../azquotes/89516-Udo_Dirkschneider.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Udi Aloni Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95697-Udi_Aloni.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Uffie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96349-Uffie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Unknown Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96898-Unknown.html" target="A">1</a></li>
+<li><a href="../../azquotes/96898-Unknown@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/96898-Unknown@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/96898-Unknown@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/96898-Unknown@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/96898-Unknown@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/96898-Unknown@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/96898-Unknown@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/96898-Unknown@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/96898-Unknown@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ulrike Meinhof Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9942-Ulrike_Meinhof.html" target="A">1</a></li>
+</ul>
+</details>
+</section>
+<section id="help-right"></section>
+</section>
+</body>
+</html>

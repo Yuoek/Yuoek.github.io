@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Toc_mypoeticside</title>
+<meta name="description" content="Toc_mypoeticside。" />
+<meta name="keywords" content="纯CSS,样式控制,折叠展开,菜单,效果,特效演示" />
+<meta name="author" content="jQuery插件库" />
+<meta name="Copyright" content="jQuery插件库" />
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+a {
+text-decoration: none;
+}
+#conter {
+width: 1000px;
+margin: auto;
+}
+#help-left {
+width: auto;
+font-family: 'microsoft YaHei';
+float: left;
+}
+.menu {
+border-left: 1px solid #3cbfb3;
+border-right: 1px solid #3cbfb3;
+}
+.menu:last-child {
+border-bottom: 1px solid #3cbfb3;
+}
+.menu summary {
+height: 40px;
+line-height: 40px;
+text-indent: 10px;
+outline: none;
+font-size: 14px;
+font-weight: 700;
+border-top: 1px solid #3cbfb3;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #fff0));
+cursor: pointer;
+display: flex;
+}
+/*使用下面这个，可以去掉小三角，神奇的菜单就可以完成了*/
+.menu summary::-webkit-details-marker {
+}
+.menu summary:before {
+content: "🌸";
+display: inline-block;
+width: 16px;
+height: 16px;
+margin-right: 10px;
+font-size: 18px;
+font-weight: 700;
+}
+.menu[open] summary:before {
+content: "🕊️";
+}
+.menu ul {
+padding: 10px 0;
+}
+.menu ul li {
+list-style: none;
+text-indent: 25px;
+font-size: 12px;
+height: 30px;
+line-height: 30px;
+}
+.menu ul li a {
+display: block;
+color: #096868;
+}
+.menu ul li a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<section id="conter">
+<section id="help-left">
+<!--open为展开菜单，close为折叠菜单-->
+<details class="menu" close>
+<summary>Idris Davies Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-7375.html" target="A">Bells Of Rhymney</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ihara Saikaku Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-24818.html" target="A">A Sake Barrel</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingeborg Bachmann Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-1756.html" target="A">In The Storm Of Roses</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-1757.html" target="A">Menschenlos</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-1758.html" target="A">Stay</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irwin Peter Russell Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-24447.html" target="A">De Fust Banjo</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Rosenberg Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-23818.html" target="A">Break of Day in the Trenches</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23826.html" target="A">Dead Man's Dump</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23825.html" target="A">God</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23824.html" target="A">In the Trenches</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23823.html" target="A">Louse Hunting</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23822.html" target="A">On Receiving News of the War</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23821.html" target="A">Returning, We Hear the Larks</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23820.html" target="A">The Immortals</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23819.html" target="A">The Jew</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23827.html" target="A">Through These Pale Cold Days</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Taylor Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-30328.html" target="A">Negligent Mary</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30329.html" target="A">The Gaudy Flower</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Watts Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-33069.html" target="A">
+Hymn 93</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33186.html" target="A">Against Evil Company</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33185.html" target="A">Against Idleness and Mischief</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32493.html" target="A">Against Lying</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32494.html" target="A">Against Quarreling and Fighting</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32495.html" target="A">Against Scoffing and Calling Names</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32480.html" target="A">Alas! And Did My Savior Bleed?</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32497.html" target="A">Examples of Early Piety</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32950.html" target="A">Hymn 1-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32951.html" target="A">Hymn 1--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32952.html" target="A">Hymn 1.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32948.html" target="A">Hymn 10-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32949.html" target="A">Hymn 10--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32946.html" target="A">Hymn 100</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32947.html" target="A">Hymn 100-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32945.html" target="A">Hymn 101</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32953.html" target="A">Hymn 101-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32954.html" target="A">Hymn 102</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32963.html" target="A">Hymn 102-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32961.html" target="A">Hymn 103</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32962.html" target="A">Hymn 103-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32959.html" target="A">Hymn 104</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32960.html" target="A">Hymn 104-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32957.html" target="A">Hymn 105</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32958.html" target="A">Hymn 105-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32955.html" target="A">Hymn 106</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32956.html" target="A">Hymn 106-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32943.html" target="A">Hymn 107</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32944.html" target="A">Hymn 107-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32930.html" target="A">Hymn 108</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32931.html" target="A">Hymn 108-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32928.html" target="A">Hymn 109</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32929.html" target="A">Hymn 109-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32927.html" target="A">Hymn 11-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32925.html" target="A">Hymn 110</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32926.html" target="A">Hymn 110-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32932.html" target="A">Hymn 111</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32933.html" target="A">Hymn 111-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32941.html" target="A">Hymn 112</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32942.html" target="A">Hymn 112-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32939.html" target="A">Hymn 113</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32940.html" target="A">Hymn 113-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32937.html" target="A">Hymn 114</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32938.html" target="A">Hymn 114-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32935.html" target="A">Hymn 115</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32936.html" target="A">Hymn 115-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32924.html" target="A">Hymn 116</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32934.html" target="A">Hymn 116-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32996.html" target="A">Hymn 117</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33008.html" target="A">Hymn 117-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32994.html" target="A">Hymn 118</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32995.html" target="A">Hymn 118-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32992.html" target="A">Hymn 119</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32993.html" target="A">Hymn 119-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32989.html" target="A">Hymn 12-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32990.html" target="A">Hymn 12--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32991.html" target="A">Hymn 12.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32988.html" target="A">Hymn 120</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32997.html" target="A">Hymn 120-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32998.html" target="A">Hymn 121</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33007.html" target="A">Hymn 121-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33005.html" target="A">Hymn 122</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33006.html" target="A">Hymn 122-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33003.html" target="A">Hymn 123</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33004.html" target="A">Hymn 123-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33001.html" target="A">Hymn 124</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33002.html" target="A">Hymn 124-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32999.html" target="A">Hymn 125</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33000.html" target="A">Hymn 125-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32986.html" target="A">Hymn 126</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32987.html" target="A">Hymn 126-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32973.html" target="A">Hymn 127</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32974.html" target="A">Hymn 127-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32971.html" target="A">Hymn 128</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32972.html" target="A">Hymn 128-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32969.html" target="A">Hymn 129</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32970.html" target="A">Hymn 129-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32966.html" target="A">Hymn 13-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32967.html" target="A">Hymn 13--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32968.html" target="A">Hymn 13.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32975.html" target="A">Hymn 130</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32976.html" target="A">Hymn 130-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32984.html" target="A">Hymn 131</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32985.html" target="A">Hymn 131-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32982.html" target="A">Hymn 132</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32983.html" target="A">Hymn 132-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32980.html" target="A">Hymn 133</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32981.html" target="A">Hymn 133-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32978.html" target="A">Hymn 134</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32979.html" target="A">Hymn 134-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32965.html" target="A">Hymn 135</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32977.html" target="A">Hymn 135-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32870.html" target="A">Hymn 136</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32881.html" target="A">Hymn 136-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32868.html" target="A">Hymn 137</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32869.html" target="A">Hymn 137-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32866.html" target="A">Hymn 138</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32867.html" target="A">Hymn 138-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32864.html" target="A">Hymn 139</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32865.html" target="A">Hymn 139-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32862.html" target="A">Hymn 14-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32871.html" target="A">Hymn 14--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32863.html" target="A">Hymn 14.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32879.html" target="A">Hymn 140</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32880.html" target="A">Hymn 140-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32877.html" target="A">Hymn 141</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32878.html" target="A">Hymn 141-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32875.html" target="A">Hymn 142</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32876.html" target="A">Hymn 142-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32873.html" target="A">Hymn 143</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32874.html" target="A">Hymn 143-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32861.html" target="A">Hymn 144</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32872.html" target="A">Hymn 144-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32848.html" target="A">Hymn 145</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32860.html" target="A">Hymn 145</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32846.html" target="A">Hymn 146</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32847.html" target="A">Hymn 146-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32845.html" target="A">Hymn 147</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32843.html" target="A">Hymn 148</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32844.html" target="A">Hymn 148.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32841.html" target="A">Hymn 149</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32842.html" target="A">Hymn 149-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32840.html" target="A">Hymn 15</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32849.html" target="A">Hymn 15</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32850.html" target="A">Hymn 15-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32858.html" target="A">Hymn 150</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32859.html" target="A">Hymn 150-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32857.html" target="A">Hymn 151</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32856.html" target="A">Hymn 152</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32855.html" target="A">Hymn 153</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32854.html" target="A">Hymn 154</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32853.html" target="A">Hymn 155</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32852.html" target="A">Hymn 156</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32851.html" target="A">Hymn 157</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32839.html" target="A">Hymn 158</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32923.html" target="A">Hymn 159</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32909.html" target="A">Hymn 16 Part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32910.html" target="A">Hymn 16-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32911.html" target="A">Hymn 16--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32908.html" target="A">Hymn 160</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32907.html" target="A">Hymn 161</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32906.html" target="A">Hymn 162</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32905.html" target="A">Hymn 163</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32904.html" target="A">Hymn 164</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32903.html" target="A">Hymn 165</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32912.html" target="A">Hymn 166</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32913.html" target="A">Hymn 167</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32922.html" target="A">Hymn 168</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32921.html" target="A">Hymn 169</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32918.html" target="A">Hymn 17</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32919.html" target="A">Hymn 17-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32920.html" target="A">Hymn 17.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32917.html" target="A">Hymn 170</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32914.html" target="A">Hymn 18</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32915.html" target="A">Hymn 18-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32916.html" target="A">Hymn 18--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32890.html" target="A">Hymn 19</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32902.html" target="A">Hymn 19-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32888.html" target="A">Hymn 2-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32889.html" target="A">Hymn 2--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32885.html" target="A">Hymn 20</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32886.html" target="A">Hymn 20-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32887.html" target="A">Hymn 20--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32883.html" target="A">Hymn 21</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32884.html" target="A">Hymn 21-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32891.html" target="A">Hymn 21--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32892.html" target="A">Hymn 22</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32900.html" target="A">Hymn 22 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32899.html" target="A">Hymn 22 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32901.html" target="A">Hymn 22-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32897.html" target="A">Hymn 23</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32896.html" target="A">Hymn 23 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32964.html" target="A">Hymn 23 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32898.html" target="A">Hymn 23-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32893.html" target="A">Hymn 24</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32894.html" target="A">Hymn 24-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32895.html" target="A">Hymn 24.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32882.html" target="A">Hymn 25</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33129.html" target="A">Hymn 25-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33141.html" target="A">Hymn 25--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33126.html" target="A">Hymn 26</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33127.html" target="A">Hymn 26-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33128.html" target="A">Hymn 26--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33124.html" target="A">Hymn 27</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33125.html" target="A">Hymn 27-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33122.html" target="A">Hymn 28</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33123.html" target="A">Hymn 28-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33130.html" target="A">Hymn 29</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33131.html" target="A">Hymn 29-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33132.html" target="A">Hymn 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33139.html" target="A">Hymn 3-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33140.html" target="A">Hymn 3--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33137.html" target="A">Hymn 30</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33138.html" target="A">Hymn 30-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33136.html" target="A">Hymn 31</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33135.html" target="A">Hymn 31 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33134.html" target="A">Hymn 31 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33121.html" target="A">Hymn 32</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33133.html" target="A">Hymn 32-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33119.html" target="A">Hymn 33</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33120.html" target="A">Hymn 33-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33107.html" target="A">Hymn 34 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33106.html" target="A">Hymn 34 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33105.html" target="A">Hymn 35</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33104.html" target="A">Hymn 35 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33103.html" target="A">Hymn 35 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33101.html" target="A">Hymn 36</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33102.html" target="A">Hymn 36-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33100.html" target="A">Hymn 37</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33108.html" target="A">Hymn 37 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33109.html" target="A">Hymn 37 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33110.html" target="A">Hymn 38</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33117.html" target="A">Hymn 38 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33116.html" target="A">Hymn 38 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33118.html" target="A">Hymn 38-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33114.html" target="A">Hymn 39</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33115.html" target="A">Hymn 39-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33111.html" target="A">Hymn 4 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33099.html" target="A">Hymn 4 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33112.html" target="A">Hymn 4-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33113.html" target="A">Hymn 4--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33142.html" target="A">Hymn 40</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33173.html" target="A">Hymn 40-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33171.html" target="A">Hymn 41</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33172.html" target="A">Hymn 41-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33168.html" target="A">Hymn 42</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33169.html" target="A">Hymn 42-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33170.html" target="A">Hymn 42--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33167.html" target="A">Hymn 43</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33166.html" target="A">Hymn 43 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33165.html" target="A">Hymn 43 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33174.html" target="A">Hymn 44</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33175.html" target="A">Hymn 44 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33184.html" target="A">Hymn 44 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33182.html" target="A">Hymn 45</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33183.html" target="A">Hymn 45-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33181.html" target="A">Hymn 46</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33180.html" target="A">Hymn 46 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33179.html" target="A">Hymn 46 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33177.html" target="A">Hymn 47</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33178.html" target="A">Hymn 47-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33164.html" target="A">Hymn 48</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33176.html" target="A">Hymn 48</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33163.html" target="A">Hymn 49</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33149.html" target="A">Hymn 5</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33150.html" target="A">Hymn 5-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33151.html" target="A">Hymn 5--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33147.html" target="A">Hymn 50</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33148.html" target="A">Hymn 50-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33145.html" target="A">Hymn 51</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33146.html" target="A">Hymn 51-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33144.html" target="A">Hymn 52</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33152.html" target="A">Hymn 52-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33153.html" target="A">Hymn 53</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33154.html" target="A">Hymn 53-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33161.html" target="A">Hymn 54</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33162.html" target="A">Hymn 54-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33159.html" target="A">Hymn 55</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33160.html" target="A">Hymn 55-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33156.html" target="A">Hymn 56</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33158.html" target="A">Hymn 56-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33143.html" target="A">Hymn 57</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33155.html" target="A">Hymn 57-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33098.html" target="A">Hymn 58</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33157.html" target="A">Hymn 58-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33040.html" target="A">Hymn 59</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33052.html" target="A">Hymn 59-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33037.html" target="A">Hymn 6-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33038.html" target="A">Hymn 6--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33039.html" target="A">Hymn 6.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33035.html" target="A">Hymn 60</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33036.html" target="A">Hymn 60-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33033.html" target="A">Hymn 61</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33034.html" target="A">Hymn 61-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33032.html" target="A">Hymn 62</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33041.html" target="A">Hymn 62-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33042.html" target="A">Hymn 63</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33051.html" target="A">Hymn 63-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33049.html" target="A">Hymn 64</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33050.html" target="A">Hymn 64-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33047.html" target="A">Hymn 65</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33048.html" target="A">Hymn 65-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33045.html" target="A">Hymn 66</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33046.html" target="A">Hymn 66-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33043.html" target="A">Hymn 67</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33044.html" target="A">Hymn 67-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33030.html" target="A">Hymn 68</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33031.html" target="A">Hymn 68-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33017.html" target="A">Hymn 69</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33018.html" target="A">Hymn 69-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33014.html" target="A">Hymn 7-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33015.html" target="A">Hymn 7.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33016.html" target="A">Hymn 7..</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33012.html" target="A">Hymn 70</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33013.html" target="A">Hymn 70-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33010.html" target="A">Hymn 71</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33011.html" target="A">Hymn 71-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33019.html" target="A">Hymn 72</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33020.html" target="A">Hymn 72-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33028.html" target="A">Hymn 73</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33029.html" target="A">Hymn 73-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33026.html" target="A">Hymn 74</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33027.html" target="A">Hymn 74-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33024.html" target="A">Hymn 75</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33025.html" target="A">Hymn 75-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33022.html" target="A">Hymn 76</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33023.html" target="A">Hymn 76-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33009.html" target="A">Hymn 77</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33021.html" target="A">Hymn 77-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33084.html" target="A">Hymn 78</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33097.html" target="A">Hymn 78-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33082.html" target="A">Hymn 79</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33083.html" target="A">Hymn 79-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33079.html" target="A">Hymn 8-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33080.html" target="A">Hymn 8--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33081.html" target="A">Hymn 8.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33077.html" target="A">Hymn 80</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33078.html" target="A">Hymn 80-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33076.html" target="A">Hymn 81</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33085.html" target="A">Hymn 81-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33086.html" target="A">Hymn 82</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33096.html" target="A">Hymn 82-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33094.html" target="A">Hymn 83</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33095.html" target="A">Hymn 83-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33091.html" target="A">Hymn 84</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33092.html" target="A">Hymn 84-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33093.html" target="A">Hymn 84--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33088.html" target="A">Hymn 85</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33089.html" target="A">Hymn 85-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33090.html" target="A">Hymn 85--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33075.html" target="A">Hymn 86</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33087.html" target="A">Hymn 86-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33062.html" target="A">Hymn 87</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33074.html" target="A">Hymn 87-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33060.html" target="A">Hymn 88</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33061.html" target="A">Hymn 88-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33058.html" target="A">Hymn 89</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33059.html" target="A">Hymn 89-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33055.html" target="A">Hymn 9-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33056.html" target="A">Hymn 9--</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33057.html" target="A">Hymn 9.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33054.html" target="A">Hymn 90</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33063.html" target="A">Hymn 90-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33064.html" target="A">Hymn 91</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33073.html" target="A">Hymn 91-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33071.html" target="A">Hymn 92</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33072.html" target="A">Hymn 92-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33070.html" target="A">Hymn 93</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33067.html" target="A">Hymn 94</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33068.html" target="A">Hymn 94-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33065.html" target="A">Hymn 95</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33066.html" target="A">Hymn 95-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32625.html" target="A">Hymn 96</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33053.html" target="A">Hymn 96</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32612.html" target="A">Hymn 97</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32613.html" target="A">Hymn 97-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32610.html" target="A">Hymn 98</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32611.html" target="A">Hymn 98-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32608.html" target="A">Hymn 99</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32609.html" target="A">Hymn 99.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32487.html" target="A">Praise for Creation and Providence</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32607.html" target="A">Psalm 10</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32606.html" target="A">Psalm 100</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32614.html" target="A">Psalm 100</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32615.html" target="A">Psalm 101</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32616.html" target="A">Psalm 101-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32624.html" target="A">Psalm 102 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32623.html" target="A">Psalm 102 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32622.html" target="A">Psalm 102 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32620.html" target="A">Psalm 103 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32621.html" target="A">Psalm 103 part 1-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32618.html" target="A">Psalm 103 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32619.html" target="A">Psalm 103 part 2-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32617.html" target="A">Psalm 103 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32605.html" target="A">Psalm 104</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32604.html" target="A">PSALM 105 Abridged</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32592.html" target="A">Psalm 106 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32591.html" target="A">Psalm 106 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32590.html" target="A">Psalm 107 last part</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32589.html" target="A">Psalm 107 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32588.html" target="A">Psalm 107 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32587.html" target="A">Psalm 107 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32585.html" target="A">Psalm 107 part 4</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32586.html" target="A">Psalm 107 part 4.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32593.html" target="A">Psalm 109</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32594.html" target="A">Psalm 11</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32595.html" target="A">Psalm 110</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32602.html" target="A">Psalm 110 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32603.html" target="A">Psalm 110 part 1.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32601.html" target="A">Psalm 111 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32600.html" target="A">Psalm 111 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32597.html" target="A">Psalm 112</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32598.html" target="A">Psalm 112.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32599.html" target="A">Psalm 112...</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32584.html" target="A">Psalm 113</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32596.html" target="A">Psalm 113</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32626.html" target="A">Psalm 114</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32656.html" target="A">Psalm 115</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32668.html" target="A">Psalm 115</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32655.html" target="A">Psalm 116 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32654.html" target="A">Psalm 116 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32653.html" target="A">Psalm 117</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32651.html" target="A">Psalm 118</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32652.html" target="A">Psalm 118</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32650.html" target="A">Psalm 118 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32649.html" target="A">Psalm 118 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32657.html" target="A">Psalm 118 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32658.html" target="A">Psalm 118 part 4</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32659.html" target="A">Psalm 119 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32667.html" target="A">Psalm 119 part 10</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32666.html" target="A">Psalm 119 part 11</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32665.html" target="A">Psalm 119 part 12</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32664.html" target="A">Psalm 119 part 13</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32663.html" target="A">Psalm 119 part 14</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32662.html" target="A">Psalm 119 part 15</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32661.html" target="A">Psalm 119 part 16</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32660.html" target="A">Psalm 119 part 17</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32648.html" target="A">Psalm 119 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32647.html" target="A">Psalm 119 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32635.html" target="A">Psalm 119 part 4</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32634.html" target="A">Psalm 119 part 5</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32633.html" target="A">Psalm 119 part 6</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32632.html" target="A">Psalm 119 part 7</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32631.html" target="A">Psalm 119 part 8</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32630.html" target="A">Psalm 119 part 9</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32629.html" target="A">Psalm 119. last part</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32628.html" target="A">Psalm 12</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32636.html" target="A">Psalm 12</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32637.html" target="A">Psalm 120</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32638.html" target="A">Psalm 121</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32645.html" target="A">Psalm 121</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32646.html" target="A">Psalm 121</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32643.html" target="A">Psalm 122</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32644.html" target="A">Psalm 122-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32642.html" target="A">Psalm 123</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32641.html" target="A">Psalm 124</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32640.html" target="A">Psalm 125</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32627.html" target="A">Psalm 126</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32639.html" target="A">Psalm 126</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32529.html" target="A">Psalm 127</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32541.html" target="A">Psalm 127</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32528.html" target="A">Psalm 128</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32527.html" target="A">Psalm 129</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32525.html" target="A">Psalm 13</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32526.html" target="A">Psalm 13.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32523.html" target="A">Psalm 130</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32524.html" target="A">Psalm 130.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32522.html" target="A">Psalm 131</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32530.html" target="A">Psalm 132</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32531.html" target="A">Psalm 132.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32532.html" target="A">Psalm 133</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32539.html" target="A">Psalm 133</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32540.html" target="A">Psalm 133.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32538.html" target="A">Psalm 134</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32537.html" target="A">Psalm 135</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32536.html" target="A">Psalm 135 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32535.html" target="A">Psalm 135 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32533.html" target="A">Psalm 136</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32521.html" target="A">Psalm 136 Abridged</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32534.html" target="A">Psalm 136.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32520.html" target="A">Psalm 138</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32500.html" target="A">Psalm 139 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32508.html" target="A">Psalm 139 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32506.html" target="A">Psalm 139 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32507.html" target="A">Psalm 139 part 2.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32504.html" target="A">Psalm 139 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32505.html" target="A">Psalm 139 part 3.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32503.html" target="A">Psalm 14 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32502.html" target="A">Psalm 14 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32501.html" target="A">Psalm 141</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32509.html" target="A">Psalm 142</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32510.html" target="A">Psalm 143</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32519.html" target="A">Psalm 144 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32518.html" target="A">Psalm 144 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32516.html" target="A">Psalm 144 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32517.html" target="A">Psalm 144 part 3.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32514.html" target="A">Psalm 145 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32513.html" target="A">Psalm 145 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32515.html" target="A">Psalm 145 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32511.html" target="A">Psalm 146</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32512.html" target="A">Psalm 146.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32583.html" target="A">Psalm 147</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32571.html" target="A">Psalm 147 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32570.html" target="A">Psalm 147 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32568.html" target="A">Psalm 148</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32567.html" target="A">Psalm 148 Paraphrased</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32569.html" target="A">Psalm 148.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32566.html" target="A">Psalm 149</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32564.html" target="A">Psalm 15</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32565.html" target="A">Psalm 15.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32572.html" target="A">Psalm 150</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32573.html" target="A">Psalm 16 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32574.html" target="A">Psalm 16 part 1.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32581.html" target="A">Psalm 16 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32582.html" target="A">Psalm 16 part 2.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32580.html" target="A">Psalm 16 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32578.html" target="A">Psalm 17</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32579.html" target="A">Psalm 17.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32576.html" target="A">Psalm 18 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32577.html" target="A">Psalm 18 part 1.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32563.html" target="A">Psalm 18 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32575.html" target="A">Psalm 18 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32562.html" target="A">Psalm 18 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32549.html" target="A">Psalm 19</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32550.html" target="A">Psalm 19</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32548.html" target="A">Psalm 19 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32547.html" target="A">Psalm 19 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32544.html" target="A">Psalm 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32545.html" target="A">Psalm 2.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32546.html" target="A">Psalm 2..</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32543.html" target="A">Psalm 20</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32551.html" target="A">Psalm 21</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32552.html" target="A">Psalm 21.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32553.html" target="A">Psalm 22</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32561.html" target="A">Psalm 22 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32560.html" target="A">Psalm 22 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32557.html" target="A">Psalm 23</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32558.html" target="A">Psalm 23.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32559.html" target="A">Psalm 23..</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32555.html" target="A">Psalm 24</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32556.html" target="A">Psalm 24.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32554.html" target="A">Psalm 25 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32542.html" target="A">Psalm 25 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32795.html" target="A">Psalm 25 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32783.html" target="A">Psalm 26</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32782.html" target="A">Psalm 27 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32781.html" target="A">Psalm 27 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32780.html" target="A">Psalm 29</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32712.html" target="A">Psalm 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32779.html" target="A">Psalm 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32778.html" target="A">Psalm 30 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32777.html" target="A">Psalm 30 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32776.html" target="A">Psalm 31 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32784.html" target="A">Psalm 31 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32785.html" target="A">Psalm 32</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32794.html" target="A">Psalm 32 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32793.html" target="A">Psalm 32 Part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32786.html" target="A">Psalm 32-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32790.html" target="A">Psalm 33 Part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32792.html" target="A">Psalm 33 part 1-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32789.html" target="A">Psalm 33 Part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32791.html" target="A">Psalm 33 part 2-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32787.html" target="A">Psalm 34 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32788.html" target="A">Psalm 34 part 1-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32774.html" target="A">Psalm 34 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32775.html" target="A">Psalm 34 part 2-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32762.html" target="A">Psalm 35 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32761.html" target="A">Psalm 35 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32758.html" target="A">Psalm 36</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32760.html" target="A">Psalm 36</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32759.html" target="A">Psalm 36-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32757.html" target="A">Psalm 37 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32756.html" target="A">Psalm 37 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32755.html" target="A">Psalm 37 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32763.html" target="A">Psalm 38</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32764.html" target="A">Psalm 39 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32765.html" target="A">Psalm 39 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32773.html" target="A">Psalm 39 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32771.html" target="A">Psalm 4</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32772.html" target="A">Psalm 4-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32770.html" target="A">Psalm 40</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32769.html" target="A">Psalm 40 Part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32768.html" target="A">Psalm 40 Part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32767.html" target="A">Psalm 41</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32754.html" target="A">Psalm 42 Part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32766.html" target="A">Psalm 42 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32796.html" target="A">Psalm 44</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32826.html" target="A">Psalm 45</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32825.html" target="A">Psalm 45 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32824.html" target="A">Psalm 45 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32838.html" target="A">Psalm 45-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32823.html" target="A">Psalm 46 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32822.html" target="A">Psalm 46 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32821.html" target="A">Psalm 47</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32820.html" target="A">Psalm 48 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32819.html" target="A">Psalm 48 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32827.html" target="A">Psalm 49</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32828.html" target="A">Psalm 49 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32829.html" target="A">Psalm 49 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32837.html" target="A">Psalm 5</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32835.html" target="A">Psalm 50</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32834.html" target="A">Psalm 50 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32833.html" target="A">Psalm 50 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32831.html" target="A">Psalm 50 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32832.html" target="A">Psalm 50 part 3-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32836.html" target="A">Psalm 50-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32818.html" target="A">Psalm 51 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32830.html" target="A">Psalm 51 part 1-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32805.html" target="A">Psalm 51 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32817.html" target="A">Psalm 51 part 2-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32804.html" target="A">Psalm 51 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32803.html" target="A">Psalm 53</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32801.html" target="A">Psalm 55</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32802.html" target="A">Psalm 55-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32800.html" target="A">Psalm 56</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32799.html" target="A">Psalm 57</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32798.html" target="A">Psalm 58</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32806.html" target="A">Psalm 6</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32807.html" target="A">Psalm 6-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32808.html" target="A">Psalm 60</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32816.html" target="A">Psalm 61</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32815.html" target="A">Psalm 62</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32813.html" target="A">Psalm 63</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32812.html" target="A">Psalm 63 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32811.html" target="A">Psalm 63 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32814.html" target="A">Psalm 63-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32809.html" target="A">Psalm 65 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32810.html" target="A">Psalm 65 part 1-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32710.html" target="A">Psalm 65 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32797.html" target="A">Psalm 65 part 2-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32698.html" target="A">Psalm 65 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32697.html" target="A">Psalm 66 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32696.html" target="A">Psalm 66 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32695.html" target="A">Psalm 67</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32694.html" target="A">Psalm 68 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32693.html" target="A">Psalm 68 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32692.html" target="A">Psalm 68 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32691.html" target="A">Psalm 69 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32699.html" target="A">Psalm 69 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32700.html" target="A">Psalm 69 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32701.html" target="A">Psalm 69 part 2-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32709.html" target="A">Psalm 69 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32708.html" target="A">Psalm 7</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32707.html" target="A">Psalm 71 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32706.html" target="A">Psalm 71 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32705.html" target="A">Psalm 71 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32704.html" target="A">Psalm 72 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32703.html" target="A">Psalm 72 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32690.html" target="A">Psalm 73</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32702.html" target="A">Psalm 73</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32689.html" target="A">Psalm 73 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32677.html" target="A">Psalm 73 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32676.html" target="A">Psalm 74</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32675.html" target="A">Psalm 75</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32674.html" target="A">Psalm 76</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32673.html" target="A">Psalm 77 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32672.html" target="A">Psalm 77 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32671.html" target="A">Psalm 78 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32670.html" target="A">Psalm 78 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32678.html" target="A">Psalm 78 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32679.html" target="A">Psalm 78 part 4</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32680.html" target="A">Psalm 8</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32688.html" target="A">Psalm 8</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32687.html" target="A">Psalm 8 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32686.html" target="A">Psalm 8 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32685.html" target="A">Psalm 80</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32684.html" target="A">Psalm 81</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32683.html" target="A">Psalm 82</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32682.html" target="A">Psalm 83</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32669.html" target="A">Psalm 84</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32681.html" target="A">Psalm 84</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32711.html" target="A">Psalm 84 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32753.html" target="A">Psalm 84 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32741.html" target="A">Psalm 85 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32740.html" target="A">Psalm 85 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32739.html" target="A">Psalm 86</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32738.html" target="A">Psalm 87</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32737.html" target="A">Psalm 89</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32736.html" target="A">Psalm 89 last part</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32735.html" target="A">Psalm 89 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32734.html" target="A">Psalm 89 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32742.html" target="A">Psalm 89 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32743.html" target="A">Psalm 89 part 4</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32744.html" target="A">Psalm 89 part 5</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32752.html" target="A">Psalm 89 part 6</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32751.html" target="A">Psalm 9 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32750.html" target="A">Psalm 9 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32748.html" target="A">Psalm 90</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32747.html" target="A">Psalm 90 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32746.html" target="A">Psalm 90 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32745.html" target="A">Psalm 90 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32749.html" target="A">Psalm 90-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32733.html" target="A">Psalm 91 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32732.html" target="A">Psalm 91 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32719.html" target="A">Psalm 92 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32720.html" target="A">Psalm 92 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32717.html" target="A">Psalm 93</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32718.html" target="A">Psalm 93-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32716.html" target="A">Psalm 94 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32715.html" target="A">Psalm 94 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32713.html" target="A">Psalm 95</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32721.html" target="A">Psalm 95</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32714.html" target="A">Psalm 95-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32722.html" target="A">Psalm 96</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32723.html" target="A">Psalm 96-</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32731.html" target="A">Psalm 97</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32730.html" target="A">Psalm 97 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32729.html" target="A">Psalm 97 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32728.html" target="A">Psalm 97 part 3</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32727.html" target="A">Psalm 98 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32726.html" target="A">Psalm 98 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32725.html" target="A">Psalm 99 part 1</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32724.html" target="A">Psalm 99 part 2</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32486.html" target="A">Psalm I: The Man Is Ever Blessed</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32485.html" target="A">Psalm II: Why Did the Nations</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32484.html" target="A">Psalm III: My God, How Many Are My Fears</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32483.html" target="A">Psalm LXXII: Great God</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32482.html" target="A">Psalm LXXIII: Now I'm Convinced the Lord Is Kind</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32496.html" target="A">Psalm LXXIV: Will God For Ever Cast Us Off?</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32481.html" target="A">Psalm VIII: O Lord, Our Lord</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32489.html" target="A">Psalm XIX: The Heavens Declare Thy Glory, Lord</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32490.html" target="A">Psalm XLVI: God Is the Refuge</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32491.html" target="A">Psalm XXXII: Happy the Man</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32498.html" target="A">Psalm XXXIII: Rejoice, Ye Righteous</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32499.html" target="A">Psalm XXXIV: Lord, I Will Bless Thee</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32492.html" target="A">Psalm XXXV: Now Plead My Cause, Almighty God</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32488.html" target="A">Psalm XXXVI: High in the Heav'ns</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabella Valancy Crawford Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-6736.html" target="A">A Battle</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6747.html" target="A">A Harvest Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6746.html" target="A">A Hungry Day</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6745.html" target="A">A Perfect Strain</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6744.html" target="A">An Interregnum</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6743.html" target="A">Baby's Dreams</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6742.html" target="A">BABY'S DREAMS (second version)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6741.html" target="A">Beside The Sea</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6740.html" target="A">Bite Deep And Wide, O Axe, The Tree!</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6739.html" target="A">Bouche-Mignonne</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6738.html" target="A">Caesar's Wife</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6737.html" target="A">Canada To England</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6748.html" target="A">Curtius</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6749.html" target="A">From:The Helot</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6750.html" target="A">His Mother</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6754.html" target="A">His Sweetheart</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6755.html" target="A">His Wife and Baby</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6756.html" target="A">Malcolm's Katie: A Love Story</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6757.html" target="A">Old Spookses' Pass</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6759.html" target="A">Said the West Wind</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6752.html" target="A">Songs for the Soldiers</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6758.html" target="A">The Camp of Souls</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6762.html" target="A">The Canoe</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6760.html" target="A">The Dark Stag</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6761.html" target="A">The Lily Bed</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6751.html" target="A">The Mother's Soul</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6753.html" target="A">The Rose</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Turgenev Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-31607.html" target="A">'Thou shalt Hear The Fool's Judgment....'--_Pushkin_</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31656.html" target="A">A Contented Man</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31621.html" target="A">A Conversation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31617.html" target="A">A Dream</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31639.html" target="A">A Rule Of Life</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31640.html" target="A">A Visit</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31645.html" target="A">Alms</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31641.html" target="A">An Eastern Legend</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31642.html" target="A">Cabbage Soup</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31643.html" target="A">Christ</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31644.html" target="A">Friend And Enemy</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31616.html" target="A">Hang Him!</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31620.html" target="A">How Fair, How Fresh Were The Roses ...</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31646.html" target="A">Masha</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31608.html" target="A">My Adversary</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31609.html" target="A">N. n.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31647.html" target="A">Nature</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31610.html" target="A">On The Sea</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31611.html" target="A">Prayer</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31612.html" target="A">Stay!</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31648.html" target="A">The Banquet Of The Supreme Being</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31649.html" target="A">The Beggar</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31613.html" target="A">The Country</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31650.html" target="A">The Dog</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31651.html" target="A">The Doves</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31652.html" target="A">The Egoist</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31653.html" target="A">The Fool</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31654.html" target="A">The Insect</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31655.html" target="A">The Last Meeting</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31615.html" target="A">The Monk</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31638.html" target="A">The Nymphs</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31637.html" target="A">The Old Man</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31625.html" target="A">The Old Woman</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31624.html" target="A">The Realm Of Azure</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31623.html" target="A">The Reporter</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31622.html" target="A">The Rose</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31614.html" target="A">The Russian Tongue</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31627.html" target="A">The Skulls</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31629.html" target="A">The Sparrow</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31630.html" target="A">The Sphinx</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31631.html" target="A">The Stone</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31634.html" target="A">The Two Brothers</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31635.html" target="A">The Workman And The Man With White Hands - A Dialogue</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31628.html" target="A">To The Memory Of U. P. Vrevsky</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31636.html" target="A">To-Morrow! To-Morrow!</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31633.html" target="A">Two Rich Men</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31632.html" target="A">Two Stanzas</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31619.html" target="A">We Still Fight On</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31618.html" target="A">What Shall I Think?...</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31626.html" target="A">_Necessitas--Vis--Libertas!_ A Bas-Relief</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Vazov Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-32039.html" target="A">The Bay Of Naples</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32040.html" target="A">The Bay Of Naples</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32041.html" target="A">What Is A Poet's Soul Like</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivor Gurney Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-12001.html" target="A">Afterwards</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12022.html" target="A">Beauty</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12018.html" target="A">Hedger</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12007.html" target="A">Snow</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12009.html" target="A">Soft Rain Beats Upon My Windows</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12015.html" target="A">Song and Pain</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12011.html" target="A">Strange Hells</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12004.html" target="A">Strange Service</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12006.html" target="A">The Bohemians</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12005.html" target="A">The Love Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12014.html" target="A">The Silent One</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12012.html" target="A">The Target</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12016.html" target="A">The Touchstone – Watching Malvern</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12002.html" target="A">To Certain Comrades (E.S. and J.H.)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12008.html" target="A">To England--A Note</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12013.html" target="A">To his Love</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12003.html" target="A">To The Poet Before Battle</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12010.html" target="A">Tobacco</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12019.html" target="A">Up There</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12017.html" target="A">Walking Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12021.html" target="A">Water Colours</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12020.html" target="A">Yesterday Lost</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Izumi Shikibu Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-27312.html" target="A">Although I Try</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27313.html" target="A">Although The Wind</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27314.html" target="A">If The One I've Waited For</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27315.html" target="A">plum blossom</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27316.html" target="A">Watching The Moon</a></li>
+</ul>
+</details>
+</section>
+<section id="help-right"></section>
+</section>
+</body>
+</html>

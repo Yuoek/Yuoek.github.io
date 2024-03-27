@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>纯CSS样式控制折叠展开菜单效果特效演示</title>
+<meta name="description" content="纯CSS样式控制折叠展开菜单效果特效演示。" />
+<meta name="keywords" content="纯CSS,样式控制,折叠展开,菜单,效果,特效演示" />
+<meta name="author" content="jQuery插件库" />
+<meta name="Copyright" content="jQuery插件库" />
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+a {
+text-decoration: none;
+}
+#conter {
+width: 1000px;
+margin: auto;
+}
+#help-left {
+width: auto;
+font-family: 'microsoft YaHei';
+float: left;
+}
+.menu {
+border-left: 1px solid #3cbfb3;
+border-right: 1px solid #3cbfb3;
+}
+.menu:last-child {
+border-bottom: 1px solid #3cbfb3;
+}
+.menu summary {
+height: 40px;
+line-height: 40px;
+text-indent: 10px;
+outline: none;
+font-size: 14px;
+font-weight: 700;
+border-top: 1px solid #3cbfb3;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #fff0));
+cursor: pointer;
+display: flex;
+}
+/*使用下面这个，可以去掉小三角，神奇的菜单就可以完成了*/
+.menu summary::-webkit-details-marker {
+}
+.menu summary:before {
+content: "🌸";
+display: inline-block;
+width: 16px;
+height: 16px;
+margin-right: 10px;
+font-size: 18px;
+font-weight: 700;
+}
+.menu[open] summary:before {
+content: "🕊️";
+}
+.menu ul {
+padding: 10px 0;
+}
+.menu ul li {
+list-style: none;
+text-indent: 25px;
+font-size: 12px;
+height: 30px;
+line-height: 30px;
+}
+.menu ul li a {
+display: block;
+color: #096868;
+}
+.menu ul li a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<section id="conter">
+<section id="help-left">
+<!--open为展开菜单，close为折叠菜单-->
+<details class="menu" close>
+<summary>Zell Miller Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10139-Zell_Miller.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zygmunt Bauman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1054-Zygmunt_Bauman.html" target="A">1</a></li>
+<li><a href="../../azquotes/1054-Zygmunt_Bauman@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/1054-Zygmunt_Bauman@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/1054-Zygmunt_Bauman@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/1054-Zygmunt_Bauman@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/1054-Zygmunt_Bauman@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zachary Quinto Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11994-Zachary_Quinto.html" target="A">1</a></li>
+<li><a href="../../azquotes/11994-Zachary_Quinto@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11994-Zachary_Quinto@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/11994-Zachary_Quinto@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/11994-Zachary_Quinto@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zack de la Rocha Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12495-Zack_de_la_Rocha.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhu Rongji Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12590-Zhu_Rongji.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Saldana Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12903-Zoe_Saldana.html" target="A">1</a></li>
+<li><a href="../../azquotes/12903-Zoe_Saldana@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/12903-Zoe_Saldana@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/12903-Zoe_Saldana@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zadie Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13823-Zadie_Smith.html" target="A">1</a></li>
+<li><a href="../../azquotes/13823-Zadie_Smith@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13823-Zadie_Smith@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/13823-Zadie_Smith@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/13823-Zadie_Smith@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/13823-Zadie_Smith@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/13823-Zadie_Smith@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/13823-Zadie_Smith@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/13823-Zadie_Smith@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/13823-Zadie_Smith@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zack Snyder Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13850-Zack_Snyder.html" target="A">1</a></li>
+<li><a href="../../azquotes/13850-Zack_Snyder@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13850-Zack_Snyder@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/13850-Zack_Snyder@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Wamp Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15272-Zach_Wamp.html" target="A">1</a></li>
+<li><a href="../../azquotes/15272-Zach_Wamp@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zakk Wylde Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15991-Zakk_Wylde.html" target="A">1</a></li>
+<li><a href="../../azquotes/15991-Zakk_Wylde@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhang Yimou Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16063-Zhang_Yimou.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zinedine Zidane Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16178-Zinedine_Zidane.html" target="A">1</a></li>
+<li><a href="../../azquotes/16178-Zinedine_Zidane@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/16178-Zinedine_Zidane@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zig Ziglar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16182-Zig_Ziglar.html" target="A">1</a></li>
+<li><a href="../../azquotes/16182-Zig_Ziglar@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/16182-Zig_Ziglar@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/16182-Zig_Ziglar@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/16182-Zig_Ziglar@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/16182-Zig_Ziglar@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/16182-Zig_Ziglar@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/16182-Zig_Ziglar@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/16182-Zig_Ziglar@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/16182-Zig_Ziglar@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhang Ziyi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16196-Zhang_Ziyi.html" target="A">1</a></li>
+<li><a href="../../azquotes/16196-Zhang_Ziyi@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zbigniew Herbert Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17751-Zbigniew_Herbert.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Braff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1799-Zach_Braff.html" target="A">1</a></li>
+<li><a href="../../azquotes/1799-Zach_Braff@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/1799-Zach_Braff@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/1799-Zach_Braff@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/1799-Zach_Braff@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/1799-Zach_Braff@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/1799-Zach_Braff@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/1799-Zach_Braff@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/1799-Zach_Braff@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/1799-Zach_Braff@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zane Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18007-Zane.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoë Heller Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18024-Zoe_Heller.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zilpha Keatley Snyder Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18046-Zilpha_Keatley_Snyder.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zlata Filipović Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18063-Zlata_Filipovic.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoey Dean Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18801-Zoey_Dean.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zakir Naik Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19149-Zakir_Naik.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zona Gale Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19715-Zona_Gale.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhuangzi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20386-Zhuangzi.html" target="A">1</a></li>
+<li><a href="../../azquotes/20386-Zhuangzi@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/20386-Zhuangzi@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/20386-Zhuangzi@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/20386-Zhuangzi@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/20386-Zhuangzi@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/20386-Zhuangzi@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/20386-Zhuangzi@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/20386-Zhuangzi@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/20386-Zhuangzi@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zilda Arns Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20452-Zilda_Arns.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zbigniew Brzezinski Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2100-Zbigniew_Brzezinski.html" target="A">1</a></li>
+<li><a href="../../azquotes/2100-Zbigniew_Brzezinski@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/2100-Zbigniew_Brzezinski@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/2100-Zbigniew_Brzezinski@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/2100-Zbigniew_Brzezinski@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/2100-Zbigniew_Brzezinski@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/2100-Zbigniew_Brzezinski@p=7.html" target="A">7</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoot Sims Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21119-Zoot_Sims.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zero Mostel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22668-Zero_Mostel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zola Budd Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22697-Zola_Budd.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zac Posen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22746-Zac_Posen.html" target="A">1</a></li>
+<li><a href="../../azquotes/22746-Zac_Posen@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zitkala-Sa Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23043-Zitkala_Sa.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zeenat Aman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23377-Zeenat_Aman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zengzi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23711-Zengzi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Lofgren Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24211-Zoe_Lofgren.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhang Zai Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24450-Zhang_Zai.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zebulon Pike Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24530-Zebulon_Pike.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Sudfeld Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24606-Zach_Sudfeld.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhuge Liang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24613-Zhuge_Liang.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zeppo Marx Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24738-Zeppo_Marx.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zac Rinaldo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25070-Zac_Rinaldo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ze Frank Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25150-Ze_Frank.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zachary Scott Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25542-Zachary_Scott.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhang Jinjing Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26019-Zhang_Jinjing.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zak Kustok Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26507-Zak_Kustok.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zeljko Obradovic Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27377-Zeljko_Obradovic.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhores Alferov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27575-Zhores_Alferov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ziad K. Abdelnour Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27727-Ziad_K_Abdelnour.html" target="A">1</a></li>
+<li><a href="../../azquotes/27727-Ziad_K_Abdelnour@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/27727-Ziad_K_Abdelnour@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhou Enlai Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28425-Zhou_Enlai.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zalmay Khalilzad Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28680-Zalmay_Khalilzad.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Z'ev ben Shimon Halevi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29109-Z_ev_ben_Shimon_Halevi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ziauddin Yousafzai Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29764-Ziauddin_Yousafzai.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zeno of Citium Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30290-Zeno_of_Citium.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zuheir Mohsen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30570-Zuheir_Mohsen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zachary Taylor Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30876-Zachary_Taylor.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zubin Mehta Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31049-Zubin_Mehta.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zlatan Ibrahimovic Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31565-Zlatan_Ibrahimovic.html" target="A">1</a></li>
+<li><a href="../../azquotes/31565-Zlatan_Ibrahimovic@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zbigniew Jaworowski Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32219-Zbigniew_Jaworowski.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zack Rosen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32818-Zack_Rosen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zalman Schachter-Shalomi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33531-Zalman_Schachter_Shalomi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Valdes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33569-Zoe_Valdes.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zuoxiao Zuzhou Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33931-Zuoxiao_Zuzhou.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Whittall Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34008-Zoe_Whittall.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zendaya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34646-Zendaya.html" target="A">1</a></li>
+<li><a href="../../azquotes/34646-Zendaya@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/34646-Zendaya@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/34646-Zendaya@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/34646-Zendaya@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoey Deutch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35018-Zoey_Deutch.html" target="A">1</a></li>
+<li><a href="../../azquotes/35018-Zoey_Deutch@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Bell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35234-Zoe_Bell.html" target="A">1</a></li>
+<li><a href="../../azquotes/35234-Zoe_Bell@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zosia Mamet Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35242-Zosia_Mamet.html" target="A">1</a></li>
+<li><a href="../../azquotes/35242-Zosia_Mamet@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zack Greinke Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35991-Zack_Greinke.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zak Starkey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36088-Zak_Starkey.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ziauddin Sardar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36296-Ziauddin_Sardar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Wanamaker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36533-Zoe_Wanamaker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Sobiech Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36648-Zach_Sobiech.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Koplowitz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37275-Zoe_Koplowitz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ze'ev Jabotinsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37299-Ze_ev_Jabotinsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoroaster Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38027-Zoroaster.html" target="A">1</a></li>
+<li><a href="../../azquotes/38027-Zoroaster@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zayn Malik Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38674-Zayn_Malik.html" target="A">1</a></li>
+<li><a href="../../azquotes/38674-Zayn_Malik@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/38674-Zayn_Malik@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/38674-Zayn_Malik@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhi Gang Sha Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38901-Zhi_Gang_Sha.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zooey Deschanel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3899-Zooey_Deschanel.html" target="A">1</a></li>
+<li><a href="../../azquotes/3899-Zooey_Deschanel@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/3899-Zooey_Deschanel@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/3899-Zooey_Deschanel@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/3899-Zooey_Deschanel@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/3899-Zooey_Deschanel@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/3899-Zooey_Deschanel@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/3899-Zooey_Deschanel@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/3899-Zooey_Deschanel@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/3899-Zooey_Deschanel@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Weil Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39424-Zoe_Weil.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zeno of Elea Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39518-Zeno_of_Elea.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhang Sanfeng Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39604-Zhang_Sanfeng.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zainab Salbi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39710-Zainab_Salbi.html" target="A">1</a></li>
+<li><a href="../../azquotes/39710-Zainab_Salbi@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/39710-Zainab_Salbi@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Nelson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39738-Zach_Nelson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Condon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39776-Zach_Condon.html" target="A">1</a></li>
+<li><a href="../../azquotes/39776-Zach_Condon@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/39776-Zach_Condon@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhang Xiaogang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39865-Zhang_Xiaogang.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zong Qinghou Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40096-Zong_Qinghou.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zuzana Licko Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40525-Zuzana_Licko.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoltan Kodaly Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41013-Zoltan_Kodaly.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zeena Schreck Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41493-Zeena_Schreck.html" target="A">1</a></li>
+<li><a href="../../azquotes/41493-Zeena_Schreck@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zelda Popkin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41887-Zelda_Popkin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ze'ev Chafets Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42040-Ze_ev_Chafets.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoketsu Norman Fischer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42950-Zoketsu_Norman_Fischer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zac Efron Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4382-Zac_Efron.html" target="A">1</a></li>
+<li><a href="../../azquotes/4382-Zac_Efron@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/4382-Zac_Efron@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/4382-Zac_Efron@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zutty Singleton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43964-Zutty_Singleton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zakes Mda Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44759-Zakes_Mda.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zedd Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44764-Zedd.html" target="A">1</a></li>
+<li><a href="../../azquotes/44764-Zedd@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Klein Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44981-Zach_Klein.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Tapper Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45106-Zoe_Tapper.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zeresenay Alemseged Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45121-Zeresenay_Alemseged.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zechariah Chafee Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45258-Zechariah_Chafee.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoran ?in?ic Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45454-Zoran_in_ic.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zulfikar Ali Bhutto Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45487-Zulfikar_Ali_Bhutto.html" target="A">1</a></li>
+<li><a href="../../azquotes/45487-Zulfikar_Ali_Bhutto@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhou Yongkang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45489-Zhou_Yongkang.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zenkei Shibayama Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46375-Zenkei_Shibayama.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zev Yaroslavsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46557-Zev_Yaroslavsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zsuzsanna Budapest Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46680-Zsuzsanna_Budapest.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zion Lee Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46779-Zion_Lee.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zacky Vengeance Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47105-Zacky_Vengeance.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zentatsu Richard Baker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47152-Zentatsu_Richard_Baker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zebulon Baird Vance Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47704-Zebulon_Baird_Vance.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Akins Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48187-Zoe_Akins.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zafrullah Chowdhury Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48493-Zafrullah_Chowdhury.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zelda Fitzgerald Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4878-Zelda_Fitzgerald.html" target="A">1</a></li>
+<li><a href="../../azquotes/4878-Zelda_Fitzgerald@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/4878-Zelda_Fitzgerald@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/4878-Zelda_Fitzgerald@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zazie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49139-Zazie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhang Huan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49226-Zhang_Huan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zachary Macaulay Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49247-Zachary_Macaulay.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zakaria Tamer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50017-Zakaria_Tamer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zweli Mkhize Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50506-Zweli_Mkhize.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Hunter Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50694-Zach_Hunter.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhang Xi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50839-Zhang_Xi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zack Ryder Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51262-Zack_Ryder.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zsa Zsa Gabor Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5257-Zsa_Zsa_Gabor.html" target="A">1</a></li>
+<li><a href="../../azquotes/5257-Zsa_Zsa_Gabor@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Galifianakis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5283-Zach_Galifianakis.html" target="A">1</a></li>
+<li><a href="../../azquotes/5283-Zach_Galifianakis@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/5283-Zach_Galifianakis@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/5283-Zach_Galifianakis@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/5283-Zach_Galifianakis@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/5283-Zach_Galifianakis@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zohra Sehgal Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53567-Zohra_Sehgal.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zelda Fichandler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54066-Zelda_Fichandler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Wahls Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54208-Zach_Wahls.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoro Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54597-Zoro.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Anner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54676-Zach_Anner.html" target="A">1</a></li>
+<li><a href="../../azquotes/54676-Zach_Anner@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/54676-Zach_Anner@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zachary Schomburg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56211-Zachary_Schomburg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>ZZ Ward Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56516-ZZ_Ward.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoran Drvenkar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57020-Zoran_Drvenkar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zanele Muholi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57045-Zanele_Muholi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zara Phillips Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58049-Zara_Phillips.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zane Grey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5909-Zane_Grey.html" target="A">1</a></li>
+<li><a href="../../azquotes/5909-Zane_Grey@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zak Bagans Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59882-Zak_Bagans.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoran Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59952-Zoran.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zaha Hadid Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6071-Zaha_Hadid.html" target="A">1</a></li>
+<li><a href="../../azquotes/6071-Zaha_Hadid@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/6071-Zaha_Hadid@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/6071-Zaha_Hadid@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/6071-Zaha_Hadid@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>ZZ Packer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61457-ZZ_Packer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zephyr Teachout Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61487-Zephyr_Teachout.html" target="A">1</a></li>
+<li><a href="../../azquotes/61487-Zephyr_Teachout@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zachery Ty Bryan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61594-Zachery_Ty_Bryan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Cassavetes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61754-Zoe_Cassavetes.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhang Xianliang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61897-Zhang_Xianliang.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Kazan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63147-Zoe_Kazan.html" target="A">1</a></li>
+<li><a href="../../azquotes/63147-Zoe_Kazan@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/63147-Zoe_Kazan@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/63147-Zoe_Kazan@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/63147-Zoe_Kazan@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zac Hanson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63816-Zac_Hanson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zahi Hawass Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6393-Zahi_Hawass.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zelig Pliskin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/64011-Zelig_Pliskin.html" target="A">1</a></li>
+<li><a href="../../azquotes/64011-Zelig_Pliskin@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zelda Rubinstein Quotes</summary>
+<ul>
+<li><a href="../../azquotes/65876-Zelda_Rubinstein.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhou Shengxian Quotes</summary>
+<ul>
+<li><a href="../../azquotes/66531-Zhou_Shengxian.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zulima Farber Quotes</summary>
+<ul>
+<li><a href="../../azquotes/66598-Zulima_Farber.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zheng Bijian Quotes</summary>
+<ul>
+<li><a href="../../azquotes/67228-Zheng_Bijian.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zana Briski Quotes</summary>
+<ul>
+<li><a href="../../azquotes/68228-Zana_Briski.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Gilford Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70293-Zach_Gilford.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhou Xun Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70347-Zhou_Xun.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhang Zhao Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70745-Zhang_Zhao.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zora Neale Hurston Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7096-Zora_Neale_Hurston.html" target="A">1</a></li>
+<li><a href="../../azquotes/7096-Zora_Neale_Hurston@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/7096-Zora_Neale_Hurston@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/7096-Zora_Neale_Hurston@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/7096-Zora_Neale_Hurston@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/7096-Zora_Neale_Hurston@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/7096-Zora_Neale_Hurston@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/7096-Zora_Neale_Hurston@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/7096-Zora_Neale_Hurston@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoltan Istvan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71581-Zoltan_Istvan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zak Orth Quotes</summary>
+<ul>
+<li><a href="../../azquotes/72799-Zak_Orth.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zola Jesus Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7428-Zola_Jesus.html" target="A">1</a></li>
+<li><a href="../../azquotes/7428-Zola_Jesus@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Sugg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/74726-Zoe_Sugg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zelo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/74728-Zelo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zella Day Quotes</summary>
+<ul>
+<li><a href="../../azquotes/75018-Zella_Day.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zac Brown Quotes</summary>
+<ul>
+<li><a href="../../azquotes/75338-Zac_Brown.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhou Yu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/75578-Zhou_Yu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhao Yun Quotes</summary>
+<ul>
+<li><a href="../../azquotes/75580-Zhao_Yun.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Johnson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/75775-Zach_Johnson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zick Rubin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/76828-Zick_Rubin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zeno Vendler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/78261-Zeno_Vendler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zachary Knighton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8163-Zachary_Knighton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Kravitz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8269-Zoe_Kravitz.html" target="A">1</a></li>
+<li><a href="../../azquotes/8269-Zoe_Kravitz@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/8269-Zoe_Kravitz@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Lister-Jones Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8361-Zoe_Lister_Jones.html" target="A">1</a></li>
+<li><a href="../../azquotes/8361-Zoe_Lister_Jones@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/8361-Zoe_Lister_Jones@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Leonard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83879-Zoe_Leonard.html" target="A">1</a></li>
+<li><a href="../../azquotes/83879-Zoe_Leonard@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zeina Quotes</summary>
+<ul>
+<li><a href="../../azquotes/84461-Zeina.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zia Haider Rahman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/85090-Zia_Haider_Rahman.html" target="A">1</a></li>
+<li><a href="../../azquotes/85090-Zia_Haider_Rahman@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Parise Quotes</summary>
+<ul>
+<li><a href="../../azquotes/85577-Zach_Parise.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach McGowan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/86177-Zach_McGowan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zachary Levi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8771-Zachary_Levi.html" target="A">1</a></li>
+<li><a href="../../azquotes/8771-Zachary_Levi@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/8771-Zachary_Levi@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zal Batmanglij Quotes</summary>
+<ul>
+<li><a href="../../azquotes/87783-Zal_Batmanglij.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe Helene Quotes</summary>
+<ul>
+<li><a href="../../azquotes/87857-Zoe_Helene.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zak Penn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/88668-Zak_Penn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zulay Henao Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90878-Zulay_Henao.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zachary Cole Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90916-Zachary_Cole_Smith.html" target="A">1</a></li>
+<li><a href="../../azquotes/90916-Zachary_Cole_Smith@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/90916-Zachary_Cole_Smith@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zachary Lazar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90990-Zachary_Lazar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhang Xin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91059-Zhang_Xin.html" target="A">1</a></li>
+<li><a href="../../azquotes/91059-Zhang_Xin@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zac Farro Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91108-Zac_Farro.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Z'EV Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91447-Z_EV.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zeena Parkins Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91454-Zeena_Parkins.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zicheng Hong Quotes</summary>
+<ul>
+<li><a href="../../azquotes/92122-Zicheng_Hong.html" target="A">1</a></li>
+<li><a href="../../azquotes/92122-Zicheng_Hong@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/92122-Zicheng_Hong@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/92122-Zicheng_Hong@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zan Perrion Quotes</summary>
+<ul>
+<li><a href="../../azquotes/93890-Zan_Perrion.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ziya Tong Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94391-Ziya_Tong.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoe McLellan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94533-Zoe_McLellan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ziggy Marley Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9483-Ziggy_Marley.html" target="A">1</a></li>
+<li><a href="../../azquotes/9483-Ziggy_Marley@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9483-Ziggy_Marley@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/9483-Ziggy_Marley@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/9483-Ziggy_Marley@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/9483-Ziggy_Marley@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/9483-Ziggy_Marley@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/9483-Ziggy_Marley@p=8.html" target="A">8</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zeke Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95383-Zeke_Smith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zhu Zhu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95440-Zhu_Zhu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zoya Phan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95812-Zoya_Phan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zara Larsson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95983-Zara_Larsson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zach Woods Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96472-Zach_Woods.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zomby Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96813-Zomby.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Zainab al-Khawaja Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96971-Zainab_al_Khawaja.html" target="A">1</a></li>
+</ul>
+</details>
+</section>
+<section id="help-right"></section>
+</section>
+</body>
+</html>

@@ -1,0 +1,5071 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo_标签</title>
+    <url>/hexo-%E6%A0%87%E7%AD%BE.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="./images/fly.png" />
+<center>Hexo 标签，以备遗忘</center>
+<span id="more"></span>
+<h2 id="一-Pdf-书籍插入">一. Pdf 书籍插入</h2>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;Yu/Books/1.pdf&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width:100%; height:1080px;&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="二-Latex公式">二. Latex公式</h2>
+<p>$$\begin{split}<br>
+\cos 2x &amp;= \cos^2x - \sin^2x \\<br>
+&amp;=2\cos^2x-1<br>
+\end{split}$$</p>
+<p>$$<br>
+f(n) =<br>
+\begin{cases}<br>
+n/2,  &amp; \text{if }n\text{ is even} \\<br>
+3n+1, &amp; \text{if }n\text{ is odd}<br>
+\end{cases}<br>
+$$</p>
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span><span class="keyword">\begin</span>&#123;split&#125;</span><br><span class="line"><span class="keyword">\cos</span> 2x <span class="built_in">&amp;</span>= <span class="keyword">\cos</span><span class="built_in">^</span>2x - <span class="keyword">\sin</span><span class="built_in">^</span>2x <span class="keyword">\\</span><span class="keyword">\\</span></span><br><span class="line"><span class="built_in">&amp;</span>=2<span class="keyword">\cos</span><span class="built_in">^</span>2x-1</span><br><span class="line"><span class="keyword">\end</span>&#123;split&#125;<span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">f(n) =</span><br><span class="line"><span class="keyword">\begin</span>&#123;cases&#125; </span><br><span class="line">n/2,  <span class="built_in">&amp;</span> <span class="keyword">\text</span>&#123;if &#125;n<span class="keyword">\text</span>&#123; is even&#125; <span class="keyword">\\</span><span class="keyword">\\</span></span><br><span class="line">3n+1, <span class="built_in">&amp;</span> <span class="keyword">\text</span>&#123;if &#125;n<span class="keyword">\text</span>&#123; is odd&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;cases&#125;</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+<h2 id="三-Markmap-标签">三. Markmap 标签</h2>
+
+<div class="markmap-container" style="height:400px">
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;links&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;&lt;strong&gt;inline&lt;/strong&gt; &lt;del&gt;text&lt;/del&gt; &lt;em&gt;styles&lt;/em&gt;&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[4,6]},&quot;v&quot;:&quot;multiline&lt;br&gt;\ntext&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;&lt;code&gt;inline code&lt;/code&gt;&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;遇光见影，遇你见爱！&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[11,12]},&quot;v&quot;:&quot;KaTeX - &lt;span class=\&quot;katex\&quot;&gt;&lt;span class=\&quot;katex-mathml\&quot;&gt;&lt;math xmlns=\&quot;http://www.w3.org/1998/Math/MathML\&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;±&lt;/mo&gt;&lt;msqrt&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;/mrow&gt;&lt;/msqrt&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;annotation encoding=\&quot;application/x-tex\&quot;&gt;x = { -b \\pm \\sqrt{b^2-4ac } \\over 2a}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=\&quot;katex-html\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;span class=\&quot;base\&quot;&gt;&lt;span class=\&quot;strut\&quot; style=\&quot;height:0.4306em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;mord mathnormal\&quot;&gt;x&lt;/span&gt;&lt;span class=\&quot;mspace\&quot; style=\&quot;margin-right:0.2778em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;mrel\&quot;&gt;=&lt;/span&gt;&lt;span class=\&quot;mspace\&quot; style=\&quot;margin-right:0.2778em;\&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;base\&quot;&gt;&lt;span class=\&quot;strut\&quot; style=\&quot;height:1.3845em;vertical-align:-0.345em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;mord\&quot;&gt;&lt;span class=\&quot;mord\&quot;&gt;&lt;span class=\&quot;mopen nulldelimiter\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;mfrac\&quot;&gt;&lt;span class=\&quot;vlist-t vlist-t2\&quot;&gt;&lt;span class=\&quot;vlist-r\&quot;&gt;&lt;span class=\&quot;vlist\&quot; style=\&quot;height:1.0395em;\&quot;&gt;&lt;span style=\&quot;top:-2.655em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:3em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;sizing reset-size6 size3 mtight\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;2&lt;/span&gt;&lt;span class=\&quot;mord mathnormal mtight\&quot;&gt;a&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=\&quot;top:-3.23em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:3em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;frac-line\&quot; style=\&quot;border-bottom-width:0.04em;\&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=\&quot;top:-3.394em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:3em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;sizing reset-size6 size3 mtight\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;−&lt;/span&gt;&lt;span class=\&quot;mord mathnormal mtight\&quot;&gt;b&lt;/span&gt;&lt;span class=\&quot;mbin mtight\&quot;&gt;±&lt;/span&gt;&lt;span class=\&quot;mord sqrt mtight\&quot;&gt;&lt;span class=\&quot;vlist-t vlist-t2\&quot;&gt;&lt;span class=\&quot;vlist-r\&quot;&gt;&lt;span class=\&quot;vlist\&quot; style=\&quot;height:0.9221em;\&quot;&gt;&lt;span class=\&quot;svg-align\&quot; style=\&quot;top:-3em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:3em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;mord mtight\&quot; style=\&quot;padding-left:0.833em;\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;&lt;span class=\&quot;mord mathnormal mtight\&quot;&gt;b&lt;/span&gt;&lt;span class=\&quot;msupsub\&quot;&gt;&lt;span class=\&quot;vlist-t\&quot;&gt;&lt;span class=\&quot;vlist-r\&quot;&gt;&lt;span class=\&quot;vlist\&quot; style=\&quot;height:0.7463em;\&quot;&gt;&lt;span style=\&quot;top:-2.786em;margin-right:0.0714em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:2.5em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;sizing reset-size3 size1 mtight\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;mbin mtight\&quot;&gt;−&lt;/span&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;4&lt;/span&gt;&lt;span class=\&quot;mord mathnormal mtight\&quot;&gt;a&lt;/span&gt;&lt;span class=\&quot;mord mathnormal mtight\&quot;&gt;c&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=\&quot;top:-2.8821em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:3em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;hide-tail mtight\&quot; style=\&quot;min-width:0.853em;height:1.08em;\&quot;&gt;&lt;svg xmlns=\&quot;http://www.w3.org/2000/svg\&quot; width=&#39;400em&#39; height=&#39;1.08em&#39; viewBox=&#39;0 0 400000 1080&#39; preserveAspectRatio=&#39;xMinYMin slice&#39;&gt;&lt;path d=&#39;M95,702\nc-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14\nc0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54\nc44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10\ns173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429\nc69,-144,104.5,-217.7,106.5,-221\nl0 -0\nc5.3,-9.3,12,-14,20,-14\nH400000v40H845.2724\ns-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7\nc-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z\nM834 80h400000v40h-400000z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;vlist-s\&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;vlist-r\&quot;&gt;&lt;span class=\&quot;vlist\&quot; style=\&quot;height:0.1179em;\&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;vlist-s\&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;vlist-r\&quot;&gt;&lt;span class=\&quot;vlist\&quot; style=\&quot;height:0.345em;\&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;mclose nulldelimiter\&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[13,14]},&quot;v&quot;:&quot;IMG &lt;img src=\&quot;https://www.feloy.top/images/flyfull.png\&quot; style=\&quot;zoom:25%;\&quot; /&gt;&quot;}],&quot;p&quot;:{}}"></svg>
+</div>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% markmap 400px %&#125;</span><br><span class="line"><span class="bullet">-</span> links</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**inline**</span> ~~text~~ <span class="emphasis">*styles*</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> multiline</span><br><span class="line">  text</span><br><span class="line">  </span><br><span class="line"><span class="bullet">-</span> <span class="code">`inline code`</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 遇光见影，遇你见爱！</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> KaTeX - $x = &#123; -b \pm \sqrt&#123;b^2-4ac &#125; \over 2a&#125;$</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> IMG <span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://www.feloy.top/images/flyfull.png&quot;</span> <span class="attr">style</span>=<span class="string">&quot;zoom:25%;&quot;</span> /&gt;</span></span></span><br><span class="line"></span><br><span class="line">&#123;% endmarkmap %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四-Dplayer视频">四. Dplayer视频</h2>
+<table>
+<thead>
+<tr>
+<th>空镜头</th>
+<th>全景</th>
+<th>特写</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"loop":"yes","screenshot":"yes","video":{"url":"/vedio/1.mp4"},"subtitle":{"url":"/vedio/1.vtt"},"danmaku":{"api":"https://api.prprpr.me/dplayer/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></td>
+<td><div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"loop":"yes","screenshot":"yes","video":{"url":"/Yu/1.mp4"},"danmaku":{"api":"https://api.prprpr.me/dplayer/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></td>
+<td><div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"loop":"yes","screenshot":"yes","video":{"url":"/Yu/1.mp4"},"danmaku":{"api":"https://api.prprpr.me/dplayer/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></td>
+</tr>
+<tr>
+<td>空镜头</td>
+<td>全景</td>
+<td>特写</td>
+</tr>
+<tr>
+<td><div id="dplayer3" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer3"),"loop":"yes","screenshot":"yes","video":{"url":"/vedio/1.mp4"},"subtitle":{"url":"/vedio/1.vtt"},"danmaku":{"api":"https://api.prprpr.me/dplayer/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></td>
+<td><div id="dplayer4" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer4"),"loop":"yes","screenshot":"yes","video":{"url":"/Yu/1.mp4"},"danmaku":{"api":"https://api.prprpr.me/dplayer/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></td>
+<td><div id="dplayer5" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer5"),"loop":"yes","screenshot":"yes","video":{"url":"/Yu/1.mp4"},"danmaku":{"api":"https://api.prprpr.me/dplayer/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| 空镜头                                                       | 全景                          | 特写                          |</span><br><span class="line">| ------------------------------------------------------------ | ----------------------------- | ----------------------------- |</span><br><span class="line">| &#123;% dplayer &quot;url=/vedio/1.mp4&quot; &quot;suburl=/vedio/1.vtt&quot; %&#125; | &#123;% dplayer &quot;url=/Yu/1.mp4&quot; %&#125; | &#123;% dplayer &quot;url=/Yu/1.mp4&quot; %&#125; |</span><br><span class="line">| 空镜头                                                       | 全景                          | 特写                          |</span><br><span class="line">| &#123;% dplayer &quot;url=/vedio/1.mp4&quot; &quot;suburl=/vedio/1.vtt&quot; %&#125; | &#123;% dplayer &quot;url=/Yu/1.mp4&quot; %&#125; | &#123;% dplayer &quot;url=/Yu/1.mp4&quot; %&#125; |</span><br></pre></td></tr></table></figure>
+<h2 id="五-Echarts-图片">五. Echarts 图片</h2>
+<p>ifreme 引入 html 文件</p>
+<h2 id="六-Aplayer-音乐">六. Aplayer 音乐</h2>
+<p>网易云音乐</p>
+
+    <div id="aplayer-YxugxWIO" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="1978921795" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#777777"
+    ></div>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;1978921795&quot; &quot;netease&quot; &quot;playlist&quot; &quot;mutex:true&quot; &quot;theme:#777777&quot; %&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>标签</category>
+      </categories>
+      <tags>
+        <tag>练习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>漫芊遍野</title>
+    <url>/%E6%BC%AB%E8%8A%8A%E9%81%8D%E9%87%8E.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="./images/my.jpg" />
+<center><font color=#6f5dee>遇光见影，遇你见爱! </font>
+<span id="more"></span>
+
+        <div id="aplayer-OCcJsrbh" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-OCcJsrbh"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "林俊杰 - 弹唱",
+              author: "林俊杰JJLin",
+              url: "/music/林俊杰 - 弹唱.mp3",
+              pic: "/music/M.jpg",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>  
+<p>喜欢小漫，喜欢你</p>
+<p>喜欢我们相遇的那一晚</p>
+<p>喜欢和你一起去喝咖啡</p>
+<p>喜欢和你分享诗歌</p>
+<p>和你一起听音乐</p>
+<p>一起去影院看电影</p>
+<p>还有什么比和你在一起更重要？</p>
+<p>还有什么比爱情与梦想交织在一起更重要？</p>
+<p>喜欢你的手</p>
+<p>喜欢你笑起来露出的那颗虎牙</p>
+<p>喜欢你脸上的那颗痣</p>
+<p>喜欢你独有音调的那句：你干嘛啊！</p>
+<p>我也会不自觉地模仿你说：你干嘛啊！</p>
+<p>在光影的梦想里</p>
+<p>在我影的过往里</p>
+<p>在无数个日日夜夜地追寻里</p>
+<p>我裹着影遇见了光</p>
+<p>我藏着爱遇见了你</p>
+<hr>
+<p><font color=#6f5dee>《一百首爱的十四行诗》 </font></p>
+<p><font size=1px > ——巴勃罗·聂鲁达</font></p>
+<font color=#db62c2>
+<p>用你的眼睛阻隔这个月的光</p>
+<p>用你的臂膀拂去所有的忧伤</p>
+<p>只求你别忘了</p>
+<p>我若哭着醒来</p>
+<p>那是梦见自己是迷途的孩子</p>
+<p>穿过夜晚的树叶</p>
+<p>寻找你的手</p>
+<p>你是一沽无声的泉水</p>
+<p>在遥远的山脚渐渐隐匿</p>
+<p>我是一颗孤单的石子</p>
+<p>在寞落的山顶等待晨曦</p>
+<p>怎么说起，又怎能忘记</p>
+<p>所有的话语都显得苍白无力</p>
+<p>所以，我只能——</p>
+<p>用我这个月的记忆铭刻你的快乐</p>
+<p>用我所有的泪水灌溉你的伤心</p>
+<p>只求你别忘了</p>
+<p>我若笑着死去</p>
+<p>那是因为梦见自己是残落的败叶</p>
+<p>穿过寂静的黑色</p>
+<p>亲吻你的脸</p>
+</font>
+</center>
+<p><img src="/music/M2.jpg" alt="MY"></p>
+<p>（摘录于2023/12/02）</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+        <category>漫野</category>
+      </categories>
+      <tags>
+        <tag>漫野</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>致自己</title>
+    <url>/%E8%87%B4%E8%87%AA%E5%B7%B1.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="./images/yu.jpg" />
+<center>自己致已，进阶更好的自己吧！</center>
+<span id="more"></span> 
+<h2 id="回忆978，给自己的一封信💌">回忆978，给自己的一封信💌</h2>
+<p>嗨, 桃，胜桃，阿桃，原谅我这么喊你的名字， 但对回忆的那个你， 我心里就是如此，如此地想这样喊你．</p>
+<p>在 2017 年, 你的一封来信中, 问我写到: 我有没有喜欢过你. 不过还是被你涂抹了. 这个问题, 那时自己也很想告诉你, 但在那时自己的心情也很乱, 对待回忆还是一团糟, 直到现在才发现了回忆是自己生命中的瑰宝, 而自己也常常在回忆里感受着和反思着.</p>
+<p>你说你的潜意识里有我, 让我非常非常地高兴, 因为自己这些年来, 都没有再感受到来自她人的思念和喜欢. 还以为自己已成为了爱情的边缘者, 没有再被人喜欢, 再被人主动, 自己有喜欢的她也只能暗恋于心, 生怕主动了也会被拒绝.</p>
+<p>记得2020年第一次坐飞机, 自己选了靠窗的位置, 而刚好旁边的是一对情侣, 而去年第一次坐高铁, 也是在靠窗的位置, 也刚好旁边是一对情侣, 那一刻我才发现自己好像成了爱情的旁观者, 只是客观地存在了…还有去年那晚经过西湖时, 那儿的人们不是和朋友, 就是和喜欢的人游玩和散步, 而自己只身一人, 只凭着对父亲日记里写到杭城的美丽, 西湖的美景的遐想与向往来到了西湖, 一个人, 我真的感觉好孤单….而且L.就在杭州的不远处, 我却无法找她闲聊, 也没有跟她说我就在西湖.</p>
+<p>在我孤独与迷惘的时候, 我常常会想起你(也会想起733, L.), 想起你给过我的那一份感情和那一个不曾迷失的自己. 上个星期我想起了你, 今年高考前后也想起了你, 今年早些时候我发了一张你之前用作微信的本人头像, 那时也想起了你, 于是就去逛了你的朋友圈, 看着你“走过场”的那个视频. 那些时候, 我多想主动去找你, 好想问你: 你还喜欢我吗?</p>
+<p>但内心时常提醒着我, 我们已经不可能了, 那时候看着你男朋友那么好, 那么厉害(虽然现在分了, 相信你以后也会找到一个更好的!), 就像现在看到L.的男朋友这么好一样(733就不用说啦), 他们都能给你们肩膀依靠, 在现实生活中也能让你们感受到真实, 而自己, 能给的, 只是回忆, 有过悲伤, 朦胧却又虚幻. 我知道我给不了你们现实生活, 所以只能通过艺术的方式来表达自己对你们的思念与喜欢, 而现在渺小的自己也在一步步地去追逐那镜头表达的方式啊.</p>
+<p>很喜欢 萍水相逢 这个词, 因为她的名字有“萍”, 而水就是我们相遇的开始啊.</p>
+<p>在我的记忆中, 从初一到初二, 虽然我们就是隔壁班, 但我们还是不认识对方, 却因为水, 我们相遇了. 初二下学期临近期末的那段时间, 有一晚下晚自习我走出了教室, 当时好像看到你来我们班接水喝, 好像李琪琪也在, 我当时好像对你说了“同学, 你们班没有水吗? 怎么来我们班接水来了?”类似的话语, 于是我们的故事就这样开始了!</p>
+<p>后几天李琪琪也时不时给我说, 隔壁班有个女生喜欢我, 那时候我还不相信, 以为她是和我开玩笑的, 直到看到了你把内心的喜欢疯狂地表现了出来, 我便相信是真的了. 期末考试前一天扫地和排桌椅, 我当时吃着杨桂花买来的土豆饼, 然后你突然地 “冒” 到了教室门口前, 看到我说了一声…(忘了是什么了, 哈哈). 不过那时的我的心情和你一样, 好激动, 好高兴!</p>
+<p>考试期间要上晚自习, 上晚自习自己都没有心情看书了, 都在和李琪琪她们聊着你, 我们当时还拿班上的一个男生和你们班的大双和小双开玩笑. 特别是回到寝室也睡不着, 因为晚上我们寝室里的人都在说着你, 说着我, 说着我们, 说着你是我的圣桃, 那时候真的真的好高兴, 高兴到无法入眠…</p>
+<p>记得在走廊上你让李琪琪来要我的qq. 在考最后一科的时候(忘了是生物还是地理了), 当时试卷写完了, 可时间还没到, 自己就在心里喊着你的名字: 胜桃, 胜桃, 你是我的圣桃, 我喜欢你…(类似的话语, 哈哈), 那时真的好想时间快点结束, 然后就能回家和你qq聊天了.</p>
+<p>回到老家, 打开了电脑, 同意了你的申请(记得那时候你网名有过叫“骑白马的不一定是王子”,头像也有印象的,好像是穿黄色T恤的背影女孩…), 但看到你也没有发什么信息来, 我也不知道要发什么消息, 好像第二天还看到你发了摘草莓的说说, 我当时便觉得有种落空感, 或许你不是那么喜欢我吧, 所以就去玩滑板了, 然后姐姐就在玩电脑.不知道是不是在傍晚, 姐说有个女生问我在不在, 她就回复了我弟去玩了…然后自那之后就和你不知不觉聊了起来. 那时候我内心对你的欢喜, 不知道要怎么说出口, 而且你的主动, 让自己内心的主动被动地隐藏了起来.</p>
+<p>那个夏天, 我真的好高兴, 每天和你聊天, 我用的手机是妈妈的, 然后就放在祖宗祠堂上, 因为我发现在那里的wifi信号是最好的(哈哈,祖宗也在保佑着我能和你聊天啊). 有一次你问我谈过恋爱了没有, 有没有喜欢的人, 我说没有, 是因为当时真的没有, 不过呢有一个是六年级喜欢过的女生了, 那时候也不和她聊天了, 不过她呢你也是认识的, 就是…胡洋锦耶~~ 因为想到你和她是一个班的, 所以当时就没有告诉你我和她的往事, 而她呢, 在六年级时给我留了言说“逗比, 喜欢我吗? “ 和 “是风是雨我陪你”… 不过那个账号, 我很久都没登录进去了.</p>
+<p>那个夏天, 我还分享了好多歌给你, 那是自己第一次分享那么多歌给一个女生, 也是第一次向她人说起自己为何喜欢JJ, 不过那时候听着分享给你的 《关键词》，听着没有什么感觉，当时最喜欢的是《浪漫血液》。当我问你喜欢什么歌时，你分享了《国王与乞丐》，后来这首歌让我想起了你，听着这首歌，我的心情也像国王与乞丐一样，一样的富有，一样的贫穷。</p>
+<p>那个夏天，你让我做了你一天的男朋友，我最终也答应了，应该说这也是我所希望的啊，所以我们便成为了一天的情侣，即便是在手机上聊天的情侣，在我们的生命里也始终有一天是情侣的啊。有时候我也在想，我的初恋是你呢？还是733（小学的就不算啦吧，哈哈）</p>
+<p>直到那个夏天过完了，我也不知道为何我们还是没有在一起。当我想和你在一起时，脑海里总会有种潜意识的克制，不知是你我刚好都姓杨，让自己感觉我们就是有种陌生的熟悉感，而这种感觉，现在都还在，以至于我没再主动找733，L.聊天了，却还来找你聊天。因为我总觉得我们还能在一起，而潜意识里的克制让自己不能和你在一起。我对你的喜欢，便是这种心情吧。自己和733也总分分合合，而每次都是自己提出的，我想或许自己也有不能和她在一起的原因吧，而原因都来源于自己啊。</p>
+<p>到了九年级开学，刚开始我们两个班每星期刚好有一节体育课在同一节，那时真的挺开心的，因为我知道有你在，你在看，我便会发自内心地想要去做得更好，就连跑步时的心情都大不相同了。而这都是因为你，因为你，我也想让你看到更好的自己啊。有一次周五放学，其它人都走了，只剩我一人在打扫教室，我也不知道为什么，我能感受到你的存在，我知道你会在教室后门的小窗看着我，所以自己打扫卫生时就特别认真，特别仔细…也有一晚，不知道是不是晚自习自己在看语文书，然后下晚自习时书本就放在课桌上，等到第二天上语文课我翻开读本时，惊讶地看到了你的名字，当时我嘴角微笑着，心里便知是怎么回事了，上课也还时不时翻回那页看你的名字，心里就特别地开心。</p>
+<p>第一次给我写信的女生，是你，是那一封道歉信，虽说删说说是小事而且好像了和你没有多大的联系，也不值得你为此而道歉，但写信的习惯，却伴随了我的爱情，和733没有什么来信 ，和L.却有，自己写信给她，她也给自己来信，你们的书信，总能让自己看到你们的内心感受和想法，也客观地看到当时的那一个自己。每每读着你们的来信，总会让自己落泪，让自己亏欠着回忆中的你们，也让自己知道，自己也曾有人喜欢着…</p>
+<p>L.喜欢画画，我和她的开始也是自己画了两幅画送给她。不知道你是否还记得，2016年你生日时我给你画的那幅画，画呢是照着你的照片画的，后来你说画的不像你，是因为画得不是很好，但对自己来说，怎么看我都觉得像你，因为那是一种心情，是自己的一笔一画啊!</p>
+<p>即使这样，我还是不知道自己何为没有主动向你表达我的心情，送画给L. 后来我和她在一起了，送画给你，后来我们反而更遥远了。九年级九月份就快要结束了，在国庆节前一个星期里，733时不时就看向我们组长韩双英，而自己当时的余光就感觉她往我这边看，然后我就看向她，然后国庆期间我就在qq上问她喜欢我吗？她说让我猜，我便说，有一点，然后她说答对了…然后一切故事便从这里发生了转折。</p>
+<p>对自己来说，733，L. 和你，你们给了我三段不同的爱情，不同的心情感受，但我发现，自己对733，L. 的情感是一种悲伤，悲伤而美好，而对于你，是热烈，是一种阳光向上，因为你，我发觉自己能从内心深处去做出改变，而不是像现在这样，做着无谓的挣扎。</p>
+<p>说到书信，好像是书信记录了我们长达3年的情谊，搬到新教学楼时，自己已经给733表白了，在和她聊天时，好像也忘记了你的存在，就像你谈了新的男朋友，也会忘了我的存在一样吧。不过2016年的那个圣诞夜，我收到了你的礼物，心情很开心，因为这是自己从没想过的，也从没有收到过她人的礼物，而且还是女生啊，你送的薯片和糖果我都舍不得吃。</p>
+<p>到了2017年平安夜，下晚自习我拿了苹果给你，第二天也收到了你的书信和糖果，不过呢，你是让杨水成拿来的。而那时候自己也和L.分了，是自己主动提出的（哈哈，自己真的很可笑吧，提出在一起的是我，提出分手的也是我）。</p>
+<p>然后到了2018年的平安夜，晚自习下课间时，我拿苹果去文科楼送给你时，刚好在操场升旗台那儿遇到了你，当时你突然转过头来说…（忘了说什么了），那里我觉得你当时的样子好可爱，真的好可爱。</p>
+<p>到2019年圣诞夜，自己没有在学校读，也没有给你送苹果了。直到现在也没法送了，彼此相距也越来越远了。</p>
+<p>也是在2019年，在9月2号晚，你说你找我谈心，你说你想听到我的声音，当时自己也录了声音，觉得自己的声音不好听，所以就没发给你，我知道你当时很难过，我也想用声音来安慰你，可自己的声音，真的太难听了，而自己，也无法透过声音来传达感情，所以当时自己录的时候，自己听了也感觉不到一点情感，所以就没有发给你。在你伤心难过的时候，我却没能帮到你，替你分担伤痛，试问，你和这样的我如果当初在一起了，你会开心嘛？我们也会像我和733，和L.一样，迟早会分开的。我常常都觉得自己，是不是此生只适合一个人？而在回忆中有了你们，自己回想起爱情，或许便不会再感到孤单了吧，只是如果此生都是这样一个人的话，我会很对不起父母的…</p>
+<p>在你的来信中，你说你为我流过泪，恨过我，谢过我，也为我祝福着。</p>
+<p>我知道自己曾让你伤心难过，对不起已经不能挽回什么，所以只能谢谢你，以前的你和现在的你，还有谢谢那时的那个我吧，谢谢彼此都曾喜欢过吧。而你对我的喜欢，是急流是狂风，具有热烈的激情，而我对你的喜欢，是平原是小雨，平缓而无声，小心地感受着这份感情。</p>
+<p>写到这里，我也回答了你2017年的那封来信最后涂抹的那个问题了，是的：我，喜欢过你…</p>
+<p>不然就没有我现在想到的飛䎅Feloy了，一个英文fly, 便奇迹般地把我对你，733，L. 的感情联结在了一起，每当我想起过去，便想起了你们，这便是自己对回忆的爱情的总结吧。</p>
+<p>F.L.Y. 是我想表达成故事的整体，却也能从整体中分离出构成你们各自独立的故事。而我此后想要去做的，就是把回忆写成故事，然后通过自己喜欢的方式表达出来，而把有关于你们的回忆构思成为故事，就是自己走出回忆走向生活的第一步啊，有故事的生活，如此真实，如此亲近，如此清晰明了！</p>
+<p>而我的故事大多都是从回忆里摸索，所以才发现回忆是自己创作的无限珍宝啊 ！</p>
+<p>写到这里, 写了这么多，我也不知道自己究竟想要表达什么，思绪还是不够清楚，但我已经把自己想起的，对自己来说重要的，都讲出来了，原谅我的文字表达得不好，但感情却是真的，而且不曾改变（希望你能感受到啊~~），因为自己每当回想起，以前内心的情感就又涌现了出来。</p>
+<p>我不擅长用口语和行动来表达，但镜头的表达却成了我要追逐的方式。</p>
+<p>我也只是一个渺小而普通的男孩，却因为回忆中有你，让自己感受到了与众不同。</p>
+<p>我也还没鼓起勇气和喜欢的女生一起生活，但走出回忆就是走向生活的第一步啊！</p>
+<p>嗯嗯，在这4000有余的文字里，希望你能从我的想法和感受中，找回或找到你喜欢的那个你：疯狂，主动，热情，还会傻白甜；酷得像风，野得像狗，想你所想，爱你所爱的那个自己，然后找到一个和你在一起生活的那个人，能够替你分担苦难，为你扛起肩膀的重担，还能给你遮起人生的天空…</p>
+<p>总之呢，还是要快快乐乐，顺顺利利，健健康康，平平安安，幸福美满啦！！！（2022/9/30/23:37/晴/杨）</p>
+]]></content>
+      <categories>
+        <category>Liiany</category>
+        <category>music</category>
+        <category>Yuoek</category>
+        <category>歌单</category>
+        <category>音乐</category>
+        <category>回忆</category>
+        <category>music</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/Mycss.css</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>.body{
+    background-color: rgba(239, 66, 170, 0);
+}
+/* 包裹菜单栏的div居中 */
+.nav{
+    margin: 0 0;
+    width: 100%;
+}
+/* 描述a标签的css */
+.nav a{
+    display: block;
+    width: 100px;
+    color: white;
+    background-color: #fff0;
+    text-align: center;
+    text-decoration: none;
+}
+/* 鼠标悬停a标签事改变背景色 */
+.nav a:hover{
+	color: blue;
+    background-color: rgba(61, 220, 241, 0.644);
+}
+/* 去除无序列表 无标记 取消默认的内边距  */
+.nav ul{
+    list-style: none;
+    padding: 10px;
+}
+.drop-down > ul{
+	float: right;
+    background-color: rgba(12, 138, 241, 0);
+}
+/* 一级菜单设置浮动 使之在一行上面 */
+.drop-down > ul >li {
+    float: right;
+    /* 为了让二级菜单栏参照定位  */
+    position: relative;
+}
+/* 一级菜单栏悬停鼠标时显示二级菜单栏 */
+.drop-down > ul >li:hover > ul{
+    display: block;
+}
+/* 二级菜单栏绝对定位 脱离文档 默认不显示 */
+.drop-down > ul >li > ul {
+    position: absolute;
+    display: none;
+}
+/* 在二级菜单栏悬停鼠标时 显示相对于的三级菜单栏 */
+.drop-down > ul > li > ul > li:hover > ul{
+    display: block;
+}
+/* 二级菜单栏相对定位 为下面三级菜单栏绝对定位做准备 */
+.drop-down > ul > li > ul > li{
+    position: relative;
+}
+/* 三级菜单栏绝对定位 脱离文档流 并且位于二级菜单栏右边 默认不显示 */
+.drop-down > ul > li > ul > li > ul {
+    position: absolute;
+    right: 100%;
+    top:0;
+    display: none;
+}
+/* 在三级菜单栏悬停鼠标时 显示相对于的三级菜单栏 */
+.drop-down > ul > li > ul > li > ul > li:hover > ul{
+    display: block;
+}
+/* 三级菜单栏相对定位 为下面三级菜单栏绝对定位做准备 */
+.drop-down > ul > li > ul > li > ul > li{
+    position: relative;
+}
+/* 四级菜单栏绝对定位 脱离文档流 并且位于五级菜单栏右边 默认不显示 */
+.drop-down > ul > li > ul > li > ul > li > ul {
+    position: absolute;
+    right: 100%;
+    top:0;
+    display: none;
+}
+/* 在四级菜单栏悬停鼠标时 显示相对于的五级菜单栏 */
+.drop-down > ul > li > ul > li > ul > li > ul > li:hover > ul{
+    display: block;
+}
+/* 四级菜单栏相对定位 为下面三级菜单栏绝对定位做准备 */
+.drop-down > ul > li > ul > li > ul > li > ul > li{
+    position: relative;
+}
+/* 四级菜单栏绝对定位 脱离文档流 并且位于二级菜单栏右边 默认不显示 */
+.drop-down > ul > li > ul > li > ul > li > ul > li > ul {
+    position: absolute;
+    right: 100%;
+    top:0;
+    display: none;
+}
+/* 清除浮动 兼容低版本IE */
+.clearfix{
+    *zoom: 1;
+}
+/* 清除一级菜单栏浮动的操作 */
+.clearfix ::after{
+    content: ".";
+    display: block;
+    clear: both;
+/* 兼容低版本Firefox*/
+    height: 0;
+    overflow: hidden;
+}
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/main.css</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>:root {
+  /* dy color */
+  --select-text-bg-color: #ffafa3; /* 文本选中背景色（粉红） */
+  /*--primary-color: red;*/
+  --focus-color: #52baff; /* 点击某些元素（如标题）显示的颜色（偏红） */
+  --codeblockbg-color: rgba(152, 223, 255, 0); /* 代码块背景色（灰色） */
+  --codeblockfont-color: #555; /* 代码块默认字体颜色（黑色） */
+  --titlebefore-color: #00c4b6; /* 各级标题点缀颜色（绿色） */
+  --codeblocknum-color: rgba(128, 128, 255, 0); /* 代码块行编号颜色（蓝色） */
+  --blockquoteicon-color: #5fa7e4; /* blockquote提示图标色（蓝色） */
+  --blockquotebg-color: #fff0; /* blockquote背景色（淡蓝） */
+  --ulol-color: #81accf; /* 有序无序列表前缀颜色（灰色） */
+  --tableevenrow-color: rgba(128, 128, 255, 0); /* 表格偶数行颜色（淡灰） */
+  --tablerow-color: rgba(108, 238,238, 0);/* 表格偶数行颜色（淡灰） */
+  --tablefocusrow-color: rgba(96, 252, 156, 0.4); /* 表格鼠标悬停行颜色（淡蓝） */
+  --tableborder-color: #ffffffd7; /* 表格边框色（黑色） */
+  --tablethbg-color: rgba(128, 128, 255, 0.2); /* 表格表头背景色（淡蓝） */
+  --toc-color: #ffa500; /* 目录颜色（绿色） */
+  --atext-color: black; /* 超链接文本颜色（黑色） */
+  --abottom-color: #cc579a24; /* 超链接下划线颜色（青色） */
+  --code-color: #ff3502; /* 行内代码前景色（红色） */
+  --codebg-color: #f8f5ec; /* 行内代码背景色（淡红） */
+  --footnote-color: #e96900; /* 脚注上标前景色（红色） */
+  --footnotebg-color: #f8f8f8; /* 脚注上标背景色（淡灰） */
+  --highlight-color: red; /* 高亮文本前景色（红色） */
+  --highlightbg-color: yellow; /* 高亮文本背景色（黄色） */
+  --split-color: #44d7b6; 
+  --taskborder-color: red; /* 任务列表边框色（红色） */
+  --taskfocus-color: #00c4b6; /* 任务列表选中填充色（绿色） */
+  --spannote-color: #e91e64; /* 小标签背景色（红色） */
+  --emptext-color: #fe5f58; /* 几款强调型文本的颜色（红色） */
+  --hidetextcover-color: #a1a1a1; /* 隐藏文本遮罩颜色（灰色） */
+  --hidetext-color: #444; /* 隐藏文本颜色（黑色） */
+  --spanbtn-color: #44d7b6; /* 文本按钮颜色（绿色） */
+  --detailstxt-color: rgba(68,68,68,.7); /* 折叠框summary文字颜色（灰色） */
+  --detailsbg-color: #ebf9ed; /* 折叠框summary背景色（青绿色） */
+  --detailsborder-color: #00c4b6; /* 折叠框边框色（绿色） */
+  --body-color: #222; /* 文本颜色 */
+  --para-color: #222; /* 段落文本颜色（黑色） */
+  /* dy font */
+  --body-font: 'Source Sans Pro', '等距更纱黑体 SC', 'Helvetica Neue', Arial, sans-serif; /* 全局字体 */
+  --code-font: 'JetBrains Mono'; /* 代码块以及行内代码字体 */
+
+  --body-bg-color: #f5f7f9;
+  --content-bg-color: rgba(255,255,255,0);
+  --card-bg-color: $ rgba(255,255,255,0);
+  --text-color: $ #222;
+  --blockquote-color: $ rgba(0,0,0,0.267) 0;
+  --link-color: #a5ff01;
+  --link-hover-color: #222;
+  --brand-color: rgba(239,114,66,0.949);
+  --brand-hover-color: rgba(255,255,255,0);
+  --table-row-odd-bg-color: #f9f9f9;
+  --table-row-hover-bg-color: #f5f5f5;
+  --menu-item-bg-color: #f5f5f5;
+  --theme-color: #222;
+  --btn-default-bg: #fff;
+  --btn-default-color: $ #222;
+  --btn-default-border-color: $ #222;
+  --btn-default-hover-bg: #222;
+  --btn-default-hover-color: #fff;
+  --btn-default-hover-border-color: #222;
+  --highlight-background: #f3f3f3;
+  --highlight-foreground: #444;
+  --highlight-gutter-background: #f3f3f3;
+  --highlight-gutter-foreground: #555;
+  color-scheme: light;
+  
+}
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+a {
+  background: transparent;
+}
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+button,
+input {
+/* 1 */
+  overflow: visible;
+}
+button,
+select {
+/* 1 */
+  text-transform: none;
+}
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+progress {
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+[type='search'] {
+  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+}
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  font: inherit; /* 2 */
+  -webkit-appearance: button; /* 1 */
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+::selection {
+  background: $ #4084d0;
+  color: #eee;
+}
+html,
+body {
+  height: 100%;
+  mix-blend-mode: multiply;
+  background-image:url(/images/L1.png); 
+  background-attachment:fixed; 
+  background-size:cover;  
+}
+body {
+  background: var(--body-bg-color);
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 1em;
+  line-height: 2;
+  min-height: 100%;
+  position: relative;
+  transition: padding 0.2s ease-in-out;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 30px 0 15px;
+}
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.375em;
+}
+h3 {
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1.125em;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: 0.875em;
+}
+p {
+  margin: 0 0 20px;
+}
+a {
+  border-bottom: 1px solid #999;
+  color: var(--link-color);
+  cursor: pointer;
+  outline: 0;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+a:hover {
+  border-bottom-color: var(--link-hover-color);
+  color: var(--link-hover-color);
+}
+iframe,
+img,
+video,
+embed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+hr {
+  background-image: repeating-linear-gradient(-45deg, rgba(167,241,238,0.741), rgba(167,241,238,0.741) 4px, transparent 4px, transparent 8px);
+  border: 0;
+  height: 3px;
+  margin: 40px 0;
+}
+blockquote {
+  border-left: 4px solid rgba(167,241,238,0.741);
+  color: var(--blockquote-color);
+  margin: 0;
+  padding: 0 15px;
+}
+blockquote cite::before {
+  content: '-';
+  padding: 0 5px;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0;
+  padding: 0;
+}
+.table-container {
+  overflow: auto;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.875em;
+  margin: 0 0 20px;
+  width: 100%;
+}
+tbody tr:nth-of-type(odd) {
+  background: var(--table-row-odd-bg-color);
+}
+tbody tr:hover {
+  background: var(--table-row-hover-bg-color);
+}
+caption,
+th,
+td {
+  padding: 8px;
+}
+th,
+td {
+  border: 1px solid rgba(167,241,238,0.741);
+  border-bottom: 3px solid rgba(167,241,238,0.741);
+}
+th {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+td {
+  border-bottom-width: 1px;
+}
+.btn {
+  background: var(--btn-default-bg);
+  border: 2px solid var(--btn-default-border-color);
+  border-radius: 2px;
+  color: var(--btn-default-color);
+  display: inline-block;
+  font-size: 0.875em;
+  line-height: 2;
+  padding: 0 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+.btn:hover {
+  background: var(--btn-default-hover-bg);
+  border-color: var(--btn-default-hover-border-color);
+  color: var(--btn-default-hover-color);
+}
+.btn + .btn {
+  margin: 0 0 8px 8px;
+}
+.btn .fa-fw {
+  text-align: left;
+  width: 1.285714285714286em;
+}
+.toggle {
+  line-height: 0;
+}
+.toggle .toggle-line {
+  background: #fff;
+  display: block;
+  height: 2px;
+  left: 0;
+  position: relative;
+  top: 0;
+  transition: all 0.4s;
+  width: 100%;
+}
+.toggle .toggle-line:not(:first-child) {
+  margin-top: 3px;
+}
+.toggle.toggle-arrow .toggle-line:first-child {
+  left: 50%;
+  top: 2px;
+  transform: rotate(45deg);
+  width: 50%;
+}
+.toggle.toggle-arrow .toggle-line:last-child {
+  left: 50%;
+  top: -2px;
+  transform: rotate(-45deg);
+  width: 50%;
+}
+.toggle.toggle-close .toggle-line:nth-child(2) {
+  opacity: 0;
+}
+.toggle.toggle-close .toggle-line:first-child {
+  top: 5px;
+  transform: rotate(45deg);
+}
+.toggle.toggle-close .toggle-line:last-child {
+  top: -5px;
+  transform: rotate(-45deg);
+}
+/*!
+  Theme: Default
+  Description: Original highlight.js style
+  Author: (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
+  Maintainer: @highlightjs/core-team
+  Website: https://highlightjs.org/
+  License: see project LICENSE
+  Touched: 2021
+*/pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{background:#f3f3f3;color:#444}.hljs-comment{color:#697070}.hljs-punctuation,.hljs-tag{color:#444a}.hljs-tag .hljs-attr,.hljs-tag .hljs-name{color:#444}.hljs-attribute,.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-name,.hljs-selector-tag{font-weight:700}.hljs-deletion,.hljs-number,.hljs-quote,.hljs-selector-class,.hljs-selector-id,.hljs-string,.hljs-template-tag,.hljs-type{color:#800}.hljs-section,.hljs-title{color:#800;font-weight:700}.hljs-link,.hljs-operator,.hljs-regexp,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-symbol,.hljs-template-variable,.hljs-variable{color:#ab5656}.hljs-literal{color:#695}.hljs-addition,.hljs-built_in,.hljs-bullet,.hljs-code{color:#397300}.hljs-meta{color:#1f7199}.hljs-meta .hljs-string{color:#38a}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+.highlight:hover .copy-btn,
+pre:hover .copy-btn {
+  opacity: 1;
+}
+.copy-btn {
+  color: #333;
+  cursor: pointer;
+  line-height: 1.6;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  font-size: 0.8125em;
+  right: 4px;
+  top: 8px;
+}
+code,
+kbd,
+figure.highlight,
+pre {
+  background: var(--highlight-background);
+  color: var(--highlight-foreground);
+}
+figure.highlight,
+pre {
+  line-height: 1.6;
+  margin: 0 auto 20px;
+}
+figure.highlight figcaption,
+pre .caption,
+pre figcaption {
+  background: var(--highlight-gutter-background);
+  color: var(--highlight-foreground);
+  display: flow-root;
+  font-size: 0.875em;
+  line-height: 1.2;
+  padding: 0.5em;
+}
+figure.highlight figcaption a,
+pre .caption a,
+pre figcaption a {
+  color: var(--highlight-foreground);
+  float: right;
+}
+figure.highlight figcaption a:hover,
+pre .caption a:hover,
+pre figcaption a:hover {
+  border-bottom-color: var(--highlight-foreground);
+}
+pre,
+code {
+  font-family: consolas, Menlo, monospace, 'PingFang SC', 'Microsoft YaHei';
+}
+code {
+  border-radius: 3px;
+  font-size: 0.875em;
+  padding: 2px 4px;
+  overflow-wrap: break-word;
+}
+kbd {
+  border: 2px solid rgba(167,241,238,0.741);
+  border-radius: 0.2em;
+  box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1);
+  font-family: inherit;
+  padding: 0.1em 0.3em;
+  white-space: nowrap;
+}
+figure.highlight {
+  position: relative;
+}
+figure.highlight pre {
+  border: 0;
+  margin: 0;
+  padding: 10px 0;
+}
+figure.highlight table {
+  border: 0;
+  margin: 0;
+  width: auto;
+}
+figure.highlight td {
+  border: 0;
+  padding: 0;
+}
+figure.highlight .gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+figure.highlight .gutter pre {
+  background: var(--highlight-gutter-background);
+  color: var(--highlight-gutter-foreground);
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+}
+figure.highlight .code pre {
+  padding-left: 10px;
+  width: 100%;
+}
+figure.highlight .marked {
+  background: rgba(0,0,0,0.3);
+}
+pre .caption,
+pre figcaption {
+  margin-bottom: 10px;
+}
+.gist table {
+  width: auto;
+}
+.gist table td {
+  border: 0;
+}
+pre {
+  overflow: auto;
+  padding: 10px;
+  position: relative;
+}
+pre code {
+  background: none;
+  padding: 0;
+  text-shadow: none;
+}
+.blockquote-center {
+  border-left: 0;
+  margin: 40px 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+.blockquote-center::before,
+.blockquote-center::after {
+  left: 0;
+  line-height: 1;
+  opacity: 0.6;
+  position: absolute;
+  width: 100%;
+}
+.blockquote-center::before {
+  border-top: 1px solid rgba(167,241,238,0.741);
+  text-align: left;
+  top: -20px;
+  content: '\f10d';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.blockquote-center::after {
+  border-bottom: 1px solid rgba(167,241,238,0.741);
+  bottom: -20px;
+  text-align: right;
+  content: '\f10e';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.blockquote-center p,
+.blockquote-center div {
+  text-align: center;
+}
+.group-picture {
+  margin-bottom: 20px;
+}
+.group-picture .group-picture-row {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 3px;
+}
+.group-picture .group-picture-column {
+  flex: 1;
+}
+.group-picture .group-picture-column img {
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  width: 100%;
+}
+.post-body .label {
+  color: $ #222;
+  padding: 0 2px;
+}
+.post-body .label.default {
+  background: #f0f0f0;
+}
+.post-body .label.primary {
+  background: #efe6f7;
+}
+.post-body .label.info {
+  background: #e5f2f8;
+}
+.post-body .label.success {
+  background: #e7f4e9;
+}
+.post-body .label.warning {
+  background: #fcf6e1;
+}
+.post-body .label.danger {
+  background: #fae8eb;
+}
+.post-body .link-grid {
+  display: grid;
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+  padding: 1rem;
+}
+@media (max-width: 767px) {
+  .post-body .link-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.post-body .link-grid .link-grid-container {
+  border: solid rgba(167,241,238,0.741);
+  box-shadow: 1rem 1rem 0.5rem rgba(0,0,0,0.5);
+  min-height: 5rem;
+  min-width: 0;
+  padding: 0.5rem;
+  position: relative;
+  transition: background 0.3s;
+}
+.post-body .link-grid .link-grid-container:hover {
+  animation: next-shake 0.5s;
+  background: var(--card-bg-color);
+}
+.post-body .link-grid .link-grid-container:active {
+  box-shadow: 0.5rem 0.5rem 0.25rem rgba(0,0,0,0.5);
+  transform: translate(0.2rem, 0.2rem);
+}
+.post-body .link-grid .link-grid-container .link-grid-image {
+  border: 1px solid rgba(167,241,238,0.741);
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 5rem;
+  padding: 3px;
+  position: absolute;
+  width: 5rem;
+}
+.post-body .link-grid .link-grid-container p {
+  margin: 0 1rem 0 6rem;
+}
+.post-body .link-grid .link-grid-container p:first-of-type {
+  font-size: 1.2em;
+}
+.post-body .link-grid .link-grid-container p:last-of-type {
+  font-size: 0.8em;
+  line-height: 1.3rem;
+  opacity: 0.7;
+}
+.post-body .link-grid .link-grid-container a {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+@-moz-keyframes next-shake {
+  0% {
+    transform: translate(1pt, 1pt) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1pt, -2pt) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3pt, 0pt) rotate(1deg);
+  }
+  30% {
+    transform: translate(3pt, 2pt) rotate(0deg);
+  }
+  40% {
+    transform: translate(1pt, -1pt) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1pt, 2pt) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3pt, 1pt) rotate(0deg);
+  }
+  70% {
+    transform: translate(3pt, 1pt) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1pt, -1pt) rotate(1deg);
+  }
+  90% {
+    transform: translate(1pt, 2pt) rotate(0deg);
+  }
+  100% {
+    transform: translate(1pt, -2pt) rotate(-1deg);
+  }
+}
+@-webkit-keyframes next-shake {
+  0% {
+    transform: translate(1pt, 1pt) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1pt, -2pt) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3pt, 0pt) rotate(1deg);
+  }
+  30% {
+    transform: translate(3pt, 2pt) rotate(0deg);
+  }
+  40% {
+    transform: translate(1pt, -1pt) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1pt, 2pt) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3pt, 1pt) rotate(0deg);
+  }
+  70% {
+    transform: translate(3pt, 1pt) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1pt, -1pt) rotate(1deg);
+  }
+  90% {
+    transform: translate(1pt, 2pt) rotate(0deg);
+  }
+  100% {
+    transform: translate(1pt, -2pt) rotate(-1deg);
+  }
+}
+@-o-keyframes next-shake {
+  0% {
+    transform: translate(1pt, 1pt) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1pt, -2pt) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3pt, 0pt) rotate(1deg);
+  }
+  30% {
+    transform: translate(3pt, 2pt) rotate(0deg);
+  }
+  40% {
+    transform: translate(1pt, -1pt) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1pt, 2pt) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3pt, 1pt) rotate(0deg);
+  }
+  70% {
+    transform: translate(3pt, 1pt) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1pt, -1pt) rotate(1deg);
+  }
+  90% {
+    transform: translate(1pt, 2pt) rotate(0deg);
+  }
+  100% {
+    transform: translate(1pt, -2pt) rotate(-1deg);
+  }
+}
+@keyframes next-shake {
+  0% {
+    transform: translate(1pt, 1pt) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1pt, -2pt) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3pt, 0pt) rotate(1deg);
+  }
+  30% {
+    transform: translate(3pt, 2pt) rotate(0deg);
+  }
+  40% {
+    transform: translate(1pt, -1pt) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1pt, 2pt) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3pt, 1pt) rotate(0deg);
+  }
+  70% {
+    transform: translate(3pt, 1pt) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1pt, -1pt) rotate(1deg);
+  }
+  90% {
+    transform: translate(1pt, 2pt) rotate(0deg);
+  }
+  100% {
+    transform: translate(1pt, -2pt) rotate(-1deg);
+  }
+}
+.mermaid {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.post-body .note {
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding: 1em;
+  position: relative;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+}
+.post-body .note summary {
+  cursor: pointer;
+  outline: 0;
+}
+.post-body .note summary p {
+  display: inline;
+}
+.post-body .note h2,
+.post-body .note h3,
+.post-body .note h4,
+.post-body .note h5,
+.post-body .note h6 {
+  border-bottom: initial;
+  margin: 0;
+  padding-top: 0;
+}
+.post-body .note p:first-child,
+.post-body .note ul:first-child,
+.post-body .note ol:first-child,
+.post-body .note table:first-child,
+.post-body .note pre:first-child,
+.post-body .note blockquote:first-child,
+.post-body .note img:first-child {
+  margin-top: 0;
+}
+.post-body .note p:last-child,
+.post-body .note ul:last-child,
+.post-body .note ol:last-child,
+.post-body .note table:last-child,
+.post-body .note pre:last-child,
+.post-body .note blockquote:last-child,
+.post-body .note img:last-child {
+  margin-bottom: 0;
+}
+.post-body .note.default {
+  border-left-color: #777;
+}
+.post-body .note.default h2,
+.post-body .note.default h3,
+.post-body .note.default h4,
+.post-body .note.default h5,
+.post-body .note.default h6 {
+  color: #777;
+}
+.post-body .note.primary {
+  border-left-color: #6f42c1;
+}
+.post-body .note.primary h2,
+.post-body .note.primary h3,
+.post-body .note.primary h4,
+.post-body .note.primary h5,
+.post-body .note.primary h6 {
+  color: #6f42c1;
+}
+.post-body .note.info {
+  border-left-color: #428bca;
+}
+.post-body .note.info h2,
+.post-body .note.info h3,
+.post-body .note.info h4,
+.post-body .note.info h5,
+.post-body .note.info h6 {
+  color: #428bca;
+}
+.post-body .note.success {
+  border-left-color: #5cb85c;
+}
+.post-body .note.success h2,
+.post-body .note.success h3,
+.post-body .note.success h4,
+.post-body .note.success h5,
+.post-body .note.success h6 {
+  color: #5cb85c;
+}
+.post-body .note.warning {
+  border-left-color: #f0ad4e;
+}
+.post-body .note.warning h2,
+.post-body .note.warning h3,
+.post-body .note.warning h4,
+.post-body .note.warning h5,
+.post-body .note.warning h6 {
+  color: #f0ad4e;
+}
+.post-body .note.danger {
+  border-left-color: #d9534f;
+}
+.post-body .note.danger h2,
+.post-body .note.danger h3,
+.post-body .note.danger h4,
+.post-body .note.danger h5,
+.post-body .note.danger h6 {
+  color: #d9534f;
+}
+.pdfobject-container iframe,
+.pdfobject-container embed {
+  height: 500px;
+  width: 100%;
+}
+.post-body .tabs {
+  margin-bottom: 20px;
+}
+.post-body .tabs,
+.tabs-comment {
+  padding-top: 10px;
+}
+.post-body .tabs ul.nav-tabs,
+.tabs-comment ul.nav-tabs {
+  background: var(--content-bg-color);
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+@media (max-width: 413px) {
+  .post-body .tabs ul.nav-tabs,
+  .tabs-comment ul.nav-tabs {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+.post-body .tabs ul.nav-tabs li.tab,
+.tabs-comment ul.nav-tabs li.tab {
+  border-bottom: 1px solid rgba(167,241,238,0.741);
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-radius: 0 0 0 0;
+  border-top: 3px solid transparent;
+  flex-grow: 1;
+  list-style-type: none;
+  transition: all 0.2s ease-out;
+}
+@media (max-width: 413px) {
+  .post-body .tabs ul.nav-tabs li.tab,
+  .tabs-comment ul.nav-tabs li.tab {
+    border-bottom: 1px solid transparent;
+    border-left: 3px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+  }
+}
+@media (max-width: 413px) {
+  .post-body .tabs ul.nav-tabs li.tab,
+  .tabs-comment ul.nav-tabs li.tab {
+    border-radius: 0;
+  }
+}
+.post-body .tabs ul.nav-tabs li.tab a,
+.tabs-comment ul.nav-tabs li.tab a {
+  border-bottom: initial;
+  display: block;
+  line-height: 1.8;
+  padding: 0.25em 0.75em;
+  text-align: center;
+  transition: all 0.2s ease-out;
+}
+.post-body .tabs ul.nav-tabs li.tab a i,
+.tabs-comment ul.nav-tabs li.tab a i {
+  width: 1.285714285714286em;
+}
+.post-body .tabs ul.nav-tabs li.tab.active,
+.tabs-comment ul.nav-tabs li.tab.active {
+  border-bottom-color: transparent;
+  border-left-color: rgba(167,241,238,0.741);
+  border-right-color: rgba(167,241,238,0.741);
+  border-top-color: #fc6423;
+}
+@media (max-width: 413px) {
+  .post-body .tabs ul.nav-tabs li.tab.active,
+  .tabs-comment ul.nav-tabs li.tab.active {
+    border-bottom-color: rgba(167,241,238,0.741);
+    border-left-color: #fc6423;
+    border-right-color: rgba(167,241,238,0.741);
+    border-top-color: rgba(167,241,238,0.741);
+  }
+}
+.post-body .tabs ul.nav-tabs li.tab.active a,
+.tabs-comment ul.nav-tabs li.tab.active a {
+  cursor: default;
+}
+.post-body .tabs .tab-content,
+.tabs-comment .tab-content {
+  border: 1px solid rgba(167,241,238,0.741);
+  border-radius: 0 0 0 0;
+  border-top-color: transparent;
+}
+@media (max-width: 413px) {
+  .post-body .tabs .tab-content,
+  .tabs-comment .tab-content {
+    border-radius: 0;
+    border-top-color: rgba(167,241,238,0.741);
+  }
+}
+.post-body .tabs .tab-content .tab-pane,
+.tabs-comment .tab-content .tab-pane {
+  padding: 20px 20px 0;
+}
+.post-body .tabs .tab-content .tab-pane:not(.active),
+.tabs-comment .tab-content .tab-pane:not(.active) {
+  display: none;
+}
+.pagination .prev,
+.pagination .next,
+.pagination .page-number,
+.pagination .space {
+  display: inline-block;
+  margin: -1px 10px 0;
+  padding: 0 10px;
+}
+@media (max-width: 767px) {
+  .pagination .prev,
+  .pagination .next,
+  .pagination .page-number,
+  .pagination .space {
+    margin: 0 5px;
+  }
+}
+.pagination .page-number.current {
+  background: rgba(167,241,238,0.741);
+  border-color: rgba(167,241,238,0.741);
+  color: var(--content-bg-color);
+}
+.pagination {
+  border-top: 1px solid #eee;
+  margin: 120px 0 0;
+  text-align: center;
+}
+.pagination .prev,
+.pagination .next,
+.pagination .page-number {
+  border-bottom: 0;
+  border-top: 1px solid #eee;
+  transition: border-color 0.2s ease-in-out;
+}
+.pagination .prev:hover,
+.pagination .next:hover,
+.pagination .page-number:hover {
+  border-top-color: var(--link-hover-color);
+}
+@media (max-width: 767px) {
+  .pagination {
+    border-top: 0;
+  }
+  .pagination .prev,
+  .pagination .next,
+  .pagination .page-number {
+    border-bottom: 1px solid #eee;
+    border-top: 0;
+  }
+  .pagination .prev:hover,
+  .pagination .next:hover,
+  .pagination .page-number:hover {
+    border-bottom-color: var(--link-hover-color);
+  }
+}
+.pagination .space {
+  margin: 0;
+  padding: 0;
+}
+.comments {
+  margin-top: 60px;
+  overflow: hidden;
+}
+.comment-button-group {
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: center;
+  margin: 1em 0;
+}
+.comment-button-group .comment-button {
+  margin: 0.1em 0.2em;
+}
+.comment-button-group .comment-button.active {
+  background: var(--btn-default-hover-bg);
+  border-color: var(--btn-default-hover-border-color);
+  color: var(--btn-default-hover-color);
+}
+.comment-position {
+  display: none;
+}
+.comment-position.active {
+  display: block;
+}
+.tabs-comment {
+  margin-top: 4em;
+  padding-top: 0;
+}
+.tabs-comment .comments {
+  margin-top: 0;
+  padding-top: 0;
+}
+.headband {
+  background: var(--theme-color);
+  height: 0px;
+}
+@media (max-width: 991px) {
+  .headband {
+    display: none;
+  }
+}
+.header {
+  background: transparent;
+}
+.header-inner {
+  margin: 0 auto;
+  width: calc(100% - 10px);
+}
+@media (min-width: 1200px) {
+  .header-inner {
+    width: 1160px;
+  }
+}
+@media (min-width: 1600px) {
+  .header-inner {
+    width: 96%;
+  }
+}
+.site-brand-container {
+  display: flex;
+  flex-shrink: 0;
+  padding: 0 10px;
+}
+.use-motion .header,
+.use-motion .site-brand-container .toggle {
+  opacity: 0;
+}
+.site-meta {
+  flex-grow: 1;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .site-meta {
+    text-align: center;
+  }
+}
+.custom-logo-image {
+  margin-top: 20px;
+}
+@media (max-width: 991px) {
+  .custom-logo-image {
+    display: none;
+  }
+}
+.brand {
+  border-bottom: 0;
+  color: var(--brand-color);
+  display: inline-block;
+  padding: 0 40px;
+}
+.brand:hover {
+  color: var(--brand-hover-color);
+}
+.site-title {
+  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 1.375em;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0;
+}
+.site-subtitle {
+  color: #fc6423;
+  font-size: 0.8125em;
+  margin: 10px 0;
+}
+.use-motion .site-title,
+.use-motion .site-subtitle,
+.use-motion .custom-logo-image {
+  opacity: 0;
+  position: relative;
+  top: -10px;
+}
+.site-nav-toggle,
+.site-nav-right {
+  display: none;
+}
+@media (max-width: 767px) {
+  .site-nav-toggle,
+  .site-nav-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.site-nav-toggle .toggle,
+.site-nav-right .toggle {
+  color: var(--text-color);
+  padding: 10px;
+  width: 22px;
+}
+.site-nav-toggle .toggle .toggle-line,
+.site-nav-right .toggle .toggle-line {
+  background: var(--text-color);
+  border-radius: 1px;
+}
+@media (max-width: 767px) {
+  .site-nav {
+    --scroll-height: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out;
+  }
+  body:not(.site-nav-on) .site-nav .animated {
+    animation: none;
+  }
+  body.site-nav-on .site-nav {
+    height: var(--scroll-height);
+  }
+}
+.menu {
+  margin: 0;
+  padding: 1em 0;
+  text-align: center;
+}
+.menu-item {
+  display: inline-block;
+  list-style: none;
+  margin: 0 10px;
+}
+@media (max-width: 767px) {
+  .menu-item {
+    display: block;
+    margin-top: 10px;
+  }
+  .menu-item.menu-item-search {
+    display: none;
+  }
+}
+.menu-item a {
+  border-bottom: 0;
+  display: block;
+  font-size: 18px;
+  transition: border-color 0.2s ease-in-out;
+}
+.menu-item a:hover,
+.menu-item a.menu-item-active {
+  background: var(--menu-item-bg-color);
+}
+.menu-item .fa,
+.menu-item .fab,
+.menu-item .far,
+.menu-item .fas {
+  margin-right: 8px;
+}
+.menu-item .badge {
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  margin-left: 0.35em;
+  margin-top: 0.35em;
+  text-align: center;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .menu-item .badge {
+    float: right;
+    margin-left: 0;
+  }
+}
+.use-motion .menu-item {
+  visibility: hidden;
+}
+.sidebar-inner {
+  color: #f5d249;
+  max-height: calc(100vh - 16px);
+  padding: 8px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.site-overview-item:not(:first-child) {
+  margin-top: 10px;
+}
+.cc-license .cc-opacity {
+  border-bottom: 0;
+  opacity: 0.7;
+}
+.cc-license .cc-opacity:hover {
+  opacity: 0.9;
+}
+.cc-license img {
+  display: inline-block;
+}
+.site-author-image {
+  border: 1px solid #eee;
+  max-width: 120px;
+  padding: 2px;
+  border-radius: 50%;
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
+}
+.site-author-name {
+  color: var(--text-color);
+  font-weight: 600;
+  margin: 0;
+}
+.site-description {
+  color: #96389d;
+  font-size: 1.2125em;
+  margin-top: 0;
+}
+.links-of-author a {
+  font-size: 0.8125em;
+}
+.links-of-author .fa,
+.links-of-author .fab,
+.links-of-author .far,
+.links-of-author .fas {
+  margin-right: 2px;
+}
+.sidebar .sidebar-button:not(:first-child) {
+  margin-top: 15px;
+}
+.sidebar .sidebar-button button {
+  background: transparent;
+  color: #fc6423;
+  cursor: pointer;
+  line-height: 2;
+  padding: 0 15px;
+  border: 1px solid #fc6423;
+  border-radius: 4px;
+}
+.sidebar .sidebar-button button:hover {
+  background: #fc6423;
+  color: #fff;
+}
+.sidebar .sidebar-button button .fa,
+.sidebar .sidebar-button button .fab,
+.sidebar .sidebar-button button .far,
+.sidebar .sidebar-button button .fas {
+  margin-right: 5px;
+}
+.links-of-blogroll {
+  font-size: 0.8125em;
+}
+.links-of-blogroll-title {
+  font-size: 0.875em;
+  font-weight: 600;
+  margin-top: 0;
+}
+.links-of-blogroll-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-dimmer {
+  display: none;
+}
+@media (max-width: 991px) {
+  .sidebar-dimmer {
+    background: #000;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition: visibility 0.4s, opacity 0.4s;
+    visibility: hidden;
+    width: 100%;
+    z-index: 10;
+  }
+  .sidebar-active .sidebar-dimmer {
+    opacity: 0.7;
+    visibility: visible;
+  }
+}
+.sidebar-nav {
+  display: none;
+  margin: 0;
+  padding-bottom: 20px;
+  padding-left: 0;
+}
+.sidebar-nav-active .sidebar-nav {
+  display: block;
+}
+.sidebar-nav li {
+  border-bottom: 1px solid transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.875em;
+}
+.sidebar-nav li.sidebar-nav-overview {
+  margin-left: 10px;
+}
+.sidebar-nav li:hover {
+  color: #00c4b6;
+}
+.sidebar-toc-active .sidebar-nav-toc,
+.sidebar-overview-active .sidebar-nav-overview {
+  border-bottom-color: #00c4b6;
+  color: #00c4b6;
+}
+.sidebar-toc-active .sidebar-nav-toc:hover,
+.sidebar-overview-active .sidebar-nav-overview:hover {
+  color: #00c4b6;
+}
+.sidebar-panel-container {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.sidebar-panel {
+  display: none;
+}
+.sidebar-overview-active .site-overview-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sidebar-toc-active .post-toc-wrap {
+  display: block;
+}
+.sidebar-toggle {
+  bottom: 45px;
+  height: 12px;
+  padding: 6px 5px;
+  width: 14px;
+  background: $fff;
+  cursor: pointer;
+  opacity: 0.6;
+  position: fixed;
+  z-index: 30;
+  right: 80px;
+}
+@media (max-width: 991px) {
+  .sidebar-toggle {
+    right: 20px;
+  }
+}
+.sidebar-toggle:hover {
+  opacity: 0;
+}
+@media (max-width: 991px) {
+  .sidebar-toggle {
+    opacity: 0;
+  }
+}
+.sidebar-toggle:hover .toggle-line {
+  background: #fc6423;
+}
+@media (any-hover: hover) {
+  body:not(.sidebar-active) .sidebar-toggle:hover .toggle-line:first-child {
+    left: 50%;
+    top: 2px;
+    transform: rotate(45deg);
+    width: 50%;
+  }
+  body:not(.sidebar-active) .sidebar-toggle:hover .toggle-line:last-child {
+    left: 50%;
+    top: -2px;
+    transform: rotate(-45deg);
+    width: 50%;
+  }
+}
+.sidebar-active .sidebar-toggle .toggle-line:nth-child(2) {
+  opacity: 0;
+}
+.sidebar-active .sidebar-toggle .toggle-line:first-child {
+  top: 5px;
+  transform: rotate(45deg);
+}
+.sidebar-active .sidebar-toggle .toggle-line:last-child {
+  top: -5px;
+  transform: rotate(-45deg);
+}
+.post-toc {
+  font-size: 0.875em;
+}
+.post-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0 2px 5px 10px;
+  text-align: left;
+}
+.post-toc ol > ol {
+  padding-left: 0;
+}
+.post-toc ol a {
+  transition: all 0.2s ease-in-out;
+}
+.post-toc .nav-item {
+  line-height: 1.8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.post-toc .nav .nav-child {
+  display: block;
+}
+.post-toc .nav .active > .nav-child {
+  display: block;
+}
+.post-toc .nav .active-current > .nav-child {
+  display: block;
+}
+.post-toc .nav .active-current > .nav-child > .nav-item {
+  display: block;
+}
+.post-toc .nav .active > a {
+  color: #00c4b6;
+}
+.post-toc .nav .active-current > a {
+  color: #00c4b6;
+}
+.post-toc .nav .active-current > a:hover {
+  color: #00c4b6;
+}
+.site-state {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 1.4;
+}
+.site-state-item {
+  padding: 0 15px;
+}
+.site-state-item a {
+  border-bottom: 0;
+  display: block;
+}
+.site-state-item-count {
+  display: block;
+  font-size: 1em;
+  font-weight: 600;
+}
+.site-state-item-name {
+  color: #0e7c06;
+  font-size: 0.8125em;
+}
+.footer {
+  color: #0b7c0a;
+  font-size: 0.875em;
+  padding: 20px 0;
+}
+.footer.footer-fixed {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+.footer-inner {
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: calc(100% - 10px);
+}
+@media (min-width: 1200px) {
+  .footer-inner {
+    width: 1160px;
+  }
+}
+@media (min-width: 1600px) {
+  .footer-inner {
+    width: 96%;
+  }
+}
+.use-motion .footer {
+  opacity: 0;
+}
+.languages {
+  display: inline-block;
+  font-size: 1.125em;
+  position: relative;
+}
+.languages .lang-select-label span {
+  margin: 0 0.5em;
+}
+.languages .lang-select {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.with-love {
+  color: #f60;
+  display: inline-block;
+  margin: 0 5px;
+}
+.beian img {
+  display: inline-block;
+  margin: 0 3px;
+  vertical-align: middle;
+}
+@-moz-keyframes icon-animate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.9);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1.1);
+  }
+  50%, 70% {
+    transform: scale(1.1);
+  }
+}
+@-webkit-keyframes icon-animate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.9);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1.1);
+  }
+  50%, 70% {
+    transform: scale(1.1);
+  }
+}
+@-o-keyframes icon-animate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.9);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1.1);
+  }
+  50%, 70% {
+    transform: scale(1.1);
+  }
+}
+@keyframes icon-animate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.9);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1.1);
+  }
+  50%, 70% {
+    transform: scale(1.1);
+  }
+}
+.noscript-warning {
+  background-color: #f55;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+.back-to-top {
+  font-size: 20px;
+  margin: 12px -10px -20px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.back-to-top.back-to-top-on {
+  cursor: pointer;
+  opacity: 0.8;
+  color: #e71010ed;
+}
+.back-to-top.back-to-top-on:hover {
+  opacity: 0;
+}
+.rtl.post-body p,
+.rtl.post-body a,
+.rtl.post-body h1,
+.rtl.post-body h2,
+.rtl.post-body h3,
+.rtl.post-body h4,
+.rtl.post-body h5,
+.rtl.post-body h6,
+.rtl.post-body li,
+.rtl.post-body ul,
+.rtl.post-body ol {
+  direction: rtl;
+  font-family: UKIJ Ekran;
+}
+.rtl.post-title {
+  font-family: UKIJ Ekran;
+}
+.post-button {
+  margin-top: 40px;
+  text-align: center;
+}
+.use-motion .post-block {
+  opacity: 0;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+.use-motion .pagination,
+.use-motion .comments {
+  opacity: 0;
+}
+.use-motion .post-header {
+  visibility: hidden;
+}
+.use-motion .post-body {
+  visibility: hidden;
+}
+.use-motion .collection-header {
+  visibility: hidden;
+}
+.posts-collapse .post-content {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .posts-collapse .post-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.posts-collapse .post-content .collection-title {
+  font-size: 1.125em;
+  position: relative;
+}
+.posts-collapse .post-content .collection-title::before {
+  background: #999;
+  border: 1px solid #fff;
+  margin-left: -6px;
+  margin-top: -4px;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  content: ' ';
+  height: 10px;
+  width: 10px;
+}
+.posts-collapse .post-content .collection-year {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 60px 0;
+  position: relative;
+}
+.posts-collapse .post-content .collection-year::before {
+  background: rgba(167,241,238,0.741);
+  margin-left: -4px;
+  margin-top: -4px;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  content: ' ';
+  height: 8px;
+  width: 8px;
+}
+.posts-collapse .post-content .collection-header {
+  display: block;
+  margin-left: 20px;
+}
+.posts-collapse .post-content .collection-header small {
+  color: rgba(167,241,238,0.741);
+  margin-left: 5px;
+}
+.posts-collapse .post-content .post-header {
+  border-bottom: 1px dashed rgba(167,241,238,0.741);
+  margin: 30px 2px 0;
+  padding-left: 15px;
+  position: relative;
+  transition: border 0.2s ease-in-out;
+}
+.posts-collapse .post-content .post-header::before {
+  background: rgba(167,241,238,0.741);
+  border: 1px solid #fff;
+  left: -6px;
+  position: absolute;
+  top: 0.75em;
+  transition: background 0.2s ease-in-out;
+  border-radius: 50%;
+  content: ' ';
+  height: 6px;
+  width: 6px;
+}
+.posts-collapse .post-content .post-header:hover {
+  border-bottom-color: #666;
+}
+.posts-collapse .post-content .post-header:hover::before {
+  background: #222;
+}
+.posts-collapse .post-content .post-meta-container {
+  display: inline;
+  font-size: 0.75em;
+  margin-right: 10px;
+}
+.posts-collapse .post-content .post-title {
+  display: inline;
+}
+.posts-collapse .post-content .post-title a {
+  border-bottom: 0;
+  color: var(--link-color);
+}
+.posts-collapse .post-content .post-title .fa-external-link-alt {
+  font-size: 0.875em;
+  margin-left: 5px;
+}
+.posts-collapse .post-content::before {
+  background: #cb70d780;
+  content: ' ';
+  height: 100%;
+  margin-left: -2px;
+  position: absolute;
+  top: 1.25em;
+  width: 4px;
+}
+.post-body {
+  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  overflow-wrap: break-word;
+}
+@media (min-width: 1200px) {
+  .post-body {
+    font-size: 1.125em;
+  }
+}
+@media (min-width: 992px) {
+  .post-body {
+    text-align: justify;
+  }
+}
+@media (max-width: 991px) {
+  .post-body {
+    text-align: justify;
+  }
+}
+.post-body h1 .header-anchor,
+.post-body h2 .header-anchor,
+.post-body h3 .header-anchor,
+.post-body h4 .header-anchor,
+.post-body h5 .header-anchor,
+.post-body h6 .header-anchor,
+.post-body h1 .headerlink,
+.post-body h2 .headerlink,
+.post-body h3 .headerlink,
+.post-body h4 .headerlink,
+.post-body h5 .headerlink,
+.post-body h6 .headerlink {
+  border-bottom-style: none;
+  color: inherit;
+  float: right;
+  font-size: 0.875em;
+  margin-left: 10px;
+  opacity: 0;
+}
+.post-body h1 .header-anchor::before,
+.post-body h2 .header-anchor::before,
+.post-body h3 .header-anchor::before,
+.post-body h4 .header-anchor::before,
+.post-body h5 .header-anchor::before,
+.post-body h6 .header-anchor::before,
+.post-body h1 .headerlink::before,
+.post-body h2 .headerlink::before,
+.post-body h3 .headerlink::before,
+.post-body h4 .headerlink::before,
+.post-body h5 .headerlink::before,
+.post-body h6 .headerlink::before {
+  content: '\f0c1';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.post-body h1:hover .header-anchor,
+.post-body h2:hover .header-anchor,
+.post-body h3:hover .header-anchor,
+.post-body h4:hover .header-anchor,
+.post-body h5:hover .header-anchor,
+.post-body h6:hover .header-anchor,
+.post-body h1:hover .headerlink,
+.post-body h2:hover .headerlink,
+.post-body h3:hover .headerlink,
+.post-body h4:hover .headerlink,
+.post-body h5:hover .headerlink,
+.post-body h6:hover .headerlink {
+  opacity: 0;
+}
+.post-body h1:hover .header-anchor:hover,
+.post-body h2:hover .header-anchor:hover,
+.post-body h3:hover .header-anchor:hover,
+.post-body h4:hover .header-anchor:hover,
+.post-body h5:hover .header-anchor:hover,
+.post-body h6:hover .header-anchor:hover,
+.post-body h1:hover .headerlink:hover,
+.post-body h2:hover .headerlink:hover,
+.post-body h3:hover .headerlink:hover,
+.post-body h4:hover .headerlink:hover,
+.post-body h5:hover .headerlink:hover,
+.post-body h6:hover .headerlink:hover {
+  opacity: 1;
+}
+.post-body .exturl .fa {
+  font-size: 0.875em;
+  margin-left: 4px;
+}
+.post-body .image-caption,
+.post-body img + figcaption,
+.post-body .fancybox + figcaption {
+  color: #258976;
+  font-size: 1px;
+  text-align: right;
+}
+.post-body iframe,
+.post-body img,
+.post-body video,
+.post-body embed {
+  margin-bottom: 0px;
+}
+.post-body .video-container {
+  height: 0;
+  margin-bottom: 0px;
+  overflow: hidden;
+  padding-top: 75%;
+  position: relative;
+  width: 100%;
+}
+.post-body .video-container iframe,
+.post-body .video-container object,
+.post-body .video-container embed {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.post-body a:not(.bth) {
+  color: #000;
+  border-bottom: none;
+}
+.post-body a:not(.bth):hover {
+  color: #ff7a7a;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.post-gallery {
+  display: flex;
+  min-height: 200px;
+}
+.post-gallery .post-gallery-image {
+  flex: 1;
+}
+.post-gallery .post-gallery-image:not(:first-child) {
+  clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%);
+  margin-left: -20px;
+}
+.post-gallery .post-gallery-image:not(:last-child) {
+  margin-right: -20px;
+}
+.post-gallery .post-gallery-image img {
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  width: 100%;
+}
+.posts-expand .post-gallery {
+  margin-bottom: 60px;
+}
+.posts-collapse .post-gallery {
+  margin: 15px 0;
+}
+.posts-expand .post-header {
+  font-size: 1.125em;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.posts-expand .post-title {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: initial;
+  overflow-wrap: break-word;
+}
+.posts-expand .post-title-link {
+  border-bottom: 0;
+  color: var(--link-color);
+  display: inline-block;
+  position: relative;
+}
+.posts-expand .post-title-link::before {
+  background: var(--link-color);
+  bottom: 0;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+}
+.posts-expand .post-title-link:hover::before {
+  transform: scaleX(1);
+}
+.posts-expand .post-title-link .fa-external-link-alt {
+  font-size: 0.875em;
+  margin-left: 5px;
+}
+.post-sticky-flag {
+  display: inline-block;
+  margin-right: 8px;
+  transform: rotate(30deg);
+}
+.posts-expand .post-meta-container {
+  color: #598d38;
+  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 0.75em;
+  margin-top: 3px;
+}
+.posts-expand .post-meta-container .post-description {
+  font-size: 0.875em;
+  margin-top: 2px;
+}
+.posts-expand .post-meta-container time {
+  border-bottom: 1px dashed #61d833d1;
+}
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+:not(.post-meta-break) + .post-meta-item::before {
+  content: '|';
+  margin: 0 0.5em;
+}
+.post-meta-item-icon {
+  margin-right: 3px;
+}
+@media (max-width: 991px) {
+  .post-meta-item-text {
+    display: none;
+  }
+}
+.post-meta-break {
+  flex-basis: 100%;
+  height: 0;
+}
+.post-nav {
+  border-top: 0 solid #eee;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 1em;
+  padding: 10px 5px 0;
+}
+.post-nav-item {
+  flex: 1;
+}
+.post-nav-item a {
+  border-bottom: 0;
+  display: block;
+  font-size: 0.875em;
+  line-height: 1.6;
+}
+.post-nav-item a:active {
+  top: 2px;
+}
+.post-nav-item .fa {
+  font-size: 0.75em;
+}
+.post-nav-item:first-child .fa {
+  margin-right: 5px;
+}
+.post-nav-item:last-child {
+  text-align: right;
+}
+.post-nav-item:last-child .fa {
+  margin-left: 5px;
+}
+.post-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.post-eof {
+  background: rgba(167,241,238,0.741);
+  height: 0;
+  margin: 80px auto 60px;
+  width: 8%;
+}
+.post-block:last-of-type .post-eof {
+  display: none;
+}
+.post-tags {
+  margin-top: 40px;
+  text-align: center;
+}
+.post-tags a {
+  display: inline-block;
+  font-size: 0.8125em;
+}
+.post-tags a:not(:last-child) {
+  margin-right: 10px;
+}
+.post-widgets {
+  border-top: 1px solid #eee;
+  margin-top: 15px;
+  text-align: center;
+}
+.wpac-rating-container {
+  height: 20px;
+  line-height: 20px;
+  margin-top: 10px;
+  padding-top: 6px;
+  text-align: center;
+}
+.social-like {
+  display: flex;
+  font-size: 0.875em;
+  justify-content: center;
+  text-align: center;
+}
+.reward-container {
+  margin: 1em 0 0;
+  padding: 1em 0;
+  text-align: center;
+}
+.reward-container button {
+  background: transparent;
+  color: #fc6423;
+  cursor: pointer;
+  line-height: 2;
+  padding: 0 15px;
+  border: 2px solid #fc6423;
+  border-radius: 2px;
+  outline: 0;
+  transition: all 0.2s ease-in-out;
+  vertical-align: text-top;
+}
+.reward-container button:hover {
+  background: #fc6423;
+  color: #fff;
+}
+.post-reward {
+  display: none;
+  padding-top: 20px;
+}
+.post-reward.active {
+  display: block;
+}
+.post-reward div {
+  display: inline-block;
+}
+.post-reward div span {
+  display: block;
+}
+.post-reward img {
+  display: inline-block;
+  margin: 0.8em 2em 0;
+  max-width: 100%;
+  width: 180px;
+}
+@-moz-keyframes next-roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
+@-webkit-keyframes next-roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
+@-o-keyframes next-roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
+@keyframes next-roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
+.category-all-page .category-all-title {
+  text-align: center;
+}
+.category-all-page .category-all {
+  margin-top: 20px;
+}
+.category-all-page .category-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.category-all-page .category-list-item {
+  margin: 5px 10px;
+}
+.category-all-page .category-list-count {
+  color: rgba(167,241,238,0.741);
+}
+.category-all-page .category-list-count::before {
+  content: ' (';
+}
+.category-all-page .category-list-count::after {
+  content: ') ';
+}
+.category-all-page .category-list-child {
+  padding-left: 50px;
+  color: #f14f2b
+  list-style-type: none;
+  list-style-image: url(/images/fly16.png);
+}
+.event-list hr {
+  background: #222;
+  margin: 20px 0 45px;
+}
+.event-list hr::after {
+  background: #222;
+  color: #fff;
+  content: 'NOW';
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 5px;
+}
+.event-list .event {
+  --event-background: #222;
+  --event-foreground: rgba(167,241,238,0.741);
+  --event-title: #fff;
+  background: var(--event-background);
+  padding: 15px;
+}
+.event-list .event .event-summary {
+  border-bottom: 0;
+  color: var(--event-title);
+  margin: 0;
+  padding: 0 0 0 35px;
+  position: relative;
+}
+.event-list .event .event-summary::before {
+  animation: dot-flash 1s alternate infinite ease-in-out;
+  background: var(--event-title);
+  left: 0;
+  margin-top: -6px;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  content: ' ';
+  height: 12px;
+  width: 12px;
+}
+.event-list .event:nth-of-type(odd) .event-summary::before {
+  animation-delay: 0.5s;
+}
+.event-list .event:not(:last-child) {
+  margin-bottom: 20px;
+}
+.event-list .event .event-relative-time {
+  color: var(--event-foreground);
+  display: inline-block;
+  font-size: 12px;
+  font-weight: normal;
+  padding-left: 12px;
+}
+.event-list .event .event-details {
+  color: var(--event-foreground);
+  display: block;
+  line-height: 18px;
+  padding: 6px 0 6px 35px;
+}
+.event-list .event .event-details::before {
+  color: var(--event-foreground);
+  display: inline-block;
+  margin-right: 9px;
+  width: 14px;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.event-list .event .event-details.event-location::before {
+  content: '\f041';
+}
+.event-list .event .event-details.event-duration::before {
+  content: '\f017';
+}
+.event-list .event .event-details.event-description::before {
+  content: '\f024';
+}
+.event-list .event-past {
+  --event-background: #f5f5f5;
+  --event-foreground: #999;
+  --event-title: #222;
+}
+@-moz-keyframes dot-flash {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@-webkit-keyframes dot-flash {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@-o-keyframes dot-flash {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@keyframes dot-flash {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+ul.breadcrumb {
+  font-size: 0.75em;
+  list-style: none;
+  margin: 1em 0;
+  padding: 0 2em;
+  text-align: center;
+}
+ul.breadcrumb li {
+  display: inline;
+}
+ul.breadcrumb li:not(:first-child)::before {
+  content: '/\00a0';
+  font-weight: normal;
+  padding: 0.5em;
+}
+ul.breadcrumb li:last-child {
+  font-weight: bold;
+}
+.tag-cloud {
+  text-align: center;
+}
+.tag-cloud a {
+  display: inline-block;
+  margin: 12px;
+}
+.tag-cloud-0 {
+  border-bottom-color: #e4622c;
+  color: #e4622c;
+}
+.tag-cloud-1 {
+  border-bottom-color: #d16d37;
+  color: #d16d37;
+}
+.tag-cloud-2 {
+  border-bottom-color: #be7842;
+  color: #be7842;
+}
+.tag-cloud-3 {
+  border-bottom-color: #ab834d;
+  color: #ab834d;
+}
+.tag-cloud-4 {
+  border-bottom-color: #988e59;
+  color: #988e59;
+}
+.tag-cloud-5 {
+  border-bottom-color: #859964;
+  color: #859964;
+}
+.tag-cloud-6 {
+  border-bottom-color: #72a46f;
+  color: #72a46f;
+}
+.tag-cloud-7 {
+  border-bottom-color: #5faf7b;
+  color: #5faf7b;
+}
+.tag-cloud-8 {
+  border-bottom-color: #4cba86;
+  color: #4cba86;
+}
+.tag-cloud-9 {
+  border-bottom-color: #39c591;
+  color: #39c591;
+}
+.tag-cloud-10 {
+  border-bottom-color: #27d19d;
+  color: #27d19d;
+}
+.search-active {
+  overflow: hidden;
+}
+.search-pop-overlay {
+  background: rgba(0,0,0,0);
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: visibility 0.4s, background 0.4s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 40;
+}
+.search-active .search-pop-overlay {
+  background: rgba(0,0,0,0.3);
+  visibility: visible;
+}
+.search-popup {
+  background: var(--card-bg-color);
+  border-radius: 5px;
+  height: 80%;
+  margin: auto;
+  transform: scale(0);
+  transition: transform 0.4s;
+  width: 700px;
+}
+.search-active .search-popup {
+  transform: scale(1);
+}
+@media (max-width: 767px) {
+  .search-popup {
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+.search-popup .search-icon,
+.search-popup .popup-btn-close {
+  color: #999;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.search-popup .popup-btn-close {
+  cursor: pointer;
+}
+.search-popup .popup-btn-close:hover .fa {
+  color: #222;
+}
+.search-popup .search-header {
+  background: #eee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  padding: 5px;
+}
+.search-popup input.search-input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+}
+.search-popup input.search-input::-webkit-search-cancel-button {
+  display: none;
+}
+.search-popup .search-result-container {
+  height: calc(100% - 55px);
+  overflow: auto;
+  background: #94e3d1
+}
+.search-popup .search-result-container hr {
+  margin: 5px 0 10px;
+}
+.search-popup .search-result-container hr:first-child {
+  display: none;
+}
+.search-popup .search-result-list {
+  margin: 0 5px;
+  padding: 0;
+}
+.search-popup a.search-result-title {
+  font-weight: bold;
+}
+.search-popup p.search-result {
+  border-bottom: 1px dashed rgba(167,241,238,0.741);
+  padding: 5px 0;
+}
+.search-popup .search-input-container {
+  flex-grow: 1;
+  padding: 2px;
+}
+.search-popup .no-result {
+  display: flex;
+  background: #94e3d1
+}
+.search-popup .search-result-list {
+  width: 100%;
+}
+.search-popup .search-result-icon {
+  color: rgba(167,241,238,0.741);
+  margin: auto;
+}
+mark.search-keyword {
+    background: #7ad97da6;
+    border-bottom: 1px dashed #e958cc;
+    color: #e472eb;
+    font-weight: bold;
+    font-size: 21px;
+}
+mjx-container[jax='CHTML'][display='true'],
+.has-jax {
+  overflow: auto hidden;
+}
+mjx-container[display='true'] + br {
+  display: none;
+}
+.use-motion .animated {
+  animation-fill-mode: none;
+  visibility: inherit;
+}
+.use-motion .sidebar .animated {
+  animation-fill-mode: both;
+}
+.header-inner {
+  background: var(--content-bg-color);
+  border-radius: initial;
+  box-shadow: initial;
+  width: 200px;
+}
+@media (max-width: 991px) {
+  .header-inner {
+    border-radius: initial;
+    width: auto;
+  }
+}
+.main {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: calc(100% - 10px);
+}
+@media (min-width: 1200px) {
+  .main {
+    width: 1160px;
+  }
+}
+@media (min-width: 1600px) {
+  .main {
+    width: 96%;
+  }
+}
+@media (max-width: 991px) {
+  .main {
+    display: block;
+    width: auto;
+  }
+}
+.main-inner {
+  border-radius: initial;
+  box-sizing: border-box;
+  width: calc(100% - 208px);
+}
+@media (max-width: 991px) {
+  .main-inner {
+    border-radius: initial;
+    width: 100%;
+  }
+}
+.footer-inner {
+  padding-left: 208px;
+}
+@media (max-width: 991px) {
+  .footer-inner {
+    padding-left: 0;
+    padding-right: 0;
+    width: auto;
+  }
+}
+.site-brand-container {
+  background: rgba(0,0,0,0);
+}
+@media (max-width: 991px) {
+  .site-nav-on .site-brand-container {
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+  }
+}
+.site-meta {
+  padding: 20px 0;
+}
+.brand {
+  padding: 0;
+}
+.site-subtitle {
+  margin: 10px 10px 0;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .site-nav-toggle,
+  .site-nav-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.site-nav-toggle .toggle,
+.site-nav-right .toggle {
+  color: #fa7e0d;
+}
+.site-nav-toggle .toggle .toggle-line,
+.site-nav-right .toggle .toggle-line {
+  background: #fa7e0d;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .site-nav {
+    --scroll-height: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out;
+  }
+  body:not(.site-nav-on) .site-nav .animated {
+    animation: none;
+  }
+  body.site-nav-on .site-nav {
+    height: var(--scroll-height);
+  }
+}
+.menu .menu-item {
+  display: block;
+  margin: 0;
+}
+.menu .menu-item a {
+  padding: 5px 20px;
+  position: relative;
+  text-align: left;
+  transition-property: background-color;
+}
+@media (max-width: 991px) {
+  .menu .menu-item.menu-item-search {
+    display: none;
+  }
+}
+.menu .menu-item .badge {
+  background: rgba(167,241,238,0.741);
+  border-radius: 10px;
+  color: rgb(241, 167, 167);
+  float: right;
+  padding: 2px 5px;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+}
+.sub-menu {
+  margin: 0;
+  padding: 6px 0;
+}
+.sub-menu .menu-item {
+  display: inline-block;
+}
+.sub-menu .menu-item a {
+  background: transparent;
+  margin: 5px 10px;
+  padding: initial;
+}
+.sub-menu .menu-item a:hover {
+  background: transparent;
+  color: #fc6423;
+}
+.sub-menu .menu-item-active {
+  border-bottom-color: #fc6423;
+  color: #fc6423;
+}
+.sub-menu .menu-item-active:hover {
+  border-bottom-color: #fc6423;
+}
+.sidebar {
+  margin-top: 8px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 8px;
+  width: 200px;
+}
+@media (max-width: 991px) {
+  .sidebar {
+    display: none;
+  }
+}
+.sidebar-toggle {
+  display: none;
+}
+.sidebar-inner {
+  background: var(--content-bg-color);
+  border-radius: initial;
+  box-shadow: initial;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+.site-state-item {
+  padding: 0 10px;
+}
+.sidebar .sidebar-button {
+  border-bottom: 1px dotted rgba(167,241,238,0.741);
+  border-top: 1px dotted rgba(167,241,238,0.741);
+}
+.sidebar .sidebar-button button {
+  border: 0;
+  color: #fc6423;
+  display: block;
+  width: 100%;
+}
+.sidebar .sidebar-button button:hover {
+  background: none;
+  border: 0;
+  color: #e34603;
+}
+.links-of-author {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.links-of-author-item {
+  margin: 5px 0 0;
+  width: 50%;
+}
+.links-of-author-item a {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.links-of-author-item a {
+  border-bottom: 0;
+  border-radius: 4px;
+  display: block;
+}
+.links-of-author-item a:hover {
+  background: var(--body-bg-color);
+}
+.back-to-top {
+  background: rgba(255,255,255,0);
+  margin: 0px -10px -18px;
+}
+.back-to-top.back-to-top-on {
+  margin-top: 16px;
+}
+.main-inner {
+  background: var(--content-bg-color);
+  box-shadow: initial;
+  padding: 20px;
+}
+@media (max-width: 991px) {
+  .main-inner {
+    padding: 20px;
+  }
+}
+.sub-menu {
+  border-bottom: 1px solid rgba(167,241,238,0.741);
+}
+.post-block:first-of-type {
+  padding-top: 20px;
+}
+@media (max-width: 767px) {
+  .pagination {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/** html{margin:0px 00px}  **/
+html{margin:40px 20px}
+
+body{box-sizing:border-box;margin:0 auto;padding:0px;word-wrap:break-word;border:0px solid #ddd;border-radius:0px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,"Segoe UI",Arial,"PingFang SC", "Microsoft YaHei",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:14px;line-height:1.8}body pre code,body code,body pre{font-size:100%;line-height:1.15;font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,"PingFang SC", "Microsoft YaHei",monospace}body::before{display:table;content:""}body::after{display:table;clear:both;content:""}body>*:first-child{margin-top:0 !important}body>*:last-child{margin-bottom:0 !important}body a:not([href]){color:inherit;text-decoration:none}
+body .absent{color:#cb2431}
+body .anchor{float:left;padding-right:0px;margin-left:0;line-height:1}
+body .anchor:focus{outline:none}
+body p,body blockquote,body ul,body ol,body dl,body table,body pre{margin-top:0;margin-bottom:0px}
+
+
+/** 分割线 **/
+
+/*
+hr {
+    height: 1px;
+    padding: 0;
+    margin: 14px 0;
+    background-color: var(--split-color);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+*/
+hr { /* 来自next主题样式 */
+    background-image: repeating-linear-gradient(-45deg, var(--split-color), var(--split-color) 0px, transparent 0px, transparent 0px);
+    border: 0;
+    height: 3px;
+    margin: 40px 0
+}
+
+
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+    color: #22a2c9;
+}
+
+
+/** 引用块（提示型） **/
+
+
+blockquote {
+    /* border: 1px solid #d1f3ff; */
+    border-left: 5px solid var(--blockquoteicon-color);
+    padding: 10px 15px;
+    color: #3f3f3f;
+    background-color: var(--blockquotebg-color); /* white */
+    border-radius: 3px;
+    position:relative;
+}
+
+
+/* 给提示块加info图标 */
+blockquote>* {
+    margin-left: 2rem !important;
+}
+blockquote::before {
+    content: '\e613';
+    font-family: "iconfont";
+    color: var(--blockquoteicon-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: large;
+    font-weight: 600;
+}
+/*
+blockquote:hover {
+    border-left: 5px solid var(--focus-color);
+}
+blockquote:hover:before {
+    color: var(--focus-color);
+}
+*/
+
+
+
+body kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:solid 1px #c6cbd1;border-bottom-color:#959da5;border-radius:3px;box-shadow:inset 0 -1px 0 #959da5}
+body h1,body h2,body h3,body h4,body h5,body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}
+body h1 .octicon-link,body h2 .octicon-link,body h3 .octicon-link,body h4 .octicon-link,body h5 .octicon-link,body h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}
+body h1:hover .anchor,body h2:hover .anchor,body h3:hover .anchor,body h4:hover .anchor,body h5:hover .anchor,body h6:hover .anchor{text-decoration:none}
+body h1:hover .anchor .octicon-link,body h2:hover .anchor .octicon-link,body h3:hover .anchor .octicon-link,body h4:hover .anchor .octicon-link,body h5:hover .anchor .octicon-link,body h6:hover .anchor .octicon-link{visibility:visible}
+body h1 tt,body h1 code,body h2 tt,body h2 code,body h3 tt,body h3 code,body h4 tt,body h4 code,body h5 tt,body h5 code,body h6 tt,body h6 code{font-size:inherit}
+body h1{padding-bottom:.3em;font-size:2em;color: #FF506C}
+body h2{padding-bottom:.3em;font-size:1.5em;color: #FD910F}
+body h3{font-size:1.25em;color: #ECDA1B}
+body h4{font-size:1em;color: #12BC00}
+body h5{font-size:.875em;color: #00B0BD}
+body h6{font-size:.85em;color: #B26BE6}
+body ul,body ol{padding-left:2em}
+body ul.no-list,body ol.no-list{padding:0;list-style-type:none}
+body ul ul,body ul ol,body ol ol,body ol ul{margin-top:0;margin-bottom:0}
+body li>p{margin-top:16px}
+body li+li{margin-top:.25em}
+body dl{padding:0}
+body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}
+body dl dd{padding:0 16px;margin-bottom:16px}
+
+/** 表格样式 **/
+
+
+table {
+    padding: 2;
+    word-break: initial;
+}
+/*
+table tr {
+    border-top: 1px solid var(--main-6);
+    margin: 1;
+    padding: 1;
+}
+*/
+table tr:nth-child(2n) {
+    background-color: var(--tableevenrow-color);
+}
+table tr:nth-child(2n+1) {
+    background-color: var(--tablerow-color);
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid var(--tableborder-color);
+    background-color: var(--tablethbg-color);
+    border-bottom: 1;
+    text-align: left;
+    margin: 1;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid var(--tableborder-color);
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 1;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 1;
+}
+table tr:hover {
+    background-color: var(--tablefocusrow-color);
+}
+
+
+
+body img{max-width:100%;box-sizing:content-box;background-color:#fff}
+body img[align=right]{padding-left:0}
+body img[align=left]{padding-right:0}
+body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}
+body span.frame{display:block;overflow:hidden}
+body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #dfe2e5}
+body span.frame span img{display:block;float:left}
+body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#24292e}
+body span.align-center{display:block;overflow:hidden;clear:both}
+body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}
+body span.align-center span img{margin:0 auto;text-align:center}
+body span.align-right{display:block;overflow:hidden;clear:both}
+body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}
+body span.align-right span img{margin:0;text-align:right}
+body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}
+body span.float-left span{margin:13px 0 0}
+body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}
+body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}
+body code,body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(27,31,35,0.05);border-radius:3px}
+body code::before,body code::after,body tt::before,body tt::after{letter-spacing:-.2em;content:"\00a0"}
+body code br,body tt br{display:none}
+body del code{text-decoration:inherit}
+body pre{word-wrap:normal}
+body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}
+body pre>code::before,body pre>code::after{content:""}
+body pre{background-color:#f6f8fa;padding:14px}
+body a{color:#05668b;text-decoration:none}
+body a:hover{text-decoration:underline}
+.hljs{display:block;background:white;padding:0.5em;color:#333333;overflow-x:auto}
+.hljs-comment,.hljs-meta{color:#969896}
+.hljs-string,.hljs-variable,.hljs-template-variable,.hljs-strong,.hljs-emphasis,.hljs-quote{color:#df5000}
+.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}
+.hljs-literal,.hljs-symbol,.hljs-bullet,.hljs-attribute{color:#0086b3}
+.hljs-section,.hljs-name{color:#63a35c}
+.hljs-tag{color:#333333}
+.hljs-title,.hljs-attr,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#795da3}
+.hljs-addition{color:#55a532;background-color:#eaffea}
+.hljs-deletion{color:#bd2c00;background-color:#ffecec}
+.hljs-link{text-decoration:underline}
+.task-list-item{list-style-type:none}
+.task-list-item-checkbox{margin:0 0.2em 0.25em -1.6em;vertical-align:middle}
+
+
+/*自定义容器*/
+.tips {
+    padding-left: 10px;
+    background-color rgba(52,152,219,.3);
+    border-left 4px solid rgb(52,152,219);
+    color: darken(rgb(52,152,219),20%);
+}
+.success {
+    padding-left: 10px;
+    background-color rgba(46,204,113,.3);
+    border-left 4px solid rgb(46,204,113);
+    color: darken(rgb(46,204,113),20%);
+}
+.warning {
+    padding-left: 10px;
+    background-color rgba(241,196,15,.3);
+    border-left 4px solid rgb(241,196,15);
+    color: darken(rgb(241,196,15),20%);
+}
+.danger {
+    padding-left: 10px;
+    background-color rgba(231,76,60,.3);
+    border-left 4px solid rgb(231,76,60);
+    color: darken(rgb(231,76,60),20%);
+}
+]]></content>
+  </entry>
+  <entry>
+    <title>film</title>
+    <url>/film/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+  </entry>
+  <entry>
+    <title>Life_Film</title>
+    <url>/life/film.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><select name="" onchange="javascript:location.href=this.value;" style="width: 102px; height: 32px; color: #333; BACKGROUND-COLOR: #fff0;border-color: rgba(201, 108, 245, 0.575);">
+<option style="background:rgba(139, 149, 236, 0.616)"; value="/life/film.html" >光影视听</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life" >生活0123</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/quotes.html" >一言一行</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/poetry.html" >诗歌美文</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/paint.html" >审美绘画</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/music.html" >声音乐章</option>
+</select>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="../css/Mycss.css">
+<title>Film</title>
+</head>
+<body>
+<div class="header">
+<div class="nav">
+<div class="drop-down clearfix">
+<ul>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_w.html" target="B">w</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_x.html" target="B">x</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_y.html" target="B">y</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_a.html" target="B">a</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_b.html" target="B">b</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_c.html" target="B">c</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_d.html" target="B">d</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_e.html" target="B">e</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_f.html" target="B">f</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_g.html" target="B">g</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_h.html" target="B">h</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_i.html" target="B">i</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_j.html" target="B">j</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_k.html" target="B">k</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_l.html" target="B">l</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_m.html" target="B">m</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_n.html" target="B">n</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_o.html" target="B">o</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_p.html" target="B">p</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_r.html" target="B">r</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_s.html" target="B">s</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_t.html" target="B">t</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_u.html" target="B">u</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_v.html" target="B">v</a>
+</ul>
+</div></div></div>
+</body>
+<iframe src="../html/Frame.html" height="720px" width="100%" scrolling="auto" frameborder="0" style="box-shadow: 0px 0px 20px -10px #fff0;" background-colorj="#fffo";>
+</iframe>
+]]></content>
+  </entry>
+  <entry>
+    <title>Life0123</title>
+    <url>/life/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><select name="" onchange="javascript:location.href=this.value;" style="width: 102px; height: 32px; color: #333; BACKGROUND-COLOR: #fff0;border-color: rgba(201, 108, 245, 0.575);">
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life" >生活0123</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/quotes.html" >一言一行</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/poetry.html" >诗歌美文</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/paint.html" >审美绘画</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/music.html" >声音乐章</option>
+<option style="background:rgba(139, 149, 236, 0.616)"; value="/life/film.html" >光影视听</option>
+</select>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/Mycss.css">
+    <title>Film</title>
+</head>
+<body>
+<div class="header">
+  <div class="nav">
+    <div class="drop-down clearfix">
+      <ul>
+        <li><a href="#">飛䎅</a>
+          <ul>
+            <li>
+              <a href="#">生活</a>
+              <ul>
+                <li>
+                  <a href="#">生活</a>
+                </li>
+                <li>
+                  <a href="#">考级</a>
+                </li>
+                <li>
+                  <a href="#">语言</a>
+                </li>
+                <li>
+                  <a href="#">运动</a>
+                </li>
+                  <li>
+                  <a href="#">经济</a>
+                </li>
+                <li>
+                  <a href="#">心理</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">计算机</a>
+              <ul>
+                <li>
+                  <a href="#">计算机</a>
+                </li>
+                <li>
+                  <a href="#">数学</a>
+                </li>
+                <li>
+                  <a href="#">物理</a>
+                </li>
+                <li>
+                  <a href="#">化学</a>
+                </li>
+                <li>
+                  <a href="#">生物</a>
+                </li>
+                <li>
+                  <a href="#">天文</a>
+                </li>
+                <li>
+                  <a href="#">工程</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">电影</a>
+              <ul>
+                <li>
+                  <a href="#">电影</a>
+                </li>
+                <li>
+                  <a href="#">文学</a>
+                </li>
+                <li>
+                  <a href="#">美术</a>
+                </li>
+                <li>
+                  <a href="#">音乐</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">哲学</a>
+              <ul>
+                <li>
+                  <a href="#">哲学</a>
+                </li>
+                <li>
+                  <a href="#">价值观</a>
+                </li>
+                <li>
+                  <a href="#">世界观</a>
+                </li>
+                <li>
+                  <a href="#">个人观</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">生活</a>
+          <ul>
+            <li>
+              <a href="#">生活</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">考级</a>
+              <ul>
+                <li>
+                  <a href="#">小学</a>
+                </li>
+                <li>
+                  <a href="#">初中</a>
+                </li>
+                <li>
+                  <a href="#">高中</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">语言</a>
+              <ul>
+                <li>
+                  <a href="#">普通话</a>
+                </li>
+                <li>
+                  <a href="#">英语</a>
+                </li>
+                <li>
+                  <a href="#">法语</a>
+                  <ul>
+                    <li>
+                      <a href="#">Yuoek</a>
+                    </li>
+                  </ul>
+                  <li>
+                    <a href="#">德语</a>
+                  </li>
+                  <li>
+                    <a href="#">西语</a>
+                  </li>
+                  <li>
+                    <a href="#">俄语</a>
+                  </li>
+                  <li>
+                    <a href="#">日语</a>
+                  </li>
+                  <li>
+                    <a href="#">韩语</a>
+                  </li>
+                  <li>
+                    <a href="#">阿拉伯语</a>
+                  </li>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">运动</a>
+              <ul>
+                <li>
+                  <a href="#">滑板</a>
+                </li>
+                <li>
+                  <a href="#">足球</a>
+                </li>
+                <li>
+                  <a href="#">篮球</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">经济</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">心理</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">计算机</a>
+          <ul>
+            <li>
+              <a href="#">计算机</a>
+              <ul>
+                <li>
+                  <a href="#">编程</a>
+                  <ul>
+                    <li>
+                      <a href="#">C</a>
+                    </li>
+                    <li>
+                      <a href="#">Python</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">软件</a>
+                  <ul>
+                    <li>
+                      <a href="#">AE</a>
+                    </li>
+                    <li>
+                      <a href="'#">C4D</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">数学</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">物理</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">化学</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">生物</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">天文</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">工程</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">电影</a>
+          <ul>
+            <li>
+              <a href="#">电影</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">文学</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">美术</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">音乐</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">哲学</a>
+          <ul>
+            <li>
+              <a href="#">哲学</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">价值观</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">世界观</a>
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+</div></div></div>
+</body>
+<iframe src="../html/Frame.html" height="720px" width="100%" scrolling="auto" frameborder="0" style="box-shadow: 0px 0px 20px -10px #fff0;" background-colorj="#fffo";>
+</iframe>
+]]></content>
+  </entry>
+  <entry>
+    <title>Life_Music</title>
+    <url>/life/music.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><select name="" onchange="javascript:location.href=this.value;" style="width: 102px; height: 32px; color: #333; BACKGROUND-COLOR: #fff0;border-color: rgba(201, 108, 245, 0.575);">
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/music.html" >声音乐章</option>
+<option style="background:rgba(139, 149, 236, 0.616)"; value="/life/film.html" >光影视听</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life" >生活0123</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/quotes.html" >一言一行</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/poetry.html" >诗歌美文</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/paint.html" >审美绘画</option>
+</select>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="../css/Mycss.css">
+<title>Film</title>
+</head>
+<body>
+<div class="header">
+<div class="nav">
+<div class="drop-down clearfix">
+<ul>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_w.html" target="B">w</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_x.html" target="B">x</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_y.html" target="B">y</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_a.html" target="B">a</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_b.html" target="B">b</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_c.html" target="B">c</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_d.html" target="B">d</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_e.html" target="B">e</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_f.html" target="B">f</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_g.html" target="B">g</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_h.html" target="B">h</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_i.html" target="B">i</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_j.html" target="B">j</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_k.html" target="B">k</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_l.html" target="B">l</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_m.html" target="B">m</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_n.html" target="B">n</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_o.html" target="B">o</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_p.html" target="B">p</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_r.html" target="B">r</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_s.html" target="B">s</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_t.html" target="B">t</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_u.html" target="B">u</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_v.html" target="B">v</a>
+</ul>
+</div></div></div>
+</body>
+<iframe src="../html/Frame.html" height="720px" width="100%" scrolling="auto" frameborder="0" style="box-shadow: 0px 0px 20px -10px #fff0;" background-colorj="#fffo";>
+</iframe>
+]]></content>
+  </entry>
+  <entry>
+    <title>Life_Paint</title>
+    <url>/life/paint.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><select name="" onchange="javascript:location.href=this.value;" style="width: 102px; height: 32px; color: #333; BACKGROUND-COLOR: #fff0;border-color: rgba(201, 108, 245, 0.575);">
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/paint.html" >审美绘画</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/music.html" >声音乐章</option>
+<option style="background:rgba(139, 149, 236, 0.616)"; value="/life/film.html" >光影视听</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life" >生活0123</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/quotes.html" >一言一行</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/poetry.html" >诗歌美文</option>
+</select>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="../css/Mycss.css">
+<title>Film</title>
+</head>
+<body>
+<div class="header">
+<div class="nav">
+<div class="drop-down clearfix">
+<ul>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_w.html" target="B">w</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_x.html" target="B">x</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_y.html" target="B">y</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_a.html" target="B">a</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_b.html" target="B">b</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_c.html" target="B">c</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_d.html" target="B">d</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_e.html" target="B">e</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_f.html" target="B">f</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_g.html" target="B">g</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_h.html" target="B">h</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_i.html" target="B">i</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_j.html" target="B">j</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_k.html" target="B">k</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_l.html" target="B">l</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_m.html" target="B">m</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_n.html" target="B">n</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_o.html" target="B">o</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_p.html" target="B">p</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_r.html" target="B">r</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_s.html" target="B">s</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_t.html" target="B">t</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_u.html" target="B">u</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_v.html" target="B">v</a>
+</ul>
+</div></div></div>
+</body>
+<iframe src="../html/Frame.html" height="720px" width="100%" scrolling="auto" frameborder="0" style="box-shadow: 0px 0px 20px -10px #fff0;" background-colorj="#fffo";>
+</iframe>
+]]></content>
+  </entry>
+  <entry>
+    <title>Life_Poetry</title>
+    <url>/life/poetry.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><select name="" onchange="javascript:location.href=this.value;" style="width: 102px; height: 32px; color: #333; BACKGROUND-COLOR: #fff0;border-color: rgba(201, 108, 245, 0.575);">
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/poetry.html" >诗歌美文</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/paint.html" >审美绘画</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/music.html" >声音乐章</option>
+<option style="background:rgba(139, 149, 236, 0.616)"; value="/life/film.html" >光影视听</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life" >生活0123</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/quotes.html" >一言一行</option>
+</select>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="../css/Mycss.css">
+<title>Film</title>
+</head>
+<body>
+<div class="header">
+<div class="nav">
+<div class="drop-down clearfix">
+<ul>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_w.html" target="B">W</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_x.html" target="B">X</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_y.html" target="B">Y</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_a.html" target="B">A</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_b.html" target="B">B</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_c.html" target="B">C</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_d.html" target="B">D</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_e.html" target="B">E</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_f.html" target="B">F</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_g.html" target="B">G</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_h.html" target="B">H</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_i.html" target="B">I</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_j.html" target="B">J</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_k.html" target="B">K</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_l.html" target="B">L</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_m.html" target="B">M</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_n.html" target="B">N</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_o.html" target="B">O</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_p.html" target="B">P</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_r.html" target="B">R</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_s.html" target="B">S</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_t.html" target="B">T</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_u.html" target="B">U</a>
+<li><a href="../html/toc/toc_mypoeticside/toc_mypoeticside_v.html" target="B">V</a>
+</ul>
+</div></div></div>
+</body>
+<iframe src="../html/Frame.html" height="720px" width="100%" scrolling="auto" frameborder="0" style="box-shadow: 0px 0px 20px -10px #fff0;" background-colorj="#fffo";>
+</iframe>
+]]></content>
+  </entry>
+  <entry>
+    <title>Life_Quotes</title>
+    <url>/life/quotes.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><select name="" onchange="javascript:location.href=this.value;" style="width: 102px; height: 32px; color: #333; BACKGROUND-COLOR: #fff0;border-color: rgba(201, 108, 245, 0.575);">
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/quotes.html" >一言一行</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/poetry.html" >诗歌美文</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/paint.html" >审美绘画</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life/music.html" >声音乐章</option>
+<option style="background:rgba(139, 149, 236, 0.616)"; value="/life/film.html" >光影视听</option>
+<option style="background:rgba(151, 210, 238, 0.616)"; value="/life" >生活0123</option>
+</select>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="../css/Mycss.css">
+<title>Film</title>
+</head>
+<body>
+<div class="header">
+<div class="nav">
+<div class="drop-down clearfix">
+<ul>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_a.html" target="B">A</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_b.html" target="B">B</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_c.html" target="B">C</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_d.html" target="B">D</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_e.html" target="B">E</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_f.html" target="B">F</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_g.html" target="B">G</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_h.html" target="B">H</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_i.html" target="B">I</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_j.html" target="B">J</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_k.html" target="B">K</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_l.html" target="B">L</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_m.html" target="B">M</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_n.html" target="B">N</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_o.html" target="B">O</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_p.html" target="B">P</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_q.html" target="B">Q</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_r.html" target="B">R</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_s.html" target="B">S</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_t.html" target="B">T</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_u.html" target="B">U</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_v.html" target="B">V</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_w.html" target="B">W</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_x.html" target="B">X</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_y.html" target="B">Y</a>
+<li><a href="../html/toc/toc_azquotes/toc_azquotes_z.html" target="B">Z</a>
+</ul>
+</div></div></div>
+</body>
+<iframe src="../html/Frame.html" height="720px" width="100%" scrolling="auto" frameborder="0" style="box-shadow: 0px 0px 20px -10px #fff0;" background-colorj="#fffo";>
+</iframe>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/music/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><table>
+<thead>
+<tr>
+<th>我喜欢的音乐</th>
+<th>你是光影世界里一首可视听的歌</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+    <div id="aplayer-fjpBShJN" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="2097889854" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
+    ></div></td>
+<td>
+    <div id="aplayer-mdgtZxLb" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="5469560397" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
+    ></div></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><mark>hello</mark></p>
+<p>🤙</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>练习_五笔</title>
+    <url>/music/%E7%BB%83%E4%B9%A0_%E4%BA%94%E7%AC%94.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>五笔打字练习</p>
+<span id="more"></span>
+<table>
+<thead>
+<tr>
+<th>一</th>
+<th>二</th>
+<th>三</th>
+<th>四</th>
+<th>五</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>吖</td>
+<td>KUHH</td>
+<td>阿</td>
+<td>BSKG</td>
+<td>.1</td>
+</tr>
+<tr>
+<td>啊</td>
+<td>KBSK</td>
+<td>锕</td>
+<td>KBSK</td>
+<td>.2</td>
+</tr>
+<tr>
+<td>嗄</td>
+<td>KDHT</td>
+<td>哎</td>
+<td>KAQY</td>
+<td>.3</td>
+</tr>
+<tr>
+<td>哀</td>
+<td>YEU</td>
+<td>唉</td>
+<td>KCTD</td>
+<td>.4</td>
+</tr>
+<tr>
+<td>埃</td>
+<td>FCTD</td>
+<td>挨</td>
+<td>RCTD</td>
+<td></td>
+</tr>
+<tr>
+<td>一</td>
+<td>二</td>
+<td>三</td>
+<td>四</td>
+<td>五</td>
+</tr>
+<tr>
+<td>锿</td>
+<td>QYEY</td>
+<td>捱</td>
+<td>RDFF</td>
+<td>.1</td>
+</tr>
+<tr>
+<td>皑</td>
+<td>RMNN</td>
+<td>癌</td>
+<td>UKKM</td>
+<td>.2</td>
+</tr>
+<tr>
+<td>嗳</td>
+<td>KEPC</td>
+<td>矮</td>
+<td>TDTV</td>
+<td>.3</td>
+</tr>
+<tr>
+<td>蔼</td>
+<td>AYJN</td>
+<td>霭</td>
+<td>FYJN</td>
+<td>.4</td>
+</tr>
+</tbody>
+</table>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><input type="checkbox" id="checkbox0"><label for="checkbox0">Linear</label></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><input type="checkbox" id="checkbox1"><label for="checkbox1">text</label></th>
+<th><details>Hello<summary>Hi，Yuoek</summary></details></th>
+<th>$\sigma$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Item1</td>
+<td>Item1</td>
+<td>Item1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><input type="checkbox" id="checkbox2"><label for="checkbox2">text</label></th>
+<th>二</th>
+<th>Column3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Item1</td>
+<td>Item1</td>
+<td>Item1</td>
+</tr>
+</tbody>
+</table>
+<p>你好</p>
+<p>你%0D好</p>
+<p>您好</p>
+<p>你&amp;emsp好</p>
+<p>您好</p>
+<p>wqvb</p>
+<p>您好nihāo</p>
+<p>你好</p>
+<iframe src="Yu/Books/1.pdf" style="width:100%; height:1080px;" frameborder="0"></iframe>
+<p>$$\begin{split}<br>
+\cos 2x &amp;= \cos^2x - \sin^2x \\<br>
+&amp;=2\cos^2x-1<br>
+\end{split}$$</p>
+<p>$$<br>
+f(n) =<br>
+\begin{cases}<br>
+n/2,  &amp; \text{if }n\text{ is even} \\<br>
+3n+1, &amp; \text{if }n\text{ is odd}<br>
+\end{cases}<br>
+$$</p>
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://billy14553.github.io/2023/01/07/Preprocessing/preprocessing.html" frameborder="1" scrolling="yes" width="320" height="240"></iframe>
+</div>
+
+<div class="markmap-container" style="height:400px">
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;links&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;&lt;strong&gt;inline&lt;/strong&gt; &lt;del&gt;text&lt;/del&gt; &lt;em&gt;styles&lt;/em&gt;&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,4]},&quot;v&quot;:&quot;multiline&lt;br&gt;\ntext&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;&lt;code&gt;inline code&lt;/code&gt;&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[5,9]},&quot;v&quot;:&quot;&lt;pre class=\&quot;language-js\&quot;&gt;&lt;code class=\&quot;language-js\&quot;&gt;console&lt;span class=\&quot;token punctuation\&quot;&gt;.&lt;/span&gt;&lt;span class=\&quot;token function\&quot;&gt;log&lt;/span&gt;&lt;span class=\&quot;token punctuation\&quot;&gt;(&lt;/span&gt;&lt;span class=\&quot;token string\&quot;&gt;&#39;code block&#39;&lt;/span&gt;&lt;span class=\&quot;token punctuation\&quot;&gt;)&lt;/span&gt;&lt;span class=\&quot;token punctuation\&quot;&gt;;&lt;/span&gt;\nconsole&lt;span class=\&quot;token punctuation\&quot;&gt;.&lt;/span&gt;&lt;span class=\&quot;token function\&quot;&gt;log&lt;/span&gt;&lt;span class=\&quot;token punctuation\&quot;&gt;(&lt;/span&gt;&lt;span class=\&quot;token string\&quot;&gt;&#39;code block&#39;&lt;/span&gt;&lt;span class=\&quot;token punctuation\&quot;&gt;)&lt;/span&gt;&lt;span class=\&quot;token punctuation\&quot;&gt;;&lt;/span&gt;\n&lt;/code&gt;&lt;/pre&gt;\n&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;KaTeX - &lt;span class=\&quot;katex\&quot;&gt;&lt;span class=\&quot;katex-mathml\&quot;&gt;&lt;math xmlns=\&quot;http://www.w3.org/1998/Math/MathML\&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;±&lt;/mo&gt;&lt;msqrt&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;/mrow&gt;&lt;/msqrt&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;annotation encoding=\&quot;application/x-tex\&quot;&gt;x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=\&quot;katex-html\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;span class=\&quot;base\&quot;&gt;&lt;span class=\&quot;strut\&quot; style=\&quot;height:0.4306em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;mord mathnormal\&quot;&gt;x&lt;/span&gt;&lt;span class=\&quot;mspace\&quot; style=\&quot;margin-right:0.2778em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;mrel\&quot;&gt;=&lt;/span&gt;&lt;span class=\&quot;mspace\&quot; style=\&quot;margin-right:0.2778em;\&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;base\&quot;&gt;&lt;span class=\&quot;strut\&quot; style=\&quot;height:1.3845em;vertical-align:-0.345em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;mord\&quot;&gt;&lt;span class=\&quot;mord\&quot;&gt;&lt;span class=\&quot;mopen nulldelimiter\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;mfrac\&quot;&gt;&lt;span class=\&quot;vlist-t vlist-t2\&quot;&gt;&lt;span class=\&quot;vlist-r\&quot;&gt;&lt;span class=\&quot;vlist\&quot; style=\&quot;height:1.0395em;\&quot;&gt;&lt;span style=\&quot;top:-2.655em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:3em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;sizing reset-size6 size3 mtight\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;2&lt;/span&gt;&lt;span class=\&quot;mord mathnormal mtight\&quot;&gt;a&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=\&quot;top:-3.23em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:3em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;frac-line\&quot; style=\&quot;border-bottom-width:0.04em;\&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=\&quot;top:-3.394em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:3em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;sizing reset-size6 size3 mtight\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;−&lt;/span&gt;&lt;span class=\&quot;mord mathnormal mtight\&quot;&gt;b&lt;/span&gt;&lt;span class=\&quot;mbin mtight\&quot;&gt;±&lt;/span&gt;&lt;span class=\&quot;mord sqrt mtight\&quot;&gt;&lt;span class=\&quot;vlist-t vlist-t2\&quot;&gt;&lt;span class=\&quot;vlist-r\&quot;&gt;&lt;span class=\&quot;vlist\&quot; style=\&quot;height:0.9221em;\&quot;&gt;&lt;span class=\&quot;svg-align\&quot; style=\&quot;top:-3em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:3em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;mord mtight\&quot; style=\&quot;padding-left:0.833em;\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;&lt;span class=\&quot;mord mathnormal mtight\&quot;&gt;b&lt;/span&gt;&lt;span class=\&quot;msupsub\&quot;&gt;&lt;span class=\&quot;vlist-t\&quot;&gt;&lt;span class=\&quot;vlist-r\&quot;&gt;&lt;span class=\&quot;vlist\&quot; style=\&quot;height:0.7463em;\&quot;&gt;&lt;span style=\&quot;top:-2.786em;margin-right:0.0714em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:2.5em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;sizing reset-size3 size1 mtight\&quot;&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;mbin mtight\&quot;&gt;−&lt;/span&gt;&lt;span class=\&quot;mord mtight\&quot;&gt;4&lt;/span&gt;&lt;span class=\&quot;mord mathnormal mtight\&quot;&gt;a&lt;/span&gt;&lt;span class=\&quot;mord mathnormal mtight\&quot;&gt;c&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=\&quot;top:-2.8821em;\&quot;&gt;&lt;span class=\&quot;pstrut\&quot; style=\&quot;height:3em;\&quot;&gt;&lt;/span&gt;&lt;span class=\&quot;hide-tail mtight\&quot; style=\&quot;min-width:0.853em;height:1.08em;\&quot;&gt;&lt;svg xmlns=\&quot;http://www.w3.org/2000/svg\&quot; width=&#39;400em&#39; height=&#39;1.08em&#39; viewBox=&#39;0 0 400000 1080&#39; preserveAspectRatio=&#39;xMinYMin slice&#39;&gt;&lt;path d=&#39;M95,702\nc-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14\nc0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54\nc44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10\ns173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429\nc69,-144,104.5,-217.7,106.5,-221\nl0 -0\nc5.3,-9.3,12,-14,20,-14\nH400000v40H845.2724\ns-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7\nc-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z\nM834 80h400000v40h-400000z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;vlist-s\&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;vlist-r\&quot;&gt;&lt;span class=\&quot;vlist\&quot; style=\&quot;height:0.1179em;\&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;vlist-s\&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;vlist-r\&quot;&gt;&lt;span class=\&quot;vlist\&quot; style=\&quot;height:0.345em;\&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;mclose nulldelimiter\&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&quot;}],&quot;p&quot;:{}}"></svg>
+</div>
+
+<p>// 通过jsDelivr的CDN引入echarts</p>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<p>// 使用GL里的各种组件时需要添加，否则可不需要</p>
+<script src="https://cdn.jsdelivr.net/npm/echarts-gl@2.0.9/dist/echarts-gl.min.js"></script>
+<p>00:00:02.064 开始</p>
+<p>00:00:32.139 书签 1<br>
+00:00:50.734 高潮<br>
+00:01:11.281 书签 2<br>
+00:01:41.244 书签 3<br>
+00:03:13.141 书签 4</p>
+<div id="echarts3772" style="width: 81%;height: 400px;margin: 0 auto"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts3772'));
+
+        // 指定图表的配置项和数据
+        var option = 
+
+option = {
+  tooltip: {
+    trigger: 'item',
+    formatter: '{a} <br/>{b}: {c} ({d}%)'
+  },
+  legend: {
+    data: [
+      'Direct',
+      'Marketing',
+      'Search Engine',
+      'Email',
+      'Union Ads',
+      'Video Ads',
+      'Baidu',
+      'Google',
+      'Bing',
+      'Others'
+    ]
+  },
+  series: [
+    {
+      name: 'Access From',
+      type: 'pie',
+      selectedMode: 'single',
+      radius: [0, '30%'],
+      label: {
+        position: 'inner',
+        fontSize: 14
+      },
+      labelLine: {
+        show: false
+      },
+      data: [
+        { value: 1548, name: 'Search Engine' },
+        { value: 775, name: 'Direct' },
+        { value: 679, name: 'Marketing', selected: true }
+      ]
+    },
+    {
+      name: 'Access From',
+      type: 'pie',
+      radius: ['45%', '60%'],
+      labelLine: {
+        length: 30
+      },
+      label: {
+        formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+        backgroundColor: '#F6F8FC',
+        borderColor: '#8C8D8E',
+        borderWidth: 1,
+        borderRadius: 4,
+        rich: {
+          a: {
+            color: '#6E7079',
+            lineHeight: 22,
+            align: 'center'
+          },
+          hr: {
+            borderColor: '#8C8D8E',
+            width: '100%',
+            borderWidth: 1,
+            height: 0
+          },
+          b: {
+            color: '#4C5058',
+            fontSize: 14,
+            fontWeight: 'bold',
+            lineHeight: 33
+          },
+          per: {
+            color: '#fff',
+            backgroundColor: '#4C5058',
+            padding: [3, 4],
+            borderRadius: 4
+          }
+        }
+      },
+      data: [
+        { value: 1048, name: 'Baidu' },
+        { value: 335, name: 'Direct' },
+        { value: 310, name: 'Email' },
+        { value: 251, name: 'Google' },
+        { value: 234, name: 'Union Ads' },
+        { value: 147, name: 'Bing' },
+        { value: 135, name: 'Video Ads' },
+        { value: 102, name: 'Others' }
+      ]
+    }
+  ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+<div id="echarts398" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts398'));
+
+        // 指定图表的配置项和数据
+        var option = 
+
+option = {
+  tooltip: {},
+  backgroundColor: '#fff',
+  visualMap: {
+    show: false,
+    dimension: 2,
+    min: -1,
+    max: 1,
+    inRange: {
+      color: [
+        '#313695',
+        '#4575b4',
+        '#74add1',
+        '#abd9e9',
+        '#e0f3f8',
+        '#ffffbf',
+        '#fee090',
+        '#fdae61',
+        '#f46d43',
+        '#d73027',
+        '#a50026'
+      ]
+    }
+  },
+  xAxis3D: {
+    type: 'value'
+  },
+  yAxis3D: {
+    type: 'value'
+  },
+  zAxis3D: {
+    type: 'value',
+    max: 1,
+    splitNumber: 2
+  },
+  grid3D: {
+    viewControl: {
+      // projection: 'orthographic'
+    },
+    boxHeight: 40
+  },
+  series: [
+    {
+      type: 'surface',
+      wireframe: {
+        show: false
+      },
+      shading: 'color',
+      equation: {
+        x: {
+          step: 0.05,
+          min: -3,
+          max: 3
+        },
+        y: {
+          step: 0.05,
+          min: -3,
+          max: 3
+        },
+        z: function (x, y) {
+          return (Math.sin(x * x + y * y) * x) / 3.14;
+        }
+      }
+    }
+  ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+<div id="echarts9792" style="width: 90%;height: 400px;margin: 0 auto"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts9792'));
+
+        // 指定图表的配置项和数据
+        var option = option = {
+  toolbox: {
+    feature: {
+      saveAsImage: {
+        backgroundColor: '#111'
+      }
+    },
+    iconStyle: {
+      normal: {
+        borderColor: '#fff'
+      }
+    },
+    left: 0
+  },
+  xAxis3D: {
+    type: 'value'
+  },
+  yAxis3D: {
+    type: 'value'
+  },
+  zAxis3D: {
+    type: 'value'
+  },
+  grid3D: {
+    show: false,
+    boxWidth: 200,
+    boxDepth: 200,
+    axisPointer: {
+      show: false
+    },
+    axisLine: {
+      lineStyle: {
+        color: '#fff'
+      }
+    },
+    postEffect: {
+      enable: true,
+      SSAO: {
+        enable: true,
+        radius: 10,
+        intensity: 1
+      }
+    },
+    temporalSuperSampling: {
+      enable: true
+    },
+    light: {
+      main: {
+        intensity: 1,
+        shadow: true
+      },
+      ambient: {
+        intensity: 0
+      },
+      ambientCubemap: {
+        texture: ROOT_PATH + '/data-gl/asset/pisa.hdr',
+        exposure: 1,
+        diffuseIntensity: 1,
+        specularIntensity: 1
+      }
+    },
+    viewControl: {
+      // projection: 'orthographic'
+    }
+  },
+  series: [
+    createSeries(1.5, 1.5),
+    createSeries(-1.5, -1.5),
+    createSeries(-1.5, 1.5),
+    createSeries(1.5, -1.5),
+    createSeries(0, 0)
+  ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+<div id="echarts6232" style="width: 90%;height: 400px;margin: 0 auto"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts6232'));
+
+        // 指定图表的配置项和数据
+        var option = option = {
+  color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
+  title: {
+    text: 'Gradient Stacked Area Chart'
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross',
+      label: {
+        backgroundColor: '#6a7985'
+      }
+    }
+  },
+  legend: {
+    data: ['Line 1', 'Line 2', 'Line 3', 'Line 4', 'Line 5']
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {}
+    }
+  },
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+  xAxis: [
+    {
+      type: 'category',
+      boundaryGap: false,
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value'
+    }
+  ],
+  series: [
+    {
+      name: 'Line 1',
+      type: 'line',
+      stack: 'Total',
+      smooth: true,
+      lineStyle: {
+        width: 0
+      },
+      showSymbol: false,
+      areaStyle: {
+        opacity: 0.8,
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: 'rgb(128, 255, 165)'
+          },
+          {
+            offset: 1,
+            color: 'rgb(1, 191, 236)'
+          }
+        ])
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [140, 232, 101, 264, 90, 340, 250]
+    },
+    {
+      name: 'Line 2',
+      type: 'line',
+      stack: 'Total',
+      smooth: true,
+      lineStyle: {
+        width: 0
+      },
+      showSymbol: false,
+      areaStyle: {
+        opacity: 0.8,
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: 'rgb(0, 221, 255)'
+          },
+          {
+            offset: 1,
+            color: 'rgb(77, 119, 255)'
+          }
+        ])
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [120, 282, 111, 234, 220, 340, 310]
+    },
+    {
+      name: 'Line 3',
+      type: 'line',
+      stack: 'Total',
+      smooth: true,
+      lineStyle: {
+        width: 0
+      },
+      showSymbol: false,
+      areaStyle: {
+        opacity: 0.8,
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: 'rgb(55, 162, 255)'
+          },
+          {
+            offset: 1,
+            color: 'rgb(116, 21, 219)'
+          }
+        ])
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [320, 132, 201, 334, 190, 130, 220]
+    },
+    {
+      name: 'Line 4',
+      type: 'line',
+      stack: 'Total',
+      smooth: true,
+      lineStyle: {
+        width: 0
+      },
+      showSymbol: false,
+      areaStyle: {
+        opacity: 0.8,
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: 'rgb(255, 0, 135)'
+          },
+          {
+            offset: 1,
+            color: 'rgb(135, 0, 157)'
+          }
+        ])
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [220, 402, 231, 134, 190, 230, 120]
+    },
+    {
+      name: 'Line 5',
+      type: 'line',
+      stack: 'Total',
+      smooth: true,
+      lineStyle: {
+        width: 0
+      },
+      showSymbol: false,
+      label: {
+        show: true,
+        position: 'top'
+      },
+      areaStyle: {
+        opacity: 0.8,
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: 'rgb(255, 191, 0)'
+          },
+          {
+            offset: 1,
+            color: 'rgb(224, 62, 76)'
+          }
+        ])
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [220, 302, 181, 234, 210, 290, 150]
+    }
+  ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+<div id="echarts9179" style="width: 90%;height: 400px;margin: 0 auto"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts9179'));
+
+        // 指定图表的配置项和数据
+        var option = 
+option = {
+  title: {
+    text: 'Two Value-Axes in Polar'
+  },
+  legend: {
+    data: ['line']
+  },
+  polar: {},
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross'
+    }
+  },
+  angleAxis: {
+    type: 'value',
+    startAngle: 0
+  },
+  radiusAxis: {},
+  series: [
+    {
+      coordinateSystem: 'polar',
+      name: 'line',
+      type: 'line',
+      data: data
+    }
+  ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+<div id="echarts2367" style="width: 90%;height: 400px;margin: 0 auto"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts2367'));
+
+        // 指定图表的配置项和数据
+        var option = option = {
+   title: {
+     text: 'Les Miserables',
+     subtext: 'Default layout',
+     top: 'bottom',
+     left: 'right'
+   },
+   tooltip: {},
+   legend: [
+     {
+       // selectedMode: 'single',
+       data: graph.categories.map(function (a) {
+         return a.name;
+       })
+     }
+   ],
+   animationDuration: 1500,
+   animationEasingUpdate: 'quinticInOut',
+   series: [
+     {
+       name: 'Les Miserables',
+       type: 'graph',
+       layout: 'none',
+       data: graph.nodes,
+       links: graph.links,
+       categories: graph.categories,
+       roam: true,
+       label: {
+         position: 'right',
+         formatter: '{b}'
+       },
+       lineStyle: {
+         color: 'source',
+         curveness: 0.3
+       },
+       emphasis: {
+         focus: 'adjacency',
+         lineStyle: {
+           width: 10
+         }
+       }
+     }
+   ]
+ };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+<div id="echarts6729" style="width: 90%;height: 400px;margin: 0 auto"></div>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts6729'));
+
+        // 指定图表的配置项和数据
+        var option = const data = {
+  name: 'flare',
+  children: [
+    {
+      name: 'data',
+      children: [
+        {
+          name: 'converters',
+          children: [
+            { name: 'Converters', value: 721 },
+            { name: 'DelimitedTextConverter', value: 4294 }
+          ]
+        },
+        {
+          name: 'DataUtil',
+          value: 3322
+        }
+      ]
+    },
+    {
+      name: 'display',
+      children: [
+        { name: 'DirtySprite', value: 8833 },
+        { name: 'LineSprite', value: 1732 },
+        { name: 'RectSprite', value: 3623 }
+      ]
+    },
+    {
+      name: 'flex',
+      children: [{ name: 'FlareVis', value: 4116 }]
+    },
+    {
+      name: 'query',
+      children: [
+        { name: 'AggregateExpression', value: 1616 },
+        { name: 'And', value: 1027 },
+        { name: 'Arithmetic', value: 3891 },
+        { name: 'Average', value: 891 },
+        { name: 'BinaryExpression', value: 2893 },
+        { name: 'Comparison', value: 5103 },
+        { name: 'CompositeExpression', value: 3677 },
+        { name: 'Count', value: 781 },
+        { name: 'DateUtil', value: 4141 },
+        { name: 'Distinct', value: 933 },
+        { name: 'Expression', value: 5130 },
+        { name: 'ExpressionIterator', value: 3617 },
+        { name: 'Fn', value: 3240 },
+        { name: 'If', value: 2732 },
+        { name: 'IsA', value: 2039 },
+        { name: 'Literal', value: 1214 },
+        { name: 'Match', value: 3748 },
+        { name: 'Maximum', value: 843 },
+        {
+          name: 'methods',
+          children: [
+            { name: 'add', value: 593 },
+            { name: 'and', value: 330 },
+            { name: 'average', value: 287 },
+            { name: 'count', value: 277 },
+            { name: 'distinct', value: 292 },
+            { name: 'div', value: 595 },
+            { name: 'eq', value: 594 },
+            { name: 'fn', value: 460 },
+            { name: 'gt', value: 603 },
+            { name: 'gte', value: 625 },
+            { name: 'iff', value: 748 },
+            { name: 'isa', value: 461 },
+            { name: 'lt', value: 597 },
+            { name: 'lte', value: 619 },
+            { name: 'max', value: 283 },
+            { name: 'min', value: 283 },
+            { name: 'mod', value: 591 },
+            { name: 'mul', value: 603 },
+            { name: 'neq', value: 599 },
+            { name: 'not', value: 386 },
+            { name: 'or', value: 323 },
+            { name: 'orderby', value: 307 },
+            { name: 'range', value: 772 },
+            { name: 'select', value: 296 },
+            { name: 'stddev', value: 363 },
+            { name: 'sub', value: 600 },
+            { name: 'sum', value: 280 },
+            { name: 'update', value: 307 },
+            { name: 'variance', value: 335 },
+            { name: 'where', value: 299 },
+            { name: 'xor', value: 354 },
+            { name: 'x_x', value: 264 }
+          ]
+        },
+        { name: 'Minimum', value: 843 },
+        { name: 'Not', value: 1554 },
+        { name: 'Or', value: 970 },
+        { name: 'Query', value: 13896 },
+        { name: 'Range', value: 1594 },
+        { name: 'StringUtil', value: 4130 },
+        { name: 'Sum', value: 791 },
+        { name: 'Variable', value: 1124 },
+        { name: 'Variance', value: 1876 },
+        { name: 'Xor', value: 1101 }
+      ]
+    },
+    {
+      name: 'scale',
+      children: [
+        { name: 'IScaleMap', value: 2105 },
+        { name: 'LinearScale', value: 1316 },
+        { name: 'LogScale', value: 3151 },
+        { name: 'OrdinalScale', value: 3770 },
+        { name: 'QuantileScale', value: 2435 },
+        { name: 'QuantitativeScale', value: 4839 },
+        { name: 'RootScale', value: 1756 },
+        { name: 'Scale', value: 4268 },
+        { name: 'ScaleType', value: 1821 },
+        { name: 'TimeScale', value: 5833 }
+      ]
+    }
+  ]
+};
+option = {
+  tooltip: {
+    trigger: 'item',
+    triggerOn: 'mousemove'
+  },
+  series: [
+    {
+      type: 'tree',
+      id: 0,
+      name: 'tree1',
+      data: [data],
+      top: '10%',
+      left: '8%',
+      bottom: '22%',
+      right: '20%',
+      symbolSize: 7,
+      edgeShape: 'polyline',
+      edgeForkPosition: '63%',
+      initialTreeDepth: 3,
+      lineStyle: {
+        width: 2
+      },
+      label: {
+        backgroundColor: '#fff',
+        position: 'left',
+        verticalAlign: 'middle',
+        align: 'right'
+      },
+      leaves: {
+        label: {
+          position: 'right',
+          verticalAlign: 'middle',
+          align: 'left'
+        }
+      },
+      emphasis: {
+        focus: 'descendant'
+      },
+      expandAndCollapse: true,
+      animationDuration: 550,
+      animationDurationUpdate: 750
+    }
+  ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+<iframe src="html/Frame.html" height="600px" width="800px"> </iframe>
+<h2 id="1">1</h2>
+
+    <div id="aplayer-qNMgsfae" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="7868005687" data-server="tencent" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="1000px" data-preload="auto" data-theme="#555"
+    ></div>
+
+    <div id="aplayer-BcDmlrZf" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="55s2g552" data-server="kugou" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="1000px" data-preload="auto" data-theme="#555"
+    ></div>
+<h2 id="2">2</h2>
+
+    <div id="aplayer-PQjIQmfO" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="9FA29DB71BD38B342A3E0A2202A9E8F9" data-server="kugou" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="1000px" data-preload="auto" data-theme="#555"
+    ></div>
+<h3 id="3">3</h3>
+
+    <div id="aplayer-qdzLaMZo" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="60198" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"
+    ></div>
+<h4 id="4">4</h4>
+
+    <div id="aplayer-XUcphkvk" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="1978921795" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#777777"
+    ></div>
+<h5 id="5">5</h5>
+
+    <div id="aplayer-HHALqXgJ" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="279795641" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#0F0F0F"
+    ></div>
+<h6 id="6">6</h6>
+
+    <div id="aplayer-SgdEfuuC" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="001eAeSJ1sUIKg" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#5CB85C"
+    ></div>
+]]></content>
+  </entry>
+  <entry>
+    <title>schedule</title>
+    <url>/schedule/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+  </entry>
+  <entry>
+    <title>tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+  </entry>
+</search>

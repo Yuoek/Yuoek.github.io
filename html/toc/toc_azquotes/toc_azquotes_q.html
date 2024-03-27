@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>纯CSS样式控制折叠展开菜单效果特效演示</title>
+<meta name="description" content="纯CSS样式控制折叠展开菜单效果特效演示。" />
+<meta name="keywords" content="纯CSS,样式控制,折叠展开,菜单,效果,特效演示" />
+<meta name="author" content="jQuery插件库" />
+<meta name="Copyright" content="jQuery插件库" />
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+a {
+text-decoration: none;
+}
+#conter {
+width: 1000px;
+margin: auto;
+}
+#help-left {
+width: auto;
+font-family: 'microsoft YaHei';
+float: left;
+}
+.menu {
+border-left: 1px solid #3cbfb3;
+border-right: 1px solid #3cbfb3;
+}
+.menu:last-child {
+border-bottom: 1px solid #3cbfb3;
+}
+.menu summary {
+height: 40px;
+line-height: 40px;
+text-indent: 10px;
+outline: none;
+font-size: 14px;
+font-weight: 700;
+border-top: 1px solid #3cbfb3;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #fff0));
+cursor: pointer;
+display: flex;
+}
+/*使用下面这个，可以去掉小三角，神奇的菜单就可以完成了*/
+.menu summary::-webkit-details-marker {
+}
+.menu summary:before {
+content: "🌸";
+display: inline-block;
+width: 16px;
+height: 16px;
+margin-right: 10px;
+font-size: 18px;
+font-weight: 700;
+}
+.menu[open] summary:before {
+content: "🕊️";
+}
+.menu ul {
+padding: 10px 0;
+}
+.menu ul li {
+list-style: none;
+text-indent: 25px;
+font-size: 12px;
+height: 30px;
+line-height: 30px;
+}
+.menu ul li a {
+display: block;
+color: #096868;
+}
+.menu ul li a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<section id="conter">
+<section id="help-left">
+<!--open为展开菜单，close为折叠菜单-->
+<details class="menu" close>
+<summary>Quentin Bryce Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11953-Quentin_Bryce.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Questlove Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11971-Questlove.html" target="A">1</a></li>
+<li><a href="../../azquotes/11971-Questlove@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11971-Questlove@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/11971-Questlove@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quintilian Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11993-Quintilian.html" target="A">1</a></li>
+<li><a href="../../azquotes/11993-Quintilian@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11993-Quintilian@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/11993-Quintilian@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Queen Rania of Jordan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11999-Queen_Rania_of_Jordan.html" target="A">1</a></li>
+<li><a href="../../azquotes/11999-Queen_Rania_of_Jordan@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11999-Queen_Rania_of_Jordan@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Redzepi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12158-Rene_Redzepi.html" target="A">1</a></li>
+<li><a href="../../azquotes/12158-Rene_Redzepi@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Russo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12810-Rene_Russo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quentin Tarantino Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14449-Quentin_Tarantino.html" target="A">1</a></li>
+<li><a href="../../azquotes/14449-Quentin_Tarantino@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/14449-Quentin_Tarantino@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/14449-Quentin_Tarantino@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/14449-Quentin_Tarantino@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/14449-Quentin_Tarantino@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/14449-Quentin_Tarantino@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/14449-Quentin_Tarantino@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/14449-Quentin_Tarantino@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/14449-Quentin_Tarantino@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Queen Victoria Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15079-Queen_Victoria.html" target="A">1</a></li>
+<li><a href="../../azquotes/15079-Queen_Victoria@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15079-Queen_Victoria@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Rivkin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21032-Rene_Rivkin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Queen Noor of Jordan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22598-Queen_Noor_of_Jordan.html" target="A">1</a></li>
+<li><a href="../../azquotes/22598-Queen_Noor_of_Jordan@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Maheu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22702-Rene_Maheu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Qiu Jin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24431-Qiu_Jin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quintus Tullius Cicero Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25313-Quintus_Tullius_Cicero.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quang Nhuong Huynh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26036-Quang_Nhuong_Huynh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Maran Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26308-Rene_Maran.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Queen Seondeok of Silla Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26969-Queen_Seondeok_of_Silla.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quentin L. Cook Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27959-Quentin_L_Cook.html" target="A">1</a></li>
+<li><a href="../../azquotes/27959-Quentin_L_Cook@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/27959-Quentin_L_Cook@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quino Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28578-Quino.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Q-Tip Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28738-Q_Tip.html" target="A">1</a></li>
+<li><a href="../../azquotes/28738-Q_Tip@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quanah Parker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30222-Quanah_Parker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quanell X Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30571-Quanell_X.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quvenzhane Wallis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30591-Quvenzhane_Wallis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Renee Amoore Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31240-Renee_Amoore.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quentin Bell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31273-Quentin_Bell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Qurratulain Hyder Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34062-Qurratulain_Hyder.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quentin Crisp Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3408-Quentin_Crisp.html" target="A">1</a></li>
+<li><a href="../../azquotes/3408-Quentin_Crisp@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/3408-Quentin_Crisp@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/3408-Quentin_Crisp@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/3408-Quentin_Crisp@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/3408-Quentin_Crisp@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/3408-Quentin_Crisp@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/3408-Quentin_Crisp@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/3408-Quentin_Crisp@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/3408-Quentin_Crisp@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quinn Cummings Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34667-Quinn_Cummings.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quinton Aaron Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35315-Quinton_Aaron.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quin Hillyer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35614-Quin_Hillyer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Renee Ellmers Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36980-Renee_Ellmers.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Konig Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37782-Rene_Konig.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Qiu Xiaolong Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40026-Qiu_Xiaolong.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Leriche Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43529-Rene_Leriche.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Queen Elizabeth II Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4435-Queen_Elizabeth_II.html" target="A">1</a></li>
+<li><a href="../../azquotes/4435-Queen_Elizabeth_II@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/4435-Queen_Elizabeth_II@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Queen Elizabeth The Queen Mother Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44369-Queen_Elizabeth_The_Queen_Mother.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quentin Blake Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44495-Quentin_Blake.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quico Canseco Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44749-Quico_Canseco.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quint Studer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44836-Quint_Studer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quintus Ennius Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4515-Quintus_Ennius.html" target="A">1</a></li>
+<li><a href="../../azquotes/4515-Quintus_Ennius@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Q'orianka Kilcher Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45483-Q_orianka_Kilcher.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quentin Reynolds Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46346-Quentin_Reynolds.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Thom Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46434-Rene_Thom.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quintus Curtius Rufus Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47050-Quintus_Curtius_Rufus.html" target="A">1</a></li>
+<li><a href="../../azquotes/47050-Quintus_Curtius_Rufus@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Lavand Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48729-Rene_Lavand.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quinlan Terry Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48958-Quinlan_Terry.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Renee Fleming Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4915-Renee_Fleming.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quintin Jardine Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50381-Quintin_Jardine.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Saguisag Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50725-Rene_Saguisag.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Preval Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51250-Rene_Preval.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Qiu Miaojin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53554-Qiu_Miaojin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quentin Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57293-Quentin_Smith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quinn Norton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57738-Quinn_Norton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quinton Jackson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/65795-Quinton_Jackson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quavo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/66108-Quavo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quentin Dupieux Quotes</summary>
+<ul>
+<li><a href="../../azquotes/69906-Quentin_Dupieux.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quinn Shephard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70449-Quinn_Shephard.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Qin Shi Huang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71915-Qin_Shi_Huang.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quincy Jones Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7588-Quincy_Jones.html" target="A">1</a></li>
+<li><a href="../../azquotes/7588-Quincy_Jones@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/7588-Quincy_Jones@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/7588-Quincy_Jones@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/7588-Quincy_Jones@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Queen Latifah Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8527-Queen_Latifah.html" target="A">1</a></li>
+<li><a href="../../azquotes/8527-Queen_Latifah@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/8527-Queen_Latifah@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/8527-Queen_Latifah@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/8527-Queen_Latifah@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/8527-Queen_Latifah@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/8527-Queen_Latifah@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/8527-Queen_Latifah@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/8527-Queen_Latifah@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Magritte Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9289-Rene_Magritte.html" target="A">1</a></li>
+<li><a href="../../azquotes/9289-Rene_Magritte@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quindon Tarver Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95304-Quindon_Tarver.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quentin S. Crisp Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95411-Quentin_S_Crisp.html" target="A">1</a></li>
+<li><a href="../../azquotes/95411-Quentin_S_Crisp@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/95411-Quentin_S_Crisp@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/95411-Quentin_S_Crisp@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/95411-Quentin_S_Crisp@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Rene Marie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95456-Rene_Marie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Quiara Alegria Hudes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97034-Quiara_Alegria_Hudes.html" target="A">1</a></li>
+</ul>
+</details>
+</section>
+<section id="help-right"></section>
+</section>
+</body>
+</html>

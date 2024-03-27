@@ -1,0 +1,3774 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>纯CSS样式控制折叠展开菜单效果特效演示</title>
+<meta name="description" content="纯CSS样式控制折叠展开菜单效果特效演示。" />
+<meta name="keywords" content="纯CSS,样式控制,折叠展开,菜单,效果,特效演示" />
+<meta name="author" content="jQuery插件库" />
+<meta name="Copyright" content="jQuery插件库" />
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+a {
+text-decoration: none;
+}
+#conter {
+width: 1000px;
+margin: auto;
+}
+#help-left {
+width: auto;
+font-family: 'microsoft YaHei';
+float: left;
+}
+.menu {
+border-left: 1px solid #3cbfb3;
+border-right: 1px solid #3cbfb3;
+}
+.menu:last-child {
+border-bottom: 1px solid #3cbfb3;
+}
+.menu summary {
+height: 40px;
+line-height: 40px;
+text-indent: 10px;
+outline: none;
+font-size: 14px;
+font-weight: 700;
+border-top: 1px solid #3cbfb3;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #fff0));
+cursor: pointer;
+display: flex;
+}
+/*使用下面这个，可以去掉小三角，神奇的菜单就可以完成了*/
+.menu summary::-webkit-details-marker {
+}
+.menu summary:before {
+content: "🌸";
+display: inline-block;
+width: 16px;
+height: 16px;
+margin-right: 10px;
+font-size: 18px;
+font-weight: 700;
+}
+.menu[open] summary:before {
+content: "🕊️";
+}
+.menu ul {
+padding: 10px 0;
+}
+.menu ul li {
+list-style: none;
+text-indent: 25px;
+font-size: 12px;
+height: 30px;
+line-height: 30px;
+}
+.menu ul li a {
+display: block;
+color: #096868;
+}
+.menu ul li a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<section id="conter">
+<section id="help-left">
+<!--open为展开菜单，close为折叠菜单-->
+<details class="menu" close>
+<summary>Van Morrison Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10442-Van_Morrison.html" target="A">1</a></li>
+<li><a href="../../azquotes/10442-Van_Morrison@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/10442-Van_Morrison@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/10442-Van_Morrison@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/10442-Van_Morrison@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/10442-Van_Morrison@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/10442-Van_Morrison@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/10442-Van_Morrison@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/10442-Van_Morrison@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/10442-Van_Morrison@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viggo Mortensen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10453-Viggo_Mortensen.html" target="A">1</a></li>
+<li><a href="../../azquotes/10453-Viggo_Mortensen@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/10453-Viggo_Mortensen@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/10453-Viggo_Mortensen@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/10453-Viggo_Mortensen@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/10453-Viggo_Mortensen@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/10453-Viggo_Mortensen@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/10453-Viggo_Mortensen@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/10453-Viggo_Mortensen@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Nabokov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10641-Vladimir_Nabokov.html" target="A">1</a></li>
+<li><a href="../../azquotes/10641-Vladimir_Nabokov@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/10641-Vladimir_Nabokov@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/10641-Vladimir_Nabokov@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/10641-Vladimir_Nabokov@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/10641-Vladimir_Nabokov@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/10641-Vladimir_Nabokov@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/10641-Vladimir_Nabokov@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/10641-Vladimir_Nabokov@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/10641-Vladimir_Nabokov@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V. S. Naipaul Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10655-V_S_Naipaul.html" target="A">1</a></li>
+<li><a href="../../azquotes/10655-V_S_Naipaul@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/10655-V_S_Naipaul@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/10655-V_S_Naipaul@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/10655-V_S_Naipaul@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Nichols Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10802-Vincent_Nichols.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Ortiz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11144-Victor_Ortiz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Beckham Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1120-Victoria_Beckham.html" target="A">1</a></li>
+<li><a href="../../azquotes/1120-Victoria_Beckham@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/1120-Victoria_Beckham@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/1120-Victoria_Beckham@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/1120-Victoria_Beckham@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vance Packard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11227-Vance_Packard.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Venerable Bede Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1124-Venerable_Bede.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Paradis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11296-Vanessa_Paradis.html" target="A">1</a></li>
+<li><a href="../../azquotes/11296-Vanessa_Paradis@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11296-Vanessa_Paradis@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Pratt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11848-Victoria_Pratt.html" target="A">1</a></li>
+<li><a href="../../azquotes/11848-Victoria_Pratt@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Price Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11879-Vincent_Price.html" target="A">1</a></li>
+<li><a href="../../azquotes/11879-Vincent_Price@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Principal Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11893-Victoria_Principal.html" target="A">1</a></li>
+<li><a href="../../azquotes/11893-Victoria_Principal@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Putin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11940-Vladimir_Putin.html" target="A">1</a></li>
+<li><a href="../../azquotes/11940-Vladimir_Putin@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11940-Vladimir_Putin@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/11940-Vladimir_Putin@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/11940-Vladimir_Putin@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/11940-Vladimir_Putin@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/11940-Vladimir_Putin@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/11940-Vladimir_Putin@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/11940-Vladimir_Putin@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/11940-Vladimir_Putin@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vilayanur S. Ramachandran Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12053-Vilayanur_S_Ramachandran.html" target="A">1</a></li>
+<li><a href="../../azquotes/12053-Vilayanur_S_Ramachandran@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valentino Rossi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12669-Valentino_Rossi.html" target="A">1</a></li>
+<li><a href="../../azquotes/12669-Valentino_Rossi@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/12669-Valentino_Rossi@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronica Roth Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12684-Veronica_Roth.html" target="A">1</a></li>
+<li><a href="../../azquotes/12684-Veronica_Roth@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/12684-Veronica_Roth@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/12684-Veronica_Roth@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/12684-Veronica_Roth@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/12684-Veronica_Roth@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/12684-Veronica_Roth@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/12684-Veronica_Roth@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/12684-Veronica_Roth@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/12684-Veronica_Roth@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vita Sackville-West Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12871-Vita_Sackville_West.html" target="A">1</a></li>
+<li><a href="../../azquotes/12871-Vita_Sackville_West@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/12871-Vita_Sackville_West@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/12871-Vita_Sackville_West@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vidal Sassoon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13005-Vidal_Sassoon.html" target="A">1</a></li>
+<li><a href="../../azquotes/13005-Vidal_Sassoon@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13005-Vidal_Sassoon@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Satir Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13008-Virginia_Satir.html" target="A">1</a></li>
+<li><a href="../../azquotes/13008-Virginia_Satir@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13008-Virginia_Satir@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Schiavelli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13079-Vincent_Schiavelli.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vin Scully Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13241-Vin_Scully.html" target="A">1</a></li>
+<li><a href="../../azquotes/13241-Vin_Scully@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vikram Seth Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13343-Vikram_Seth.html" target="A">1</a></li>
+<li><a href="../../azquotes/13343-Vikram_Seth@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13343-Vikram_Seth@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Bertinelli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1337-Valerie_Bertinelli.html" target="A">1</a></li>
+<li><a href="../../azquotes/1337-Valerie_Bertinelli@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinoba Bhave Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1371-Vinoba_Bhave.html" target="A">1</a></li>
+<li><a href="../../azquotes/1371-Vinoba_Bhave@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon L. Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13815-Vernon_L_Smith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vic Snyder Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13849-Vic_Snyder.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Stanshall Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14009-Vivian_Stanshall.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valentina Tereshkova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14531-Valentina_Tereshkova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virgil Thomson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14635-Virgil_Thomson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Verne Troyer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14809-Verne_Troyer.html" target="A">1</a></li>
+<li><a href="../../azquotes/14809-Verne_Troyer@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ville Valo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14983-Ville_Valo.html" target="A">1</a></li>
+<li><a href="../../azquotes/14983-Ville_Valo@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/14983-Ville_Valo@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Vaughn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15022-Vince_Vaughn.html" target="A">1</a></li>
+<li><a href="../../azquotes/15022-Vince_Vaughn@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15022-Vince_Vaughn@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15022-Vince_Vaughn@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernor Vinge Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15104-Vernor_Vinge.html" target="A">1</a></li>
+<li><a href="../../azquotes/15104-Vernor_Vinge@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15104-Vernor_Vinge@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Voltaire Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15138-Voltaire.html" target="A">1</a></li>
+<li><a href="../../azquotes/15138-Voltaire@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15138-Voltaire@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15138-Voltaire@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/15138-Voltaire@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/15138-Voltaire@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/15138-Voltaire@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/15138-Voltaire@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/15138-Voltaire@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/15138-Voltaire@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Wang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15277-Vera_Wang.html" target="A">1</a></li>
+<li><a href="../../azquotes/15277-Vera_Wang@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15277-Vera_Wang@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15277-Vera_Wang@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivienne Westwood Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15537-Vivienne_Westwood.html" target="A">1</a></li>
+<li><a href="../../azquotes/15537-Vivienne_Westwood@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15537-Vivienne_Westwood@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15537-Vivienne_Westwood@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/15537-Vivienne_Westwood@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/15537-Vivienne_Westwood@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/15537-Vivienne_Westwood@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/15537-Vivienne_Westwood@p=8.html" target="A">8</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanna White Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15588-Vanna_White.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Venus Williams Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15732-Venus_Williams.html" target="A">1</a></li>
+<li><a href="../../azquotes/15732-Venus_Williams@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15732-Venus_Williams@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15732-Venus_Williams@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/15732-Venus_Williams@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/15732-Venus_Williams@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Wood Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15917-Victoria_Wood.html" target="A">1</a></li>
+<li><a href="../../azquotes/15917-Victoria_Wood@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Woodhull Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15924-Victoria_Woodhull.html" target="A">1</a></li>
+<li><a href="../../azquotes/15924-Victoria_Woodhull@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15924-Victoria_Woodhull@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Woolf Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15937-Virginia_Woolf.html" target="A">1</a></li>
+<li><a href="../../azquotes/15937-Virginia_Woolf@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15937-Virginia_Woolf@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15937-Virginia_Woolf@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/15937-Virginia_Woolf@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/15937-Virginia_Woolf@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/15937-Virginia_Woolf@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/15937-Virginia_Woolf@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/15937-Virginia_Woolf@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/15937-Virginia_Woolf@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Zhirinovsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16173-Vladimir_Zhirinovsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viswanathan Anand Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16249-Viswanathan_Anand.html" target="A">1</a></li>
+<li><a href="../../azquotes/16249-Viswanathan_Anand@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/16249-Viswanathan_Anand@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vir Das Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16506-Vir_Das.html" target="A">1</a></li>
+<li><a href="../../azquotes/16506-Vir_Das@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanna Bonta Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1653-Vanna_Bonta.html" target="A">1</a></li>
+<li><a href="../../azquotes/1653-Vanna_Bonta@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/1653-Vanna_Bonta@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/1653-Vanna_Bonta@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/1653-Vanna_Bonta@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/1653-Vanna_Bonta@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/1653-Vanna_Bonta@p=7.html" target="A">7</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Borge Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1680-Victor_Borge.html" target="A">1</a></li>
+<li><a href="../../azquotes/1680-Victor_Borge@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinnie Jones Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16825-Vinnie_Jones.html" target="A">1</a></li>
+<li><a href="../../azquotes/16825-Vinnie_Jones@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vijender Singh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17376-Vijender_Singh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Euwer Wolff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17633-Virginia_Euwer_Wolff.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Serge Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17675-Victor_Serge.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vandana Shiva Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17793-Vandana_Shiva.html" target="A">1</a></li>
+<li><a href="../../azquotes/17793-Vandana_Shiva@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/17793-Vandana_Shiva@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/17793-Vandana_Shiva@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/17793-Vandana_Shiva@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/17793-Vandana_Shiva@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Vande Velde Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18104-Vivian_Vande_Velde.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vikram Chandra Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18292-Vikram_Chandra.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Hanley Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18380-Victoria_Hanley.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Robin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18476-Vicki_Robin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Nazarian Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18537-Vera_Nazarian.html" target="A">1</a></li>
+<li><a href="../../azquotes/18537-Vera_Nazarian@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/18537-Vera_Nazarian@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/18537-Vera_Nazarian@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/18537-Vera_Nazarian@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/18537-Vera_Nazarian@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/18537-Vera_Nazarian@p=7.html" target="A">7</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vine Deloria Jr. Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18590-Vine_Deloria_Jr.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Alexander Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18716-Victoria_Alexander.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Pelevin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18726-Victor_Pelevin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Val McDermid Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18756-Val_McDermid.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Starrett Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18833-Vincent_Starrett.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Pettersson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18896-Vicki_Pettersson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Brittain Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1926-Vera_Brittain.html" target="A">1</a></li>
+<li><a href="../../azquotes/1926-Vera_Brittain@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Peniakoff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19757-Vladimir_Peniakoff.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Van Wyck Brooks Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1981-Van_Wyck_Brooks.html" target="A">1</a></li>
+<li><a href="../../azquotes/1981-Van_Wyck_Brooks@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Jackson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19869-Victoria_Jackson.html" target="A">1</a></li>
+<li><a href="../../azquotes/19869-Victoria_Jackson@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Van Cliburn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19883-Van_Cliburn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Osteen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19891-Victoria_Osteen.html" target="A">1</a></li>
+<li><a href="../../azquotes/19891-Victoria_Osteen@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viola Davis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19893-Viola_Davis.html" target="A">1</a></li>
+<li><a href="../../azquotes/19893-Viola_Davis@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/19893-Viola_Davis@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/19893-Viola_Davis@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/19893-Viola_Davis@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/19893-Viola_Davis@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/19893-Viola_Davis@p=7.html" target="A">7</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Baum Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20022-Vicki_Baum.html" target="A">1</a></li>
+<li><a href="../../azquotes/20022-Vicki_Baum@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Violeta Parra Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20098-Violeta_Parra.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vilfredo Pareto Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20356-Vilfredo_Pareto.html" target="A">1</a></li>
+<li><a href="../../azquotes/20356-Vilfredo_Pareto@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vern Law Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20362-Vern_Law.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Jankelevitch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20515-Vladimir_Jankelevitch.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasily Zhukovsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20562-Vasily_Zhukovsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasyl Sukhomlynsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20563-Vasyl_Sukhomlynsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vissarion Belinsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20564-Vissarion_Belinsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Korolenko Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20565-Vladimir_Korolenko.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Lee Burton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20644-Virginia_Lee_Burton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa L. Williams Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20684-Vanessa_L_Williams.html" target="A">1</a></li>
+<li><a href="../../azquotes/20684-Vanessa_L_Williams@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Bayer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20697-Vanessa_Bayer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir K. Zworykin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20942-Vladimir_K_Zworykin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Frederick Weisskopf Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21120-Victor_Frederick_Weisskopf.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Duke Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21138-Vernon_Duke.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Wooten Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21187-Victor_Wooten.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virgil Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21195-Virgil.html" target="A">1</a></li>
+<li><a href="../../azquotes/21195-Virgil@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/21195-Virgil@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/21195-Virgil@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/21195-Virgil@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/21195-Virgil@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/21195-Virgil@p=7.html" target="A">7</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vijaya Lakshmi Pandit Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21312-Vijaya_Lakshmi_Pandit.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktor Korchnoi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21371-Viktor_Korchnoi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Bugliosi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2139-Vincent_Bugliosi.html" target="A">1</a></li>
+<li><a href="../../azquotes/2139-Vincent_Bugliosi@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/2139-Vincent_Bugliosi@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Cassel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21390-Vincent_Cassel.html" target="A">1</a></li>
+<li><a href="../../azquotes/21390-Vincent_Cassel@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/21390-Vincent_Cassel@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor J. Stenger Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21416-Victor_J_Stenger.html" target="A">1</a></li>
+<li><a href="../../azquotes/21416-Victor_J_Stenger@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent de Paul Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21572-Vincent_de_Paul.html" target="A">1</a></li>
+<li><a href="../../azquotes/21572-Vincent_de_Paul@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/21572-Vincent_de_Paul@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/21572-Vincent_de_Paul@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/21572-Vincent_de_Paul@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/21572-Vincent_de_Paul@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/21572-Vincent_de_Paul@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/21572-Vincent_de_Paul@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/21572-Vincent_de_Paul@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vilhjalmur Stefansson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21584-Vilhjalmur_Stefansson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vaslav Nijinsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21765-Vaslav_Nijinsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vempati Chinna Satyam Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21768-Vempati_Chinna_Satyam.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viola Spolin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21789-Viola_Spolin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vishnudevananda Saraswati Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21806-Vishnudevananda_Saraswati.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicky Beeching Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21833-Vicky_Beeching.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Gildersleeve Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21903-Virginia_Gildersleeve.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Postrel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22018-Virginia_Postrel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Bond Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22115-Victoria_Bond.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vineet Nayar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22453-Vineet_Nayar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vannevar Bush Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2255-Vannevar_Bush.html" target="A">1</a></li>
+<li><a href="../../azquotes/2255-Vannevar_Bush@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Wade Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22698-Virginia_Wade.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vance Law Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22725-Vance_Law.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virpi Hameen-Anttila Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22767-Virpi_Hameen_Anttila.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivek Paul Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22837-Vivek_Paul.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Montori Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22884-Victor_Montori.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vilayat Inayat Khan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22994-Vilayat_Inayat_Khan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Cable Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2309-Vince_Cable.html" target="A">1</a></li>
+<li><a href="../../azquotes/2309-Vince_Cable@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/2309-Vince_Cable@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Niederhoffer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23094-Victor_Niederhoffer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vito Dumas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23139-Vito_Dumas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktor Suvorov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23158-Viktor_Suvorov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Matthews Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23267-Vincent_Matthews.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vittorio Alfieri Quotes</summary>
+<ul>
+<li><a href="../../azquotes/234-Vittorio_Alfieri.html" target="A">1</a></li>
+<li><a href="../../azquotes/234-Vittorio_Alfieri@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valentino Garavani Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23461-Valentino_Garavani.html" target="A">1</a></li>
+<li><a href="../../azquotes/23461-Valentino_Garavani@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia H. Pearce Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23715-Virginia_H_Pearce.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vic Braden Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23741-Vic_Braden.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Lansky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23797-Vicki_Lansky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Baker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23827-Vernon_Baker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vahid Halilhodzic Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23919-Vahid_Halilhodzic.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Violet Fane Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24001-Violet_Fane.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vern Huffman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24093-Vern_Huffman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Cherbuliez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24183-Victor_Cherbuliez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Plame Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24232-Valerie_Plame.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Jordan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24244-Vernon_Jordan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Volker Grassmuck Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24252-Volker_Grassmuck.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasily Klyuchevsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24296-Vasily_Klyuchevsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Gill Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24306-Vince_Gill.html" target="A">1</a></li>
+<li><a href="../../azquotes/24306-Vince_Gill@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicesimus Knox Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24417-Vicesimus_Knox.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V. K. Krishna Menon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24423-V_K_Krishna_Menon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Varahamihira Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24453-Varahamihira.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Gomez Cima Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24534-Victoria_Gomez_Cima.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Van Jones Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24568-Van_Jones.html" target="A">1</a></li>
+<li><a href="../../azquotes/24568-Van_Jones@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/24568-Van_Jones@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/24568-Van_Jones@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/24568-Van_Jones@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/24568-Van_Jones@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/24568-Van_Jones@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/24568-Van_Jones@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/24568-Van_Jones@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/24568-Van_Jones@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Scannell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24592-Vernon_Scannell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Gironda Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24643-Vince_Gironda.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Val Doonican Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24733-Val_Doonican.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Carlton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2485-Vanessa_Carlton.html" target="A">1</a></li>
+<li><a href="../../azquotes/2485-Vanessa_Carlton@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor H. Krulak Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24936-Victor_H_Krulak.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vo Nguyen Giap Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25303-Vo_Nguyen_Giap.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Glendinning Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25377-Victoria_Glendinning.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladislav Tretiak Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25444-Vladislav_Tretiak.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladislav Rastorotsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25499-Vladislav_Rastorotsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Caslavska Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25511-Vera_Caslavska.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vitaly Scherbo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25516-Vitaly_Scherbo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanderlei Luxemburgo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25579-Vanderlei_Luxemburgo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vikram Batra Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25642-Vikram_Batra.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Carter Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2571-Vince_Carter.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivien Greene Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25908-Vivien_Greene.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vijay Singh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25980-Vijay_Singh.html" target="A">1</a></li>
+<li><a href="../../azquotes/25980-Vijay_Singh@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vaughn J Featherstone Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26030-Vaughn_J_Featherstone.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viacheslav Platonov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26388-Viacheslav_Platonov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Violette Leduc Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26436-Violette_Leduc.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Belousov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26519-Vladimir_Belousov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinton Cerf Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2658-Vinton_Cerf.html" target="A">1</a></li>
+<li><a href="../../azquotes/2658-Vinton_Cerf@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/2658-Vinton_Cerf@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Benjamin Mountcastle Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26585-Vernon_Benjamin_Mountcastle.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Redgrave Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26664-Vanessa_Redgrave.html" target="A">1</a></li>
+<li><a href="../../azquotes/26664-Vanessa_Redgrave@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Violet Trefusis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26756-Violet_Trefusis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valentin Gonzalez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26757-Valentin_Gonzalez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vlade Divac Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26791-Vlade_Divac.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Cousin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26861-Victor_Cousin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Gornick Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27089-Vivian_Gornick.html" target="A">1</a></li>
+<li><a href="../../azquotes/27089-Vivian_Gornick@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/27089-Vivian_Gornick@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vida Dutton Scudder Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27172-Vida_Dutton_Scudder.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Johnson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27244-Vernon_Johnson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerius Geist Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27461-Valerius_Geist.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Canby Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27538-Vincent_Canby.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Clinton Kelley Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27573-Virginia_Clinton_Kelley.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Brown Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27693-Vicki_Brown.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veikko Karvonen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27917-Veikko_Karvonen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Venkatesananda Saraswati Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27984-Venkatesananda_Saraswati.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vavasor Powell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28088-Vavasor_Powell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Robinson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28188-Victor_Robinson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Voiture Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28193-Vincent_Voiture.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicente Aleixandre Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28214-Vicente_Aleixandre.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Graham Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28268-Virginia_Graham.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Collins, Baron Stonham Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28376-Victor_Collins_Baron_Stonham.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Rothschild, 3rd Baron Rothschild Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28465-Victor_Rothschild_3rd_Baron_Rothschild.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Vasarely Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28599-Victor_Vasarely.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vlady Kibalchich Russakov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28601-Vlady_Kibalchich_Russakov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vespasian Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28657-Vespasian.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vash Young Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28697-Vash_Young.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vic Oliver Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28782-Vic_Oliver.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Grignard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29127-Victor_Grignard.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Verlyn Klinkenborg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29321-Verlyn_Klinkenborg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincenzo Galilei Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29334-Vincenzo_Galilei.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasco Ronchi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29382-Vasco_Ronchi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Coren Mitchell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29475-Victoria_Coren_Mitchell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Kistiakowsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29578-Vera_Kistiakowsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vallabha Acharya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29652-Vallabha_Acharya.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vito Fossella Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29751-Vito_Fossella.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Neil Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29782-Vince_Neil.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktor Chernomyrdin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29857-Viktor_Chernomyrdin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Voltairine de Cleyre Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2986-Voltairine_de_Cleyre.html" target="A">1</a></li>
+<li><a href="../../azquotes/2986-Voltairine_de_Cleyre@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Gray Adams Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29913-Victoria_Gray_Adams.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Richards Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30078-Vernon_Richards.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V. P. Singh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30117-V_P_Singh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Gigante Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30203-Vincent_Gigante.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Val Venis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30294-Val_Venis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinny Testaverde Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30354-Vinny_Testaverde.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vaclav Hlavaty Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30492-Vaclav_Hlavaty.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Huston Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30600-Virginia_Huston.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Chang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30774-Victor_Chang.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Vernadsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30802-Vladimir_Vernadsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vida Blue Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30817-Vida_Blue.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vaclav Smil Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30878-Vaclav_Smil.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Wilson Wesley Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30903-Valerie_Wilson_Wesley.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Amos, Baroness Amos Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31170-Valerie_Amos_Baroness_Amos.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Harper Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31181-Valerie_Harper.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V. S. Pritchett Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31257-V_S_Pritchett.html" target="A">1</a></li>
+<li><a href="../../azquotes/31257-V_S_Pritchett@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasily Smyslov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31506-Vasily_Smyslov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vlastimil Hort Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31507-Vlastimil_Hort.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Skrebneski Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31555-Victor_Skrebneski.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Van Deren Coke Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31557-Van_Deren_Coke.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Laforet Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31567-Vincent_Laforet.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vito Acconci Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31785-Vito_Acconci.html" target="A">1</a></li>
+<li><a href="../../azquotes/31785-Vito_Acconci@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Lanoux Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31806-Victor_Lanoux.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Varg Vikernes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31859-Varg_Vikernes.html" target="A">1</a></li>
+<li><a href="../../azquotes/31859-Varg_Vikernes@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Verner E. Suomi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32151-Verner_E_Suomi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Violeta Chamorro Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32170-Violeta_Chamorro.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virgil Goode Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32362-Virgil_Goode.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vallabhbhai Patel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32379-Vallabhbhai_Patel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Maksimov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32511-Vladimir_Maksimov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vijay Mallya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32640-Vijay_Mallya.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veryl Goodnight Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32710-Veryl_Goodnight.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Aleksandrovich Antonov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32816-Vladimir_Aleksandrovich_Antonov.html" target="A">1</a></li>
+<li><a href="../../azquotes/32816-Vladimir_Aleksandrovich_Antonov@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vilna Gaon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33007-Vilna_Gaon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Heffernan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33258-Virginia_Heffernan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vittorio De Sica Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33326-Vittorio_De_Sica.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasily Alekseyev Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33343-Vasily_Alekseyev.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktor Mikhailovich Afanasyev Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33352-Viktor_Mikhailovich_Afanasyev.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinny Paz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33438-Vinny_Paz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Verner Panton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33585-Verner_Panton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vendela Vida Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33618-Vendela_Vida.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor LaValle Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33620-Victor_LaValle.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Velimir Khlebnikov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33660-Velimir_Khlebnikov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Varlam Shalamov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33750-Varlam_Shalamov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vitor Belfort Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33803-Vitor_Belfort.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veda Hille Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33862-Veda_Hille.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vaughn Monroe Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33872-Vaughn_Monroe.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Ocampo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34040-Victoria_Ocampo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vu Tran Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34054-Vu_Tran.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Velcrow Ripper Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34060-Velcrow_Ripper.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Vance Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34206-Vivian_Vance.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ving Rhames Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34278-Ving_Rhames.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Perrine Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34417-Valerie_Perrine.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Bell Calloway Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34481-Vanessa_Bell_Calloway.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Madsen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34523-Virginia_Madsen.html" target="A">1</a></li>
+<li><a href="../../azquotes/34523-Virginia_Madsen@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Cruz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3465-Victor_Cruz.html" target="A">1</a></li>
+<li><a href="../../azquotes/3465-Victor_Cruz@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/3465-Victor_Cruz@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Lengies Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34722-Vanessa_Lengies.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vic Morrow Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34799-Vic_Morrow.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Marano Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34825-Vanessa_Marano.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vic Reeves Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34870-Vic_Reeves.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Tennant Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34899-Victoria_Tennant.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Van Heflin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35022-Van_Heflin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Buono Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35040-Victor_Buono.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera-Ellen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35103-Vera_Ellen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vidya Balan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35175-Vidya_Balan.html" target="A">1</a></li>
+<li><a href="../../azquotes/35175-Vidya_Balan@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vern Yip Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35266-Vern_Yip.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Quennessen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35329-Valerie_Quennessen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Van Dyke Parks Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35332-Van_Dyke_Parks.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Klyn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35360-Vincent_Klyn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Edwards Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35375-Vince_Edwards.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Van Johnson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35378-Van_Johnson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Varun Dhawan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35382-Varun_Dhawan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Volkmar Wentzel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35407-Volkmar_Wentzel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ved Mehta Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35427-Ved_Mehta.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vhils Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35521-Vhils.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viviane Reding Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35537-Viviane_Reding.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicente del Bosque Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3554-Vicente_del_Bosque.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent D'Onofrio Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3566-Vincent_D_Onofrio.html" target="A">1</a></li>
+<li><a href="../../azquotes/3566-Vincent_D_Onofrio@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Lam Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35761-Vincent_Lam.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vitas Gerulaitis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35781-Vitas_Gerulaitis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vic Toews Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35822-Vic_Toews.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktoria Komova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35859-Viktoria_Komova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Turner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35861-Victor_Turner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Kubrick Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35877-Vivian_Kubrick.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Chytilova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35951-Vera_Chytilova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vishwas Mudagal Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36662-Vishwas_Mudagal.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Fuchs Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36672-Vivian_Fuchs.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vikas Khanna Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36833-Vikas_Khanna.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Manuel Rivera Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37180-Victor_Manuel_Rivera.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktor Schauberger Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37236-Viktor_Schauberger.html" target="A">1</a></li>
+<li><a href="../../azquotes/37236-Viktor_Schauberger@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Henderson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37310-Virginia_Henderson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vangelis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37431-Vangelis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vida Goldstein Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37462-Vida_Goldstein.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veena Malik Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37525-Veena_Malik.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincente Minnelli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37571-Vincente_Minnelli.html" target="A">1</a></li>
+<li><a href="../../azquotes/37571-Vincente_Minnelli@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Dzhanibekov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37636-Vladimir_Dzhanibekov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Kerry Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37661-Vanessa_Kerry.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent McNabb Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37713-Vincent_McNabb.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vito Russo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37787-Vito_Russo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor L. Brown Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37801-Victor_L_Brown.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Lownes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37814-Victor_Lownes.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Mercier Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37818-Vivian_Mercier.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera de Bosset Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37834-Vera_de_Bosset.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Moran Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38209-Victoria_Moran.html" target="A">1</a></li>
+<li><a href="../../azquotes/38209-Victoria_Moran@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/38209-Victoria_Moran@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Weiss Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38237-Valerie_Weiss.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronica Rossi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38452-Veronica_Rossi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Davis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38566-Vicki_Davis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vipin Sharma Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38594-Vipin_Sharma.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Solanas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38783-Valerie_Solanas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Mahoney Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38831-Victoria_Mahoney.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor C. Ferkiss Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38985-Victor_C_Ferkiss.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vijay V. Vaitheeswaran Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39025-Vijay_V_Vaitheeswaran.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Simpson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39089-Valerie_Simpson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vin Suprynowicz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39105-Vin_Suprynowicz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Lewis Thompson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39200-Vicki_Lewis_Thompson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Reddy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39256-Vivian_Reddy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vatsyayana Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39536-Vatsyayana.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vitit Muntarbhorn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39597-Vitit_Muntarbhorn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent of Lerins Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39621-Vincent_of_Lerins.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vin Diesel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3963-Vin_Diesel.html" target="A">1</a></li>
+<li><a href="../../azquotes/3963-Vin_Diesel@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/3963-Vin_Diesel@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/3963-Vin_Diesel@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/3963-Vin_Diesel@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virgil Suarez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39903-Virgil_Suarez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor J. Dzau Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40065-Victor_J_Dzau.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vi Hart Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40074-Vi_Hart.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valzhyna Mort Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40126-Valzhyna_Mort.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktoras Kulvinskas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40191-Viktoras_Kulvinskas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vikas Swarup Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40263-Vikas_Swarup.html" target="A">1</a></li>
+<li><a href="../../azquotes/40263-Vikas_Swarup@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vijay Prashad Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40352-Vijay_Prashad.html" target="A">1</a></li>
+<li><a href="../../azquotes/40352-Vijay_Prashad@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Hamilton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40458-Virginia_Hamilton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Sokoloff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40471-Vladimir_Sokoloff.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Martin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40482-Vincent_Martin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Papanek Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40520-Victor_Papanek.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Staples Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40543-Vince_Staples.html" target="A">1</a></li>
+<li><a href="../../azquotes/40543-Vince_Staples@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/40543-Vince_Staples@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/40543-Vince_Staples@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Gardenia Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40588-Vincent_Gardenia.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Volker Braun Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40591-Volker_Braun.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinnie Paz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40620-Vinnie_Paz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vakill Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40631-Vakill.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktor Khristenko Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40988-Viktor_Khristenko.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vittorio Gregotti Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41165-Vittorio_Gregotti.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Gold Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41205-Victor_Gold.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vilhelm Moberg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41391-Vilhelm_Moberg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasily Rozanov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41400-Vasily_Rozanov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Cruz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41683-Valerie_Cruz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vijay Tendulkar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41685-Vijay_Tendulkar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicente Huidobro Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41704-Vicente_Huidobro.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vsevolod Pudovkin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41746-Vsevolod_Pudovkin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ve Neill Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41869-Ve_Neill.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Stanley Alder Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42161-Vera_Stanley_Alder.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vikram Pandit Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42562-Vikram_Pandit.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vic Ziegel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42687-Vic_Ziegel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V. Vale Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42812-V_Vale.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vimala Thakar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42827-Vimala_Thakar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Bukovsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42875-Vladimir_Bukovsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Francis Hess Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42966-Victor_Francis_Hess.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia C. Andrews Quotes</summary>
+<ul>
+<li><a href="../../azquotes/430-Virginia_C_Andrews.html" target="A">1</a></li>
+<li><a href="../../azquotes/430-Virginia_C_Andrews@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/430-Virginia_C_Andrews@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valery Giscard d'Estaing Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43122-Valery_Giscard_d_Estaing.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virgilia Peterson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43142-Virgilia_Peterson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vidkun Quisling Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43355-Vidkun_Quisling.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vsevolod Meyerhold Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43383-Vsevolod_Meyerhold.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vyacheslav Molotov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43454-Vyacheslav_Molotov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vijay Govindarajan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43605-Vijay_Govindarajan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vittorio Emanuele Orlando Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43618-Vittorio_Emanuele_Orlando.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasco da Gama Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43675-Vasco_da_Gama.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Guerrero Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43744-Vladimir_Guerrero.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivek Wadhwa Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43810-Vivek_Wadhwa.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vilmos Zsigmond Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43822-Vilmos_Zsigmond.html" target="A">1</a></li>
+<li><a href="../../azquotes/43822-Vilmos_Zsigmond@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/43822-Vilmos_Zsigmond@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Azarenka Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43835-Victoria_Azarenka.html" target="A">1</a></li>
+<li><a href="../../azquotes/43835-Victoria_Azarenka@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vonda N. McIntyre Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43841-Vonda_N_McIntyre.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vitaly Sevastyanov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43991-Vitaly_Sevastyanov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivianne Crowley Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44105-Vivianne_Crowley.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vic Bubas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44120-Vic_Bubas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Estelle Frankel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44149-Valerie_Estelle_Frankel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valmiki Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44178-Valmiki.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virat Kohli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44235-Virat_Kohli.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Pendleton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44295-Victoria_Pendleton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Dahmer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44317-Vernon_Dahmer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victorio Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44477-Victorio.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vikram Chatwal Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44480-Vikram_Chatwal.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vittorio Arrigoni Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44574-Vittorio_Arrigoni.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor de Laprade Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44818-Victor_de_Laprade.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Cooper Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44837-Vernon_Cooper.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktor Yushchenko Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44922-Viktor_Yushchenko.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vaughn Walker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44983-Vaughn_Walker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Val Guest Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45031-Val_Guest.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vusi Mahlasela Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45120-Vusi_Mahlasela.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Val Plumwood Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45196-Val_Plumwood.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valeria Mazza Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45235-Valeria_Mazza.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vittorio Storaro Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45236-Vittorio_Storaro.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vitali Klitschko Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45395-Vitali_Klitschko.html" target="A">1</a></li>
+<li><a href="../../azquotes/45395-Vitali_Klitschko@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Ashkenazy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45413-Vladimir_Ashkenazy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veruschka von Lehndorff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45426-Veruschka_von_Lehndorff.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vittorio Gassman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45508-Vittorio_Gassman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Vasiliev Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45664-Vladimir_Vasiliev.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V. Raymond Edman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45672-V_Raymond_Edman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Coleman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45742-Vernon_Coleman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vesanto Melina Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45743-Vesanto_Melina.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinnie Tortorich Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45873-Vinnie_Tortorich.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vishen Lakhiani Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45993-Vishen_Lakhiani.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Franz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46100-Vladimir_Franz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vazgen Sargsyan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46112-Vazgen_Sargsyan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Rubin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46234-Vera_Rubin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viola Meynell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46412-Viola_Meynell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasant Lad Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46480-Vasant_Lad.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Sperandeo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46528-Victor_Sperandeo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V. S. Subramanya Iyer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46610-V_S_Subramanya_Iyer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Farmiga Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4673-Vera_Farmiga.html" target="A">1</a></li>
+<li><a href="../../azquotes/4673-Vera_Farmiga@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/4673-Vera_Farmiga@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/4673-Vera_Farmiga@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/4673-Vera_Farmiga@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Violet Bonham Carter Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46810-Violet_Bonham_Carter.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vassily Ivanchuk Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46916-Vassily_Ivanchuk.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Clarke Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47426-Vince_Clarke.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Suarez Melendez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47451-Victor_Suarez_Melendez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valentine de Saint-Point Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47628-Valentine_de_Saint_Point.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Myron Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47644-Vicki_Myron.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Miles Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47678-Vera_Miles.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Linder Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47956-Virginia_Linder.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vahan Janjigian Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48010-Vahan_Janjigian.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Spadea Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48076-Vince_Spadea.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Van Day Truex Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48337-Van_Day_Truex.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Connare Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48341-Vincent_Connare.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viacheslav Ragozin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48412-Viacheslav_Ragozin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasilios Kotronias Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48628-Vasilios_Kotronias.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Venkaiah Naidu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48865-Venkaiah_Naidu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor de Laveleye Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48881-Victor_de_Laveleye.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vikram Sarabhai Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48917-Vikram_Sarabhai.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vin Weber Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48955-Vin_Weber.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Abril Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49-Victoria_Abril.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinicius de Moraes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49048-Vinicius_de_Moraes.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktor Hamburger Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49083-Viktor_Hamburger.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Lee Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49113-Vernon_Lee.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Saul Navasky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49186-Victor_Saul_Navasky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vic Fuentes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49196-Vic_Fuentes.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Young Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49260-Vince_Young.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Martin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49365-Valerie_Martin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Flynn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4938-Vince_Flynn.html" target="A">1</a></li>
+<li><a href="../../azquotes/4938-Vince_Flynn@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vern Rutsala Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49387-Vern_Rutsala.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Voinovich Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49469-Vladimir_Voinovich.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vashti McCollum Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49509-Vashti_McCollum.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vik Muniz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49763-Vik_Muniz.html" target="A">1</a></li>
+<li><a href="../../azquotes/49763-Vik_Muniz@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Lachey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49850-Vanessa_Lachey.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vano Merabishvili Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50089-Vano_Merabishvili.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vic Chesnutt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50167-Vic_Chesnutt.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virgilio S. Almario Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50375-Virgilio_S_Almario.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Caspary Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50404-Vera_Caspary.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivaan Shah Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50482-Vivaan_Shah.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Scott Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50713-Victoria_Scott.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicente Fox Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5078-Vicente_Fox.html" target="A">1</a></li>
+<li><a href="../../azquotes/5078-Vicente_Fox@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivica Fox Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5079-Vivica_Fox.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Foxx Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5085-Virginia_Foxx.html" target="A">1</a></li>
+<li><a href="../../azquotes/5085-Virginia_Foxx@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valery Bryusov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50852-Valery_Bryusov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vali Nasr Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50922-Vali_Nasr.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinny Appice Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50992-Vinny_Appice.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronica Franco Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5104-Veronica_Franco.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vishal Sikka Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51205-Vishal_Sikka.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktor E. Frankl Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5121-Viktor_E_Frankl.html" target="A">1</a></li>
+<li><a href="../../azquotes/5121-Viktor_E_Frankl@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/5121-Viktor_E_Frankl@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/5121-Viktor_E_Frankl@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/5121-Viktor_E_Frankl@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/5121-Viktor_E_Frankl@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/5121-Viktor_E_Frankl@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/5121-Viktor_E_Frankl@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/5121-Viktor_E_Frankl@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Tan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51301-Vincent_Tan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Kompany Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51317-Vincent_Kompany.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Davis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51370-Vernon_Davis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Jenkins Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51373-Vivian_Jenkins.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Karalius Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51400-Vince_Karalius.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Salva Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51442-Victor_Salva.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinnie Vincent Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51650-Vinnie_Vincent.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Gollancz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52077-Victor_Gollancz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon A. Walters Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52420-Vernon_A_Walters.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Velupillai Prabhakaran Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52463-Velupillai_Prabhakaran.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V V Brown Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52494-V_V_Brown.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Thomas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52597-Valerie_Thomas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virender Sehwag Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52610-Virender_Sehwag.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Gallo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5301-Vincent_Gallo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virchand Gandhi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5311-Virchand_Gandhi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Garber Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5322-Victor_Garber.html" target="A">1</a></li>
+<li><a href="../../azquotes/5322-Victor_Garber@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincenzo Nibali Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53311-Vincenzo_Nibali.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktoria Modesta Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53514-Viktoria_Modesta.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Mature Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53590-Victor_Mature.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinnie Colaiuta Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53660-Vinnie_Colaiuta.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Verne Lundquist Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53795-Verne_Lundquist.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginie Ledoyen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53902-Virginie_Ledoyen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Ray Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53941-Vanessa_Ray.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronica Webb Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53954-Veronica_Webb.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valorie Burton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54005-Valorie_Burton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Pavlova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54203-Vera_Pavlova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Semichastny Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54391-Vladimir_Semichastny.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V. R. Krishna Iyer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54469-V_R_Krishna_Iyer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronik Mallet Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55012-Veronik_Mallet.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vannoccio Biringuccio Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55137-Vannoccio_Biringuccio.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Clark Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55184-Victoria_Clark.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Nuland Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55276-Victoria_Nuland.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia McKenna Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55394-Virginia_McKenna.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktor Yanukovych Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55489-Viktor_Yanukovych.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Steele Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55656-Valerie_Steele.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Campbell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55793-Vivian_Campbell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viera Scheibner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55855-Viera_Scheibner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia E. Johnson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55905-Virginia_E_Johnson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Finlay Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56083-Victoria_Finlay.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Forester Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56206-Victoria_Forester.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Van Gogh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5632-Vincent_Van_Gogh.html" target="A">1</a></li>
+<li><a href="../../azquotes/5632-Vincent_Van_Gogh@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/5632-Vincent_Van_Gogh@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/5632-Vincent_Van_Gogh@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/5632-Vincent_Van_Gogh@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/5632-Vincent_Van_Gogh@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/5632-Vincent_Van_Gogh@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/5632-Vincent_Van_Gogh@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/5632-Vincent_Van_Gogh@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/5632-Vincent_Van_Gogh@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Reid Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56346-Vernon_Reid.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veerappa Moily Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56412-Veerappa_Moily.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valentina Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56531-Valentina.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronica Chambers Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56541-Veronica_Chambers.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Donlan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56579-Vicki_Donlan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasily Chuikov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56647-Vasily_Chuikov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Verghese Kurien Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56852-Verghese_Kurien.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vija Celmins Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57056-Vija_Celmins.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Diffenbaugh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57138-Vanessa_Diffenbaugh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Makarov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57329-Vladimir_Makarov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Redel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57334-Victoria_Redel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Ponta Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57458-Victor_Ponta.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Blanchard Scheffer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57537-Victor_Blanchard_Scheffer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Chang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57622-Victoria_Chang.html" target="A">1</a></li>
+<li><a href="../../azquotes/57622-Victoria_Chang@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Axline Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58042-Virginia_Axline.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Gilligan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58227-Vince_Gilligan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valentin Tomberg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58238-Valentin_Tomberg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valeria Lukyanova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58277-Valeria_Lukyanova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vishal Mangalwadi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58335-Vishal_Mangalwadi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viv Richards Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58424-Viv_Richards.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Harding Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58610-Vincent_Harding.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vartan Gregorian Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5891-Vartan_Gregorian.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vern Poythress Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59452-Vern_Poythress.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vasily Grossman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5966-Vasily_Grossman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vickie Guerrero Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59737-Vickie_Guerrero.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinny Guadagnino Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5976-Vinny_Guadagnino.html" target="A">1</a></li>
+<li><a href="../../azquotes/5976-Vinny_Guadagnino@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Veselka Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59856-Vanessa_Veselka.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valtteri Bottas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59867-Valtteri_Bottas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinayak Damodar Savarkar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60118-Vinayak_Damodar_Savarkar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vani Hari Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60305-Vani_Hari.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Sorokin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60793-Vladimir_Sorokin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Cary Hudson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60888-Virginia_Cary_Hudson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V. V. S. Laxman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61231-V_V_S_Laxman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viva Bianca Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61593-Viva_Bianca.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Verity Stob Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61801-Verity_Stob.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Piazza Quotes</summary>
+<ul>
+<li><a href="../../azquotes/62186-Vincent_Piazza.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinnie Paul Quotes</summary>
+<ul>
+<li><a href="../../azquotes/62286-Vinnie_Paul.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Davis Hanson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6236-Victor_Davis_Hanson.html" target="A">1</a></li>
+<li><a href="../../azquotes/6236-Victor_Davis_Hanson@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/6236-Victor_Davis_Hanson@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/6236-Victor_Davis_Hanson@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vayalar Ravi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/62605-Vayalar_Ravi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vaughan Oliver Quotes</summary>
+<ul>
+<li><a href="../../azquotes/62616-Vaughan_Oliver.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vonette Bright Quotes</summary>
+<ul>
+<li><a href="../../azquotes/62791-Vonette_Bright.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Lewis-Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/62823-Victor_Lewis_Smith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vance Palmer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63010-Vance_Palmer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vagit Alekperov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63159-Vagit_Alekperov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valorie Curry Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63225-Valorie_Curry.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Gotti Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63299-Victoria_Gotti.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Pinchuk Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63360-Victor_Pinchuk.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vance Havner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63425-Vance_Havner.html" target="A">1</a></li>
+<li><a href="../../azquotes/63425-Vance_Havner@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/63425-Vance_Havner@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/63425-Vance_Havner@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/63425-Vance_Havner@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/63425-Vance_Havner@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/63425-Vance_Havner@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/63425-Vance_Havner@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/63425-Vance_Havner@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Legrand Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63839-Victoria_Legrand.html" target="A">1</a></li>
+<li><a href="../../azquotes/63839-Victoria_Legrand@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vaclav Havel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6389-Vaclav_Havel.html" target="A">1</a></li>
+<li><a href="../../azquotes/6389-Vaclav_Havel@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/6389-Vaclav_Havel@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/6389-Vaclav_Havel@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/6389-Vaclav_Havel@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/6389-Vaclav_Havel@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/6389-Vaclav_Havel@p=7.html" target="A">7</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Visar Zhiti Quotes</summary>
+<ul>
+<li><a href="../../azquotes/64126-Visar_Zhiti.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinita Hampton Wright Quotes</summary>
+<ul>
+<li><a href="../../azquotes/64593-Vinita_Hampton_Wright.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vigen Guroian Quotes</summary>
+<ul>
+<li><a href="../../azquotes/64626-Vigen_Guroian.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vy Higginsen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/64870-Vy_Higginsen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Massey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/65502-Vincent_Massey.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vina Delmar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/65546-Vina_Delmar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Goldberg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/67603-Vicki_Goldberg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Aletti Quotes</summary>
+<ul>
+<li><a href="../../azquotes/68136-Vince_Aletti.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vilem Flusser Quotes</summary>
+<ul>
+<li><a href="../../azquotes/68366-Vilem_Flusser.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Val Logsdon Fitch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/68395-Val_Logsdon_Fitch.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Friedman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/68554-Vanessa_Friedman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Posner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/68673-Vladimir_Posner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Laurie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/68819-Victoria_Laurie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Horowitz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6920-Vladimir_Horowitz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Burgin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/69205-Victor_Burgin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vance Bourjaily Quotes</summary>
+<ul>
+<li><a href="../../azquotes/69411-Vance_Bourjaily.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Howard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6959-Vernon_Howard.html" target="A">1</a></li>
+<li><a href="../../azquotes/6959-Vernon_Howard@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/6959-Vernon_Howard@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/6959-Vernon_Howard@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/6959-Vernon_Howard@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/6959-Vernon_Howard@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Lawrence Quotes</summary>
+<ul>
+<li><a href="../../azquotes/69603-Vicki_Lawrence.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Navone Quotes</summary>
+<ul>
+<li><a href="../../azquotes/69883-Victor_Navone.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Hudgens Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6990-Vanessa_Hudgens.html" target="A">1</a></li>
+<li><a href="../../azquotes/6990-Vanessa_Hudgens@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/6990-Vanessa_Hudgens@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/6990-Vanessa_Hudgens@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/6990-Vanessa_Hudgens@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vance Joy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70073-Vance_Joy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Hugo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7021-Victor_Hugo.html" target="A">1</a></li>
+<li><a href="../../azquotes/7021-Victor_Hugo@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/7021-Victor_Hugo@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/7021-Victor_Hugo@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/7021-Victor_Hugo@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/7021-Victor_Hugo@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/7021-Victor_Hugo@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/7021-Victor_Hugo@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/7021-Victor_Hugo@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/7021-Victor_Hugo@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronica Hamel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70381-Veronica_Hamel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Smurfit Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70430-Victoria_Smurfit.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicky Hartzler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70608-Vicky_Hartzler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virgil Miller Newton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71108-Virgil_Miller_Newton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanilla Ice Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7137-Vanilla_Ice.html" target="A">1</a></li>
+<li><a href="../../azquotes/7137-Vanilla_Ice@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/7137-Vanilla_Ice@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vittorio Grigolo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71505-Vittorio_Grigolo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Worth Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71543-Valerie_Worth.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vijay Seshadri Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71771-Vijay_Seshadri.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Trierweiler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71945-Valerie_Trierweiler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ventseslav Konstantinov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/72225-Ventseslav_Konstantinov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Bottomley Quotes</summary>
+<ul>
+<li><a href="../../azquotes/72683-Virginia_Bottomley.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Villasenor Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73139-Victor_Villasenor.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor de Riqueti, marquis de Mirabeau Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73497-Victor_de_Riqueti_marquis_de_Mirabeau.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Velda Johnston Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73725-Velda_Johnston.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Jarrett Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7373-Valerie_Jarrett.html" target="A">1</a></li>
+<li><a href="../../azquotes/7373-Valerie_Jarrett@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Venita VanCaspel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73745-Venita_VanCaspel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Miner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73810-Valerie_Miner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Knauer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73934-Virginia_Knauer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera John-Steiner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73937-Vera_John_Steiner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinessa Shaw Quotes</summary>
+<ul>
+<li><a href="../../azquotes/74294-Vinessa_Shaw.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vendela Kirsebom Quotes</summary>
+<ul>
+<li><a href="../../azquotes/74638-Vendela_Kirsebom.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie June Quotes</summary>
+<ul>
+<li><a href="../../azquotes/74659-Valerie_June.html" target="A">1</a></li>
+<li><a href="../../azquotes/74659-Valerie_June@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vernon Johns Quotes</summary>
+<ul>
+<li><a href="../../azquotes/74787-Vernon_Johns.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Arnold Quotes</summary>
+<ul>
+<li><a href="../../azquotes/74972-Vladimir_Arnold.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginie Despentes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/75510-Virginie_Despentes.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vikram Quotes</summary>
+<ul>
+<li><a href="../../azquotes/76116-Vikram.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa L Ochs Quotes</summary>
+<ul>
+<li><a href="../../azquotes/76411-Vanessa_L_Ochs.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Justice Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7666-Victoria_Justice.html" target="A">1</a></li>
+<li><a href="../../azquotes/7666-Victoria_Justice@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/7666-Victoria_Justice@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Wilfork Quotes</summary>
+<ul>
+<li><a href="../../azquotes/77190-Vince_Wilfork.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Bartol Quotes</summary>
+<ul>
+<li><a href="../../azquotes/77197-Vladimir_Bartol.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Kartheiser Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7755-Vincent_Kartheiser.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vali Myers Quotes</summary>
+<ul>
+<li><a href="../../azquotes/77615-Vali_Myers.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valerie Sayers Quotes</summary>
+<ul>
+<li><a href="../../azquotes/77774-Valerie_Sayers.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Poscente Quotes</summary>
+<ul>
+<li><a href="../../azquotes/77861-Vince_Poscente.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vimala McClure Quotes</summary>
+<ul>
+<li><a href="../../azquotes/78563-Vimala_McClure.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Schiller Quotes</summary>
+<ul>
+<li><a href="../../azquotes/78984-Vivian_Schiller.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronique Vienne Quotes</summary>
+<ul>
+<li><a href="../../azquotes/79074-Veronique_Vienne.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Yakunin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/79494-Vladimir_Yakunin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinod Khosla Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7983-Vinod_Khosla.html" target="A">1</a></li>
+<li><a href="../../azquotes/7983-Vinod_Khosla@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/7983-Vinod_Khosla@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valentina Zelyaeva Quotes</summary>
+<ul>
+<li><a href="../../azquotes/79858-Valentina_Zelyaeva.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Kiam Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7986-Victor_Kiam.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vance Gilbert Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80043-Vance_Gilbert.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vestal McIntyre Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80068-Vestal_McIntyre.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Val Kilmer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8010-Val_Kilmer.html" target="A">1</a></li>
+<li><a href="../../azquotes/8010-Val_Kilmer@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/8010-Val_Kilmer@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/8010-Val_Kilmer@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/8010-Val_Kilmer@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vyasa Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80151-Vyasa.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viet D. Dinh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80807-Viet_D_Dinh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vaclav Klaus Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8112-Vaclav_Klaus.html" target="A">1</a></li>
+<li><a href="../../azquotes/8112-Vaclav_Klaus@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vieux Farka Toure Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81309-Vieux_Farka_Toure.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Volker Ullrich Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81337-Volker_Ullrich.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Volkmar Sigusch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81365-Volkmar_Sigusch.html" target="A">1</a></li>
+<li><a href="../../azquotes/81365-Volkmar_Sigusch@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V. E. Schwab Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81486-V_E_Schwab.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinod Rai Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81597-Vinod_Rai.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinay Kumar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81862-Vinay_Kumar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Kramnik Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8255-Vladimir_Kramnik.html" target="A">1</a></li>
+<li><a href="../../azquotes/8255-Vladimir_Kramnik@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Koo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83684-Victor_Koo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Brosgol Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83878-Vera_Brosgol.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Levin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/84026-Victor_Levin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronica Lake Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8414-Veronica_Lake.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladislav Surkov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/84762-Vladislav_Surkov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veena Sud Quotes</summary>
+<ul>
+<li><a href="../../azquotes/84892-Veena_Sud.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Williams Quotes</summary>
+<ul>
+<li><a href="../../azquotes/85207-Victoria_Williams.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronika Skvortsova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/85276-Veronika_Skvortsova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Kehres Quotes</summary>
+<ul>
+<li><a href="../../azquotes/86087-Vince_Kehres.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivien Leigh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8703-Vivien_Leigh.html" target="A">1</a></li>
+<li><a href="../../azquotes/8703-Vivien_Leigh@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/8703-Vivien_Leigh@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vaginal Davis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/87064-Vaginal_Davis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivek Murthy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/87080-Vivek_Murthy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vik Sahay Quotes</summary>
+<ul>
+<li><a href="../../azquotes/87115-Vik_Sahay.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Lenin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8716-Vladimir_Lenin.html" target="A">1</a></li>
+<li><a href="../../azquotes/8716-Vladimir_Lenin@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/8716-Vladimir_Lenin@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/8716-Vladimir_Lenin@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/8716-Vladimir_Lenin@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/8716-Vladimir_Lenin@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/8716-Vladimir_Lenin@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/8716-Vladimir_Lenin@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/8716-Vladimir_Lenin@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/8716-Vladimir_Lenin@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Violante Placido Quotes</summary>
+<ul>
+<li><a href="../../azquotes/87546-Violante_Placido.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vincent Paronnaud Quotes</summary>
+<ul>
+<li><a href="../../azquotes/87760-Vincent_Paronnaud.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>V. Bozeman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/88679-V_Bozeman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vachel Lindsay Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8903-Vachel_Lindsay.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vlatko Stefanovski Quotes</summary>
+<ul>
+<li><a href="../../azquotes/89849-Vlatko_Stefanovski.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince Lombardi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8997-Vince_Lombardi.html" target="A">1</a></li>
+<li><a href="../../azquotes/8997-Vince_Lombardi@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/8997-Vince_Lombardi@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/8997-Vince_Lombardi@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/8997-Vince_Lombardi@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/8997-Vince_Lombardi@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/8997-Vince_Lombardi@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/8997-Vince_Lombardi@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/8997-Vince_Lombardi@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Venetian Snares Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90088-Venetian_Snares.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vashti Bunyan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90143-Vashti_Bunyan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Sue Robinson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90149-Vicki_Sue_Robinson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vienna Teng Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90151-Vienna_Teng.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vantile Whitfield Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91134-Vantile_Whitfield.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronika Varekova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91154-Veronika_Varekova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanya Asher Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91171-Vanya_Asher.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virgil Green Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91225-Virgil_Green.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Verka Serduchka Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91384-Verka_Serduchka.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Violet Duke Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91414-Violet_Duke.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Volker Bertelmann Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91470-Volker_Bertelmann.html" target="A">1</a></li>
+<li><a href="../../azquotes/91470-Volker_Bertelmann@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vickie Winans Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91480-Vickie_Winans.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vadal Alexander Quotes</summary>
+<ul>
+<li><a href="../../azquotes/92586-Vadal_Alexander.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Mae Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9281-Vanessa_Mae.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valeria Luiselli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/93881-Valeria_Luiselli.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Aveyard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94064-Victoria_Aveyard.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Marcil Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9443-Vanessa_Marcil.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivian Nixon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94515-Vivian_Nixon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Wilson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94519-Victoria_Wilson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicki Escarra Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94577-Vicki_Escarra.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vijay Iyer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95227-Vijay_Iyer.html" target="A">1</a></li>
+<li><a href="../../azquotes/95227-Vijay_Iyer@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Kirby Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95320-Vanessa_Kirby.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vivek Shraya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95435-Vivek_Shraya.html" target="A">1</a></li>
+<li><a href="../../azquotes/95435-Vivek_Shraya@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Viktor Orban Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95548-Viktor_Orban.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vann R. Newkirk II Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95554-Vann_R_Newkirk_II.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vera Jourova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95669-Vera_Jourova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vic Mensa Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96432-Vic_Mensa.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vladimir Mayakovsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9648-Vladimir_Mayakovsky.html" target="A">1</a></li>
+<li><a href="../../azquotes/9648-Vladimir_Mayakovsky@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victor Rasuk Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96504-Victor_Rasuk.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Veronica Vasicka Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96565-Veronica_Vasicka.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Amorosi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96590-Vanessa_Amorosi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Victoria Derbyshire Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96904-Victoria_Derbyshire.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Virginia Dwan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96975-Virginia_Dwan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Visionist Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97055-Visionist.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vanessa Grigoriadis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97081-Vanessa_Grigoriadis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Valie Export Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97108-Valie_Export.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vicky Krieps Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97122-Vicky_Krieps.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vandana Singh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97148-Vandana_Singh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vinita Kinra Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97230-Vinita_Kinra.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Vince McMahon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9887-Vince_McMahon.html" target="A">1</a></li>
+<li><a href="../../azquotes/9887-Vince_McMahon@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9887-Vince_McMahon@p=3.html" target="A">3</a></li>
+</ul>
+</details>
+</section>
+<section id="help-right"></section>
+</section>
+</body>
+</html>

@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>纯CSS样式控制折叠展开菜单效果特效演示</title>
+<meta name="description" content="纯CSS样式控制折叠展开菜单效果特效演示。" />
+<meta name="keywords" content="纯CSS,样式控制,折叠展开,菜单,效果,特效演示" />
+<meta name="author" content="jQuery插件库" />
+<meta name="Copyright" content="jQuery插件库" />
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+a {
+text-decoration: none;
+}
+#conter {
+width: 1000px;
+margin: auto;
+}
+#help-left {
+width: auto;
+font-family: 'microsoft YaHei';
+float: left;
+}
+.menu {
+border-left: 1px solid #3cbfb3;
+border-right: 1px solid #3cbfb3;
+}
+.menu:last-child {
+border-bottom: 1px solid #3cbfb3;
+}
+.menu summary {
+height: 40px;
+line-height: 40px;
+text-indent: 10px;
+outline: none;
+font-size: 14px;
+font-weight: 700;
+border-top: 1px solid #3cbfb3;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #fff0));
+cursor: pointer;
+display: flex;
+}
+/*使用下面这个，可以去掉小三角，神奇的菜单就可以完成了*/
+.menu summary::-webkit-details-marker {
+}
+.menu summary:before {
+content: "🌸";
+display: inline-block;
+width: 16px;
+height: 16px;
+margin-right: 10px;
+font-size: 18px;
+font-weight: 700;
+}
+.menu[open] summary:before {
+content: "🕊️";
+}
+.menu ul {
+padding: 10px 0;
+}
+.menu ul li {
+list-style: none;
+text-indent: 25px;
+font-size: 12px;
+height: 30px;
+line-height: 30px;
+}
+.menu ul li a {
+display: block;
+color: #096868;
+}
+.menu ul li a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<section id="conter">
+<section id="help-left">
+<!--open为展开菜单，close为折叠菜单-->
+<details class="menu" close>
+<summary>Yuri Milner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10159-Yuri_Milner.html" target="A">1</a></li>
+<li><a href="../../azquotes/10159-Yuri_Milner@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yao Ming Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10169-Yao_Ming.html" target="A">1</a></li>
+<li><a href="../../azquotes/10169-Yao_Ming@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yukio Mishima Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10191-Yukio_Mishima.html" target="A">1</a></li>
+<li><a href="../../azquotes/10191-Yukio_Mishima@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/10191-Yukio_Mishima@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/10191-Yukio_Mishima@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Youssou N'Dour Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10639-Youssou_N_Dour.html" target="A">1</a></li>
+<li><a href="../../azquotes/10639-Youssou_N_Dour@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yannick Noah Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10846-Yannick_Noah.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshihiko Noda Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10851-Yoshihiko_Noda.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoko Ono Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11111-Yoko_Ono.html" target="A">1</a></li>
+<li><a href="../../azquotes/11111-Yoko_Ono@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11111-Yoko_Ono@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/11111-Yoko_Ono@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/11111-Yoko_Ono@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/11111-Yoko_Ono@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/11111-Yoko_Ono@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/11111-Yoko_Ono@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/11111-Yoko_Ono@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/11111-Yoko_Ono@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yitzhak Rabin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12006-Yitzhak_Rabin.html" target="A">1</a></li>
+<li><a href="../../azquotes/12006-Yitzhak_Rabin@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/12006-Yitzhak_Rabin@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yogi Berra Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1321-Yogi_Berra.html" target="A">1</a></li>
+<li><a href="../../azquotes/1321-Yogi_Berra@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/1321-Yogi_Berra@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/1321-Yogi_Berra@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/1321-Yogi_Berra@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/1321-Yogi_Berra@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/1321-Yogi_Berra@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/1321-Yogi_Berra@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/1321-Yogi_Berra@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yahoo Serious Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13329-Yahoo_Serious.html" target="A">1</a></li>
+<li><a href="../../azquotes/13329-Yahoo_Serious@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yakov Smirnoff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13730-Yakov_Smirnoff.html" target="A">1</a></li>
+<li><a href="../../azquotes/13730-Yakov_Smirnoff@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yeardley Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13822-Yeardley_Smith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yves Tanguy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14439-Yves_Tanguy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshio Taniguchi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14441-Yoshio_Taniguchi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yani Tseng Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14829-Yani_Tseng.html" target="A">1</a></li>
+<li><a href="../../azquotes/14829-Yani_Tseng@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yamamoto Tsunetomo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14832-Yamamoto_Tsunetomo.html" target="A">1</a></li>
+<li><a href="../../azquotes/14832-Yamamoto_Tsunetomo@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/14832-Yamamoto_Tsunetomo@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/14832-Yamamoto_Tsunetomo@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yulia Tymoshenko Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14898-Yulia_Tymoshenko.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yanni Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16030-Yanni.html" target="A">1</a></li>
+<li><a href="../../azquotes/16030-Yanni@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/16030-Yanni@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yelawolf Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16047-Yelawolf.html" target="A">1</a></li>
+<li><a href="../../azquotes/16047-Yelawolf@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yevgeny Yevtushenko Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16058-Yevgeny_Yevtushenko.html" target="A">1</a></li>
+<li><a href="../../azquotes/16058-Yevgeny_Yevtushenko@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yevgeny Zamyatin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16130-Yevgeny_Zamyatin.html" target="A">1</a></li>
+<li><a href="../../azquotes/16130-Yevgeny_Zamyatin@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/16130-Yevgeny_Zamyatin@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/16130-Yevgeny_Zamyatin@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/16130-Yevgeny_Zamyatin@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Young-Ha Kim Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17655-Young_Ha_Kim.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasmina Khadra Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18132-Yasmina_Khadra.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yun Kouga Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18167-Yun_Kouga.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yehuda Berg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18623-Yehuda_Berg.html" target="A">1</a></li>
+<li><a href="../../azquotes/18623-Yehuda_Berg@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/18623-Yehuda_Berg@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yukiru Sugisaki Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18663-Yukiru_Sugisaki.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuu Watase Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18840-Yuu_Watase.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasutaka Tsutsui Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19055-Yasutaka_Tsutsui.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasmine Galenorn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19107-Yasmine_Galenorn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yahtzee Croshaw Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19113-Yahtzee_Croshaw.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ysabeau S. Wilce Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19166-Ysabeau_S_Wilce.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yana Toboso Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19239-Yana_Toboso.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yusuf al-Qaradawi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19435-Yusuf_al_Qaradawi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshiki Nakamura Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19527-Yoshiki_Nakamura.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvette Nicole Brown Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2045-Yvette_Nicole_Brown.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yosef Hayim Yerushalmi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20776-Yosef_Hayim_Yerushalmi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yevgeny Baratynsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20814-Yevgeny_Baratynsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuri Kochiyama Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20898-Yuri_Kochiyama.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yul Brynner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2096-Yul_Brynner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yip Harburg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20991-Yip_Harburg.html" target="A">1</a></li>
+<li><a href="../../azquotes/20991-Yip_Harburg@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yngwie Malmsteen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21061-Yngwie_Malmsteen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yusef Lateef Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21118-Yusef_Lateef.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Young Buck Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2117-Young_Buck.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yolanda King Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21428-Yolanda_King.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yamini Krishnamurthy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21756-Yamini_Krishnamurthy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yunmen Wenyan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21912-Yunmen_Wenyan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yotam Ottolenghi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22150-Yotam_Ottolenghi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yancy Butler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2274-Yancy_Butler.html" target="A">1</a></li>
+<li><a href="../../azquotes/2274-Yancy_Butler@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yogaswami Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22822-Yogaswami.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshida Kenko Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23648-Yoshida_Kenko.html" target="A">1</a></li>
+<li><a href="../../azquotes/23648-Yoshida_Kenko@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yosa Buson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23653-Yosa_Buson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasmin Le Bon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23953-Yasmin_Le_Bon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yongey Mingyur Rinpoche Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24269-Yongey_Mingyur_Rinpoche.html" target="A">1</a></li>
+<li><a href="../../azquotes/24269-Yongey_Mingyur_Rinpoche@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yagyu Munenori Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24565-Yagyu_Munenori.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yves Rossy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25148-Yves_Rossy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yakubu Gowon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25336-Yakubu_Gowon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yokoyama Sakujiro Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25696-Yokoyama_Sakujiro.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yamaoka Tesshu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25701-Yamaoka_Tesshu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yael Cohen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26157-Yael_Cohen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoenis Cespedes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26486-Yoenis_Cespedes.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvonne Strahovski Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26526-Yvonne_Strahovski.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoon Joon-soo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26884-Yoon_Joon_soo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Youngjae Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26889-Youngjae.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yi Sun-sin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26918-Yi_Sun_sin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoon Mi-rae Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26962-Yoon_Mi_rae.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoochun Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26972-Yoochun.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ysabella Brave Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27332-Ysabella_Brave.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvette Cooper Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27435-Yvette_Cooper.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yosef Yitzchak Jacobson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27482-Yosef_Yitzchak_Jacobson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yekaterina Samutsevich Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27532-Yekaterina_Samutsevich.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yu Dan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27746-Yu_Dan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvon Chouinard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2843-Yvon_Chouinard.html" target="A">1</a></li>
+<li><a href="../../azquotes/2843-Yvon_Chouinard@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/2843-Yvon_Chouinard@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/2843-Yvon_Chouinard@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yves Klein Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28594-Yves_Klein.html" target="A">1</a></li>
+<li><a href="../../azquotes/28594-Yves_Klein@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasmina Reza Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29489-Yasmina_Reza.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yohji Yamamoto Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29493-Yohji_Yamamoto.html" target="A">1</a></li>
+<li><a href="../../azquotes/29493-Yohji_Yamamoto@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yayoi Kusama Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29510-Yayoi_Kusama.html" target="A">1</a></li>
+<li><a href="../../azquotes/29510-Yayoi_Kusama@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yip Man Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29595-Yip_Man.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Y. C. James Yen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30092-Y_C_James_Yen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasmine Bleeth Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30402-Yasmine_Bleeth.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yisroel Dovid Weiss Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30526-Yisroel_Dovid_Weiss.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yahya ibn Mu'adh al-Razi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30555-Yahya_ibn_Mu_adh_al_Razi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yitzhak Shamir Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30896-Yitzhak_Shamir.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yagyu Jubei Mitsuyoshi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31178-Yagyu_Jubei_Mitsuyoshi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasser Seirawan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31489-Yasser_Seirawan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuri Balashov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31715-Yuri_Balashov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yann Arthus-Bertrand Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32283-Yann_Arthus_Bertrand.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yash Chopra Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32715-Yash_Chopra.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yitzhak Navon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33262-Yitzhak_Navon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yosef Abramowitz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33268-Yosef_Abramowitz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yiyun Li Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33604-Yiyun_Li.html" target="A">1</a></li>
+<li><a href="../../azquotes/33604-Yiyun_Li@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yunus-bek Yevkurov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33625-Yunus_bek_Yevkurov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yiannis Kouros Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33639-Yiannis_Kouros.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yaacov Agam Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33658-Yaacov_Agam.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yakov Sverdlov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33761-Yakov_Sverdlov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yefim Bronfman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33827-Yefim_Bronfman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yevgeny Vakhtangov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33886-Yevgeny_Vakhtangov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yang Gui-ja Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33987-Yang_Gui_ja.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshihiro Tatsumi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34025-Yoshihiro_Tatsumi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuri Bezmenov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34033-Yuri_Bezmenov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuya Matsushita Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34078-Yuya_Matsushita.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yaphet Kotto Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34238-Yaphet_Kotto.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvonne De Carlo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34274-Yvonne_De_Carlo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yehuda Amichai Quotes</summary>
+<ul>
+<li><a href="../../azquotes/347-Yehuda_Amichai.html" target="A">1</a></li>
+<li><a href="../../azquotes/347-Yehuda_Amichai@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yves Montand Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35169-Yves_Montand.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvonne Craig Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35193-Yvonne_Craig.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yingluck Shinawatra Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35429-Yingluck_Shinawatra.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yury Olesha Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35502-Yury_Olesha.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yaron Brook Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35586-Yaron_Brook.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yigal Allon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35825-Yigal_Allon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuja Wang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35865-Yuja_Wang.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yossi Vardi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35880-Yossi_Vardi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshihiro Togashi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36048-Yoshihiro_Togashi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yugo Nakamura Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36112-Yugo_Nakamura.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoko Ogawa Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36140-Yoko_Ogawa.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasiel Puig Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36196-Yasiel_Puig.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasunori Mitsuda Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36202-Yasunori_Mitsuda.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshitaka Amano Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36203-Yoshitaka_Amano.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yang Hyun-suk Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36261-Yang_Hyun_suk.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuji Horii Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36390-Yuji_Horii.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yosri Fouda Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36400-Yosri_Fouda.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yi-Fu Tuan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36747-Yi_Fu_Tuan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoweri Museveni Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37063-Yoweri_Museveni.html" target="A">1</a></li>
+<li><a href="../../azquotes/37063-Yoweri_Museveni@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasujiro Ozu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37119-Yasujiro_Ozu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasmin Alibhai-Brown Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37263-Yasmin_Alibhai_Brown.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvonne de Gaulle Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37502-Yvonne_de_Gaulle.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasmin Mogahed Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38017-Yasmin_Mogahed.html" target="A">1</a></li>
+<li><a href="../../azquotes/38017-Yasmin_Mogahed@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/38017-Yasmin_Mogahed@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/38017-Yasmin_Mogahed@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/38017-Yasmin_Mogahed@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/38017-Yasmin_Mogahed@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/38017-Yasmin_Mogahed@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/38017-Yasmin_Mogahed@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/38017-Yasmin_Mogahed@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yossi Ghinsberg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38024-Yossi_Ghinsberg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvette Girouard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38587-Yvette_Girouard.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvan Audouard Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38946-Yvan_Audouard.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yeong-hun Kim Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39186-Yeong_hun_Kim.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yue Minjun Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39864-Yue_Minjun.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yumi Tamura Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39912-Yumi_Tamura.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yossi Klein Halevi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40103-Yossi_Klein_Halevi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yusuke Kishi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40201-Yusuke_Kishi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yousef Munayyer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40396-Yousef_Munayyer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yevgeny Primakov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40737-Yevgeny_Primakov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yareli Arizmendi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40881-Yareli_Arizmendi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yossi Shain Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41071-Yossi_Shain.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yael Dayan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41409-Yael_Dayan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuri Orlov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41551-Yuri_Orlov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yohan Blake Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41848-Yohan_Blake.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yahya Jammeh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42087-Yahya_Jammeh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yang Liwei Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42113-Yang_Liwei.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yelena Isinbayeva Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42399-Yelena_Isinbayeva.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuan T. Lee Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42511-Yuan_T_Lee.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yunus Emre Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42533-Yunus_Emre.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuval Ne'eman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42819-Yuval_Ne_eman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshikazu Tanaka Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43150-Yoshikazu_Tanaka.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yevgeny Kafelnikov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43580-Yevgeny_Kafelnikov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yukiya Amano Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44176-Yukiya_Amano.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yehuda Bauer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44209-Yehuda_Bauer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yael Naim Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44358-Yael_Naim.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasmin Ahmad Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44518-Yasmin_Ahmad.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yann Tiersen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44726-Yann_Tiersen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yukito Kishiro Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45023-Yukito_Kishiro.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yxta Maya Murray Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45064-Yxta_Maya_Murray.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yang Lan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45113-Yang_Lan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yakov Borisovich Zel'dovich Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45586-Yakov_Borisovich_Zel_dovich.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasuhiro Konishi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45835-Yasuhiro_Konishi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuri Averbakh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46526-Yuri_Averbakh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvonne Wood Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47597-Yvonne_Wood.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasuhiko Kimura Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47912-Yasuhiko_Kimura.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yigal Azrouel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48378-Yigal_Azrouel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuri Razuvaev Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48409-Yuri_Razuvaev.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yisroel Salanter Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48610-Yisroel_Salanter.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yochai Benkler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49010-Yochai_Benkler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvonne Rainer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49092-Yvonne_Rainer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yelena Bonner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49191-Yelena_Bonner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshiyuki Tomino Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49454-Yoshiyuki_Tomino.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasser Arafat Quotes</summary>
+<ul>
+<li><a href="../../azquotes/495-Yasser_Arafat.html" target="A">1</a></li>
+<li><a href="../../azquotes/495-Yasser_Arafat@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/495-Yasser_Arafat@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/495-Yasser_Arafat@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuliya Snigir Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49570-Yuliya_Snigir.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yakir Aharonov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49619-Yakir_Aharonov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasheng Huang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49794-Yasheng_Huang.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuan Shikai Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49960-Yuan_Shikai.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yusuf Idris Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50014-Yusuf_Idris.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuichiro Miura Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50185-Yuichiro_Miura.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvonne Vera Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50316-Yvonne_Vera.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuna Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50421-Yuna.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Youssef Ziedan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50449-Youssef_Ziedan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>YZ Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50699-YZ.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yamaga Soko Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50851-Yamaga_Soko.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yi Mun-yol Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50885-Yi_Mun_yol.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yukihiro Matsumoto Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50906-Yukihiro_Matsumoto.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoon Se-ah Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51052-Yoon_Se_ah.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yeasin Khan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51276-Yeasin_Khan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshiro Mori Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51395-Yoshiro_Mori.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yeshe Tsogyal Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52558-Yeshe_Tsogyal.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuri Gagarin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5270-Yuri_Gagarin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvor Winters Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53109-Yvor_Winters.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yaya Han Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53444-Yaya_Han.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yolanda Adams Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53470-Yolanda_Adams.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Youngme Moon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54072-Youngme_Moon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yang Wanli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54151-Yang_Wanli.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Youth Lagoon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54222-Youth_Lagoon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshiko Sakurai Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54258-Yoshiko_Sakurai.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvonne Prinz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54616-Yvonne_Prinz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshiki Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55605-Yoshiki.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yolanda Foster Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56517-Yolanda_Foster.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yitzhak Gruenbaum Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56558-Yitzhak_Gruenbaum.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yusuf Hamied Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56701-Yusuf_Hamied.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasmin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57800-Yasmin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Young Thug Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57847-Young_Thug.html" target="A">1</a></li>
+<li><a href="../../azquotes/57847-Young_Thug@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yamada Koun Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59061-Yamada_Koun.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Young Jean Lee Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59423-Young_Jean_Lee.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yara Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59613-Yara.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuvraj Singh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60396-Yuvraj_Singh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yair Lapid Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60459-Yair_Lapid.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yunho Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60506-Yunho.html" target="A">1</a></li>
+<li><a href="../../azquotes/60506-Yunho@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yatin Patel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61198-Yatin_Patel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Young MC Quotes</summary>
+<ul>
+<li><a href="../../azquotes/61820-Young_MC.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuki Quotes</summary>
+<ul>
+<li><a href="../../azquotes/62502-Yuki.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yanis Varoufakis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/62524-Yanis_Varoufakis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuanwu Keqin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63130-Yuanwu_Keqin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yunjin Kim Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63342-Yunjin_Kim.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yul Vazquez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63944-Yul_Vazquez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yishan Wong Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63950-Yishan_Wong.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yukimi Nagano Quotes</summary>
+<ul>
+<li><a href="../../azquotes/65884-Yukimi_Nagano.html" target="A">1</a></li>
+<li><a href="../../azquotes/65884-Yukimi_Nagano@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ye Xiaowen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/66660-Ye_Xiaowen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yo Gotti Quotes</summary>
+<ul>
+<li><a href="../../azquotes/69939-Yo_Gotti.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yves Behar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70402-Yves_Behar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yaya DaCosta Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70460-Yaya_DaCosta.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvette Clarke Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70521-Yvette_Clarke.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yousef Saanei Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71133-Yousef_Saanei.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshijiro Umezu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71169-Yoshijiro_Umezu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoseob Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71761-Yoseob.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshida Shoin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73320-Yoshida_Shoin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvonne Zipter Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73828-Yvonne_Zipter.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Young Jeezy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7388-Young_Jeezy.html" target="A">1</a></li>
+<li><a href="../../azquotes/7388-Young_Jeezy@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/7388-Young_Jeezy@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasumasa Morimura Quotes</summary>
+<ul>
+<li><a href="../../azquotes/75543-Yasumasa_Morimura.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yung Berg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/75759-Yung_Berg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvonne Adhiambo Owuor Quotes</summary>
+<ul>
+<li><a href="../../azquotes/75911-Yvonne_Adhiambo_Owuor.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yesung Quotes</summary>
+<ul>
+<li><a href="../../azquotes/75942-Yesung.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuri Lotman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/76064-Yuri_Lotman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yousuf Karsh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7754-Yousuf_Karsh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yo Yo Honey Singh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/77594-Yo_Yo_Honey_Singh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasunari Kawabata Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7788-Yasunari_Kawabata.html" target="A">1</a></li>
+<li><a href="../../azquotes/7788-Yasunari_Kawabata@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoon Sang-hyun Quotes</summary>
+<ul>
+<li><a href="../../azquotes/79320-Yoon_Sang_hyun.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yutaka Katayama Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81870-Yutaka_Katayama.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yusef Komunyakaa Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8203-Yusef_Komunyakaa.html" target="A">1</a></li>
+<li><a href="../../azquotes/8203-Yusef_Komunyakaa@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yael Stone Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83544-Yael_Stone.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yellow Tanabe Quotes</summary>
+<ul>
+<li><a href="../../azquotes/84044-Yellow_Tanabe.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yves Saint Laurent Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8552-Yves_Saint_Laurent.html" target="A">1</a></li>
+<li><a href="../../azquotes/8552-Yves_Saint_Laurent@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/8552-Yves_Saint_Laurent@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasmin Paige Quotes</summary>
+<ul>
+<li><a href="../../azquotes/86148-Yasmin_Paige.html" target="A">1</a></li>
+<li><a href="../../azquotes/86148-Yasmin_Paige@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yaya Toure Quotes</summary>
+<ul>
+<li><a href="../../azquotes/86904-Yaya_Toure.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yehuda Levi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/88297-Yehuda_Levi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuen Woo-ping Quotes</summary>
+<ul>
+<li><a href="../../azquotes/88658-Yuen_Woo_ping.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yenz Leonhardt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90100-Yenz_Leonhardt.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoko Shimomura Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90181-Yoko_Shimomura.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yung Joc Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90188-Yung_Joc.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yaroslav Trofimov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91115-Yaroslav_Trofimov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yvette Gonzalez-Nacer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91298-Yvette_Gonzalez_Nacer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Young De Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91357-Young_De.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yoshi Wada Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91393-Yoshi_Wada.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yannis Philippakis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91400-Yannis_Philippakis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Young Chop Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91411-Young_Chop.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yajnavalkya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91687-Yajnavalkya.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yo-Yo Ma Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9188-Yo_Yo_Ma.html" target="A">1</a></li>
+<li><a href="../../azquotes/9188-Yo_Yo_Ma@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9188-Yo_Yo_Ma@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yanik Silver Quotes</summary>
+<ul>
+<li><a href="../../azquotes/93875-Yanik_Silver.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yuriy Tarnawsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94430-Yuriy_Tarnawsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yukmouth Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94465-Yukmouth.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yony Leyser Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94568-Yony_Leyser.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yann Martel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9521-Yann_Martel.html" target="A">1</a></li>
+<li><a href="../../azquotes/9521-Yann_Martel@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9521-Yann_Martel@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/9521-Yann_Martel@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/9521-Yann_Martel@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/9521-Yann_Martel@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/9521-Yann_Martel@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/9521-Yann_Martel@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/9521-Yann_Martel@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/9521-Yann_Martel@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yanar Mohammed Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95424-Yanar_Mohammed.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yara Shahidi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95892-Yara_Shahidi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yasmine Elmasri Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95932-Yasmine_Elmasri.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yellowman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96468-Yellowman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yorgos Lanthimos Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96867-Yorgos_Lanthimos.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yves Doz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97035-Yves_Doz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yang Mi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97169-Yang_Mi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Yehudi Menuhin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9979-Yehudi_Menuhin.html" target="A">1</a></li>
+<li><a href="../../azquotes/9979-Yehudi_Menuhin@p=2.html" target="A">2</a></li>
+</ul>
+</details>
+</section>
+<section id="help-right"></section>
+</section>
+</body>
+</html>

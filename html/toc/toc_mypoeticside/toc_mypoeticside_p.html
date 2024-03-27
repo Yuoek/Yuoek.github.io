@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Toc_mypoeticside</title>
+<meta name="description" content="Toc_mypoeticside。" />
+<meta name="keywords" content="纯CSS,样式控制,折叠展开,菜单,效果,特效演示" />
+<meta name="author" content="jQuery插件库" />
+<meta name="Copyright" content="jQuery插件库" />
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+a {
+text-decoration: none;
+}
+#conter {
+width: 1000px;
+margin: auto;
+}
+#help-left {
+width: auto;
+font-family: 'microsoft YaHei';
+float: left;
+}
+.menu {
+border-left: 1px solid #3cbfb3;
+border-right: 1px solid #3cbfb3;
+}
+.menu:last-child {
+border-bottom: 1px solid #3cbfb3;
+}
+.menu summary {
+height: 40px;
+line-height: 40px;
+text-indent: 10px;
+outline: none;
+font-size: 14px;
+font-weight: 700;
+border-top: 1px solid #3cbfb3;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #fff0));
+cursor: pointer;
+display: flex;
+}
+/*使用下面这个，可以去掉小三角，神奇的菜单就可以完成了*/
+.menu summary::-webkit-details-marker {
+}
+.menu summary:before {
+content: "🌸";
+display: inline-block;
+width: 16px;
+height: 16px;
+margin-right: 10px;
+font-size: 18px;
+font-weight: 700;
+}
+.menu[open] summary:before {
+content: "🕊️";
+}
+.menu ul {
+padding: 10px 0;
+}
+.menu ul li {
+list-style: none;
+text-indent: 25px;
+font-size: 12px;
+height: 30px;
+line-height: 30px;
+}
+.menu ul li a {
+display: block;
+color: #096868;
+}
+.menu ul li a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<section id="conter">
+<section id="help-left">
+<!--open为展开菜单，close为折叠菜单-->
+<details class="menu" close>
+<summary>Pablo Neruda Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-20648.html" target="A">A Dog Has Died</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20689.html" target="A">A Lemon</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20663.html" target="A">A Song of Despair</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20630.html" target="A">Absence</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20624.html" target="A">Algunas Bestias</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20684.html" target="A">Bird</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20673.html" target="A">Brown and Agile Child</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20643.html" target="A">Cat's Dream</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20660.html" target="A">Clenched Soul</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20685.html" target="A">Drunk as Drunk on Turpentine</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20653.html" target="A">Enigmas</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20629.html" target="A">Entrance of the Rivers</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20675.html" target="A">Fleas interest me so much</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20626.html" target="A">From the Heights of Maccho Picchu</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20625.html" target="A">Gautama* Christ</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20651.html" target="A">Gentleman Alone</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20628.html" target="A">Here I Love You</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20642.html" target="A">I Do Not Love You Except Because I Love You</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20635.html" target="A">I Hunt For A Sign Of You</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20631.html" target="A">I Remember You As You Were</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20659.html" target="A">I'm Explaining a Few Things</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20671.html" target="A">If You Forget Me</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20666.html" target="A">In My Sky At Twilight</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20641.html" target="A">In You The Earth</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20667.html" target="A">Leaning Into The Afternoons</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20668.html" target="A">Lost in the forest...</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20657.html" target="A">Love</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20636.html" target="A">Love, We´re Going Home Now</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20633.html" target="A">Lovely One</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20637.html" target="A">Love~</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20647.html" target="A">Magellanic Penguin</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20632.html" target="A">Naked, You Are As</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20652.html" target="A">Nothing But Death</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20623.html" target="A">Ode to Bird Watching</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20680.html" target="A">Ode to Maize</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20674.html" target="A">Ode to Sadness</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20622.html" target="A">Ode to the Artichoke</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20669.html" target="A">Ode to the Book</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20688.html" target="A">Ode To Wine</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20687.html" target="A">Poetry</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20670.html" target="A">Poor Fellows</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20646.html" target="A">Puedo Escribir</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20678.html" target="A">Some Beasts</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20679.html" target="A">Sonata</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20640.html" target="A">Soneto XVII</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20681.html" target="A">Sonnet LXXXI</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20683.html" target="A">Sonnet VIII</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20682.html" target="A">Sonnet XI</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20686.html" target="A">Sonnet XVII</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20645.html" target="A">Sonnet XXXIV (You are the daughter of the sea)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20638.html" target="A">Tell Me, Is The Rose Naked?</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20649.html" target="A">The Dictators</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20634.html" target="A">The Fickle One</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20656.html" target="A">The Light Wraps You</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20664.html" target="A">The Night in Isla Negra</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20627.html" target="A">The Old Women of the Ocean</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20639.html" target="A">The Queen</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20661.html" target="A">The Question</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20677.html" target="A">The Song of Despair</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20676.html" target="A">The Weary One</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20654.html" target="A">The White Mans Burden</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20658.html" target="A">Tonight I Can Write the Saddest Lines</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20644.html" target="A">Tower Of Light</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20620.html" target="A">Triangles</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20650.html" target="A">Walking Around</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20662.html" target="A">Water</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20672.html" target="A">We Are Many</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20621.html" target="A">What Spain Was Like</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20655.html" target="A">Your Feet</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-20665.html" target="A">Your Laughter</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Padraic Colum Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-6149.html" target="A">A Cradle Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6143.html" target="A">A Drover</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6141.html" target="A">Fourth Station</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6147.html" target="A">I shall not Die for thee</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6145.html" target="A">Monkeys</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6139.html" target="A">Old Men Complaining</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6144.html" target="A">Old Woman of the Roads</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6138.html" target="A">Polonius and the Ballad Singers</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6140.html" target="A">River-Mates</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6148.html" target="A">She Moved Through the Faire</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6142.html" target="A">The Plougher</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-6146.html" target="A">Tulips</a></li>
+</ul>
+</details>
+<details class="menu" close>
+<summary>Paruyr Sevag Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-26691.html" target="A">Hayasdan</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-26692.html" target="A">To My Son</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Patrick Branwell Brontë Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-3901.html" target="A">Lydia Gisborne</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-3902.html" target="A">Penmaenmawr (excerpt)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-3903.html" target="A">Sir Henry Tunstall (excerpt)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-3904.html" target="A">Thorp Green</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Patrick Kavanagh Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-14448.html" target="A">Advent</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14449.html" target="A">Canal Bank Walk</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14463.html" target="A">Epic</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14462.html" target="A">Having To Live in the Country</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14461.html" target="A">In Memory Of My Mother</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14460.html" target="A">Inniskeen Road: July Evening</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14459.html" target="A">Innocence</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14458.html" target="A">Kerr's Ass</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14457.html" target="A">Memory of my Father</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14456.html" target="A">On An Apple-Ripe September Morning</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14455.html" target="A">On Raglan Road</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14451.html" target="A">Peace</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14450.html" target="A">Primrose</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14454.html" target="A">Shancoduff</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14453.html" target="A">Stony Grey Soil</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14447.html" target="A">The Great Hunger</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14452.html" target="A">To the Man After the Harrow</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-14464.html" target="A">Wet Evening in April</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Patrick MacGill Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-17869.html" target="A">A Lament from the Trenches</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-17873.html" target="A">Back at Loos</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-17875.html" target="A">By The Way</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-17874.html" target="A">Death and Fairies</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-17871.html" target="A">In the Morning</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-17870.html" target="A">Letters in the Trenches</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-17872.html" target="A">The Star-Shell</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Paul Celan Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-5640.html" target="A">Corona</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5641.html" target="A">Crystal</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5642.html" target="A">Death Fugue</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5643.html" target="A">Landscape</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5638.html" target="A">Night Ray</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5644.html" target="A">This Evening Also</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5639.html" target="A">Twelve Years</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Paul Éluard Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-9747.html" target="A">At the Window</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9758.html" target="A">Curfew</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9757.html" target="A">Five Haiku</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9756.html" target="A">Head Against The Walls</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9755.html" target="A">Hunted</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9754.html" target="A">I Cannot be Known</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9746.html" target="A">La courbe de tes yeux</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9745.html" target="A">La terre est bleue</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9760.html" target="A">Lady Love</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9744.html" target="A">Liberté (translation)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9752.html" target="A">Other Children</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9751.html" target="A">The Absence</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9750.html" target="A">The Deaf and Blind</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9749.html" target="A">The Human Face</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9748.html" target="A">The Nakedness of Truth (I know it well)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9759.html" target="A">The River</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9753.html" target="A">To Live</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Paul Hamilton Hayne Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-12487.html" target="A">"Too oft the poet in elaborate verse"</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12477.html" target="A">A Dream Of The South Winds</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12486.html" target="A">At Last</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12482.html" target="A">Earth Odours--After Rain</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12476.html" target="A">In Harbor</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12481.html" target="A">Life and Death</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12480.html" target="A">My Study</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12483.html" target="A">October</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12484.html" target="A">The Coming of the Wind</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12485.html" target="A">The Phantom Bells</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12479.html" target="A">The Pine's Mystery</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12478.html" target="A">The Will and The Wing</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Paul Laurence Dunbar Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-9519.html" target="A">'Long To'Ds Night</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9439.html" target="A">A Banjo Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9441.html" target="A">A Border Ballad</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9517.html" target="A">A Boy's Summer Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9573.html" target="A">A Choice</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9511.html" target="A">A Christmas Folksong</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9416.html" target="A">A Confidence</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9535.html" target="A">A Coquette Conquered</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9429.html" target="A">A Corn-Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9561.html" target="A">A Death Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9419.html" target="A">A Drowsy Day</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9555.html" target="A">A Farm House by the River</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9554.html" target="A">A Frolic</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9512.html" target="A">A Golden Day</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9513.html" target="A">A Lazy Day</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9514.html" target="A">A Lost Dream</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9503.html" target="A">A Love Letter</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9502.html" target="A">A Musical</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9583.html" target="A">A Negro Love Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9525.html" target="A">A Plantation Portrait</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9541.html" target="A">A Prayer</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9488.html" target="A">A Song (#1)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9485.html" target="A">A Song (#2)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9425.html" target="A">A Song (#3)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9424.html" target="A">A Summer's Night</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9526.html" target="A">A Warm Day In Winter</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9579.html" target="A">Accountability</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9487.html" target="A">Advice</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9564.html" target="A">After a Visit</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9483.html" target="A">After Many Days</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9426.html" target="A">After The Quarrel</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9418.html" target="A">After While. A Poem Of Faith</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9563.html" target="A">An Ante-Bellum Sermon</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9557.html" target="A">An Easy Goin' Feller</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9490.html" target="A">Appreciation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9501.html" target="A">At Lofting-Holt</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9500.html" target="A">At Sunset Time</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9585.html" target="A">At the Tavern</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9442.html" target="A">Ballad</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9499.html" target="A">Bein' Back Home</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9437.html" target="A">Beyond The Years</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9498.html" target="A">Blue</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9435.html" target="A">By The Stream</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9434.html" target="A">Changing Time</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9507.html" target="A">Christmas</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9562.html" target="A">Christmas Carol</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9496.html" target="A">Circumstances Alter Cases</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9432.html" target="A">Columbian Ode</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9570.html" target="A">Common Things</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9412.html" target="A">Comparison</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9493.html" target="A">Compensation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9567.html" target="A">Confirmation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9376.html" target="A">Conscience And Remorse</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9492.html" target="A">Curiosity</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9378.html" target="A">Curtain</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9379.html" target="A">Dawn</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9481.html" target="A">Day</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9440.html" target="A">Deacon Jones' Grievance</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9382.html" target="A">Dead</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9494.html" target="A">Despair</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9495.html" target="A">Dey know.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9497.html" target="A">Diplomacy</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9375.html" target="A">Dirge</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9374.html" target="A">Disappointed.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9560.html" target="A">Discovered</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9574.html" target="A">Distinction</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9578.html" target="A">Douglass</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9491.html" target="A">Dreamin' Town</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9558.html" target="A">Dreams</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9559.html" target="A">Dreams</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9532.html" target="A">Drizzle</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9556.html" target="A">Emancipation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9482.html" target="A">Encouraged</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9588.html" target="A">Encouragement</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9433.html" target="A">Ere Sleep Comes Down To Soothe The Weary Eyes</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9484.html" target="A">Faith</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9575.html" target="A">Frederick Douglass</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9369.html" target="A">Fulfillment</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9370.html" target="A">Good-Night</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9371.html" target="A">Growin' Gray</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9553.html" target="A">He had his Dream</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9486.html" target="A">Hope</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9586.html" target="A">Howdy, Honey, Howdy</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9386.html" target="A">Hymn</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9387.html" target="A">If</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9577.html" target="A">If I Could But Forget</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9552.html" target="A">In the Morning</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9551.html" target="A">Invitation to Love</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9402.html" target="A">Ione</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9528.html" target="A">Itching Heels</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9515.html" target="A">Johnny Speaks</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9405.html" target="A">Keep A-Pluggin' Away</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9509.html" target="A">Kidnaped</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9550.html" target="A">Kindness</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9549.html" target="A">Life</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9571.html" target="A">Life's Tragedy</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9504.html" target="A">Limitations</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9580.html" target="A">Little Brown Baby</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9510.html" target="A">Liza May</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9410.html" target="A">Lonesome</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9400.html" target="A">Longing</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9505.html" target="A">Love's Draft</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9506.html" target="A">Mandy Lou.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9389.html" target="A">Melancholia</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9390.html" target="A">Merry Autumn</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9516.html" target="A">Morning</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9520.html" target="A">My Sweet Brown Gal</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9392.html" target="A">Nature And Art. To My Friend Charles Booth Nettleton</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9508.html" target="A">Night</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9394.html" target="A">Night Of Love</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9523.html" target="A">Noddin' By De Fire</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9396.html" target="A">Nora: A Serenade</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9547.html" target="A">Not they who soar</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9398.html" target="A">October</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9546.html" target="A">Ode for Memorial Day</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9545.html" target="A">Ode to Ethiopia</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9568.html" target="A">Old</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9383.html" target="A">One Life</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9448.html" target="A">Opportunity</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9452.html" target="A">Parted</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9411.html" target="A">Passion And Love</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9397.html" target="A">Phyllis</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9395.html" target="A">Premonition</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9393.html" target="A">Preparation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9391.html" target="A">Promise</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9454.html" target="A">Puttin' The Baby Away</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9447.html" target="A">Rain-Songs</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9399.html" target="A">Religion</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9409.html" target="A">Retort</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9408.html" target="A">Retrospection</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9407.html" target="A">Riding To Town</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9406.html" target="A">Right's Security</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9362.html" target="A">Robert Gould Shaw</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9456.html" target="A">Roses And Pearls</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9457.html" target="A">Scamp</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9593.html" target="A">Ships that Pass in the Night</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9587.html" target="A">Signs of the Times</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9590.html" target="A">Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9404.html" target="A">Song Of Summer</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9403.html" target="A">Speakin' O' Christmas</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9533.html" target="A">Spring Fever</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9401.html" target="A">Spring Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9566.html" target="A">Summer in the South</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9388.html" target="A">Sunset</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9489.html" target="A">Suppose</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9576.html" target="A">Sympathy</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9473.html" target="A">The Awakening</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9476.html" target="A">The Barrier</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9529.html" target="A">The Boogah Man</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9477.html" target="A">The Change</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9372.html" target="A">The Change Has Come</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9468.html" target="A">The Chase</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9527.html" target="A">The Colored Band</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9368.html" target="A">The Colored Soldiers</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9366.html" target="A">The Corn-Stalk Fiddle</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9459.html" target="A">The Death Of The First Born</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9591.html" target="A">The Debt</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9365.html" target="A">The Delinquent</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9364.html" target="A">The Deserted Plantation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9363.html" target="A">The Dilettante: A Modern Type</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9460.html" target="A">The Discovery</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9461.html" target="A">The Farm Child's Lullaby</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9462.html" target="A">The Fisher Child's Lullaby</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9463.html" target="A">The Forest Greeting</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9582.html" target="A">The Haunted Oak</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9589.html" target="A">The Lawyers' Ways</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9373.html" target="A">The Lesson</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9464.html" target="A">The Lily Of The Valley</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9521.html" target="A">The Looking-Glass</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9385.html" target="A">The Lover And The Moon</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9569.html" target="A">The Made to Order Smile</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9548.html" target="A">The Making Up</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9384.html" target="A">The Master-Player</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9451.html" target="A">The Masters</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9381.html" target="A">The Meadow Lark</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9534.html" target="A">The Memory Of Martha</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9380.html" target="A">The Mystery</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9377.html" target="A">The Ol' Tunes</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9367.html" target="A">The Old Apple-Tree</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9475.html" target="A">The Old Cabin</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9592.html" target="A">The Old Front Gate</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9572.html" target="A">The Paradox</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9544.html" target="A">The Party</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9431.html" target="A">The Path</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9480.html" target="A">The Place Where The Rainbow Ends</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9467.html" target="A">The Plantation Child's Lullaby</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9543.html" target="A">The Poet</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9542.html" target="A">The Poet and his Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9458.html" target="A">The Quilting</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9540.html" target="A">The Right to Die</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9430.html" target="A">The Rising Of The Storm</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9438.html" target="A">The Rivals</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9466.html" target="A">The River Of Ruin</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9465.html" target="A">The Sand-Man</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9443.html" target="A">The Secret</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9539.html" target="A">The Seedling</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9428.html" target="A">The Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9414.html" target="A">The Sparrow</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9415.html" target="A">The Spellin'-Bee</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9531.html" target="A">The Tryst</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9479.html" target="A">The Unlucky Apple</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9478.html" target="A">The Veteran</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9522.html" target="A">The Visitor</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9420.html" target="A">The Wind And The Sea</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9436.html" target="A">The Wooing</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9565.html" target="A">Theology</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9474.html" target="A">Till The Wind Gets Right</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9472.html" target="A">To Dan</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9471.html" target="A">To Her</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9470.html" target="A">To J.Q.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9427.html" target="A">To Louise</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9524.html" target="A">To The Eastern Shore</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9413.html" target="A">To The Memory Of Mary Young</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9538.html" target="A">Toast to Dayton</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9445.html" target="A">Trouble In De Kitchen</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9444.html" target="A">Twell De Night Is Pas'</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9469.html" target="A">Twilight</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9530.html" target="A">Two Little Boots</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9423.html" target="A">Two Songs</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9422.html" target="A">Unexpressed</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9450.html" target="A">Wadin' In De Crick</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9584.html" target="A">We Wear the Mask</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9446.html" target="A">What's The Use</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9453.html" target="A">When A Feller's Itching To Be Spanked</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9581.html" target="A">When de Co'n Pone's Hot</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9537.html" target="A">When dey 'Listed Colored Soldiers</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9536.html" target="A">When Malindy Sings</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9417.html" target="A">Whittier</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9421.html" target="A">Why Fades A Dream</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9455.html" target="A">Winter Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9449.html" target="A">Winter's Approach</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-9518.html" target="A">Yesterday And To-Morrow</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Paul Valery Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-31860.html" target="A">Les pas</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31861.html" target="A">The Steps</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Paul Verlaine Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-32053.html" target="A">'Tis The Feast Of Corn</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32077.html" target="A">A La Promenade</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32050.html" target="A">A Une Femme</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32068.html" target="A">Ariettes Oubliees</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32080.html" target="A">Autumn Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32072.html" target="A">Before Your Light Quite Fail</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32064.html" target="A">Birds In The Night</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32078.html" target="A">Clair De Lune</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32074.html" target="A">En Sourdine</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32059.html" target="A">Give Ear Unto The Gentle Lay</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32063.html" target="A">Green</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32066.html" target="A">Heavy, My Despair</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32056.html" target="A">Hope Shines</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32058.html" target="A">I've Seen Again The One Child</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32054.html" target="A">It Is You</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32075.html" target="A">L'Amour Par Terre</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32076.html" target="A">Mandoline</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32079.html" target="A">Melancholy</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32052.html" target="A">Nevermore</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32071.html" target="A">O'er The Wood's Brow</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32051.html" target="A">Oft Do I Dream</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32073.html" target="A">Since Shade Relents</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32055.html" target="A">Sleep, Darksome, Deep</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32057.html" target="A">Son, Thou Must Love Me</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32062.html" target="A">Streets</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32060.html" target="A">The False Fair Days</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32067.html" target="A">The Piano</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32069.html" target="A">The Rosy Hearth</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32070.html" target="A">The Scene Behind The Carriage Window Panes</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32065.html" target="A">The Tree's Reflection</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32049.html" target="A">Un Grand Sommeil Noir</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-32061.html" target="A">What Sayest Thou, Traveller</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Pavlo Tychyna Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-31704.html" target="A">Instead of Sonnets and Octaves</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31705.html" target="A">Lament of Iaroslavna</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31706.html" target="A">The Feeling Of a Single Family</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-31707.html" target="A">Three Sons</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Pedro López de Ayala Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-17215.html" target="A">LAS SIETE OBRAS DE MISERICORDIA</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-17216.html" target="A">LOS DIEZ MANDAMIENTOS</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-17217.html" target="A">Los siete pecados mortales</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-17218.html" target="A">Preliminar</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Pedro Salinas Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-24851.html" target="A">Afan</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-24852.html" target="A">Wake up. Day calls you</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Pentti Saarikoski Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-24757.html" target="A">from About the World</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-24758.html" target="A">from Runot ja Hipponaksin runot</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Percy Bysshe Shelley Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-27049.html" target="A">A Lament</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27003.html" target="A">A Summer Evening Churchyard</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27027.html" target="A">A Summer Evening Churchyard, Lechlade, Gloucestershire</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27028.html" target="A">A Widow Bird Sate Mourning For Her Love</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27031.html" target="A">Adonais: An elegy on the Death of John Keats</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27034.html" target="A">Alastor: or, the Spirit of Solitude</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27059.html" target="A">An Exhortation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27069.html" target="A">And like a Dying Lady, Lean and Pale</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27055.html" target="A">Art Thou Pale For Weariness</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27029.html" target="A">Autumn: A Dirge</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27057.html" target="A">Bereavement</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27067.html" target="A">Charles the First</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27070.html" target="A">Chorus from Hellas</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27063.html" target="A">England in 1819</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27012.html" target="A">Epipsychidion</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27068.html" target="A">Epipsychidion (excerpt)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27032.html" target="A">Feelings Of A Republican On The Fall Of Bonaparte</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-26999.html" target="A">Fragment Of A Ghost Story</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27033.html" target="A">fragment: "To the Moon"</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27000.html" target="A">Fragment: Home</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27009.html" target="A">Fragments Of An Unfinished Drama</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27030.html" target="A">From the Arabic, an Imitation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27056.html" target="A">Good-Night</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27010.html" target="A">Hellas: A Lyrical Drama</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-26998.html" target="A">Hymn of Apollo</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27058.html" target="A">Hymn of Pan</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27050.html" target="A">Hymn to Intellectual Beauty</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27061.html" target="A">I Arise from Dreams of Thee</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27053.html" target="A">Invocation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27081.html" target="A">Julian and Maddalo</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27014.html" target="A">Letter To Maria Gisborne</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27026.html" target="A">Lift Not The Painted Veil Which Those Who Live</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27021.html" target="A">Lines Written Among The Euganean Hills</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27074.html" target="A">Lines Written in the Bay of Lerici</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27080.html" target="A">Lines: The cold earth slept below</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27066.html" target="A">Love's Philosophy</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27076.html" target="A">Mont Blanc: Lines Written in the Vale of Chamouni</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27051.html" target="A">Music, When Soft Voices Die</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27052.html" target="A">Mutability</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27062.html" target="A">Ode to the West Wind</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27013.html" target="A">Oedipus Tyrannus or Swellfoot The Tyrant</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27082.html" target="A">On A Dead Violet</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27054.html" target="A">On Death</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27075.html" target="A">One sung of thee who left the tale untold</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27060.html" target="A">Ozymandias</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27011.html" target="A">Passages Of The Poem, Or Connected Therewith</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27015.html" target="A">Peter Bell The Third</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27018.html" target="A">Prince Athanase</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27073.html" target="A">Prometheus Unbound</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27079.html" target="A">Queen Mab: Part VI (excerpts)</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27035.html" target="A">Rosalind and Helen: a Modern Eclogue</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27040.html" target="A">Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27084.html" target="A">Song Of Proserpine</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27072.html" target="A">Song: Rarely, rarely, comest thou</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27037.html" target="A">Stanzas Written in Dejection Near Naples</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27007.html" target="A">Stanzas--April, 1814</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27017.html" target="A">The Cenci</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27036.html" target="A">The Cloud</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27020.html" target="A">The Daemon Of The World</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27065.html" target="A">The Fitful Alternations of the Rain</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27064.html" target="A">The Indian Serenade</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27024.html" target="A">The Invitation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27016.html" target="A">The Mask Of Anarchy</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27048.html" target="A">The Question</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27019.html" target="A">The Revolt Of Islam: Canto I-XII</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27001.html" target="A">The Sunset</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27077.html" target="A">The Triumph of Life</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27078.html" target="A">The Two Spirits: An Allegory</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27043.html" target="A">The Waning Moon</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27085.html" target="A">The Witch Of Atlas</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27047.html" target="A">Time</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27046.html" target="A">Time Long Past</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27004.html" target="A">To</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27071.html" target="A">To ----</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27022.html" target="A">To A Lady, With A Guitar</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27038.html" target="A">To a Skylark</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27083.html" target="A">To Coleridge</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27006.html" target="A">To Harriet</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27045.html" target="A">To Jane</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27005.html" target="A">To Mary Wollstonecraft Godwin</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27044.html" target="A">To Night</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27023.html" target="A">To The Men Of England</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27042.html" target="A">To the Moon</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27039.html" target="A">To Wordsworth</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27002.html" target="A">To.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27025.html" target="A">To..</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27041.html" target="A">When the Lamp Is Shattered</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-27008.html" target="A">Written At Bracknell</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Percy MacKaye Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-17898.html" target="A">Christmas: 1915</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-17899.html" target="A">The Child-Dancers</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Peter Huchel Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-13601.html" target="A">Eastern River</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-13602.html" target="A">Meeting</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-13603.html" target="A">Melpomene</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Philip James Bailey Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-1768.html" target="A">Helen's Song</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-1769.html" target="A">I Loved Her For That She Was Beautiful . . .</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-1770.html" target="A">I Loved Her For That She Was Beautiful . . .</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-1771.html" target="A">We Live In Deeds. . .</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Philip Joseph Holdsworth Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-13172.html" target="A">Hast Thou Forgotten Me?</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-13173.html" target="A">My Queen of Dreams</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-13174.html" target="A">Quis Separabit?</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Philip Larkin Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-16057.html" target="A">A Study of Reading Habits</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16079.html" target="A">Ambulances</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16098.html" target="A">An Arundel Tomb</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16045.html" target="A">Annus Mirabilis</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16060.html" target="A">Arrival</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16086.html" target="A">At Grass</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16090.html" target="A">Aubade</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16071.html" target="A">Autobiography at an Air-Station</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16059.html" target="A">Best Society</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16058.html" target="A">Breadfruit</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16093.html" target="A">Church Going</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16075.html" target="A">Continuing to Live</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16002.html" target="A">Cut Grass</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16096.html" target="A">Days</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16056.html" target="A">Deceptions</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16055.html" target="A">Dockery and Son</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16073.html" target="A">Dublinesque</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16054.html" target="A">Essential Beauty</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16053.html" target="A">Faith Healing</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16052.html" target="A">Far Out</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16051.html" target="A">First Sight</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16050.html" target="A">For Sidney Bechet</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16049.html" target="A">Friday Night at the Royal Station Hotel</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16087.html" target="A">Going</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16048.html" target="A">He Hears that His Beloved Has Become Engaged</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16083.html" target="A">High Windows</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16047.html" target="A">Homage to a Government</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16089.html" target="A">Home is So Sad</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16046.html" target="A">How Distant</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16061.html" target="A">I Have Started to Say</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16078.html" target="A">I Remember, I Remember</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16070.html" target="A">If Hands Could Free You, Heart</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16069.html" target="A">Ignorance</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16065.html" target="A">Is It For Now Or For Always</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16085.html" target="A">Library Ode</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16066.html" target="A">Like the Train's Beat</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16062.html" target="A">Lines on a Young Lady's Photograph Album</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16068.html" target="A">Long Sight In Age</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16063.html" target="A">Love Again</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16064.html" target="A">Love Songs In Age</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16076.html" target="A">Love, We Must Part Now</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16092.html" target="A">Maiden Name</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16067.html" target="A">Maturity</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16077.html" target="A">Mcmxiv</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16015.html" target="A">Modesties</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16018.html" target="A">Money</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16021.html" target="A">Mother, Summer, I</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16008.html" target="A">Mr Bleaney</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16024.html" target="A">Mr. Bleaney</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16023.html" target="A">Myxomatosis</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16022.html" target="A">New Eyes Each Year</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16006.html" target="A">Next, Please</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16084.html" target="A">Night Music</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16005.html" target="A">Night-Music</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16082.html" target="A">No Road</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16080.html" target="A">Nothing to Be Said</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16020.html" target="A">Poetry of Departures</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16019.html" target="A">Reasons for Attendance</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16081.html" target="A">Sad Steps</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16017.html" target="A">Send No Money</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16016.html" target="A">Since the Majority of Me</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16014.html" target="A">Skin</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16011.html" target="A">Solar</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16012.html" target="A">Story</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16013.html" target="A">Sunny Prestatyn</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16025.html" target="A">Take One Home For the Kiddies</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16088.html" target="A">Talking In Bed</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16026.html" target="A">The Building</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16027.html" target="A">The Explosion</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16043.html" target="A">The Importance of Elsewhere</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16042.html" target="A">The Little Lives of Earth and Form</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16041.html" target="A">The Mower</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16094.html" target="A">The North Ship</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16095.html" target="A">The Old Fools</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16040.html" target="A">The School in August</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16001.html" target="A">The Spirit Wooed</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16039.html" target="A">The Trees</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16097.html" target="A">The Whitsun Weddings</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16099.html" target="A">This be the Verse</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16038.html" target="A">This Is the First Thing</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16072.html" target="A">To Failure</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16003.html" target="A">To My Wife</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16037.html" target="A">To Put One Brick Upon Another</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16074.html" target="A">Toads</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16036.html" target="A">Toads Revisited</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16004.html" target="A">Träumerei</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16034.html" target="A">Träumerei</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16035.html" target="A">Triple Time</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16010.html" target="A">Vers De Société</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16032.html" target="A">Vers De Société</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16031.html" target="A">Wants</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16091.html" target="A">Water</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16007.html" target="A">Wedding Wind</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16030.html" target="A">Whatever Happened?</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16033.html" target="A">When First We Faced</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16009.html" target="A">When First We Faced, And Touching Showed</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16029.html" target="A">Why Did I Dream of You Last Night?</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16028.html" target="A">Wild Oats</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16044.html" target="A">Wires</a></li>
+</ul>
+</details>
+<details class="menu" close>
+<summary>Philip Morin Freneau Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-10638.html" target="A">Death's Epitaph</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10636.html" target="A">Emancipation from British Dependence</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10645.html" target="A">Eutaw Springs</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10644.html" target="A">Lord Dunmore's Petition To The Legislature Of Virginia</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10637.html" target="A">Ode</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10641.html" target="A">On A Travelling Speculator</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10642.html" target="A">On Barney's Victory Over the Ship "General Monk"</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10635.html" target="A">On Retirement</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10646.html" target="A">On The Death Of Dr. Benjamin Franklin</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10639.html" target="A">On The Ruins of a Country Inn</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10634.html" target="A">On the Universality and Other Attributes of the God of Nature</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10643.html" target="A">Prologue To A Comedy</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10631.html" target="A">Song Of Thyrsis</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10651.html" target="A">The Indian Burying Ground</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10640.html" target="A">The Parting Glass</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10647.html" target="A">The Republican Genius Of Europe</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10633.html" target="A">The Vernal Age</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10648.html" target="A">The Wild Honey-Suckle</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10649.html" target="A">To A Honey Bee</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10650.html" target="A">To A New England Poet</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10632.html" target="A">To Mr. Blanchard, the Celebrated Aeronaut in America</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Philippe Desportes Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-7781.html" target="A">Conquest</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Phillip Edward Thomas Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-30944.html" target="A">A Cat</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30931.html" target="A">A Private</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30958.html" target="A">Adlestrop</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30929.html" target="A">As the Team's Head- Brass</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30942.html" target="A">Aspens</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30954.html" target="A">Beauty</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30928.html" target="A">Bob's Lane</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30948.html" target="A">Celandine</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30943.html" target="A">Cock-crow</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30926.html" target="A">Gone, Gone Again</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30952.html" target="A">If I Should Ever by Chance</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30953.html" target="A">In Memoriam</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30934.html" target="A">Lights Out</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30956.html" target="A">Like the Touch of Rain</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30927.html" target="A">No One So Much As You</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30949.html" target="A">October</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30930.html" target="A">Old Man</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30955.html" target="A">Rain</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30940.html" target="A">Snow</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30941.html" target="A">Sowing</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30939.html" target="A">Tall Nettles</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30932.html" target="A">Thaw</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30950.html" target="A">The Cherry Trees</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30946.html" target="A">The Dark Forest</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30945.html" target="A">The Lane</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30933.html" target="A">The Long Small Room</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30935.html" target="A">The Manor Farm</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30951.html" target="A">The New House</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30957.html" target="A">The Owl</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30936.html" target="A">The Path</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30924.html" target="A">The Sign-Post</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30923.html" target="A">The Trumpet</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30922.html" target="A">The Word</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30925.html" target="A">This is No Case of Petty Right or Wrong</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30947.html" target="A">Unknown</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30938.html" target="A">When First I Came Here</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-30937.html" target="A">Words</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Phillips Brooks Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-4015.html" target="A">Bethlehem</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-4016.html" target="A">Christmas Everywhere</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Phillis Wheatley Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-33430.html" target="A">A Farewell To America to Mrs. S. W.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33421.html" target="A">A Funeral Poem On The Death Of C. E....</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33414.html" target="A">A Rebus</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33389.html" target="A">America</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33415.html" target="A">An Answer to the Rebus</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33419.html" target="A">An Hymn To Humanity To S. P. G. Esp</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33418.html" target="A">An Hymn To The Evening</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33422.html" target="A">An Hymn To The Morning</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33391.html" target="A">Atheism</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33390.html" target="A">Deism</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33423.html" target="A">Goliath Of Gath</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33412.html" target="A">Isaiah LXIII</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33424.html" target="A">Niobe In Distress For Her Children Slain By Apollo...</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33425.html" target="A">Ode To Neptune</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33417.html" target="A">On Being Brought from Africa to America</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33388.html" target="A">On Friendship</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33426.html" target="A">On Imagination</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33392.html" target="A">On Messrs Hussey and Coffin</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33429.html" target="A">On Recollection</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33410.html" target="A">On the Death of a Young Gentleman</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33427.html" target="A">On The Death Of A Young Lady Of Five Years Of Age</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33428.html" target="A">On The Death Of Dr. Samuel Marshall</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33413.html" target="A">On the Death of J.C. an Infant</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33385.html" target="A">On The Death of Mr. Snider Murder'd By Richardson</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33386.html" target="A">On The Death of The Rev'd Dr. Sewall</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33409.html" target="A">On the Death of the Rev. Mr. George Whitefield, 1770</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33420.html" target="A">On Virtue</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33398.html" target="A">Thoughts on the Works of Providence</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33411.html" target="A">To a Clergyman on the Death of His Lady</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33397.html" target="A">To a Gentleman and Lady on the Death...</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33396.html" target="A">To a Gentleman on His Voyage to Great-Britain</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33395.html" target="A">To a Lady and Her Children</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33394.html" target="A">To a Lady on Her Coming to North-America</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33400.html" target="A">To a Lady on Her Remarkable Preservation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33401.html" target="A">To a Lady on the Death of Her Husband</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33402.html" target="A">To a Lady on the Death of Three Relations</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33416.html" target="A">To Captain H---d, of the 65th Regiment</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33404.html" target="A">To His Honour the Lieutenant-Governor</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33405.html" target="A">To Maecenas</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33384.html" target="A">To Mrs. Leonard on The Death of Her Husband</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33406.html" target="A">To S.M. a Young African Painter</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33387.html" target="A">To The Honble Commodore Hood on His Pardoning a Deserter</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33407.html" target="A">To the Honourable T.H. Esq on the Death of His Daughter</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33399.html" target="A">To the King's Most Excellent Majesty, 1768</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33403.html" target="A">To the Rev. Dr. Thomas Amory</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33393.html" target="A">To the Right Honourable William...</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-33408.html" target="A">To the University of Cambridge</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Phineas Fletcher Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-10502.html" target="A">A Litany</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-10503.html" target="A">The Divine Lover</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Phoebe Cary Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-5515.html" target="A">Ballad of the Canal</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5517.html" target="A">Jacob</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5512.html" target="A">Suppose</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5518.html" target="A">The Leak In The Dike</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5513.html" target="A">The Lovers</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5514.html" target="A">The Prairie on Fire</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-5516.html" target="A">When Lovely Woman</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Pierre de Ronsard Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-23793.html" target="A">Deadly Kisses</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23790.html" target="A">His Ladys Death</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23789.html" target="A">Ladys Tomb</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23792.html" target="A">Of His Ladies Old Age</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23791.html" target="A">On His Ladies Waking</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23797.html" target="A">Roses</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23796.html" target="A">The Rose</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23794.html" target="A">To His Young Mistress</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-23795.html" target="A">To The Moon</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Pierre-Jean Jouve Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-14310.html" target="A">The Buried</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Pierre Reverdy Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-23141.html" target="A">For The Moment</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Piet Hein Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-12524.html" target="A">A Maxim for Vikings</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12547.html" target="A">A Psychological Tip</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12535.html" target="A">A Reproof</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12527.html" target="A">A Tip</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12534.html" target="A">A Word of Encouragement</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12545.html" target="A">A Word to the Wise</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12533.html" target="A">About Denmark</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12532.html" target="A">Abreast</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12531.html" target="A">An Ethical Grook</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12530.html" target="A">Ars Brevis</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12529.html" target="A">Atomyriades</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12528.html" target="A">Brave</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12526.html" target="A">Constitutional Point</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12525.html" target="A">Good Advice</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12536.html" target="A">Grook About Faith, Love, etc.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12544.html" target="A">I'd Like -</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12543.html" target="A">Investment Policy</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12542.html" target="A">It Isn't Enough</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12541.html" target="A">Living Is -</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12540.html" target="A">Making an Effort</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12539.html" target="A">Mankind</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12552.html" target="A">Meeting the Eye</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12537.html" target="A">Memento Vivere</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12548.html" target="A">Naive</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12523.html" target="A">Nothing Is Indispensable</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12522.html" target="A">On Being Oneself</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12509.html" target="A">Out of Time</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12508.html" target="A">Prayer</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12507.html" target="A">Presence of Mind</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12546.html" target="A">Problems</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12506.html" target="A">Reflection on Size</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12505.html" target="A">Rhyme and Reason</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12504.html" target="A">Saturation</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12538.html" target="A">Similarity</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12503.html" target="A">Small Things and Great</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12502.html" target="A">Stone In Shoe</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12501.html" target="A">T.t.t.</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12551.html" target="A">The Egocentrics</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12500.html" target="A">The Noble Art</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12510.html" target="A">The Only Solution</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12553.html" target="A">The Road to Wisdom</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12511.html" target="A">The State</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12521.html" target="A">The Ultimate Wisdom</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12520.html" target="A">The Unattainable Ideal</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12519.html" target="A">The Wisdom of the Spheres</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12518.html" target="A">Those Who Know</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12517.html" target="A">Thoughts on a Station Platform</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12549.html" target="A">Time</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12516.html" target="A">Time and Eternity</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12515.html" target="A">Timing Toast</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12550.html" target="A">Two Passivists</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12514.html" target="A">Wanting to Be Able To</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12513.html" target="A">What Love Is Like</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12512.html" target="A">What People May Think</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-12499.html" target="A">Wide Road</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Pietro Aretino Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-1549.html" target="A">Dialogues</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Pindar Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-22222.html" target="A">Olympia XI</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-22223.html" target="A">The Hyperboreans From Pythian X</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Pontus de Tyard Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-31703.html" target="A">Sonnet</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Primo Levi Poems</summary>
+<ul>
+<li><a href="../../mypoeticside/show-classic-poem-16704.html" target="A">Reveille</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16705.html" target="A">Shema</a></li>
+<li><a href="../../mypoeticside/show-classic-poem-16706.html" target="A">The Survivor</a></li>
+</ul>
+</details>
+</section>
+<section id="help-right"></section>
+</section>
+</body>
+</html>

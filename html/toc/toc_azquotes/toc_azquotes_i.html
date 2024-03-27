@@ -1,0 +1,3502 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>纯CSS样式控制折叠展开菜单效果特效演示</title>
+<meta name="description" content="纯CSS样式控制折叠展开菜单效果特效演示。" />
+<meta name="keywords" content="纯CSS,样式控制,折叠展开,菜单,效果,特效演示" />
+<meta name="author" content="jQuery插件库" />
+<meta name="Copyright" content="jQuery插件库" />
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+a {
+text-decoration: none;
+}
+#conter {
+width: 1000px;
+margin: auto;
+}
+#help-left {
+width: auto;
+font-family: 'microsoft YaHei';
+float: left;
+}
+.menu {
+border-left: 1px solid #3cbfb3;
+border-right: 1px solid #3cbfb3;
+}
+.menu:last-child {
+border-bottom: 1px solid #3cbfb3;
+}
+.menu summary {
+height: 40px;
+line-height: 40px;
+text-indent: 10px;
+outline: none;
+font-size: 14px;
+font-weight: 700;
+border-top: 1px solid #3cbfb3;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #fff0));
+cursor: pointer;
+display: flex;
+}
+/*使用下面这个，可以去掉小三角，神奇的菜单就可以完成了*/
+.menu summary::-webkit-details-marker {
+}
+.menu summary:before {
+content: "🌸";
+display: inline-block;
+width: 16px;
+height: 16px;
+margin-right: 10px;
+font-size: 18px;
+font-weight: 700;
+}
+.menu[open] summary:before {
+content: "🕊️";
+}
+.menu ul {
+padding: 10px 0;
+}
+.menu ul li {
+list-style: none;
+text-indent: 25px;
+font-size: 12px;
+height: 30px;
+line-height: 30px;
+}
+.menu ul li a {
+display: block;
+color: #096868;
+}
+.menu ul li a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<section id="conter">
+<section id="help-left">
+<!--open为展开菜单，close为折叠菜单-->
+<details class="menu" close>
+<summary>Issey Miyake Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10224-Issey_Miyake.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Mizrahi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10229-Isaac_Mizrahi.html" target="A">1</a></li>
+<li><a href="../../azquotes/10229-Isaac_Mizrahi@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/10229-Isaac_Mizrahi@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iris Murdoch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10567-Iris_Murdoch.html" target="A">1</a></li>
+<li><a href="../../azquotes/10567-Iris_Murdoch@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/10567-Iris_Murdoch@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/10567-Iris_Murdoch@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/10567-Iris_Murdoch@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/10567-Iris_Murdoch@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/10567-Iris_Murdoch@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/10567-Iris_Murdoch@p=8.html" target="A">8</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inga Muscio Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10609-Inga_Muscio.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaiah Mustafa Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10621-Isaiah_Mustafa.html" target="A">1</a></li>
+<li><a href="../../azquotes/10621-Isaiah_Mustafa@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilie Nastase Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10682-Ilie_Nastase.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingrid Newkirk Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10765-Ingrid_Newkirk.html" target="A">1</a></li>
+<li><a href="../../azquotes/10765-Ingrid_Newkirk@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/10765-Ingrid_Newkirk@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/10765-Ingrid_Newkirk@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/10765-Ingrid_Newkirk@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Newton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10784-Isaac_Newton.html" target="A">1</a></li>
+<li><a href="../../azquotes/10784-Isaac_Newton@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/10784-Isaac_Newton@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/10784-Isaac_Newton@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/10784-Isaac_Newton@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/10784-Isaac_Newton@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/10784-Isaac_Newton@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/10784-Isaac_Newton@p=8.html" target="A">8</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ishmael Beah Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1080-Ishmael_Beah.html" target="A">1</a></li>
+<li><a href="../../azquotes/1080-Ishmael_Beah@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Indra Nooyi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10865-Indra_Nooyi.html" target="A">1</a></li>
+<li><a href="../../azquotes/10865-Indra_Nooyi@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivor Novello Quotes</summary>
+<ul>
+<li><a href="../../azquotes/10913-Ivor_Novello.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Pavlov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11431-Ivan_Pavlov.html" target="A">1</a></li>
+<li><a href="../../azquotes/11431-Ivan_Pavlov@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Itzhak Perlman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11534-Itzhak_Perlman.html" target="A">1</a></li>
+<li><a href="../../azquotes/11534-Itzhak_Perlman@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11534-Itzhak_Perlman@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabelle Adjani Quotes</summary>
+<ul>
+<li><a href="../../azquotes/116-Isabelle_Adjani.html" target="A">1</a></li>
+<li><a href="../../azquotes/116-Isabelle_Adjani@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iggy Pop Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11774-Iggy_Pop.html" target="A">1</a></li>
+<li><a href="../../azquotes/11774-Iggy_Pop@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/11774-Iggy_Pop@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/11774-Iggy_Pop@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/11774-Iggy_Pop@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilya Prigogine Quotes</summary>
+<ul>
+<li><a href="../../azquotes/11886-Ilya_Prigogine.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Rankin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12085-Ian_Rankin.html" target="A">1</a></li>
+<li><a href="../../azquotes/12085-Ian_Rankin@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ishmael Reed Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12164-Ishmael_Reed.html" target="A">1</a></li>
+<li><a href="../../azquotes/12164-Ishmael_Reed@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/12164-Ishmael_Reed@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/12164-Ishmael_Reed@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Reitman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12218-Ivan_Reitman.html" target="A">1</a></li>
+<li><a href="../../azquotes/12218-Ivan_Reitman@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibrahim Rugova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12761-Ibrahim_Rugova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Rush Quotes</summary>
+<ul>
+<li><a href="../../azquotes/12783-Ian_Rush.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingmar Bergman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1281-Ingmar_Bergman.html" target="A">1</a></li>
+<li><a href="../../azquotes/1281-Ingmar_Bergman@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/1281-Ingmar_Bergman@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/1281-Ingmar_Bergman@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingrid Bergman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1282-Ingrid_Bergman.html" target="A">1</a></li>
+<li><a href="../../azquotes/1282-Ingrid_Bergman@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Berlin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1294-Irving_Berlin.html" target="A">1</a></li>
+<li><a href="../../azquotes/1294-Irving_Berlin@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaiah Berlin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1295-Isaiah_Berlin.html" target="A">1</a></li>
+<li><a href="../../azquotes/1295-Isaiah_Berlin@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Idries Shah Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13376-Idries_Shah.html" target="A">1</a></li>
+<li><a href="../../azquotes/13376-Idries_Shah@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13376-Idries_Shah@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/13376-Idries_Shah@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/13376-Idries_Shah@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irwin Shaw Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13419-Irwin_Shaw.html" target="A">1</a></li>
+<li><a href="../../azquotes/13419-Irwin_Shaw@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ignazio Silone Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13579-Ignazio_Silone.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Bashevis Singer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13646-Isaac_Bashevis_Singer.html" target="A">1</a></li>
+<li><a href="../../azquotes/13646-Isaac_Bashevis_Singer@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13646-Isaac_Bashevis_Singer@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/13646-Isaac_Bashevis_Singer@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/13646-Isaac_Bashevis_Singer@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/13646-Isaac_Bashevis_Singer@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ike Skelton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13681-Ike_Skelton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iain Duncan Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13766-Iain_Duncan_Smith.html" target="A">1</a></li>
+<li><a href="../../azquotes/13766-Iain_Duncan_Smith@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13766-Iain_Duncan_Smith@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Somerhalder Quotes</summary>
+<ul>
+<li><a href="../../azquotes/13870-Ian_Somerhalder.html" target="A">1</a></li>
+<li><a href="../../azquotes/13870-Ian_Somerhalder@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/13870-Ian_Somerhalder@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/13870-Ian_Somerhalder@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/13870-Ian_Somerhalder@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/13870-Ian_Somerhalder@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/13870-Ian_Somerhalder@p=7.html" target="A">7</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imelda Staunton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14036-Imelda_Staunton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Stern Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14098-Isaac_Stern.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>I. F. Stone Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14178-I_F_Stone.html" target="A">1</a></li>
+<li><a href="../../azquotes/14178-I_F_Stone@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Igor Stravinsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14230-Igor_Stravinsky.html" target="A">1</a></li>
+<li><a href="../../azquotes/14230-Igor_Stravinsky@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/14230-Igor_Stravinsky@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/14230-Igor_Stravinsky@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ichiro Suzuki Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14337-Ichiro_Suzuki.html" target="A">1</a></li>
+<li><a href="../../azquotes/14337-Ichiro_Suzuki@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Italo Svevo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14340-Italo_Svevo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ice T Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14403-Ice_T.html" target="A">1</a></li>
+<li><a href="../../azquotes/14403-Ice_T@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/14403-Ice_T@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/14403-Ice_T@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/14403-Ice_T@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/14403-Ice_T@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/14403-Ice_T@p=7.html" target="A">7</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Thorpe Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14645-Ian_Thorpe.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ieyasu Tokugawa Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14700-Ieyasu_Tokugawa.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivana Trump Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14824-Ivana_Trump.html" target="A">1</a></li>
+<li><a href="../../azquotes/14824-Ivana_Trump@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivanka Trump Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14825-Ivanka_Trump.html" target="A">1</a></li>
+<li><a href="../../azquotes/14825-Ivanka_Trump@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/14825-Ivanka_Trump@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/14825-Ivanka_Trump@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Turgenev Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14855-Ivan_Turgenev.html" target="A">1</a></li>
+<li><a href="../../azquotes/14855-Ivan_Turgenev@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/14855-Ivan_Turgenev@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/14855-Ivan_Turgenev@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ike Turner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/14866-Ike_Turner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iyanla Vanzant Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15001-Iyanla_Vanzant.html" target="A">1</a></li>
+<li><a href="../../azquotes/15001-Iyanla_Vanzant@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15001-Iyanla_Vanzant@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15001-Iyanla_Vanzant@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/15001-Iyanla_Vanzant@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/15001-Iyanla_Vanzant@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/15001-Iyanla_Vanzant@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/15001-Iyanla_Vanzant@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/15001-Iyanla_Vanzant@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/15001-Iyanla_Vanzant@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Izaak Walton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15266-Izaak_Walton.html" target="A">1</a></li>
+<li><a href="../../azquotes/15266-Izaak_Walton@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15266-Izaak_Walton@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Watts Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15364-Isaac_Watts.html" target="A">1</a></li>
+<li><a href="../../azquotes/15364-Isaac_Watts@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15364-Isaac_Watts@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15364-Isaac_Watts@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/15364-Isaac_Watts@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ida B. Wells Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15488-Ida_B_Wells.html" target="A">1</a></li>
+<li><a href="../../azquotes/15488-Ida_B_Wells@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irvine Welsh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/15492-Irvine_Welsh.html" target="A">1</a></li>
+<li><a href="../../azquotes/15492-Irvine_Welsh@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/15492-Irvine_Welsh@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/15492-Irvine_Welsh@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/15492-Irvine_Welsh@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/15492-Irvine_Welsh@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/15492-Irvine_Welsh@p=7.html" target="A">7</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isoroku Yamamoto Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16018-Isoroku_Yamamoto.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Zangwill Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16135-Israel_Zangwill.html" target="A">1</a></li>
+<li><a href="../../azquotes/16135-Israel_Zangwill@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Immaculee Ilibagiza Quotes</summary>
+<ul>
+<li><a href="../../azquotes/16795-Immaculee_Ilibagiza.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Botham Quotes</summary>
+<ul>
+<li><a href="../../azquotes/1705-Ian_Botham.html" target="A">1</a></li>
+<li><a href="../../azquotes/1705-Ian_Botham@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irwin Redlener Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17221-Irwin_Redlener.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilchi Lee Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17704-Ilchi_Lee.html" target="A">1</a></li>
+<li><a href="../../azquotes/17704-Ilchi_Lee@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Caldwell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/17982-Ian_Caldwell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iain Pears Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18012-Iain_Pears.html" target="A">1</a></li>
+<li><a href="../../azquotes/18012-Iain_Pears@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Stewart Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18047-Ian_Stewart.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibi Kaslik Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18128-Ibi_Kaslik.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irenaeus of Lyons Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18318-Irenaeus_of_Lyons.html" target="A">1</a></li>
+<li><a href="../../azquotes/18318-Irenaeus_of_Lyons@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilona Andrews Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18411-Ilona_Andrews.html" target="A">1</a></li>
+<li><a href="../../azquotes/18411-Ilona_Andrews@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/18411-Ilona_Andrews@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/18411-Ilona_Andrews@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/18411-Ilona_Andrews@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/18411-Ilona_Andrews@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/18411-Ilona_Andrews@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/18411-Ilona_Andrews@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/18411-Ilona_Andrews@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/18411-Ilona_Andrews@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Stone Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18504-Irving_Stone.html" target="A">1</a></li>
+<li><a href="../../azquotes/18504-Irving_Stone@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/18504-Irving_Stone@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/18504-Irving_Stone@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Klíma Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18536-Ivan_Klima.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imre Kertész Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18550-Imre_Kertesz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ismail Kadaré Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18556-Ismail_Kadare.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Doig Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18593-Ivan_Doig.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irvin D. Yalom Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18757-Irvin_D_Yalom.html" target="A">1</a></li>
+<li><a href="../../azquotes/18757-Irvin_D_Yalom@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/18757-Irvin_D_Yalom@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/18757-Irvin_D_Yalom@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inio Asano Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18802-Inio_Asano.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan E. Coyote Quotes</summary>
+<ul>
+<li><a href="../../azquotes/18922-Ivan_E_Coyote.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilsa J. Bick Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19192-Ilsa_J_Bick.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian McDonald Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19214-Ian_McDonald.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingrid Betancourt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19219-Ingrid_Betancourt.html" target="A">1</a></li>
+<li><a href="../../azquotes/19219-Ingrid_Betancourt@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian C. Esslemont Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19409-Ian_C_Esslemont.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Mortimer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19441-Ian_Mortimer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Kirsch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19444-Irving_Kirsch.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Doescher Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19584-Ian_Doescher.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iris Apfel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19609-Iris_Apfel.html" target="A">1</a></li>
+<li><a href="../../azquotes/19609-Iris_Apfel@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/19609-Iris_Apfel@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/19609-Iris_Apfel@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/19609-Iris_Apfel@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Igor Sikorsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19661-Igor_Sikorsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac McLellan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19713-Isaac_McLellan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Rosenberg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19759-Isaac_Rosenberg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imogen Cunningham Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19890-Imogen_Cunningham.html" target="A">1</a></li>
+<li><a href="../../azquotes/19890-Imogen_Cunningham@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Rosenfeld Quotes</summary>
+<ul>
+<li><a href="../../azquotes/19969-Irene_Rosenfeld.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Panin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20001-Ivan_Panin.html" target="A">1</a></li>
+<li><a href="../../azquotes/20001-Ivan_Panin@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imogen Stubbs Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20051-Imogen_Stubbs.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Igor Youskevitch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20321-Igor_Youskevitch.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irina Bokova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20380-Irina_Bokova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irena Chalmers Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20495-Irena_Chalmers.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Krylov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20550-Ivan_Krylov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Khaldun Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20572-Ibn_Khaldun.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iqbal Quadir Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20575-Iqbal_Quadir.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Immanuel Hermann Fichte Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20651-Immanuel_Hermann_Fichte.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inez Milholland Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20781-Inez_Milholland.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Bickerstaffe Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20818-Isaac_Bickerstaffe.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Hecker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/20982-Isaac_Hecker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ida Tarbell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21293-Ida_Tarbell.html" target="A">1</a></li>
+<li><a href="../../azquotes/21293-Ida_Tarbell@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Khan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21305-Irene_Khan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isidor Isaac Rabi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21453-Isidor_Isaac_Rabi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving R. Levine Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21464-Irving_R_Levine.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>I. Bernard Cohen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21478-I_Bernard_Cohen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaiah Bowman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21515-Isaiah_Bowman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isidore of Seville Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21544-Isidore_of_Seville.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Wallace Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21559-Irving_Wallace.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iain Sinclair Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21568-Iain_Sinclair.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isamu Noguchi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21908-Isamu_Noguchi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isa Bowman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21964-Isa_Bowman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Penn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/21995-Irving_Penn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irwin Federman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22028-Irwin_Federman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irma S. Rombauer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22145-Irma_S_Rombauer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabelle Holland Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22151-Isabelle_Holland.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iain Benson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22156-Iain_Benson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Berlin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22201-Ira_Berlin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Glasser Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22645-Ira_Glasser.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Idan Ravin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22729-Idan_Ravin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Macfarlane Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22841-Ian_Macfarlane.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ismail Serageldin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22875-Ismail_Serageldin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Arabi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/22991-Ibn_Arabi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Layton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23218-Irving_Layton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Warner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23257-Ian_Warner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Berkow Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23398-Ira_Berkow.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Colegate Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23526-Isabel_Colegate.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Italo Calvino Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2357-Italo_Calvino.html" target="A">1</a></li>
+<li><a href="../../azquotes/2357-Italo_Calvino@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/2357-Italo_Calvino@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/2357-Italo_Calvino@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/2357-Italo_Calvino@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/2357-Italo_Calvino@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Joliot-Curie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23614-Irene_Joliot_Curie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ikkyu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23650-Ikkyu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Nemirovsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23660-Irene_Nemirovsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Pitman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/23928-Isaac_Pitman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>India.Arie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24035-India_Arie.html" target="A">1</a></li>
+<li><a href="../../azquotes/24035-India_Arie@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/24035-India_Arie@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/24035-India_Arie@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imagawa Sadayo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24137-Imagawa_Sadayo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Zolli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24253-Israel_Zolli.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Izabella Scorupco Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24338-Izabella_Scorupco.html" target="A">1</a></li>
+<li><a href="../../azquotes/24338-Izabella_Scorupco@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabella Beeton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24484-Isabella_Beeton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaiah Austin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24597-Isaiah_Austin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivor Cutler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24681-Ivor_Cutler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Wooldridge Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24767-Ian_Wooldridge.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Poulter Quotes</summary>
+<ul>
+<li><a href="../../azquotes/24774-Ian_Poulter.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilya Bryzgalov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25074-Ilya_Bryzgalov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Feuer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25190-Ian_Feuer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ines de La Fressange Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25492-Ines_de_La_Fressange.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Stevenson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25557-Ian_Stevenson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ila Borders Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25618-Ila_Borders.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inigo Lopez de Mendoza, 1st Marquis of Santillana Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25714-Inigo_Lopez_de_Mendoza_1st_Marquis_of_Santillana.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian K. Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25750-Ian_K_Smith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isadore Sharp Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25753-Isadore_Sharp.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibrahim Farah Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25766-Ibrahim_Farah.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivy Baker Priest Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25926-Ivy_Baker_Priest.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Woosnam Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25952-Ian_Woosnam.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Baker-Finch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/25965-Ian_Baker_Finch.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Jogues Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26069-Isaac_Jogues.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ion Keith-Falconer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26085-Ion_Keith_Falconer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Meir Kagan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26202-Israel_Meir_Kagan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isa Miranda Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26372-Isa_Miranda.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ina Claire Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26376-Ina_Claire.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iannis Xenakis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26451-Iannis_Xenakis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Tattersall Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26597-Ian_Tattersall.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Fisher Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26785-Irving_Fisher.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Brecher Quotes</summary>
+<ul>
+<li><a href="../../azquotes/26937-Irving_Brecher.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Plimer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27029-Ian_Plimer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Bishop Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27073-Isabel_Bishop.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iris Chang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2709-Iris_Chang.html" target="A">1</a></li>
+<li><a href="../../azquotes/2709-Iris_Chang@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Boesky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27160-Ivan_Boesky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilya Kabakov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27178-Ilya_Kabakov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isiah Thomas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27387-Isiah_Thomas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Cawsey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27471-Ian_Cawsey.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilka Chase Quotes</summary>
+<ul>
+<li><a href="../../azquotes/2750-Ilka_Chase.html" target="A">1</a></li>
+<li><a href="../../azquotes/2750-Ilka_Chase@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilya Ehrenburg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27566-Ilya_Ehrenburg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Townsend Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27614-Irving_Townsend.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irv Kupcinet Quotes</summary>
+<ul>
+<li><a href="../../azquotes/27854-Irv_Kupcinet.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Itzhak Bentov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28038-Itzhak_Bentov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isambard Kingdom Brunel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28102-Isambard_Kingdom_Brunel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Adler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28114-Irving_Adler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Briggs Myers Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28196-Isabel_Briggs_Myers.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ida Rolf Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28200-Ida_Rolf.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Howe Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28224-Irving_Howe.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Qayyim Al-Jawziyya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28408-Ibn_Qayyim_Al_Jawziyya.html" target="A">1</a></li>
+<li><a href="../../azquotes/28408-Ibn_Qayyim_Al_Jawziyya@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/28408-Ibn_Qayyim_Al_Jawziyya@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Kaufman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28415-Irving_Kaufman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Remsen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28440-Ira_Remsen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>I. A. R. Wylie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28490-I_A_R_Wylie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imelda Lambertini Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28503-Imelda_Lambertini.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Albright Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28610-Ivan_Albright.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ihab Hassan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28684-Ihab_Hassan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isobel Osbourne Field Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28685-Isobel_Osbourne_Field.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inspectah Deck Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28736-Inspectah_Deck.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Intelligent Hoodlum Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28746-Intelligent_Hoodlum.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ignacy Jan Paderewski Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28759-Ignacy_Jan_Paderewski.html" target="A">1</a></li>
+<li><a href="../../azquotes/28759-Ignacy_Jan_Paderewski@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Kamakawiwo'ole Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28764-Israel_Kamakawiwo_ole.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingemar Stenmark Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28770-Ingemar_Stenmark.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iskander Mirza Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28802-Iskander_Mirza.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Hart Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28810-Ian_Hart.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ikue Mori Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28811-Ikue_Mori.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iain Hewitson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/28895-Iain_Hewitson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Allende Quotes</summary>
+<ul>
+<li><a href="../../azquotes/292-Isabel_Allende.html" target="A">1</a></li>
+<li><a href="../../azquotes/292-Isabel_Allende@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/292-Isabel_Allende@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/292-Isabel_Allende@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/292-Isabel_Allende@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/292-Isabel_Allende@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/292-Isabel_Allende@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/292-Isabel_Allende@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/292-Isabel_Allende@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/292-Isabel_Allende@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Sechenov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29215-Ivan_Sechenov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Todhunter Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29302-Isaac_Todhunter.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>IU?. I. Manin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29393-IU_I_Manin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Fernandez Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29559-Irene_Fernandez.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Copi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29564-Irving_Copi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel dos Santos Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29681-Isabel_dos_Santos.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabella Blow Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29731-Isabella_Blow.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabella Rossellini Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29736-Isabella_Rossellini.html" target="A">1</a></li>
+<li><a href="../../azquotes/29736-Isabella_Rossellini@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Wilkerson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/29836-Isabel_Wilkerson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Majah Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30033-Ibn_Majah.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Saud Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30039-Ibn_Saud.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>I. K. Gujral Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30120-I_K_Gujral.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irvin S. Cobb Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3015-Irvin_S_Cobb.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irena Sendler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30375-Irena_Sendler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Increase Mather Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30476-Increase_Mather.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Hazm Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30538-Ibn_Hazm.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Taymiyyah Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30545-Ibn_Taymiyyah.html" target="A">1</a></li>
+<li><a href="../../azquotes/30545-Ibn_Taymiyyah@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/30545-Ibn_Taymiyyah@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn al-Farid Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30546-Ibn_al_Farid.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Bannen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30595-Ian_Bannen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Kiernan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30723-Ian_Kiernan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ita Buttrose Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30724-Ita_Buttrose.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ike Barinholtz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30762-Ike_Barinholtz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iqbal Sacranie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/30917-Iqbal_Sacranie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Janis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31007-Irving_Janis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Kershaw Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31022-Ian_Kershaw.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Bunin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31044-Ivan_Bunin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Paul Lazar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31065-Irving_Paul_Lazar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingeborg Bachmann Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31068-Ingeborg_Bachmann.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivor Gurney Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31132-Ivor_Gurney.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Thalberg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31313-Irving_Thalberg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Nathan Herstein Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31389-Israel_Nathan_Herstein.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Holloway Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31426-Ian_Holloway.html" target="A">1</a></li>
+<li><a href="../../azquotes/31426-Ian_Holloway@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Albert Horowitz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31496-Israel_Albert_Horowitz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivy Compton-Burnett Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3164-Ivy_Compton_Burnett.html" target="A">1</a></li>
+<li><a href="../../azquotes/3164-Ivy_Compton_Burnett@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/3164-Ivy_Compton_Burnett@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iain Dowie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31677-Iain_Dowie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Kashdan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31720-Isaac_Kashdan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Rados Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31839-Ivan_Rados.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Gillan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31862-Ian_Gillan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Davis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31868-Ian_Davis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Peebles Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31871-Ian_Peebles.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Stang Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31893-Ivan_Stang.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irwin Schiff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/31986-Irwin_Schiff.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Lucas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32021-Ian_Lucas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Kirzner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32102-Israel_Kirzner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivar Giaever Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32200-Ivar_Giaever.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Graham Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32335-Ian_Graham.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Immanuel Wallerstein Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32447-Immanuel_Wallerstein.html" target="A">1</a></li>
+<li><a href="../../azquotes/32447-Immanuel_Wallerstein@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/32447-Immanuel_Wallerstein@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ignacio Chapela Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32658-Ignacio_Chapela.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Cohen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32692-Ian_Cohen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>I. M. Pei Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32754-I_M_Pei.html" target="A">1</a></li>
+<li><a href="../../azquotes/32754-I_M_Pei@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Curtis Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32797-Ian_Curtis.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irv Robbins Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32821-Irv_Robbins.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isobel Miller Kuhn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/32968-Isobel_Miller_Kuhn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imogen Poots Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33210-Imogen_Poots.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iron & Wine Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33219-Iron_Wine.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Forman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33286-Ira_Forman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Maclaren Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33328-Ian_Maclaren.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Rosenfeld Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33336-Isaac_Rosenfeld.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Cara Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33459-Irene_Cara.html" target="A">1</a></li>
+<li><a href="../../azquotes/33459-Irene_Cara@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ikujiro Nonaka Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33752-Ikujiro_Nonaka.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inge Lehmann Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33779-Inge_Lehmann.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ignatiy Vishnevetsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/33790-Ignatiy_Vishnevetsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irina Lazareanu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34043-Irina_Lazareanu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iain Glen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34103-Iain_Glen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabelle Huppert Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34109-Isabelle_Huppert.html" target="A">1</a></li>
+<li><a href="../../azquotes/34109-Isabelle_Huppert@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/34109-Isabelle_Huppert@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ione Skye Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34220-Ione_Skye.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Holm Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34242-Ian_Holm.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaiah Washington Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34630-Isaiah_Washington.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Ziering Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34654-Ian_Ziering.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabelle Fuhrman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34732-Isabelle_Fuhrman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian McDiarmid Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34755-Ian_McDiarmid.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imogene Coca Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34811-Imogene_Coca.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Papas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/34981-Irene_Papas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Idi Amin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/350-Idi_Amin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Hislop Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35104-Ian_Hislop.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingrid Pitt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35221-Ingrid_Pitt.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>India de Beaufort Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35320-India_de_Beaufort.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iwan Rheon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35362-Iwan_Rheon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ignaz von Dollinger Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35413-Ignaz_von_Dollinger.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Izabel Goulart Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35457-Izabel_Goulart.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irina Shayk Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35458-Irina_Shayk.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabeli Fontana Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35459-Isabeli_Fontana.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilya Ilf Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35503-Ilya_Ilf.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Gelfand Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35517-Israel_Gelfand.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac D'Israeli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3565-Isaac_D_Israeli.html" target="A">1</a></li>
+<li><a href="../../azquotes/3565-Isaac_D_Israeli@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/3565-Isaac_D_Israeli@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isao Tomita Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35698-Isao_Tomita.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Harvie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35737-Ian_Harvie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilan Stavans Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35776-Ilan_Stavans.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>India Knight Quotes</summary>
+<ul>
+<li><a href="../../azquotes/35786-India_Knight.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ishiro Honda Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36027-Ishiro_Honda.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ina Coolbrith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36028-Ina_Coolbrith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Bohen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36128-Ian_Bohen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ishida Mitsunari Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36190-Ishida_Mitsunari.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inge Druckrey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36197-Inge_Druckrey.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilya Kaminsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36271-Ilya_Kaminsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isuna Hasekura Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36371-Isuna_Hasekura.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Im Yoona Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36416-Im_Yoona.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Christie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36711-Ian_Christie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Igor Babailov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36727-Igor_Babailov.html" target="A">1</a></li>
+<li><a href="../../azquotes/36727-Igor_Babailov@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iza Calzado Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36818-Iza_Calzado.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>I. A. Richards Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36917-I_A_Richards.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Paisley Quotes</summary>
+<ul>
+<li><a href="../../azquotes/36930-Ian_Paisley.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilan Ramon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37077-Ilan_Ramon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ignace Lepp Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37160-Ignace_Lepp.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian St John Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37199-Ian_St_John.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Hanson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37200-Isaac_Hanson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Hunt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37324-Irene_Hunt.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira C. Eaker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37438-Ira_C_Eaker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian McHarg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37488-Ian_McHarg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibrahim Ali Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37546-Ibrahim_Ali.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaiah Crowell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37582-Isaiah_Crowell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Gillies Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37602-Isabel_Gillies.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Hamilton Finlay Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37609-Ian_Hamilton_Finlay.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ina May Gaskin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37677-Ina_May_Gaskin.html" target="A">1</a></li>
+<li><a href="../../azquotes/37677-Ina_May_Gaskin@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Goldberg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/37756-Isaac_Goldberg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac of Nineveh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38049-Isaac_of_Nineveh.html" target="A">1</a></li>
+<li><a href="../../azquotes/38049-Isaac_of_Nineveh@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inge Genefke Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38190-Inge_Genefke.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian P. Griffin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38334-Ian_P_Griffin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Anderson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/384-Ian_Anderson.html" target="A">1</a></li>
+<li><a href="../../azquotes/384-Ian_Anderson@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/384-Ian_Anderson@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilghazi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38481-Ilghazi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Gardner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38565-Ian_Gardner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ignatius of Antioch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38623-Ignatius_of_Antioch.html" target="A">1</a></li>
+<li><a href="../../azquotes/38623-Ignatius_of_Antioch@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/38623-Ignatius_of_Antioch@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iphicrates Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38758-Iphicrates.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38776-Isaac.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Rosenfield Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38912-Israel_Rosenfield.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibycus Quotes</summary>
+<ul>
+<li><a href="../../azquotes/38960-Ibycus.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Warraq Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39054-Ibn_Warraq.html" target="A">1</a></li>
+<li><a href="../../azquotes/39054-Ibn_Warraq@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imogen Edwards-Jones Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39065-Imogen_Edwards_Jones.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Indra Devi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3910-Indra_Devi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Ishaq Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39137-Ibn_Ishaq.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Shoales Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39148-Ian_Shoales.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Hickson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39176-Ian_Hickson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Ata Allah Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39298-Ibn_Ata_Allah.html" target="A">1</a></li>
+<li><a href="../../azquotes/39298-Ibn_Ata_Allah@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibrahim Hooper Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39305-Ibrahim_Hooper.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Lowe Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39339-Ian_Lowe.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivars Peterson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39450-Ivars_Peterson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iain McGilchrist Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39628-Iain_McGilchrist.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isak Dinesen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/3986-Isak_Dinesen.html" target="A">1</a></li>
+<li><a href="../../azquotes/3986-Isak_Dinesen@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/3986-Isak_Dinesen@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/3986-Isak_Dinesen@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/3986-Isak_Dinesen@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/3986-Isak_Dinesen@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Sansom Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39900-Ian_Sansom.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isa Chandra Moskowitz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39931-Isa_Chandra_Moskowitz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ioan Gruffudd Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39963-Ioan_Gruffudd.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imtiaz Dharker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/39993-Imtiaz_Dharker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Indu Sundaresan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40036-Indu_Sundaresan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilan Pappe Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40051-Ilan_Pappe.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ildefonso Falcones Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40070-Ildefonso_Falcones.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irshad Manji Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40269-Irshad_Manji.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Krastev Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40297-Ivan_Krastev.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Indur M. Goklany Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40343-Indur_M_Goklany.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iris Marion Young Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40476-Iris_Marion_Young.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabella Macdonald Alden Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40477-Isabella_Macdonald_Alden.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Immortal Technique Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40535-Immortal_Technique.html" target="A">1</a></li>
+<li><a href="../../azquotes/40535-Immortal_Technique@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/40535-Immortal_Technique@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/40535-Immortal_Technique@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/40535-Immortal_Technique@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/40535-Immortal_Technique@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Reiss Quotes</summary>
+<ul>
+<li><a href="../../azquotes/40689-Ira_Reiss.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Misner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41374-Ivan_Misner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingrid Michaelson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41441-Ingrid_Michaelson.html" target="A">1</a></li>
+<li><a href="../../azquotes/41441-Ingrid_Michaelson@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian McShane Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41519-Ian_McShane.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivy Lee Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41598-Ivy_Lee.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isocrates Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41663-Isocrates.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Bacheller Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41689-Irving_Bacheller.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inge Morath Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41749-Inge_Morath.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irina Slutskaya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41852-Irina_Slutskaya.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Dunbar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4191-Ian_Dunbar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isadora Duncan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4197-Isadora_Duncan.html" target="A">1</a></li>
+<li><a href="../../azquotes/4197-Isadora_Duncan@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/4197-Isadora_Duncan@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/4197-Isadora_Duncan@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Invader Quotes</summary>
+<ul>
+<li><a href="../../azquotes/41970-Invader.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ihara Saikaku Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42028-Ihara_Saikaku.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Caesar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42051-Irving_Caesar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Dunne Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4221-Irene_Dunne.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Chappell Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42213-Ian_Chappell.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Ilyin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42231-Ivan_Ilyin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Igor Markevitch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42440-Igor_Markevitch.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian McCartney Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42581-Ian_McCartney.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Hutchinson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42662-Ian_Hutchinson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac R. Trimble Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42714-Isaac_R_Trimble.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isham G. Harris Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42737-Isham_G_Harris.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Brunetti Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42912-Ivan_Brunetti.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ismael Rivera Quotes</summary>
+<ul>
+<li><a href="../../azquotes/42998-Ismael_Rivera.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Sutherland Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43063-Ivan_Sutherland.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Kinsler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43082-Ian_Kinsler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivo Andric Quotes</summary>
+<ul>
+<li><a href="../../azquotes/431-Ivo_Andric.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Gawler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43144-Ian_Gawler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Izumi Shikibu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43158-Izumi_Shikibu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Hogarth Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43238-Ian_Hogarth.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabelle Eberhardt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4325-Isabelle_Eberhardt.html" target="A">1</a></li>
+<li><a href="../../azquotes/4325-Isabelle_Eberhardt@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Eyre Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43289-Ivan_Eyre.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iwane Matsui Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43578-Iwane_Matsui.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irwin Edman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4359-Irwin_Edman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isa Boletini Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43668-Isa_Boletini.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Butt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43720-Isaac_Butt.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isidore Isou Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43782-Isidore_Isou.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Chtcheglov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43783-Ivan_Chtcheglov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iwan Bloch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43886-Iwan_Bloch.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Davidson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43905-Israel_Davidson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inge de Bruijn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/43972-Inge_de_Bruijn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Idris Elba Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4417-Idris_Elba.html" target="A">1</a></li>
+<li><a href="../../azquotes/4417-Idris_Elba@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/4417-Idris_Elba@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/4417-Idris_Elba@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Regardie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44221-Israel_Regardie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Shapiro Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44223-Ian_Shapiro.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Williams Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44327-Isaac_Williams.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Indro Montanelli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44341-Indro_Montanelli.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Brown Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44448-Ian_Brown.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan van Sertima Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44537-Ivan_van_Sertima.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Frazier Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44602-Ian_Frazier.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Brodie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44796-Ian_Brodie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Darke Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44830-Ian_Darke.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Kaplansky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44885-Irving_Kaplansky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isa Gambar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/44940-Isa_Gambar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Illeana Douglas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45085-Illeana_Douglas.html" target="A">1</a></li>
+<li><a href="../../azquotes/45085-Illeana_Douglas@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Indrani Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45184-Indrani.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irwin Stone Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45216-Irwin_Stone.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Sharaff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45321-Irene_Sharaff.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imelda May Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45459-Imelda_May.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Schrager Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45463-Ian_Schrager.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivica Dacic Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45465-Ivica_Dacic.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Lurie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45525-Ian_Lurie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ip Chun Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45627-Ip_Chun.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imi Lichtenfeld Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45641-Imi_Lichtenfeld.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ishe Smith Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45653-Ishe_Smith.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabella Thoburn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45679-Isabella_Thoburn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>I. L. Peretz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45815-I_L_Peretz.html" target="A">1</a></li>
+<li><a href="../../azquotes/45815-I_L_Peretz@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Innocent of Alaska Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45872-Innocent_of_Alaska.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Illmaculate Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45898-Illmaculate.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iimani David Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45939-Iimani_David.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ichabod Quotes</summary>
+<ul>
+<li><a href="../../azquotes/45976-Ichabod.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilham Aliyev Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46113-Ilham_Aliyev.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irven DeVore Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46249-Irven_DeVore.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ichiro Ozawa Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46352-Ichiro_Ozawa.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivor Bulmer-Thomas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46498-Ivor_Bulmer_Thomas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inglis M. Uppercu Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46588-Inglis_M_Uppercu.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ishi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46635-Ishi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Thomas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46644-Irene_Thomas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Backus Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46678-Isaac_Backus.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingrid Law Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46829-Ingrid_Law.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Jack Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46884-Ian_Jack.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ion Tiriac Quotes</summary>
+<ul>
+<li><a href="../../azquotes/46939-Ion_Tiriac.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Barbour Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47025-Ian_Barbour.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Callaghan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47112-Ian_Callaghan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iceberg Slim Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47119-Iceberg_Slim.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Kahn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47184-Irving_Kahn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingo Molnar Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47215-Ingo_Molnar.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Mayer Wise Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47273-Isaac_Mayer_Wise.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Abravanel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47304-Isaac_Abravanel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Hunter Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47368-Ian_Hunter.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Paterson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47637-Isabel_Paterson.html" target="A">1</a></li>
+<li><a href="../../azquotes/47637-Isabel_Paterson@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Gordon Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47662-Irving_Gordon.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Igor Aleksander Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47721-Igor_Aleksander.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Jenkins Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47748-Ian_Jenkins.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iker Casillas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47872-Iker_Casillas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iolo Morganwg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/47966-Iolo_Morganwg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iris Origo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48186-Iris_Origo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Boleslavsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48415-Isaac_Boleslavsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irwin Kula Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48567-Irwin_Kula.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isla Fisher Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4858-Isla_Fisher.html" target="A">1</a></li>
+<li><a href="../../azquotes/4858-Isla_Fisher@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/4858-Isla_Fisher@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iman Abdulmajid Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48630-Iman_Abdulmajid.html" target="A">1</a></li>
+<li><a href="../../azquotes/48630-Iman_Abdulmajid@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irina Krush Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48829-Irina_Krush.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Slavkov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48851-Ivan_Slavkov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ida Cox Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48877-Ida_Cox.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Istvan Deak Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48905-Istvan_Deak.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Cline Quotes</summary>
+<ul>
+<li><a href="../../azquotes/48966-Isaac_Cline.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Fleming Quotes</summary>
+<ul>
+<li><a href="../../azquotes/4912-Ian_Fleming.html" target="A">1</a></li>
+<li><a href="../../azquotes/4912-Ian_Fleming@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/4912-Ian_Fleming@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/4912-Ian_Fleming@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imogen Heap Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49125-Imogen_Heap.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Slade Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49162-Isaac_Slade.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Albeniz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49180-Isaac_Albeniz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Ayres Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49308-Ian_Ayres.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Bogost Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49311-Ian_Bogost.html" target="A">1</a></li>
+<li><a href="../../azquotes/49311-Ian_Bogost@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/49311-Ian_Bogost@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Greenberg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49340-Irving_Greenberg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iamblichus Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49349-Iamblichus.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Pepperberg Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49386-Irene_Pepperberg.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ignacio Ellacuria Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49447-Ignacio_Ellacuria.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Vladislavic Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49452-Ivan_Vladislavic.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iain Lawrence Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49456-Iain_Lawrence.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Harris Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49667-Ian_Harris.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Itay Talgam Quotes</summary>
+<ul>
+<li><a href="../../azquotes/49756-Itay_Talgam.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Foster Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50004-Ian_Foster.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Parlby Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50006-Irene_Parlby.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Houghton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50160-Israel_Houghton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Bonewits Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50265-Isaac_Bonewits.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irene Gut Opdyke Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50417-Irene_Gut_Opdyke.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Paice Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50498-Ian_Paice.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irina Dunn Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50556-Irina_Dunn.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Sachs Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50619-Ira_Sachs.html" target="A">1</a></li>
+<li><a href="../../azquotes/50619-Ira_Sachs@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ireland Baldwin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50706-Ireland_Baldwin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Immodesty Blaize Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50710-Immodesty_Blaize.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iggy Azalea Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50819-Iggy_Azalea.html" target="A">1</a></li>
+<li><a href="../../azquotes/50819-Iggy_Azalea@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabella Bird Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50824-Isabella_Bird.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Indra Sinha Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50887-Indra_Sinha.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Issan Dorsey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/50927-Issan_Dorsey.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Barre Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51037-Isaac_Barre.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Hindmarsh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51086-Ian_Hindmarsh.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Progoff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/51709-Ira_Progoff.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iris DeMent Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52159-Iris_DeMent.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Horovitz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52509-Israel_Horovitz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>I. J. Good Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52641-I_J_Good.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Pichel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52678-Irving_Pichel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Izzeldin Abuelaish Quotes</summary>
+<ul>
+<li><a href="../../azquotes/52964-Izzeldin_Abuelaish.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Indira Gandhi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5307-Indira_Gandhi.html" target="A">1</a></li>
+<li><a href="../../azquotes/5307-Indira_Gandhi@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/5307-Indira_Gandhi@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/5307-Indira_Gandhi@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/5307-Indira_Gandhi@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/5307-Indira_Gandhi@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/5307-Indira_Gandhi@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/5307-Indira_Gandhi@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/5307-Indira_Gandhi@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/5307-Indira_Gandhi@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ignatius Bryanchaninov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53260-Ignatius_Bryanchaninov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Shenker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53269-Israel_Shenker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Rajab Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53420-Ibn_Rajab.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ina Garten Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5368-Ina_Garten.html" target="A">1</a></li>
+<li><a href="../../azquotes/5368-Ina_Garten@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/5368-Ina_Garten@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iain Matthews Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53891-Iain_Matthews.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Harding Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53955-Ian_Harding.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irrfan Khan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/53976-Irrfan_Khan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Gershwin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5451-Ira_Gershwin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Lawton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/54937-Ian_Lawton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isser Harel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55199-Isser_Harel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Immanuel Velikovsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55463-Immanuel_Velikovsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Glass Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5586-Ira_Glass.html" target="A">1</a></li>
+<li><a href="../../azquotes/5586-Ira_Glass@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/5586-Ira_Glass@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irwin Winkler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/55984-Irwin_Winkler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ileana Ros-Lehtinen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56474-Ileana_Ros_Lehtinen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilya Kovalchuk Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56484-Ilya_Kovalchuk.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Wilmut Quotes</summary>
+<ul>
+<li><a href="../../azquotes/56719-Ian_Wilmut.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Goncharov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/5673-Ivan_Goncharov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Toledo Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57027-Isabel_Toledo.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Shamir Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57326-Israel_Shamir.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Azoff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57634-Irving_Azoff.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irina Tweedie Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57669-Irina_Tweedie.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Deutscher Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57785-Isaac_Deutscher.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Ambrose Quotes</summary>
+<ul>
+<li><a href="../../azquotes/57869-Isaac_Ambrose.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Axel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/58873-Ian_Axel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iliza Shlesinger Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59593-Iliza_Shlesinger.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Sirin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59668-Ibn_Sirin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Astbury Quotes</summary>
+<ul>
+<li><a href="../../azquotes/59951-Ian_Astbury.html" target="A">1</a></li>
+<li><a href="../../azquotes/59951-Ian_Astbury@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Svenonius Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60253-Ian_Svenonius.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Asimov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/605-Isaac_Asimov.html" target="A">1</a></li>
+<li><a href="../../azquotes/605-Isaac_Asimov@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/605-Isaac_Asimov@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/605-Isaac_Asimov@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/605-Isaac_Asimov@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/605-Isaac_Asimov@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/605-Isaac_Asimov@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/605-Isaac_Asimov@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/605-Isaac_Asimov@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/605-Isaac_Asimov@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imtiaz Ali Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60532-Imtiaz_Ali.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Hacking Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6063-Ian_Hacking.html" target="A">1</a></li>
+<li><a href="../../azquotes/6063-Ian_Hacking@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irena Klepfisz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/60863-Irena_Klepfisz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ismail Haniyeh Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6212-Ismail_Haniyeh.html" target="A">1</a></li>
+<li><a href="../../azquotes/6212-Ismail_Haniyeh@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isadore Singer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/62322-Isadore_Singer.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilana Mercer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/62699-Ilana_Mercer.html" target="A">1</a></li>
+<li><a href="../../azquotes/62699-Ilana_Mercer@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/62699-Ilana_Mercer@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/62699-Ilana_Mercer@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilana Glazer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/62728-Ilana_Glazer.html" target="A">1</a></li>
+<li><a href="../../azquotes/62728-Ilana_Glazer@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Hornak Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63016-Ian_Hornak.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Allen, Jr. Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63167-Ivan_Allen_Jr.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irvin Kershner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63339-Irvin_Kershner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irina Ratushinskaya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/63683-Irina_Ratushinskaya.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Hayes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6435-Ira_Hayes.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Hayes Quotes</summary>
+<ul>
+<li><a href="../../azquotes/6436-Isaac_Hayes.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ildefonsus Quotes</summary>
+<ul>
+<li><a href="../../azquotes/64379-Ildefonsus.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaiah Quotes</summary>
+<ul>
+<li><a href="../../azquotes/64827-Isaiah.html" target="A">1</a></li>
+<li><a href="../../azquotes/64827-Isaiah@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/64827-Isaiah@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Wolff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/64917-Isabel_Wolff.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibn Battuta Quotes</summary>
+<ul>
+<li><a href="../../azquotes/65376-Ibn_Battuta.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ishmael Quotes</summary>
+<ul>
+<li><a href="../../azquotes/65469-Ishmael.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibrahim al-Jaafari Quotes</summary>
+<ul>
+<li><a href="../../azquotes/66906-Ibrahim_al_Jaafari.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Sandler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/67955-Irving_Sandler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Bremmer Quotes</summary>
+<ul>
+<li><a href="../../azquotes/68400-Ian_Bremmer.html" target="A">1</a></li>
+<li><a href="../../azquotes/68400-Ian_Bremmer@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Parker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/68667-Isaac_Parker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Immanuel Jakobovits, Baron Jakobovits Quotes</summary>
+<ul>
+<li><a href="../../azquotes/69015-Immanuel_Jakobovits_Baron_Jakobovits.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Italo Zucchelli Quotes</summary>
+<ul>
+<li><a href="../../azquotes/69271-Italo_Zucchelli.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>IU Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70184-IU.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingrid Trobisch Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70559-Ingrid_Trobisch.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inbee Park Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70619-Inbee_Park.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Burton Quotes</summary>
+<ul>
+<li><a href="../../azquotes/70915-Isabel_Burton.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Israel Shahak Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71144-Israel_Shahak.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivana Milicevic Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71515-Ivana_Milicevic.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Illich Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7156-Ivan_Illich.html" target="A">1</a></li>
+<li><a href="../../azquotes/7156-Ivan_Illich@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/7156-Ivan_Illich@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingrid Weir Quotes</summary>
+<ul>
+<li><a href="../../azquotes/71611-Ingrid_Weir.html" target="A">1</a></li>
+<li><a href="../../azquotes/71611-Ingrid_Weir@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Bagramyan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/72166-Ivan_Bagramyan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Konev Quotes</summary>
+<ul>
+<li><a href="../../azquotes/72224-Ivan_Konev.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ibrahim Babangida Quotes</summary>
+<ul>
+<li><a href="../../azquotes/724-Ibrahim_Babangida.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Healy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/72633-Ian_Healy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Babbitt Quotes</summary>
+<ul>
+<li><a href="../../azquotes/727-Irving_Babbitt.html" target="A">1</a></li>
+<li><a href="../../azquotes/727-Irving_Babbitt@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Babel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/728-Isaac_Babel.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iveta Radicova Quotes</summary>
+<ul>
+<li><a href="../../azquotes/72946-Iveta_Radicova.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irwin M. Jacobs Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73024-Irwin_M_Jacobs.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ithiel de Sola Pool Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73095-Ithiel_de_Sola_Pool.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivor Grattan-Guinness Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73267-Ivor_Grattan_Guinness.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Scott Rorick Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73593-Isabel_Scott_Rorick.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inez Haynes Irwin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/73792-Inez_Haynes_Irwin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iris Johansen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7458-Iris_Johansen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Niall Quotes</summary>
+<ul>
+<li><a href="../../azquotes/74644-Ian_Niall.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>I. King Jordan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/76527-I_King_Jordan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ingvar Kamprad Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7710-Ingvar_Kamprad.html" target="A">1</a></li>
+<li><a href="../../azquotes/7710-Ingvar_Kamprad@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Immanuel Kant Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7722-Immanuel_Kant.html" target="A">1</a></li>
+<li><a href="../../azquotes/7722-Immanuel_Kant@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/7722-Immanuel_Kant@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/7722-Immanuel_Kant@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/7722-Immanuel_Kant@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/7722-Immanuel_Kant@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/7722-Immanuel_Kant@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/7722-Immanuel_Kant@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/7722-Immanuel_Kant@p=9.html" target="A">9</a></li>
+<li><a href="../../azquotes/7722-Immanuel_Kant@p=10.html" target="A">10</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Islom Karimov Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7742-Islom_Karimov.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Chermayeff Quotes</summary>
+<ul>
+<li><a href="../../azquotes/78111-Ivan_Chermayeff.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Coixet Quotes</summary>
+<ul>
+<li><a href="../../azquotes/79656-Isabel_Coixet.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imran Khan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/7971-Imran_Khan.html" target="A">1</a></li>
+<li><a href="../../azquotes/7971-Imran_Khan@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/7971-Imran_Khan@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Kaplan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/79788-Ira_Kaplan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Idris Khan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80001-Idris_Khan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivy Meeropol Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80377-Ivy_Meeropol.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Flatow Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80636-Ira_Flatow.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irena A. Hoffman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/80840-Irena_A_Hoffman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irakli Okruashvili Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81398-Irakli_Okruashvili.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Blair Quotes</summary>
+<ul>
+<li><a href="../../azquotes/81560-Ian_Blair.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilyasah Shabazz Quotes</summary>
+<ul>
+<li><a href="../../azquotes/82357-Ilyasah_Shabazz.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabella Stewart Gardner Quotes</summary>
+<ul>
+<li><a href="../../azquotes/82423-Isabella_Stewart_Gardner.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Kristol Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8288-Irving_Kristol.html" target="A">1</a></li>
+<li><a href="../../azquotes/8288-Irving_Kristol@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Brennan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83718-Ian_Brennan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Indira Varma Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83721-Indira_Varma.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isa Genzken Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83771-Isa_Genzken.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian McLagan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/83908-Ian_McLagan.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inara George Quotes</summary>
+<ul>
+<li><a href="../../azquotes/84021-Inara_George.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imre Lakatos Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8411-Imre_Lakatos.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Carmen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/84736-Ira_Carmen.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Irving Langmuir Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8483-Irving_Langmuir.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian McLeod Quotes</summary>
+<ul>
+<li><a href="../../azquotes/85431-Ian_McLeod.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isidore Ducasse Lautreamont Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8560-Isidore_Ducasse_Lautreamont.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Bryce Quotes</summary>
+<ul>
+<li><a href="../../azquotes/86131-Ian_Bryce.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ishmael Butler Quotes</summary>
+<ul>
+<li><a href="../../azquotes/86159-Ishmael_Butler.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Lendl Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8714-Ivan_Lendl.html" target="A">1</a></li>
+<li><a href="../../azquotes/8714-Ivan_Lendl@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ira Levin Quotes</summary>
+<ul>
+<li><a href="../../azquotes/8777-Ira_Levin.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iain Banks Quotes</summary>
+<ul>
+<li><a href="../../azquotes/879-Iain_Banks.html" target="A">1</a></li>
+<li><a href="../../azquotes/879-Iain_Banks@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/879-Iain_Banks@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/879-Iain_Banks@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/879-Iain_Banks@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Kelsey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/88065-Ian_Kelsey.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Igor Levit Quotes</summary>
+<ul>
+<li><a href="../../azquotes/88626-Igor_Levit.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Christe Quotes</summary>
+<ul>
+<li><a href="../../azquotes/90546-Ian_Christe.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ignatius of Loyola Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9092-Ignatius_of_Loyola.html" target="A">1</a></li>
+<li><a href="../../azquotes/9092-Ignatius_of_Loyola@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9092-Ignatius_of_Loyola@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/9092-Ignatius_of_Loyola@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isabel Lucas Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9105-Isabel_Lucas.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Italia Ricci Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91172-Italia_Ricci.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isha Judd Quotes</summary>
+<ul>
+<li><a href="../../azquotes/91292-Isha_Judd.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ida Lupino Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9135-Ida_Lupino.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian MacKaye Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9215-Ian_MacKaye.html" target="A">1</a></li>
+<li><a href="../../azquotes/9215-Ian_MacKaye@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9215-Ian_MacKaye@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/9215-Ian_MacKaye@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/9215-Ian_MacKaye@p=5.html" target="A">5</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Issa Rae Quotes</summary>
+<ul>
+<li><a href="../../azquotes/92158-Issa_Rae.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Idara Victor Quotes</summary>
+<ul>
+<li><a href="../../azquotes/93762-Idara_Victor.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian O'Doherty Quotes</summary>
+<ul>
+<li><a href="../../azquotes/93820-Ian_O_Doherty.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Imelda Marcos Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9446-Imelda_Marcos.html" target="A">1</a></li>
+<li><a href="../../azquotes/9446-Imelda_Marcos@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9446-Imelda_Marcos@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Anthony Dale Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94509-Ian_Anthony_Dale.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Inbar Lavi Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94511-Inbar_Lavi.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Marion Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9467-Isaac_Marion.html" target="A">1</a></li>
+<li><a href="../../azquotes/9467-Isaac_Marion@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9467-Isaac_Marion@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/9467-Isaac_Marion@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/9467-Isaac_Marion@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/9467-Isaac_Marion@p=6.html" target="A">6</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Indraneel Bhattacharya Quotes</summary>
+<ul>
+<li><a href="../../azquotes/94762-Indraneel_Bhattacharya.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Tverdovsky Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95214-Ivan_Tverdovsky.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iman Shumpert Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95294-Iman_Shumpert.html" target="A">1</a></li>
+<li><a href="../../azquotes/95294-Iman_Shumpert@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/95294-Iman_Shumpert@p=3.html" target="A">3</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Simpson Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95778-Ian_Simpson.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Iris Smyles Quotes</summary>
+<ul>
+<li><a href="../../azquotes/95899-Iris_Smyles.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ivan Heng Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96097-Ivan_Heng.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isa Blagden Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96102-Isa_Blagden.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Illy Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96413-Illy.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilan Berman Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96624-Ilan_Berman.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Idra Novey Quotes</summary>
+<ul>
+<li><a href="../../azquotes/96997-Idra_Novey.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Barrow Quotes</summary>
+<ul>
+<li><a href="../../azquotes/970-Isaac_Barrow.html" target="A">1</a></li>
+<li><a href="../../azquotes/970-Isaac_Barrow@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ilya Ponomarev Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97054-Ilya_Ponomarev.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ida Maria Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97127-Ida_Maria.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Isaac Hecker Quotes</summary>
+<ul>
+<li><a href="../../azquotes/97233-Isaac_Hecker.html" target="A">1</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Mcewan Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9912-Ian_Mcewan.html" target="A">1</a></li>
+<li><a href="../../azquotes/9912-Ian_Mcewan@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9912-Ian_Mcewan@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/9912-Ian_Mcewan@p=4.html" target="A">4</a></li>
+<li><a href="../../azquotes/9912-Ian_Mcewan@p=5.html" target="A">5</a></li>
+<li><a href="../../azquotes/9912-Ian_Mcewan@p=6.html" target="A">6</a></li>
+<li><a href="../../azquotes/9912-Ian_Mcewan@p=7.html" target="A">7</a></li>
+<li><a href="../../azquotes/9912-Ian_Mcewan@p=8.html" target="A">8</a></li>
+<li><a href="../../azquotes/9912-Ian_Mcewan@p=9.html" target="A">9</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ian Mckellen Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9913-Ian_Mckellen.html" target="A">1</a></li>
+<li><a href="../../azquotes/9913-Ian_Mckellen@p=2.html" target="A">2</a></li>
+<li><a href="../../azquotes/9913-Ian_Mckellen@p=3.html" target="A">3</a></li>
+<li><a href="../../azquotes/9913-Ian_Mckellen@p=4.html" target="A">4</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Idina Menzel Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9980-Idina_Menzel.html" target="A">1</a></li>
+<li><a href="../../azquotes/9980-Idina_Menzel@p=2.html" target="A">2</a></li>
+</ul>
+</details><details class="menu" close>
+<summary>Ismail Merchant Quotes</summary>
+<ul>
+<li><a href="../../azquotes/9986-Ismail_Merchant.html" target="A">1</a></li>
+</ul>
+</details>
+</section>
+<section id="help-right"></section>
+</section>
+</body>
+</html>
