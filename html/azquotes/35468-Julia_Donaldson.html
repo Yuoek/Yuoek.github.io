@@ -1,0 +1,84 @@
+
+<p>I opened a book and in I strode.<br />
+Now nobody can find me.<br />
+I've left my chair, my house, my road,<br />
+My town and my world behind me.<br />
+I'm wearing the cloak, I've slipped on the ring,<br />
+I've swallowed the magic potion.<br />
+I've fought with a dragon, dined with a king<br />
+And dived in a bottomless ocean.<br />
+I opened a book and made some friends.<br />
+I shared their tears and laughter<br />
+And followed their road with its bumps and bends<br />
+To the happily ever after.<br />
+I finished my book and out I came.<br />
+The cloak can no longer hide me.<br />
+My chair and my house are just the same,<br />
+But I have a book inside me.</p>
+</ul>
+<center></center>
+<script>
+var type = 'a';
+var cs = '08112dded688c277';
+var author_id = '35468';  
+function log_ct_visits(type, cs){
+var quotes_data = '';
+var tep_quotes_data = '';
+/* $('.list-quotes .wrap-ico').each(function() { */ 
+$('.list-quotes .share-icons').each(function() { 
+if($(this).attr('data-tep') === '1'){
+tep_quotes_data += '::' + $(this).attr('data-id');
+} else {
+quotes_data += '::' + $(this).attr('data-id') + '~~' + $(this).attr('data-place');
+}
+});
+var c = 'systems';
+var d = 'ct_visits';
+var e = type + '_sh_f.';
+var f = 'php';
+var g = '/' + c + '/' + d + '/' + e;
+var h = '?cs=' + cs; 
+var data = {data: quotes_data, url: window.location.href, ref: document.referrer };
+data.author_id = '35468';  
+$.ajax({
+url: g + f + h ,
+type: "POST",
+data: data,
+cache: false
+});
+}
+lazy.add(log_ct_visits, [type, cs]);
+</script>
+<style>
+.link_image {vertical-align: baseline; padding-top: 3px; padding-left: 4px}
+.small_source{font-size: 13px !important; font-weight: 700 !important}
+.small_source_14{font-size: 12px !important; font-style: italic !important; color: #3F4857 !important}
+/* .thicker {margin-bottom: -5px} */
+/* .list-quotes .thicker::after {margin-top: 9px !important} */
+.thicker {margin-bottom: 0px;}
+.sources_span {color: #b3b300}
+</style>
+<div class='popup' id="send-report">
+<div class='title'>
+<div class="left">
+<h2>Send Report</h2>
+</div>
+<div class="right">	 
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="content">
+<div class="wrap">
+<div class='item text' id="sr-result">
+<p id="sr-result-message"></p>
+</div>
+<form action='#' method='POST' id="send-report-form">
+<div id="sr-to-hide">
+<div class='item text'>
+<label for='sr-quote-text'>Quote:</label>
+<p id="sr-quote-text"></p>
+</div>
+<div class='item text'>
+<label for='sr-mistake'>Mistake:</label>
+<div id='sr-mistake' data-value=''>Choose...</div>
+<ol class="sr-mistake-select">
