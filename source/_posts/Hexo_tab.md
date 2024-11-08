@@ -121,11 +121,11 @@ ifreme 引入 html 文件
 网易云音乐
 
 
-{% meting "1978921795" "netease" "playlist" "mutex:true" "theme:#777777" %}
+{% meting "8894629684" "netease" "playlist" "mutex:true" "theme:#777777" %}
 
 
 ```markdown
-{% meting "1978921795" "netease" "playlist" "mutex:true" "theme:#777777" %}
+{% meting "8894629684" "netease" "playlist" "mutex:true" "theme:#777777" %}
 ```
 
 ## 七. Revealjs
