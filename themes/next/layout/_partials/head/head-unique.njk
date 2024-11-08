@@ -1,0 +1,45 @@
+{%- if theme.open_graph.enable %}
+  {%- if theme.open_graph.options %}
+    {{ open_graph(theme.open_graph.options) }}
+  {%- else %}
+    {{ open_graph() }}
+  {%- endif %}
+{%- endif %}
+
+{# https://github.com/theme-next/hexo-theme-next/issues/866 #}
+{%- set canonical = url | replace(r/index\.html$/, '') %}
+{%- if not config.permalink.endsWith('.html') %}
+  {%- set canonical = canonical | replace(r/\.html$/, '') %}
+{%- endif %}
+<link rel="canonical" href="{{ canonical }}">
+
+{# Exports some front-matter variables to Front-End #}
+{# https://hexo.io/docs/variables.html #}
+{{ next_data('page', next_config_unique()) }}
+
+{{ next_data('calendar',
+  theme.calendar if page.type === 'schedule' else '')
+}}
+
+
+<script type="text/javascript">
+    // Wait for the page to load first
+    var _prevOnload = window.onload;
+    window.onload = function() {
+        var switchLang = document.getElementsByClassName("menu-item menu-item-switch_lang")[0];
+        switchLang.onclick = function() {
+            var href = window.location.href;
+            var indexOfEn = href.toLowerCase().indexOf('/en');
+            if(indexOfEn !== -1) {
+                window.location.href = href.replace('/en/', '/');
+            }
+            else {
+                window.location.href = href.replace(/(^http[s]?:\/\/[a-z0-9.]*[:?0-9]*\/)(.*)/i, '$1en/$2');
+            }
+            if(typeof(_prevOnload) === 'function') {
+                _prevOnload();
+            }
+            return false;
+        }
+    }
+</script>
