@@ -69,7 +69,7 @@ n/2,  &amp; \text{if }n\text{ is even} \\\\
 <h2 id="六.-aplayer-音乐">六. Aplayer 音乐</h2>
 <p>网易云音乐</p>
 
-    <div id="aplayer-QeWNvTQA" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-wyWfhDmC" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="8894629684" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#777777"
     ></div>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;8894629684&quot; &quot;netease&quot; &quot;playlist&quot; &quot;mutex:true&quot; &quot;theme:#777777&quot; %&#125;</span><br></pre></td></tr></table></figure>
@@ -123,26 +123,6 @@ Android
       </categories>
       <tags>
         <tag>Yu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Notes</title>
-    <url>/zh/notes.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="notes">Notes</h1>
-<center>
-<p><font color=#6f5dee>Latex 数学公式 </font></p>
-<span id="more"></span>
-<p>git push 报错：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">git cofig pull.rebase <span class="literal">true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>git 打包：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;yuoek&quot;</span></span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:yuoek/yuoek.git</span><br><span class="line"></span><br><span class="line">(git remote add origin https://github.com/yuoek/yuoek.git)</span><br><span class="line"></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line">git push -u origin master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>日记</category>
-        <category>Notes</category>
-      </categories>
-      <tags>
-        <tag>Notes</tag>
       </tags>
   </entry>
   <entry>
@@ -299,6 +279,26 @@ v+m&amp;=0&amp;\text{Given}\tag1\\
       </tags>
   </entry>
   <entry>
+    <title>Notes</title>
+    <url>/zh/notes.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="notes">Notes</h1>
+<center>
+<p><font color=#6f5dee>Latex 数学公式 </font></p>
+<span id="more"></span>
+<p>git push 报错：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">git cofig pull.rebase <span class="literal">true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>git 打包：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;yuoek&quot;</span></span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:yuoek/yuoek.git</span><br><span class="line"></span><br><span class="line">(git remote add origin https://github.com/yuoek/yuoek.git)</span><br><span class="line"></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line">git push -u origin master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>日记</category>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>Notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>漫芊遍野</title>
     <url>/zh/%E6%BC%AB%E8%8A%8A%E9%81%8D%E9%87%8E.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="漫芊遍野">漫芊遍野</h1>
@@ -307,12 +307,12 @@ v+m&amp;=0&amp;\text{Given}\tag1\\
 <p><font color=#6f5dee>遇光见影，遇你见爱! </font></p>
 <span id="more"></span>
 
-        <div id="aplayer-DPxRfcIw" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-PWjfclaI" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-DPxRfcIw"),
+            element: document.getElementById("aplayer-PWjfclaI"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -385,12 +385,6 @@ v+m&amp;=0&amp;\text{Given}\tag1\\
       <tags>
         <tag>漫野</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Dream</title>
-    <url>/en/dream.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-]]></content>
   </entry>
   <entry>
     <title>致自己</title>
@@ -523,12 +517,6 @@ v+m&amp;=0&amp;\text{Given}\tag1\\
       </tags>
   </entry>
   <entry>
-    <title>en</title>
-    <url>/en/en.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-]]></content>
-  </entry>
-  <entry>
     <title>Posts</title>
     <url>/posts/posts.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="posts">Posts</h1>
@@ -546,6 +534,12 @@ v+m&amp;=0&amp;\text{Given}\tag1\\
   <entry>
     <title>Dream</title>
     <url>/zh/dream.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+]]></content>
+  </entry>
+  <entry>
+    <title>zh</title>
+    <url>/zh/zh.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
   </entry>
@@ -836,14 +830,20 @@ class="math inline">\(16\)</span>位的存储器的构造。</p>
       </tags>
   </entry>
   <entry>
-    <title>zh</title>
-    <url>/zh/zh.html</url>
+    <title>Dream</title>
+    <url>/en/dream.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
   </entry>
   <entry>
-    <title>archives</title>
-    <url>/archives/index.html</url>
+    <title>en</title>
+    <url>/en/en.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+]]></content>
+  </entry>
+  <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
   </entry>
@@ -868,15 +868,9 @@ class="math inline">\(16\)</span>位的存储器的构造。</p>
 </div>
 
 
-    <div id="aplayer-oaMvacaE" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-rQiwsARi" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="8894629684" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#777777"
     ></div>
-]]></content>
-  </entry>
-  <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
   </entry>
   <entry>
@@ -986,477 +980,6 @@ class="math inline">\(16\)</span>位的存储器的构造。</p>
     height: 0;
     overflow: hidden;
 }
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/film/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-]]></content>
-  </entry>
-  <entry>
-    <title>Life0123</title>
-    <url>/life/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><select name="" onchange="javascript:location.href=this.value;" style="width: 150px; height: 34px; color: #333; background-color: #fff; border-color: rgba(201, 108, 245, 0.575);">
-<option style="background:rgba(151, 210, 238, 0.616)" value="/lifebook/">书籍</option>
-<option style="background:rgba(139, 149, 236, 0.616)" value="/life/">生活0123</option>
-<option style="background:#eb99bb9d" value="/lifeenzh/">名词</option>
-<option style="background:rgba(139, 221, 236, 0.616)" value="/lifetoc/">目录</option>
-</select></p>
-<div style="width: auto; height: 100px;">
-
-</div>
-<div>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="../css/Mycss.css">
-<title>
-Film
-</title>
-</head>
-<body>
-<div class="header">
-<div class="nav">
-<div class="drop-down clearfix">
-<ul>
-<li>
-<a href="#">飛䎅</a>
-<ul>
-<li>
-<a href="#">生活</a>
-<ul>
-<li>
-<a href="./study/notes.html">生活</a>
-</li>
-<li>
-<a href="./study/notes">考级</a>
-</li>
-<li>
-<a href="#">语言</a>
-</li>
-<li>
-<a href="#">运动</a>
-</li>
-<li>
-<a href="#">经济</a>
-</li>
-<li>
-<a href="#">心理</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">计算机</a>
-<ul>
-<li>
-<a href="#">计算机</a>
-</li>
-<li>
-<a href="#">数学</a>
-</li>
-<li>
-<a href="#">物理</a>
-</li>
-<li>
-<a href="#">化学</a>
-</li>
-<li>
-<a href="#">生物</a>
-</li>
-<li>
-<a href="#">天文</a>
-</li>
-<li>
-<a href="#">工程</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">电影</a>
-<ul>
-<li>
-<a href="#">电影</a>
-</li>
-<li>
-<a href="#">文学</a>
-</li>
-<li>
-<a href="#">美术</a>
-</li>
-<li>
-<a href="#">音乐</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">哲学</a>
-<ul>
-<li>
-<a href="#">哲学</a>
-</li>
-<li>
-<a href="#">价值观</a>
-</li>
-<li>
-<a href="#">世界观</a>
-</li>
-<li>
-<a href="#">个人观</a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">生活</a>
-<ul>
-<li>
-<a href="#">生活</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">考级</a>
-<ul>
-<li>
-<a href="#">小学</a>
-</li>
-<li>
-<a href="#">初中</a>
-</li>
-<li>
-<a href="#">高中</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">语言</a>
-<ul>
-<li>
-<a href="#">普通话</a>
-</li>
-<li>
-<a href="#">英语</a>
-</li>
-<li>
-<a href="#">法语</a>
-<ul>
-<li>
-<a href="#">Yuoek</a>
-</li>
-</ul>
-<li>
-<a href="#">德语</a>
-</li>
-<li>
-<a href="#">西语</a>
-</li>
-<li>
-<a href="#">俄语</a>
-</li>
-<li>
-<a href="#">日语</a>
-</li>
-<li>
-<a href="#">韩语</a>
-</li>
-<li>
-<a href="#">阿拉伯语</a>
-</li>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">运动</a>
-<ul>
-<li>
-<a href="#">滑板</a>
-</li>
-<li>
-<a href="#">足球</a>
-</li>
-<li>
-<a href="#">篮球</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">经济</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">心理</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">计算机</a>
-<ul>
-<li>
-<a href="#">计算机</a>
-<ul>
-<li>
-<a href="#">编程</a>
-<ul>
-<li>
-<a href="#">C</a>
-</li>
-<li>
-<a href="#">Python</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">软件</a>
-<ul>
-<li>
-<a href="#">AE</a>
-</li>
-<li>
-<a href="'#">C4D</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">数学</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">物理</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">化学</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">生物</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">天文</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">工程</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">电影</a>
-<ul>
-<li>
-<a href="#">电影</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">文学</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">美术</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">音乐</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">哲学</a>
-<ul>
-<li>
-<a href="#">哲学</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">价值观</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">世界观</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</body>
-</div>
-<div style="width: auto; height: 100px;">
-
-</div>
-<div>
-<iframe src="../html/Frame.html" height="720px" width="100%" scrolling="auto" frameborder="0" style="box-shadow: 0px 0px 20px -10px #fff0;" background-colorj="#fffo;">
-</iframe>
-</div>
 ]]></content>
   </entry>
   <entry>
@@ -4504,6 +4027,12 @@ body a:hover{text-decoration:underline}
 ]]></content>
   </entry>
   <entry>
+    <title>archives</title>
+    <url>/archives/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/music/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><table>
@@ -4522,11 +4051,11 @@ body a:hover{text-decoration:underline}
 <tbody>
 <tr class="odd">
 <td>
-    <div id="aplayer-AZWNcTSU" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-khJglqNK" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="2097889854" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div></td>
 <td>
-    <div id="aplayer-FFpbKtTu" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-LXeHkbQI" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="5469560397" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div></td>
 <td></td>
@@ -4548,6 +4077,477 @@ body a:hover{text-decoration:underline}
 ]]></content>
   </entry>
   <entry>
+    <title>Life0123</title>
+    <url>/life/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><select name="" onchange="javascript:location.href=this.value;" style="width: 150px; height: 34px; color: #333; background-color: #fff; border-color: rgba(201, 108, 245, 0.575);">
+<option style="background:rgba(151, 210, 238, 0.616)" value="/lifebook/">书籍</option>
+<option style="background:rgba(139, 149, 236, 0.616)" value="/life/">生活0123</option>
+<option style="background:#eb99bb9d" value="/lifeenzh/">名词</option>
+<option style="background:rgba(139, 221, 236, 0.616)" value="/lifetoc/">目录</option>
+</select></p>
+<div style="width: auto; height: 100px;">
+
+</div>
+<div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="../css/Mycss.css">
+<title>
+Film
+</title>
+</head>
+<body>
+<div class="header">
+<div class="nav">
+<div class="drop-down clearfix">
+<ul>
+<li>
+<a href="#">飛䎅</a>
+<ul>
+<li>
+<a href="#">生活</a>
+<ul>
+<li>
+<a href="./study/notes.html">生活</a>
+</li>
+<li>
+<a href="./study/notes">考级</a>
+</li>
+<li>
+<a href="#">语言</a>
+</li>
+<li>
+<a href="#">运动</a>
+</li>
+<li>
+<a href="#">经济</a>
+</li>
+<li>
+<a href="#">心理</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">计算机</a>
+<ul>
+<li>
+<a href="#">计算机</a>
+</li>
+<li>
+<a href="#">数学</a>
+</li>
+<li>
+<a href="#">物理</a>
+</li>
+<li>
+<a href="#">化学</a>
+</li>
+<li>
+<a href="#">生物</a>
+</li>
+<li>
+<a href="#">天文</a>
+</li>
+<li>
+<a href="#">工程</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">电影</a>
+<ul>
+<li>
+<a href="#">电影</a>
+</li>
+<li>
+<a href="#">文学</a>
+</li>
+<li>
+<a href="#">美术</a>
+</li>
+<li>
+<a href="#">音乐</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">哲学</a>
+<ul>
+<li>
+<a href="#">哲学</a>
+</li>
+<li>
+<a href="#">价值观</a>
+</li>
+<li>
+<a href="#">世界观</a>
+</li>
+<li>
+<a href="#">个人观</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">生活</a>
+<ul>
+<li>
+<a href="#">生活</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">考级</a>
+<ul>
+<li>
+<a href="#">小学</a>
+</li>
+<li>
+<a href="#">初中</a>
+</li>
+<li>
+<a href="#">高中</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">语言</a>
+<ul>
+<li>
+<a href="#">普通话</a>
+</li>
+<li>
+<a href="#">英语</a>
+</li>
+<li>
+<a href="#">法语</a>
+<ul>
+<li>
+<a href="#">Yuoek</a>
+</li>
+</ul>
+<li>
+<a href="#">德语</a>
+</li>
+<li>
+<a href="#">西语</a>
+</li>
+<li>
+<a href="#">俄语</a>
+</li>
+<li>
+<a href="#">日语</a>
+</li>
+<li>
+<a href="#">韩语</a>
+</li>
+<li>
+<a href="#">阿拉伯语</a>
+</li>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">运动</a>
+<ul>
+<li>
+<a href="#">滑板</a>
+</li>
+<li>
+<a href="#">足球</a>
+</li>
+<li>
+<a href="#">篮球</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">经济</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">心理</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">计算机</a>
+<ul>
+<li>
+<a href="#">计算机</a>
+<ul>
+<li>
+<a href="#">编程</a>
+<ul>
+<li>
+<a href="#">C</a>
+</li>
+<li>
+<a href="#">Python</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">软件</a>
+<ul>
+<li>
+<a href="#">AE</a>
+</li>
+<li>
+<a href="'#">C4D</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">数学</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">物理</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">化学</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">生物</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">天文</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">工程</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">电影</a>
+<ul>
+<li>
+<a href="#">电影</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">文学</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">美术</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">音乐</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">哲学</a>
+<ul>
+<li>
+<a href="#">哲学</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">价值观</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">世界观</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</div>
+<div style="width: auto; height: 100px;">
+
+</div>
+<div>
+<iframe src="../html/Frame.html" height="720px" width="100%" scrolling="auto" frameborder="0" style="box-shadow: 0px 0px 20px -10px #fff0;" background-colorj="#fffo;">
+</iframe>
+</div>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/film/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+]]></content>
+  </entry>
+  <entry>
     <title>paint</title>
     <url>/paint/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
@@ -4560,8 +4560,8 @@ body a:hover{text-decoration:underline}
 ]]></content>
   </entry>
   <entry>
-    <title>quotes</title>
-    <url>/quotes/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
   </entry>
@@ -4587,14 +4587,20 @@ body a:hover{text-decoration:underline}
 ]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title>quotes</title>
+    <url>/quotes/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
   </entry>
   <entry>
     <title>film</title>
     <url>/film/en/film.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+]]></content>
+  </entry>
+  <entry>
+    <title>film</title>
+    <url>/film/zh-CN/film.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
   </entry>
@@ -4607,12 +4613,6 @@ body a:hover{text-decoration:underline}
 <span id="more"></span>
 <p>好记性不如烂笔头！</p>
 <p><a href="./notes.html">notes</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>film</title>
-    <url>/film/zh-CN/film.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
   </entry>
   <entry>
