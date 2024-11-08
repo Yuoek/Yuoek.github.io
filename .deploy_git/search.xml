@@ -69,7 +69,7 @@ n/2,  &amp; \text{if }n\text{ is even} \\\\
 <h2 id="六.-aplayer-音乐">六. Aplayer 音乐</h2>
 <p>网易云音乐</p>
 
-    <div id="aplayer-SCTXYgqP" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-QeWNvTQA" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="8894629684" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#777777"
     ></div>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;8894629684&quot; &quot;netease&quot; &quot;playlist&quot; &quot;mutex:true&quot; &quot;theme:#777777&quot; %&#125;</span><br></pre></td></tr></table></figure>
@@ -82,6 +82,67 @@ n/2,  &amp; \text{if }n\text{ is even} \\\\
       </categories>
       <tags>
         <tag>练习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Yu</title>
+    <url>/zh/yu.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="yu">Yu</h1>
+<center>
+<font color=#6f5dee>我想看看自己出鞘后的样子 </font>
+</center>
+<span id="more"></span>
+<p>有更大的梦想就去做吧，你值得更优秀！</p>
+<p>termux 设置默认启动文件夹 在 Termux 中，你可以通过修改
+<code>.bashrc</code> 文件来设置默认启动文件夹。以下是一般的步骤：</p>
+<ol type="1">
+<li><p>打开 Termux 应用。</p></li>
+<li><p>输入以下命令来编辑 <code>.bashrc</code> 文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nano ~/.bashrc</span><br></pre></td></tr></table></figure></li>
+<li><p>在 <code>.bashrc</code> 文件中，找到以下行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd ~</span><br></pre></td></tr></table></figure>
+<p>这行代码表示默认进入用户的主目录。</p></li>
+<li><p>将 <code>cd ~</code>
+替换为你想要设置为默认启动文件夹的路径。例如，如果你想将默认启动文件夹设置为
+<code>/sdcard/Documents</code>，则将该行替换为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /sdcard/Documents</span><br></pre></td></tr></table></figure></li>
+<li><p>按下 <code>Ctrl + X</code> 组合键，然后按 <code>Y</code>
+键保存修改并退出 <code>nano</code> 编辑器。</p></li>
+<li><p>为了使修改生效，输入以下命令来重新加载 <code>.bashrc</code>
+文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>现在，当你重新打开 Termux 时，它将默认进入你设置的文件夹。</p>
+<p>请注意，上述步骤中的文件夹路径应根据你的实际需求进行修改。此外，不同的
+Android
+设备和文件系统结构可能会有所不同，你可能需要根据自己的情况调整文件夹路径。</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+        <category>Yu</category>
+      </categories>
+      <tags>
+        <tag>Yu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notes</title>
+    <url>/zh/notes.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="notes">Notes</h1>
+<center>
+<p><font color=#6f5dee>Latex 数学公式 </font></p>
+<span id="more"></span>
+<p>git push 报错：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">git cofig pull.rebase <span class="literal">true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>git 打包：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;yuoek&quot;</span></span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:yuoek/yuoek.git</span><br><span class="line"></span><br><span class="line">(git remote add origin https://github.com/yuoek/yuoek.git)</span><br><span class="line"></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line">git push -u origin master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>日记</category>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>Notes</tag>
       </tags>
   </entry>
   <entry>
@@ -238,65 +299,98 @@ v+m&amp;=0&amp;\text{Given}\tag1\\
       </tags>
   </entry>
   <entry>
-    <title>Yu</title>
-    <url>/zh/yu.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="yu">Yu</h1>
+    <title>漫芊遍野</title>
+    <url>/zh/%E6%BC%AB%E8%8A%8A%E9%81%8D%E9%87%8E.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="漫芊遍野">漫芊遍野</h1>
+<img src="./images/my.jpg" alt="tao" style="zoom:5%;" />
 <center>
-<font color=#6f5dee>我想看看自己出鞘后的样子 </font>
-</center>
+<p><font color=#6f5dee>遇光见影，遇你见爱! </font></p>
 <span id="more"></span>
-<p>有更大的梦想就去做吧，你值得更优秀！</p>
-<p>termux 设置默认启动文件夹 在 Termux 中，你可以通过修改
-<code>.bashrc</code> 文件来设置默认启动文件夹。以下是一般的步骤：</p>
-<ol type="1">
-<li><p>打开 Termux 应用。</p></li>
-<li><p>输入以下命令来编辑 <code>.bashrc</code> 文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nano ~/.bashrc</span><br></pre></td></tr></table></figure></li>
-<li><p>在 <code>.bashrc</code> 文件中，找到以下行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd ~</span><br></pre></td></tr></table></figure>
-<p>这行代码表示默认进入用户的主目录。</p></li>
-<li><p>将 <code>cd ~</code>
-替换为你想要设置为默认启动文件夹的路径。例如，如果你想将默认启动文件夹设置为
-<code>/sdcard/Documents</code>，则将该行替换为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /sdcard/Documents</span><br></pre></td></tr></table></figure></li>
-<li><p>按下 <code>Ctrl + X</code> 组合键，然后按 <code>Y</code>
-键保存修改并退出 <code>nano</code> 编辑器。</p></li>
-<li><p>为了使修改生效，输入以下命令来重新加载 <code>.bashrc</code>
-文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>现在，当你重新打开 Termux 时，它将默认进入你设置的文件夹。</p>
-<p>请注意，上述步骤中的文件夹路径应根据你的实际需求进行修改。此外，不同的
-Android
-设备和文件系统结构可能会有所不同，你可能需要根据自己的情况调整文件夹路径。</p>
+
+        <div id="aplayer-DPxRfcIw" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-DPxRfcIw"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "林俊杰 - 弹唱",
+              author: "林俊杰JJLin",
+              url: "/music/林俊杰 - 弹唱.mp3",
+              pic: "/music/M.jpg",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+<p>喜欢小漫，喜欢你</p>
+<p>喜欢我们相遇的那一晚</p>
+<p>喜欢和你一起去喝咖啡</p>
+<p>喜欢和你分享诗歌</p>
+<p>和你一起听音乐</p>
+<p>一起去影院看电影</p>
+<p>还有什么比和你在一起更重要？</p>
+<p>还有什么比爱情与梦想交织在一起更重要？</p>
+<p>喜欢你的手</p>
+<p>喜欢你笑起来露出的那颗虎牙</p>
+<p>喜欢你脸上的那颗痣</p>
+<p>喜欢你独有音调的那句：你干嘛啊！</p>
+<p>我也会不自觉地模仿你说：你干嘛啊！</p>
+<p>在光影的梦想里</p>
+<p>在我影的过往里</p>
+<p>在无数个日日夜夜地追寻里</p>
+<p>我裹着影遇见了光</p>
+<p>我藏着爱遇见了你</p>
+<hr />
+<p><font color=#6f5dee>《一百首爱的十四行诗》 </font></p>
+<p><font size=1px > ——巴勃罗·聂鲁达</font></p>
+<p><font color=#db62c2></p>
+<p>用你的眼睛阻隔这个月的光</p>
+<p>用你的臂膀拂去所有的忧伤</p>
+<p>只求你别忘了</p>
+<p>我若哭着醒来</p>
+<p>那是梦见自己是迷途的孩子</p>
+<p>穿过夜晚的树叶</p>
+<p>寻找你的手</p>
+<p>你是一沽无声的泉水</p>
+<p>在遥远的山脚渐渐隐匿</p>
+<p>我是一颗孤单的石子</p>
+<p>在寞落的山顶等待晨曦</p>
+<p>怎么说起，又怎能忘记</p>
+<p>所有的话语都显得苍白无力</p>
+<p>所以，我只能——</p>
+<p>用我这个月的记忆铭刻你的快乐</p>
+<p>用我所有的泪水灌溉你的伤心</p>
+<p>只求你别忘了</p>
+<p>我若笑着死去</p>
+<p>那是因为梦见自己是残落的败叶</p>
+<p>穿过寂静的黑色</p>
+<p>亲吻你的脸</p>
+<p></font></p>
+</center>
+<figure>
+<img src="/music/M2.jpg" alt="MY" />
+<figcaption aria-hidden="true">MY</figcaption>
+</figure>
+<p>（摘录于2023/12/02）</p>
 ]]></content>
       <categories>
         <category>日记</category>
-        <category>Yu</category>
+        <category>漫野</category>
       </categories>
       <tags>
-        <tag>Yu</tag>
+        <tag>漫野</tag>
       </tags>
   </entry>
   <entry>
-    <title>Notes</title>
-    <url>/zh/notes.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="notes">Notes</h1>
-<center>
-<p><font color=#6f5dee>Latex 数学公式 </font></p>
-<span id="more"></span>
-<p>git push 报错：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">git cofig pull.rebase <span class="literal">true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>git 打包：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;yuoek&quot;</span></span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:yuoek/yuoek.git</span><br><span class="line"></span><br><span class="line">(git remote add origin https://github.com/yuoek/yuoek.git)</span><br><span class="line"></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line">git push -u origin master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>Dream</title>
+    <url>/en/dream.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
-      <categories>
-        <category>日记</category>
-        <category>Notes</category>
-      </categories>
-      <tags>
-        <tag>Notes</tag>
-      </tags>
   </entry>
   <entry>
     <title>致自己</title>
@@ -429,104 +523,25 @@ Android
       </tags>
   </entry>
   <entry>
-    <title>漫芊遍野</title>
-    <url>/zh/%E6%BC%AB%E8%8A%8A%E9%81%8D%E9%87%8E.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="漫芊遍野">漫芊遍野</h1>
-<img src="./images/my.jpg" alt="tao" style="zoom:5%;" />
-<center>
-<p><font color=#6f5dee>遇光见影，遇你见爱! </font></p>
-<span id="more"></span>
-
-        <div id="aplayer-iTbMuQKs" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-iTbMuQKs"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "林俊杰 - 弹唱",
-              author: "林俊杰JJLin",
-              url: "/music/林俊杰 - 弹唱.mp3",
-              pic: "/music/M.jpg",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-<p>喜欢小漫，喜欢你</p>
-<p>喜欢我们相遇的那一晚</p>
-<p>喜欢和你一起去喝咖啡</p>
-<p>喜欢和你分享诗歌</p>
-<p>和你一起听音乐</p>
-<p>一起去影院看电影</p>
-<p>还有什么比和你在一起更重要？</p>
-<p>还有什么比爱情与梦想交织在一起更重要？</p>
-<p>喜欢你的手</p>
-<p>喜欢你笑起来露出的那颗虎牙</p>
-<p>喜欢你脸上的那颗痣</p>
-<p>喜欢你独有音调的那句：你干嘛啊！</p>
-<p>我也会不自觉地模仿你说：你干嘛啊！</p>
-<p>在光影的梦想里</p>
-<p>在我影的过往里</p>
-<p>在无数个日日夜夜地追寻里</p>
-<p>我裹着影遇见了光</p>
-<p>我藏着爱遇见了你</p>
-<hr />
-<p><font color=#6f5dee>《一百首爱的十四行诗》 </font></p>
-<p><font size=1px > ——巴勃罗·聂鲁达</font></p>
-<p><font color=#db62c2></p>
-<p>用你的眼睛阻隔这个月的光</p>
-<p>用你的臂膀拂去所有的忧伤</p>
-<p>只求你别忘了</p>
-<p>我若哭着醒来</p>
-<p>那是梦见自己是迷途的孩子</p>
-<p>穿过夜晚的树叶</p>
-<p>寻找你的手</p>
-<p>你是一沽无声的泉水</p>
-<p>在遥远的山脚渐渐隐匿</p>
-<p>我是一颗孤单的石子</p>
-<p>在寞落的山顶等待晨曦</p>
-<p>怎么说起，又怎能忘记</p>
-<p>所有的话语都显得苍白无力</p>
-<p>所以，我只能——</p>
-<p>用我这个月的记忆铭刻你的快乐</p>
-<p>用我所有的泪水灌溉你的伤心</p>
-<p>只求你别忘了</p>
-<p>我若笑着死去</p>
-<p>那是因为梦见自己是残落的败叶</p>
-<p>穿过寂静的黑色</p>
-<p>亲吻你的脸</p>
-<p></font></p>
-</center>
-<figure>
-<img src="/music/M2.jpg" alt="MY" />
-<figcaption aria-hidden="true">MY</figcaption>
-</figure>
-<p>（摘录于2023/12/02）</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-        <category>漫野</category>
-      </categories>
-      <tags>
-        <tag>漫野</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Dream</title>
-    <url>/en/dream.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-]]></content>
-  </entry>
-  <entry>
     <title>en</title>
     <url>/en/en.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Posts</title>
+    <url>/posts/posts.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="posts">Posts</h1>
+<center>
+<p><font color=#6f5dee>Posts 文章 </font></p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>Posts</category>
+      </categories>
+      <tags>
+        <tag>Posts</tag>
+      </tags>
   </entry>
   <entry>
     <title>Dream</title>
@@ -827,21 +842,6 @@ class="math inline">\(16\)</span>位的存储器的构造。</p>
 ]]></content>
   </entry>
   <entry>
-    <title>Posts</title>
-    <url>/posts/posts.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="posts">Posts</h1>
-<center>
-<p><font color=#6f5dee>Posts 文章 </font></p>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>Posts</category>
-      </categories>
-      <tags>
-        <tag>Posts</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>archives</title>
     <url>/archives/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
@@ -868,7 +868,7 @@ class="math inline">\(16\)</span>位的存储器的构造。</p>
 </div>
 
 
-    <div id="aplayer-iABcKDBw" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-oaMvacaE" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="8894629684" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#777777"
     ></div>
 ]]></content>
@@ -986,6 +986,477 @@ class="math inline">\(16\)</span>位的存储器的构造。</p>
     height: 0;
     overflow: hidden;
 }
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/film/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+]]></content>
+  </entry>
+  <entry>
+    <title>Life0123</title>
+    <url>/life/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><select name="" onchange="javascript:location.href=this.value;" style="width: 150px; height: 34px; color: #333; background-color: #fff; border-color: rgba(201, 108, 245, 0.575);">
+<option style="background:rgba(151, 210, 238, 0.616)" value="/lifebook/">书籍</option>
+<option style="background:rgba(139, 149, 236, 0.616)" value="/life/">生活0123</option>
+<option style="background:#eb99bb9d" value="/lifeenzh/">名词</option>
+<option style="background:rgba(139, 221, 236, 0.616)" value="/lifetoc/">目录</option>
+</select></p>
+<div style="width: auto; height: 100px;">
+
+</div>
+<div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="../css/Mycss.css">
+<title>
+Film
+</title>
+</head>
+<body>
+<div class="header">
+<div class="nav">
+<div class="drop-down clearfix">
+<ul>
+<li>
+<a href="#">飛䎅</a>
+<ul>
+<li>
+<a href="#">生活</a>
+<ul>
+<li>
+<a href="./study/notes.html">生活</a>
+</li>
+<li>
+<a href="./study/notes">考级</a>
+</li>
+<li>
+<a href="#">语言</a>
+</li>
+<li>
+<a href="#">运动</a>
+</li>
+<li>
+<a href="#">经济</a>
+</li>
+<li>
+<a href="#">心理</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">计算机</a>
+<ul>
+<li>
+<a href="#">计算机</a>
+</li>
+<li>
+<a href="#">数学</a>
+</li>
+<li>
+<a href="#">物理</a>
+</li>
+<li>
+<a href="#">化学</a>
+</li>
+<li>
+<a href="#">生物</a>
+</li>
+<li>
+<a href="#">天文</a>
+</li>
+<li>
+<a href="#">工程</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">电影</a>
+<ul>
+<li>
+<a href="#">电影</a>
+</li>
+<li>
+<a href="#">文学</a>
+</li>
+<li>
+<a href="#">美术</a>
+</li>
+<li>
+<a href="#">音乐</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">哲学</a>
+<ul>
+<li>
+<a href="#">哲学</a>
+</li>
+<li>
+<a href="#">价值观</a>
+</li>
+<li>
+<a href="#">世界观</a>
+</li>
+<li>
+<a href="#">个人观</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">生活</a>
+<ul>
+<li>
+<a href="#">生活</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">考级</a>
+<ul>
+<li>
+<a href="#">小学</a>
+</li>
+<li>
+<a href="#">初中</a>
+</li>
+<li>
+<a href="#">高中</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">语言</a>
+<ul>
+<li>
+<a href="#">普通话</a>
+</li>
+<li>
+<a href="#">英语</a>
+</li>
+<li>
+<a href="#">法语</a>
+<ul>
+<li>
+<a href="#">Yuoek</a>
+</li>
+</ul>
+<li>
+<a href="#">德语</a>
+</li>
+<li>
+<a href="#">西语</a>
+</li>
+<li>
+<a href="#">俄语</a>
+</li>
+<li>
+<a href="#">日语</a>
+</li>
+<li>
+<a href="#">韩语</a>
+</li>
+<li>
+<a href="#">阿拉伯语</a>
+</li>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">运动</a>
+<ul>
+<li>
+<a href="#">滑板</a>
+</li>
+<li>
+<a href="#">足球</a>
+</li>
+<li>
+<a href="#">篮球</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">经济</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">心理</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">计算机</a>
+<ul>
+<li>
+<a href="#">计算机</a>
+<ul>
+<li>
+<a href="#">编程</a>
+<ul>
+<li>
+<a href="#">C</a>
+</li>
+<li>
+<a href="#">Python</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">软件</a>
+<ul>
+<li>
+<a href="#">AE</a>
+</li>
+<li>
+<a href="'#">C4D</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">数学</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">物理</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">化学</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">生物</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">天文</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">工程</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">电影</a>
+<ul>
+<li>
+<a href="#">电影</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">文学</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">美术</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">音乐</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">哲学</a>
+<ul>
+<li>
+<a href="#">哲学</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">价值观</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#">世界观</a>
+<ul>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+<li>
+<a href="#"></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</div>
+<div style="width: auto; height: 100px;">
+
+</div>
+<div>
+<iframe src="../html/Frame.html" height="720px" width="100%" scrolling="auto" frameborder="0" style="box-shadow: 0px 0px 20px -10px #fff0;" background-colorj="#fffo;">
+</iframe>
+</div>
 ]]></content>
   </entry>
   <entry>
@@ -4034,483 +4505,6 @@ body a:hover{text-decoration:underline}
   </entry>
   <entry>
     <title></title>
-    <url>/film/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-]]></content>
-  </entry>
-  <entry>
-    <title>paint</title>
-    <url>/paint/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-]]></content>
-  </entry>
-  <entry>
-    <title>Life0123</title>
-    <url>/life/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><select name="" onchange="javascript:location.href=this.value;" style="width: 150px; height: 34px; color: #333; background-color: #fff; border-color: rgba(201, 108, 245, 0.575);">
-<option style="background:rgba(151, 210, 238, 0.616)" value="/lifebook/">书籍</option>
-<option style="background:rgba(139, 149, 236, 0.616)" value="/life/">生活0123</option>
-<option style="background:#eb99bb9d" value="/lifeenzh/">名词</option>
-<option style="background:rgba(139, 221, 236, 0.616)" value="/lifetoc/">目录</option>
-</select></p>
-<div style="width: auto; height: 100px;">
-
-</div>
-<div>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="../css/Mycss.css">
-<title>
-Film
-</title>
-</head>
-<body>
-<div class="header">
-<div class="nav">
-<div class="drop-down clearfix">
-<ul>
-<li>
-<a href="#">飛䎅</a>
-<ul>
-<li>
-<a href="#">生活</a>
-<ul>
-<li>
-<a href="./study/notes.html">生活</a>
-</li>
-<li>
-<a href="./study/notes">考级</a>
-</li>
-<li>
-<a href="#">语言</a>
-</li>
-<li>
-<a href="#">运动</a>
-</li>
-<li>
-<a href="#">经济</a>
-</li>
-<li>
-<a href="#">心理</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">计算机</a>
-<ul>
-<li>
-<a href="#">计算机</a>
-</li>
-<li>
-<a href="#">数学</a>
-</li>
-<li>
-<a href="#">物理</a>
-</li>
-<li>
-<a href="#">化学</a>
-</li>
-<li>
-<a href="#">生物</a>
-</li>
-<li>
-<a href="#">天文</a>
-</li>
-<li>
-<a href="#">工程</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">电影</a>
-<ul>
-<li>
-<a href="#">电影</a>
-</li>
-<li>
-<a href="#">文学</a>
-</li>
-<li>
-<a href="#">美术</a>
-</li>
-<li>
-<a href="#">音乐</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">哲学</a>
-<ul>
-<li>
-<a href="#">哲学</a>
-</li>
-<li>
-<a href="#">价值观</a>
-</li>
-<li>
-<a href="#">世界观</a>
-</li>
-<li>
-<a href="#">个人观</a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">生活</a>
-<ul>
-<li>
-<a href="#">生活</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">考级</a>
-<ul>
-<li>
-<a href="#">小学</a>
-</li>
-<li>
-<a href="#">初中</a>
-</li>
-<li>
-<a href="#">高中</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">语言</a>
-<ul>
-<li>
-<a href="#">普通话</a>
-</li>
-<li>
-<a href="#">英语</a>
-</li>
-<li>
-<a href="#">法语</a>
-<ul>
-<li>
-<a href="#">Yuoek</a>
-</li>
-</ul>
-<li>
-<a href="#">德语</a>
-</li>
-<li>
-<a href="#">西语</a>
-</li>
-<li>
-<a href="#">俄语</a>
-</li>
-<li>
-<a href="#">日语</a>
-</li>
-<li>
-<a href="#">韩语</a>
-</li>
-<li>
-<a href="#">阿拉伯语</a>
-</li>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">运动</a>
-<ul>
-<li>
-<a href="#">滑板</a>
-</li>
-<li>
-<a href="#">足球</a>
-</li>
-<li>
-<a href="#">篮球</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">经济</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">心理</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">计算机</a>
-<ul>
-<li>
-<a href="#">计算机</a>
-<ul>
-<li>
-<a href="#">编程</a>
-<ul>
-<li>
-<a href="#">C</a>
-</li>
-<li>
-<a href="#">Python</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">软件</a>
-<ul>
-<li>
-<a href="#">AE</a>
-</li>
-<li>
-<a href="'#">C4D</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">数学</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">物理</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">化学</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">生物</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">天文</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">工程</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">电影</a>
-<ul>
-<li>
-<a href="#">电影</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">文学</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">美术</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">音乐</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">哲学</a>
-<ul>
-<li>
-<a href="#">哲学</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">价值观</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">世界观</a>
-<ul>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-<li>
-<a href="#"></a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</body>
-</div>
-<div style="width: auto; height: 100px;">
-
-</div>
-<div>
-<iframe src="../html/Frame.html" height="720px" width="100%" scrolling="auto" frameborder="0" style="box-shadow: 0px 0px 20px -10px #fff0;" background-colorj="#fffo;">
-</iframe>
-</div>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
     <url>/music/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><table>
 <colgroup>
@@ -4528,11 +4522,11 @@ Film
 <tbody>
 <tr class="odd">
 <td>
-    <div id="aplayer-XpghkSvF" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-AZWNcTSU" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="2097889854" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div></td>
 <td>
-    <div id="aplayer-VuqOdXBp" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-FFpbKtTu" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="5469560397" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div></td>
 <td></td>
@@ -4554,6 +4548,12 @@ Film
 ]]></content>
   </entry>
   <entry>
+    <title>paint</title>
+    <url>/paint/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+]]></content>
+  </entry>
+  <entry>
     <title>poetry</title>
     <url>/poetry/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
@@ -4562,12 +4562,6 @@ Film
   <entry>
     <title>quotes</title>
     <url>/quotes/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-]]></content>
-  </entry>
-  <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
   </entry>
@@ -4593,8 +4587,8 @@ Film
 ]]></content>
   </entry>
   <entry>
-    <title>film</title>
-    <url>/film/zh-CN/film.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
   </entry>
@@ -4613,6 +4607,12 @@ Film
 <span id="more"></span>
 <p>好记性不如烂笔头！</p>
 <p><a href="./notes.html">notes</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>film</title>
+    <url>/film/zh-CN/film.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
 ]]></content>
   </entry>
   <entry>
