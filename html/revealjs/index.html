@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section data-background="#b5533c" data-background-transition="zoom">
+
+					<h2>求解阶乘问题</h2>
+					<ol>
+						<li>迭代方法求解阶乘问题</li>
+						<li>递归方法求解阶乘问题</li>
+					</ol>
+				</section>
+
+					<section id="fragments" data-background="#b5533c" data-background-transition="zoom">
+						<h2><font color=orange>迭代方法求解阶乘问题</font></h2>
+						<p class="fragment">迭代方法是通过循环来逐步计算阶乘的值。</p>
+             <p class="fragment"><font color=yellow>这种方法通常比递归方法更高效，</font>因为它避免了大量的函数调用和栈空间占用。通过不断地调用自身来计算较小数的阶乘，直到达到基本情况（如0的阶乘或1的阶乘）。</p>
+						<p><span class="fragment">在选择计算方法时，需要考虑问题的规模、计算资源的限制以及对性能的要求等因素。</span> </p>
+
+				</section>
+
+				<section data-auto-animate data-background="#b5533c" data-background-transition="zoom">
+					<h2 data-id="code-title">迭代方法求解阶乘问题</h2>
+					<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers="|1,3,14,15|1,2,4,14,15|1-6,14,5|1-10,14,15|1-12,14,15"><script type="text/template">
+          #include <stdio.h>
+
+          int main() {
+              int n, factorial = 1;
+              printf("请输入一个整数: ");
+              scanf("%d", &n);
+
+              for (int i = 1; i <= n; i++) {
+                  factorial *= i;
+              }
+
+              printf("%d 的阶乘是 %d\n", n, factorial);
+
+              return 0;
+          }
+					</script></code></pre>
+				</section>
+
+
+					<section id="fragments" data-background="#4d7e65" data-background-transition="zoom">
+						<h2><font color=orange>递归方法求解阶乘问题</font></h2>
+						<p class="fragment">递归方法是一种自然的计算阶乘的方式,</p>
+						<p class="fragment">通过不断地调用自身来计算较小数的阶乘，直到达到基本情况（如0的阶乘或1的阶乘）。</p>
+						<p class="fragment"><font color=yellow>这种方法简单直观，但可能导致大量的函数调用和栈空间占用</font></p>
+
+				</section>
+
+				<section data-auto-animate data-background="#4d7e65" data-background-transition="zoom">
+					<h2 data-id="code-title">递归方法求解阶乘问题</h2>
+					<pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers="|1,4,14,15|1-7,14,15|1-9,14,5|1-15|18,19,26|20-22,26|23-25,26"><script type="text/template">
+            #include <stdio.h>
+
+
+            int main() {
+                int num;
+                int factorial(int n);
+                int result;
+                printf("请输入一个整数：");
+                scanf("%d", &num);
+
+                result = factorial(num);
+                printf("%d 的阶乘为 %d\n", num, result);
+
+                return 0;
+            }
+
+
+            // 递归函数计算阶乘
+            int factorial(int n) {
+                if (n == 0 || n == 1) {
+                    return 1;
+                }
+                else {
+                    return n * factorial(n - 1);
+                }
+            }
+					</script></code></pre>
+				</section>
+
+				<section data-background-video="./1.mp4">
+				    </section>
+
+				<section data-background-video="./2.mp4">
+				    </section>
+				<section data-background="#4d7e65" data-background-transition="zoom">
+
+					<h2>迭代与递归优缺点对比</h2>
+					<table style="font-size:24px;">
+						<thead>
+							<tr>
+								<th>方法</th>
+								<th>优点</th>
+								<th>缺点</th>
+							</tr>
+						</thead>
+						<tbody>
+              <tr>
+								<td>迭代</td>
+								<td> 没有函数调用的额外开销，效率较高，特别是对于大规模的计算，迭代方法通常比递归方法更快</td>
+								<td>1. 代码可能相对来说不如递归方法那么直观，对于一些人来说，理解和编写迭代代码可能需要更多的思考</td>
+							</tr>
+							<tr>
+								<td>递归</td>
+								<td> 代码简洁直观，逻辑清晰。阶乘的定义本身就具有递归的性质，使用递归方法可以很自然地表达这个问题</td>
+								<td>1. 递归调用会在函数栈中创建多个帧，可能会导致栈溢出错误，特别是当计算的阶乘数值较大时</td>
+							</tr>
+							<tr>
+								<td>总括</td>
+								<td>如果问题的规模较小，并且对代码的简洁性和直观性有较高的要求，那么递归方法可能是一个不错的选择</td>
+								<td>但是，如果需要处理大规模的计算或者对性能要求较高，那么迭代方法通常更为合适</td>
+							</tr></font>
+
+						</tbody>
+					</table>
+				</section>
+				<section style="text-align: center;" data-background="#b5533c" data-background-transition="zoom">
+					<h1>谢谢大家的观看!</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
