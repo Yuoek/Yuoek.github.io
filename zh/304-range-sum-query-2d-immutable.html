@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/fly32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/fly16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/pink/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yuoek.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","width":200,"display":"always","padding":8,"offset":8},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"livere","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="304. Range Sum Query 2D - Immutable 中文文档 Description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="304. Range Sum Query 2D - Immutable">
+<meta property="og:url" content="https://yuoek.github.io/zh/304-range-sum-query-2d-immutable.html">
+<meta property="og:site_name" content="Sophie">
+<meta property="og:description" content="304. Range Sum Query 2D - Immutable 中文文档 Description">
+<meta property="og:locale">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0304.Range%20Sum%20Query%202D%20-%20Immutable/images/sum-grid.jpg">
+<meta property="article:published_time" content="2025-05-05T04:00:09.000Z">
+<meta property="article:modified_time" content="2025-06-21T02:42:32.887Z">
+<meta property="article:author" content="Yuoek">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="Medium">
+<meta property="article:tag" content="Array">
+<meta property="article:tag" content="Design">
+<meta property="article:tag" content="Prefix Sum">
+<meta property="article:tag" content="Matrix">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0304.Range%20Sum%20Query%202D%20-%20Immutable/images/sum-grid.jpg">
+
+
+<link rel="canonical" href="https://yuoek.github.io/zh/304-range-sum-query-2d-immutable.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh","comments":true,"permalink":"https://yuoek.github.io/zh/304-range-sum-query-2d-immutable.html","path":"zh/304-range-sum-query-2d-immutable.html","title":"304. Range Sum Query 2D - Immutable"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>304. Range Sum Query 2D - Immutable | Sophie</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Sophie</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">136</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">35</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">233</span></a></li><li class="menu-item menu-item-life"><a href="/life/" rel="section"><i class="fa fa-happy fa-fw"></i>生活0123</a></li><li class="menu-item menu-item-quotes"><a href="/quotes/" rel="section"><i class="fa fa-pen fa-fw"></i>一言一行</a></li><li class="menu-item menu-item-poetry"><a href="/poetry/" rel="section"><i class="fa fa-book fa-fw"></i>诗歌美文</a></li><li class="menu-item menu-item-paint"><a href="/paint/" rel="section"><i class="fa fa-paint-brush fa-fw"></i>审美绘画</a></li><li class="menu-item menu-item-music"><a href="/music/" rel="section"><i class="fa fa-music fa-fw"></i>声音乐章</a></li><li class="menu-item menu-item-film"><a href="/film/" rel="section"><i class="fa fa-film fa-fw"></i>光影视听</a></li><li class="menu-item menu-item-switch_lang"><a href="/en" rel="section"><i class="fa fa-language fa-fw"></i>switch_lang</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          Yuoek部屋
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#range-sum-query-2d---immutable"><span class="nav-number">1.</span> <span class="nav-text">304.
+Range Sum Query 2D - Immutable</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#description"><span class="nav-number">1.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solutions"><span class="nav-number">1.2.</span> <span class="nav-text">Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#solution-1-two-dimensional-prefix-sum"><span class="nav-number">1.2.1.</span> <span class="nav-text">Solution 1:
+Two-dimensional Prefix Sum</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#python3"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">Python3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">Java</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">C++</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#go"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">Go</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#typescript"><span class="nav-number">1.2.1.5.</span> <span class="nav-text">TypeScript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rust"><span class="nav-number">1.2.1.6.</span> <span class="nav-text">Rust</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#javascript"><span class="nav-number">1.2.1.7.</span> <span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#kotlin"><span class="nav-number">1.2.1.8.</span> <span class="nav-text">Kotlin</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yuoek"
+      src="/images/fly512.png">
+  <p class="site-author-name" itemprop="name">Yuoek</p>
+  <div class="site-description" itemprop="description">遇光见影, 遇你见爱</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">233</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">136</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jeanyng" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jeanyng" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2055048783@qq.com" title="E-Mail → mailto:2055048783@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+	  <br>
+	   <br>
+	   <p>
+	   <br>
+	   </p>
+	   <p style="margin-top: 0px; margin-bottom: 0px; color:#ff013c; font-size: 14px;">💮一上一上又一上🌸</p>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh">
+    <link itemprop="mainEntityOfPage" href="https://yuoek.github.io/zh/304-range-sum-query-2d-immutable.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/fly512.png">
+      <meta itemprop="name" content="Yuoek">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sophie">
+      <meta itemprop="description" content="遇光见影, 遇你见爱">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="304. Range Sum Query 2D - Immutable | Sophie">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          304. Range Sum Query 2D - Immutable
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-05-05 12:00:09" itemprop="dateCreated datePublished" datetime="2025-05-05T12:00:09+08:00">2025-05-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-21 10:42:32" itemprop="dateModified" datetime="2025-06-21T10:42:32+08:00">2025-06-21</time>
+    </span>
+
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <!-- problem:start -->
+<h1 id="range-sum-query-2d---immutable"><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/range-sum-query-2d-immutable">304.
+Range Sum Query 2D - Immutable</a></h1>
+<p><a
+href="/solution/0300-0399/0304.Range%20Sum%20Query%202D%20-%20Immutable/README.md">中文文档</a></p>
+<h2 id="description">Description</h2>
+<span id="more"></span>
+
+
+<p>Given a 2D matrix <code>matrix</code>, handle multiple queries of the following type:</p>
+
+<ul>
+	<li>Calculate the <strong>sum</strong> of the elements of <code>matrix</code> inside the rectangle defined by its <strong>upper left corner</strong> <code>(row1, col1)</code> and <strong>lower right corner</strong> <code>(row2, col2)</code>.</li>
+</ul>
+
+<p>Implement the <code>NumMatrix</code> class:</p>
+
+<ul>
+	<li><code>NumMatrix(int[][] matrix)</code> Initializes the object with the integer matrix <code>matrix</code>.</li>
+	<li><code>int sumRegion(int row1, int col1, int row2, int col2)</code> Returns the <strong>sum</strong> of the elements of <code>matrix</code> inside the rectangle defined by its <strong>upper left corner</strong> <code>(row1, col1)</code> and <strong>lower right corner</strong> <code>(row2, col2)</code>.</li>
+</ul>
+
+<p>You must design an algorithm where <code>sumRegion</code> works on <code>O(1)</code> time complexity.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<img alt="" src="/images/loading/loading.gif" data-original="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/0300-0399/0304.Range%20Sum%20Query%202D%20-%20Immutable/images/sum-grid.jpg" style="width: 415px; height: 415px;" />
+<pre>
+<strong>Input</strong>
+[&quot;NumMatrix&quot;, &quot;sumRegion&quot;, &quot;sumRegion&quot;, &quot;sumRegion&quot;]
+[[[[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]], [2, 1, 4, 3], [1, 1, 2, 2], [1, 2, 2, 4]]
+<strong>Output</strong>
+[null, 8, 11, 12]
+
+<strong>Explanation</strong>
+NumMatrix numMatrix = new NumMatrix([[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]);
+numMatrix.sumRegion(2, 1, 4, 3); // return 8 (i.e sum of the red rectangle)
+numMatrix.sumRegion(1, 1, 2, 2); // return 11 (i.e sum of the green rectangle)
+numMatrix.sumRegion(1, 2, 2, 4); // return 12 (i.e sum of the blue rectangle)
+
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>m == matrix.length</code></li>
+	<li><code>n == matrix[i].length</code></li>
+	<li><code>1 &lt;= m, n &lt;= 200</code></li>
+	<li><code>-10<sup>4</sup> &lt;= matrix[i][j] &lt;= 10<sup>4</sup></code></li>
+	<li><code>0 &lt;= row1 &lt;= row2 &lt; m</code></li>
+	<li><code>0 &lt;= col1 &lt;= col2 &lt; n</code></li>
+	<li>At most <code>10<sup>4</sup></code> calls will be made to <code>sumRegion</code>.</li>
+</ul>
+
+
+<h2 id="solutions">Solutions</h2>
+<!-- solution:start -->
+<h3 id="solution-1-two-dimensional-prefix-sum">Solution 1:
+Two-dimensional Prefix Sum</h3>
+<p>We use <span class="math inline">\(s[i + 1][j + 1]\)</span> to
+represent the sum of all elements in the upper left part of the <span
+class="math inline">\(i\)</span>th row and <span
+class="math inline">\(j\)</span>th column, where indices <span
+class="math inline">\(i\)</span> and <span
+class="math inline">\(j\)</span> both start from <span
+class="math inline">\(0\)</span>. We can get the following prefix sum
+formula:</p>
+<p><span class="math display">\[
+s[i + 1][j + 1] = s[i + 1][j] + s[i][j + 1] - s[i][j] + nums[i][j]
+\]</span></p>
+<p>Then, the sum of the elements of the rectangle with <span
+class="math inline">\((x_1, y_1)\)</span> and <span
+class="math inline">\((x_2, y_2)\)</span> as the upper left corner and
+lower right corner respectively is:</p>
+<p><span class="math display">\[
+s[x_2 + 1][y_2 + 1] - s[x_2 + 1][y_1] - s[x_1][y_2 + 1] + s[x_1][y_1]
+\]</span></p>
+<p>In the initialization method, we preprocess the prefix sum array
+<span class="math inline">\(s\)</span>, and in the query method, we
+directly return the result of the above formula.</p>
+<p>The time complexity for initializing is <span
+class="math inline">\(O(m \times n)\)</span>, and the time complexity
+for querying is <span class="math inline">\(O(1)\)</span>. The space
+complexity is <span class="math inline">\(O(m \times n)\)</span>.</p>
+<!-- tabs:start -->
+<h4 id="python3">Python3</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">NumMatrix</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, matrix: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>):</span><br><span class="line">        m, n = <span class="built_in">len</span>(matrix), <span class="built_in">len</span>(matrix[<span class="number">0</span>])</span><br><span class="line">        self.s = [[<span class="number">0</span>] * (n + <span class="number">1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(m + <span class="number">1</span>)]</span><br><span class="line">        <span class="keyword">for</span> i, row <span class="keyword">in</span> <span class="built_in">enumerate</span>(matrix):</span><br><span class="line">            <span class="keyword">for</span> j, v <span class="keyword">in</span> <span class="built_in">enumerate</span>(row):</span><br><span class="line">                self.s[i + <span class="number">1</span>][j + <span class="number">1</span>] = (</span><br><span class="line">                    self.s[i][j + <span class="number">1</span>] + self.s[i + <span class="number">1</span>][j] - self.s[i][j] + v</span><br><span class="line">                )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">sumRegion</span>(<span class="params">self, row1: <span class="built_in">int</span>, col1: <span class="built_in">int</span>, row2: <span class="built_in">int</span>, col2: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            self.s[row2 + <span class="number">1</span>][col2 + <span class="number">1</span>]</span><br><span class="line">            - self.s[row2 + <span class="number">1</span>][col1]</span><br><span class="line">            - self.s[row1][col2 + <span class="number">1</span>]</span><br><span class="line">            + self.s[row1][col1]</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Your NumMatrix object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"># obj = NumMatrix(matrix)</span></span><br><span class="line"><span class="comment"># param_1 = obj.sumRegion(row1,col1,row2,col2)</span></span><br></pre></td></tr></table></figure>
+<h4 id="java">Java</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">NumMatrix</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[][] s;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">NumMatrix</span><span class="params">(<span class="type">int</span>[][] matrix)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">m</span> <span class="operator">=</span> matrix.length, n = matrix[<span class="number">0</span>].length;</span><br><span class="line">        s = <span class="keyword">new</span> <span class="title class_">int</span>[m + <span class="number">1</span>][n + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                s[i + <span class="number">1</span>][j + <span class="number">1</span>] = s[i + <span class="number">1</span>][j] + s[i][j + <span class="number">1</span>] - s[i][j] + matrix[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">sumRegion</span><span class="params">(<span class="type">int</span> row1, <span class="type">int</span> col1, <span class="type">int</span> row2, <span class="type">int</span> col2)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> s[row2 + <span class="number">1</span>][col2 + <span class="number">1</span>] - s[row2 + <span class="number">1</span>][col1] - s[row1][col2 + <span class="number">1</span>] + s[row1][col1];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your NumMatrix object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * NumMatrix obj = new NumMatrix(matrix);</span></span><br><span class="line"><span class="comment"> * int param_1 = obj.sumRegion(row1,col1,row2,col2);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<h4 id="c">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">NumMatrix</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; s;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">NumMatrix</span>(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; matrix) &#123;</span><br><span class="line">        <span class="type">int</span> m = matrix.<span class="built_in">size</span>(), n = matrix[<span class="number">0</span>].<span class="built_in">size</span>();</span><br><span class="line">        s.<span class="built_in">resize</span>(m + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n + <span class="number">1</span>));</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                s[i + <span class="number">1</span>][j + <span class="number">1</span>] = s[i + <span class="number">1</span>][j] + s[i][j + <span class="number">1</span>] - s[i][j] + matrix[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumRegion</span><span class="params">(<span class="type">int</span> row1, <span class="type">int</span> col1, <span class="type">int</span> row2, <span class="type">int</span> col2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> s[row2 + <span class="number">1</span>][col2 + <span class="number">1</span>] - s[row2 + <span class="number">1</span>][col1] - s[row1][col2 + <span class="number">1</span>] + s[row1][col1];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your NumMatrix object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * NumMatrix* obj = new NumMatrix(matrix);</span></span><br><span class="line"><span class="comment"> * int param_1 = obj-&gt;sumRegion(row1,col1,row2,col2);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<h4 id="go">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> NumMatrix <span class="keyword">struct</span> &#123;</span><br><span class="line">	s [][]<span class="type">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Constructor</span><span class="params">(matrix [][]<span class="type">int</span>)</span></span> NumMatrix &#123;</span><br><span class="line">	m, n := <span class="built_in">len</span>(matrix), <span class="built_in">len</span>(matrix[<span class="number">0</span>])</span><br><span class="line">	s := <span class="built_in">make</span>([][]<span class="type">int</span>, m+<span class="number">1</span>)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="keyword">range</span> s &#123;</span><br><span class="line">		s[i] = <span class="built_in">make</span>([]<span class="type">int</span>, n+<span class="number">1</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> i, row := <span class="keyword">range</span> matrix &#123;</span><br><span class="line">		<span class="keyword">for</span> j, v := <span class="keyword">range</span> row &#123;</span><br><span class="line">			s[i+<span class="number">1</span>][j+<span class="number">1</span>] = s[i+<span class="number">1</span>][j] + s[i][j+<span class="number">1</span>] - s[i][j] + v</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> NumMatrix&#123;s&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(this *NumMatrix)</span></span> SumRegion(row1 <span class="type">int</span>, col1 <span class="type">int</span>, row2 <span class="type">int</span>, col2 <span class="type">int</span>) <span class="type">int</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> this.s[row2+<span class="number">1</span>][col2+<span class="number">1</span>] - this.s[row2+<span class="number">1</span>][col1] - this.s[row1][col2+<span class="number">1</span>] + this.s[row1][col1]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your NumMatrix object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * obj := Constructor(matrix);</span></span><br><span class="line"><span class="comment"> * param_1 := obj.SumRegion(row1,col1,row2,col2);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<h4 id="typescript">TypeScript</h4>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">NumMatrix</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="attr">s</span>: <span class="built_in">number</span>[][];</span><br><span class="line"></span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">matrix: <span class="built_in">number</span>[][]</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> m = matrix.<span class="property">length</span>;</span><br><span class="line">        <span class="keyword">const</span> n = matrix[<span class="number">0</span>].<span class="property">length</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">s</span> = <span class="keyword">new</span> <span class="title class_">Array</span>(m + <span class="number">1</span>).<span class="title function_">fill</span>(<span class="number">0</span>).<span class="title function_">map</span>(<span class="function">() =&gt;</span> <span class="keyword">new</span> <span class="title class_">Array</span>(n + <span class="number">1</span>).<span class="title function_">fill</span>(<span class="number">0</span>));</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">s</span>[i + <span class="number">1</span>][j + <span class="number">1</span>] =</span><br><span class="line">                    <span class="variable language_">this</span>.<span class="property">s</span>[i + <span class="number">1</span>][j] + <span class="variable language_">this</span>.<span class="property">s</span>[i][j + <span class="number">1</span>] - <span class="variable language_">this</span>.<span class="property">s</span>[i][j] + matrix[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">sumRegion</span>(<span class="attr">row1</span>: <span class="built_in">number</span>, <span class="attr">col1</span>: <span class="built_in">number</span>, <span class="attr">row2</span>: <span class="built_in">number</span>, <span class="attr">col2</span>: <span class="built_in">number</span>): <span class="built_in">number</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">s</span>[row2 + <span class="number">1</span>][col2 + <span class="number">1</span>] -</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">s</span>[row2 + <span class="number">1</span>][col1] -</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">s</span>[row1][col2 + <span class="number">1</span>] +</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">s</span>[row1][col1]</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your NumMatrix object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * var obj = new NumMatrix(matrix)</span></span><br><span class="line"><span class="comment"> * var param_1 = obj.sumRegion(row1,col1,row2,col2)</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<h4 id="rust">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your NumMatrix object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * let obj = NumMatrix::new(matrix);</span></span><br><span class="line"><span class="comment"> * let ret_1: i32 = obj.sum_region(row1, col1, row2, col2);</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">NumMatrix</span> &#123;</span><br><span class="line">    <span class="comment">// Of size (N + 1) * (M + 1)</span></span><br><span class="line">    prefix_vec: <span class="type">Vec</span>&lt;<span class="type">Vec</span>&lt;<span class="type">i32</span>&gt;&gt;,</span><br><span class="line">    n: <span class="type">usize</span>,</span><br><span class="line">    m: <span class="type">usize</span>,</span><br><span class="line">    is_initialized: <span class="type">bool</span>,</span><br><span class="line">    ref_vec: <span class="type">Vec</span>&lt;<span class="type">Vec</span>&lt;<span class="type">i32</span>&gt;&gt;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * `&amp;self` means the method takes an immutable reference.</span></span><br><span class="line"><span class="comment"> * If you need a mutable reference, change it to `&amp;mut self` instead.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">NumMatrix</span> &#123;</span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">new</span>(matrix: <span class="type">Vec</span>&lt;<span class="type">Vec</span>&lt;<span class="type">i32</span>&gt;&gt;) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> &#123;</span><br><span class="line">        NumMatrix &#123;</span><br><span class="line">            prefix_vec: <span class="built_in">vec!</span>[<span class="built_in">vec!</span>[<span class="number">0</span>; matrix[<span class="number">0</span>].<span class="title function_ invoke__">len</span>() + <span class="number">1</span>]; matrix.<span class="title function_ invoke__">len</span>() + <span class="number">1</span>],</span><br><span class="line">            n: matrix.<span class="title function_ invoke__">len</span>(),</span><br><span class="line">            m: matrix[<span class="number">0</span>].<span class="title function_ invoke__">len</span>(),</span><br><span class="line">            is_initialized: <span class="literal">false</span>,</span><br><span class="line">            ref_vec: matrix,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">sum_region</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, row1: <span class="type">i32</span>, col1: <span class="type">i32</span>, row2: <span class="type">i32</span>, col2: <span class="type">i32</span>) <span class="punctuation">-&gt;</span> <span class="type">i32</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> !<span class="keyword">self</span>.is_initialized &#123;</span><br><span class="line">            <span class="keyword">self</span>.<span class="title function_ invoke__">initialize_prefix_vec</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// Since i32 will let `rustc` complain, just make it happy</span></span><br><span class="line">        <span class="keyword">let</span> <span class="variable">row1</span>: <span class="type">usize</span> = row1 <span class="keyword">as</span> <span class="type">usize</span>;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">col1</span>: <span class="type">usize</span> = col1 <span class="keyword">as</span> <span class="type">usize</span>;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">row2</span>: <span class="type">usize</span> = row2 <span class="keyword">as</span> <span class="type">usize</span>;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">col2</span>: <span class="type">usize</span> = col2 <span class="keyword">as</span> <span class="type">usize</span>;</span><br><span class="line">        <span class="comment">// Return the value in O(1)</span></span><br><span class="line">        <span class="keyword">self</span>.prefix_vec[row2 + <span class="number">1</span>][col2 + <span class="number">1</span>]</span><br><span class="line">            - <span class="keyword">self</span>.prefix_vec[row2 + <span class="number">1</span>][col1]</span><br><span class="line">            - <span class="keyword">self</span>.prefix_vec[row1][col2 + <span class="number">1</span>]</span><br><span class="line">            + <span class="keyword">self</span>.prefix_vec[row1][col1]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">fn</span> <span class="title function_">initialize_prefix_vec</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>) &#123;</span><br><span class="line">        <span class="comment">// Initialize the prefix sum vector</span></span><br><span class="line">        <span class="keyword">for</span> <span class="variable">i</span> <span class="keyword">in</span> <span class="number">0</span>..<span class="keyword">self</span>.n &#123;</span><br><span class="line">            <span class="keyword">for</span> <span class="variable">j</span> <span class="keyword">in</span> <span class="number">0</span>..<span class="keyword">self</span>.m &#123;</span><br><span class="line">                <span class="keyword">self</span>.prefix_vec[i + <span class="number">1</span>][j + <span class="number">1</span>] =</span><br><span class="line">                    <span class="keyword">self</span>.prefix_vec[i][j + <span class="number">1</span>] + <span class="keyword">self</span>.prefix_vec[i + <span class="number">1</span>][j] - <span class="keyword">self</span>.prefix_vec[i][j]</span><br><span class="line">                        + <span class="keyword">self</span>.ref_vec[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">self</span>.is_initialized = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="javascript">JavaScript</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[][]</span>&#125; <span class="variable">matrix</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">NumMatrix</span> = <span class="keyword">function</span> (<span class="params">matrix</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> m = matrix.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">const</span> n = matrix[<span class="number">0</span>].<span class="property">length</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">s</span> = <span class="keyword">new</span> <span class="title class_">Array</span>(m + <span class="number">1</span>).<span class="title function_">fill</span>(<span class="number">0</span>).<span class="title function_">map</span>(<span class="function">() =&gt;</span> <span class="keyword">new</span> <span class="title class_">Array</span>(n + <span class="number">1</span>).<span class="title function_">fill</span>(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">s</span>[i + <span class="number">1</span>][j + <span class="number">1</span>] =</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">s</span>[i + <span class="number">1</span>][j] + <span class="variable language_">this</span>.<span class="property">s</span>[i][j + <span class="number">1</span>] - <span class="variable language_">this</span>.<span class="property">s</span>[i][j] + matrix[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">row1</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">col1</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">row2</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">col2</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="title class_">NumMatrix</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">sumRegion</span> = <span class="keyword">function</span> (<span class="params">row1, col1, row2, col2</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">s</span>[row2 + <span class="number">1</span>][col2 + <span class="number">1</span>] -</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">s</span>[row2 + <span class="number">1</span>][col1] -</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">s</span>[row1][col2 + <span class="number">1</span>] +</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">s</span>[row1][col1]</span><br><span class="line">    );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your NumMatrix object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * var obj = new NumMatrix(matrix)</span></span><br><span class="line"><span class="comment"> * var param_1 = obj.sumRegion(row1,col1,row2,col2)</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<h4 id="kotlin">Kotlin</h4>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">NumMatrix</span>(matrix: Array&lt;IntArray&gt;) &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> n: <span class="built_in">Int</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> m: <span class="built_in">Int</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> matrix: Array&lt;IntArray&gt;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> prefix_sums_matrix: Array&lt;IntArray&gt;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> initialized: <span class="built_in">Boolean</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">init</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.n = matrix.size</span><br><span class="line">        <span class="keyword">this</span>.m = matrix[<span class="number">0</span>].size</span><br><span class="line">        <span class="keyword">this</span>.matrix = matrix</span><br><span class="line">        <span class="keyword">this</span>.prefix_sums_matrix = Array(n + <span class="number">1</span>) &#123; IntArray(m + <span class="number">1</span>) &#125;</span><br><span class="line">        <span class="keyword">this</span>.initialized = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">sumRegion</span><span class="params">(row1: <span class="type">Int</span>, col1: <span class="type">Int</span>, row2: <span class="type">Int</span>, col2: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.<span class="keyword">init</span>()</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.prefix_sums_matrix[row2 + <span class="number">1</span>][col2 + <span class="number">1</span>] -</span><br><span class="line">            <span class="keyword">this</span>.prefix_sums_matrix[row2 + <span class="number">1</span>][col1] -</span><br><span class="line">            <span class="keyword">this</span>.prefix_sums_matrix[row1][col2 + <span class="number">1</span>] +</span><br><span class="line">            <span class="keyword">this</span>.prefix_sums_matrix[row1][col1]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">init</span><span class="params">()</span></span>: <span class="built_in">Boolean</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>.initialized) &#123;</span><br><span class="line">            <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">0.</span>.&lt;<span class="keyword">this</span>.n) &#123;</span><br><span class="line">                <span class="keyword">for</span> (j <span class="keyword">in</span> <span class="number">0.</span>.&lt;<span class="keyword">this</span>.m) &#123;</span><br><span class="line">                    <span class="keyword">this</span>.prefix_sums_matrix[i + <span class="number">1</span>][j + <span class="number">1</span>] =</span><br><span class="line">                        <span class="keyword">this</span>.prefix_sums_matrix[i + <span class="number">1</span>][j] +</span><br><span class="line">                        <span class="keyword">this</span>.prefix_sums_matrix[i][j + <span class="number">1</span>] -</span><br><span class="line">                        <span class="keyword">this</span>.prefix_sums_matrix[i][j] +</span><br><span class="line">                        <span class="keyword">this</span>.matrix[i][j]</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">this</span>.initialized = <span class="literal">true</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your NumMatrix object will be instantiated and called as such: var obj = NumMatrix(matrix) var</span></span><br><span class="line"><span class="comment"> * param_1 = obj.sumRegion(row1,col1,row2,col2)</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<!-- tabs:end -->
+<!-- solution:end -->
+<!-- problem:end -->
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/Medium/" rel="tag"># Medium</a>
+              <a href="/tags/Array/" rel="tag"># Array</a>
+              <a href="/tags/Design/" rel="tag"># Design</a>
+              <a href="/tags/Prefix-Sum/" rel="tag"># Prefix Sum</a>
+              <a href="/tags/Matrix/" rel="tag"># Matrix</a>
+          </div>
+
+        
+
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/zh/304-%E4%BA%8C%E7%BB%B4%E5%8C%BA%E5%9F%9F%E5%92%8C%E6%A3%80%E7%B4%A2-%E7%9F%A9%E9%98%B5%E4%B8%8D%E5%8F%AF%E5%8F%98.html" rel="prev" title="304. 二维区域和检索 - 矩阵不可变">
+                  <i class="fa fa-chevron-left"></i> 304. 二维区域和检索 - 矩阵不可变
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/zh/305-%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F-ii-%F0%9F%94%92.html" rel="next" title="305. 岛屿数量 II 🔒">
+                  305. 岛屿数量 II 🔒 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+	
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class=""></i>
+  </span>
+  
+  <span class="author" itemprop="copyrightHolder">Yuoek</span>
+  
+</div><script color="255,165,0" opacity="0.7" zIndex="-2" count="110" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.7/pdfobject.min.js","integrity":"sha256-ph3Dk89VmuTVXG6x/RDzk53SU9LPdAh1tpv0UvnDZ2I="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js","integrity":"sha256-7wT34TI0pEBeEFoi4z+vhuSddGh6vUTMWdqJ2SDe2jg="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+
+<canvas
+    id="background"
+    style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1"
+></canvas>
+<script src="/js/background.js"></script>
+
+<canvas
+    id="fireworks"
+    style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:2147483647"
+></canvas>
+<script src="/js/fireworks.js"></script>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: true,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+</html>

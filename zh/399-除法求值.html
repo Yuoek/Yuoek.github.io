@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/fly32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/fly16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/pink/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yuoek.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","width":200,"display":"always","padding":8,"offset":8},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"livere","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="399. 除法求值 English Version 题目描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="399. 除法求值">
+<meta property="og:url" content="https://yuoek.github.io/zh/399-%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC.html">
+<meta property="og:site_name" content="Sophie">
+<meta property="og:description" content="399. 除法求值 English Version 题目描述">
+<meta property="og:locale">
+<meta property="article:published_time" content="2025-05-05T04:03:18.000Z">
+<meta property="article:modified_time" content="2025-06-21T02:42:33.251Z">
+<meta property="article:author" content="Yuoek">
+<meta property="article:tag" content="广度优先搜索">
+<meta property="article:tag" content="字符串">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="中等">
+<meta property="article:tag" content="数组">
+<meta property="article:tag" content="深度优先搜索">
+<meta property="article:tag" content="并查集">
+<meta property="article:tag" content="图">
+<meta property="article:tag" content="最短路">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yuoek.github.io/zh/399-%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh","comments":true,"permalink":"https://yuoek.github.io/zh/399-%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC.html","path":"zh/399-除法求值.html","title":"399. 除法求值"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>399. 除法求值 | Sophie</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Sophie</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">136</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">35</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">233</span></a></li><li class="menu-item menu-item-life"><a href="/life/" rel="section"><i class="fa fa-happy fa-fw"></i>生活0123</a></li><li class="menu-item menu-item-quotes"><a href="/quotes/" rel="section"><i class="fa fa-pen fa-fw"></i>一言一行</a></li><li class="menu-item menu-item-poetry"><a href="/poetry/" rel="section"><i class="fa fa-book fa-fw"></i>诗歌美文</a></li><li class="menu-item menu-item-paint"><a href="/paint/" rel="section"><i class="fa fa-paint-brush fa-fw"></i>审美绘画</a></li><li class="menu-item menu-item-music"><a href="/music/" rel="section"><i class="fa fa-music fa-fw"></i>声音乐章</a></li><li class="menu-item menu-item-film"><a href="/film/" rel="section"><i class="fa fa-film fa-fw"></i>光影视听</a></li><li class="menu-item menu-item-switch_lang"><a href="/en" rel="section"><i class="fa fa-language fa-fw"></i>switch_lang</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          Yuoek部屋
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC"><span class="nav-number">1.</span> <span class="nav-text">399.
+除法求值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">解法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-number">1.2.1.</span> <span class="nav-text">方法一</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#python3"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">Python3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">Java</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">C++</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#go"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">Go</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rust"><span class="nav-number">1.2.1.5.</span> <span class="nav-text">Rust</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#typescript"><span class="nav-number">1.2.1.6.</span> <span class="nav-text">TypeScript</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yuoek"
+      src="/images/fly512.png">
+  <p class="site-author-name" itemprop="name">Yuoek</p>
+  <div class="site-description" itemprop="description">遇光见影, 遇你见爱</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">233</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">136</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jeanyng" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jeanyng" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2055048783@qq.com" title="E-Mail → mailto:2055048783@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+	  <br>
+	   <br>
+	   <p>
+	   <br>
+	   </p>
+	   <p style="margin-top: 0px; margin-bottom: 0px; color:#ff013c; font-size: 14px;">💮一上一上又一上🌸</p>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh">
+    <link itemprop="mainEntityOfPage" href="https://yuoek.github.io/zh/399-%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/fly512.png">
+      <meta itemprop="name" content="Yuoek">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sophie">
+      <meta itemprop="description" content="遇光见影, 遇你见爱">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="399. 除法求值 | Sophie">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          399. 除法求值
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-05-05 12:03:18" itemprop="dateCreated datePublished" datetime="2025-05-05T12:03:18+08:00">2025-05-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-21 10:42:33" itemprop="dateModified" datetime="2025-06-21T10:42:33+08:00">2025-06-21</time>
+    </span>
+
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <!-- problem:start -->
+<h1 id="除法求值"><a
+target="_blank" rel="noopener" href="https://leetcode.cn/problems/evaluate-division">399.
+除法求值</a></h1>
+<p><a
+href="/solution/0300-0399/0399.Evaluate%20Division/README_EN.md">English
+Version</a></p>
+<h2 id="题目描述">题目描述</h2>
+<span id="more"></span>
+
+
+<p>给你一个变量对数组 <code>equations</code> 和一个实数值数组 <code>values</code> 作为已知条件，其中 <code>equations[i] = [A<sub>i</sub>, B<sub>i</sub>]</code> 和 <code>values[i]</code> 共同表示等式 <code>A<sub>i</sub> / B<sub>i</sub> = values[i]</code> 。每个 <code>A<sub>i</sub></code> 或 <code>B<sub>i</sub></code> 是一个表示单个变量的字符串。</p>
+
+<p>另有一些以数组 <code>queries</code> 表示的问题，其中 <code>queries[j] = [C<sub>j</sub>, D<sub>j</sub>]</code> 表示第 <code>j</code> 个问题，请你根据已知条件找出 <code>C<sub>j</sub> / D<sub>j</sub> = ?</code> 的结果作为答案。</p>
+
+<p>返回 <strong>所有问题的答案</strong> 。如果存在某个无法确定的答案，则用 <code>-1.0</code> 替代这个答案。如果问题中出现了给定的已知条件中没有出现的字符串，也需要用 <code>-1.0</code> 替代这个答案。</p>
+
+<p><strong>注意：</strong>输入总是有效的。你可以假设除法运算中不会出现除数为 0 的情况，且不存在任何矛盾的结果。</p>
+
+<p><strong>注意：</strong>未在等式列表中出现的变量是未定义的，因此无法确定它们的答案。</p>
+
+<p>&nbsp;</p>
+
+<p><strong class="example">示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>equations = [["a","b"],["b","c"]], values = [2.0,3.0], queries = [["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]]
+<strong>输出：</strong>[6.00000,0.50000,-1.00000,1.00000,-1.00000]
+<strong>解释：</strong>
+条件：<em>a / b = 2.0</em>, <em>b / c = 3.0</em>
+问题：<em>a / c = ?</em>, <em>b / a = ?</em>, <em>a / e = ?</em>, <em>a / a = ?</em>, <em>x / x = ?</em>
+结果：[6.0, 0.5, -1.0, 1.0, -1.0 ]
+注意：x 是未定义的 =&gt; -1.0</pre>
+
+<p><strong class="example">示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>equations = [["a","b"],["b","c"],["bc","cd"]], values = [1.5,2.5,5.0], queries = [["a","c"],["c","b"],["bc","cd"],["cd","bc"]]
+<strong>输出：</strong>[3.75000,0.40000,5.00000,0.20000]
+</pre>
+
+<p><strong class="example">示例 3：</strong></p>
+
+<pre>
+<strong>输入：</strong>equations = [["a","b"]], values = [0.5], queries = [["a","b"],["b","a"],["a","c"],["x","y"]]
+<strong>输出：</strong>[0.50000,2.00000,-1.00000,-1.00000]
+</pre>
+
+<p>&nbsp;</p>
+
+<p><strong>提示：</strong></p>
+
+<ul>
+	<li><code>1 &lt;= equations.length &lt;= 20</code></li>
+	<li><code>equations[i].length == 2</code></li>
+	<li><code>1 &lt;= A<sub>i</sub>.length, B<sub>i</sub>.length &lt;= 5</code></li>
+	<li><code>values.length == equations.length</code></li>
+	<li><code>0.0 &lt; values[i] &lt;= 20.0</code></li>
+	<li><code>1 &lt;= queries.length &lt;= 20</code></li>
+	<li><code>queries[i].length == 2</code></li>
+	<li><code>1 &lt;= C<sub>j</sub>.length, D<sub>j</sub>.length &lt;= 5</code></li>
+	<li><code>A<sub>i</sub>, B<sub>i</sub>, C<sub>j</sub>, D<sub>j</sub></code> 由小写英文字母与数字组成</li>
+</ul>
+
+
+<h2 id="解法">解法</h2>
+<!-- solution:start -->
+<h3 id="方法一">方法一</h3>
+<!-- tabs:start -->
+<h4 id="python3">Python3</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">calcEquation</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self, equations: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">str</span>]], values: <span class="type">List</span>[<span class="built_in">float</span>], queries: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">str</span>]]</span></span><br><span class="line"><span class="params">    </span>) -&gt; <span class="type">List</span>[<span class="built_in">float</span>]:</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">find</span>(<span class="params">x</span>):</span><br><span class="line">            <span class="keyword">if</span> p[x] != x:</span><br><span class="line">                origin = p[x]</span><br><span class="line">                p[x] = find(p[x])</span><br><span class="line">                w[x] *= w[origin]</span><br><span class="line">            <span class="keyword">return</span> p[x]</span><br><span class="line"></span><br><span class="line">        w = defaultdict(<span class="keyword">lambda</span>: <span class="number">1</span>)</span><br><span class="line">        p = defaultdict()</span><br><span class="line">        <span class="keyword">for</span> a, b <span class="keyword">in</span> equations:</span><br><span class="line">            p[a], p[b] = a, b</span><br><span class="line">        <span class="keyword">for</span> i, v <span class="keyword">in</span> <span class="built_in">enumerate</span>(values):</span><br><span class="line">            a, b = equations[i]</span><br><span class="line">            pa, pb = find(a), find(b)</span><br><span class="line">            <span class="keyword">if</span> pa == pb:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            p[pa] = pb</span><br><span class="line">            w[pa] = w[b] * v / w[a]</span><br><span class="line">        <span class="keyword">return</span> [</span><br><span class="line">            -<span class="number">1</span> <span class="keyword">if</span> c <span class="keyword">not</span> <span class="keyword">in</span> p <span class="keyword">or</span> d <span class="keyword">not</span> <span class="keyword">in</span> p <span class="keyword">or</span> find(c) != find(d) <span class="keyword">else</span> w[c] / w[d]</span><br><span class="line">            <span class="keyword">for</span> c, d <span class="keyword">in</span> queries</span><br><span class="line">        ]</span><br></pre></td></tr></table></figure>
+<h4 id="java">Java</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Map&lt;String, String&gt; p;</span><br><span class="line">    <span class="keyword">private</span> Map&lt;String, Double&gt; w;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span>[] calcEquation(</span><br><span class="line">        List&lt;List&lt;String&gt;&gt; equations, <span class="type">double</span>[] values, List&lt;List&lt;String&gt;&gt; queries) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> equations.size();</span><br><span class="line">        p = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        w = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (List&lt;String&gt; e : equations) &#123;</span><br><span class="line">            p.put(e.get(<span class="number">0</span>), e.get(<span class="number">0</span>));</span><br><span class="line">            p.put(e.get(<span class="number">1</span>), e.get(<span class="number">1</span>));</span><br><span class="line">            w.put(e.get(<span class="number">0</span>), <span class="number">1.0</span>);</span><br><span class="line">            w.put(e.get(<span class="number">1</span>), <span class="number">1.0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            List&lt;String&gt; e = equations.get(i);</span><br><span class="line">            <span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> e.get(<span class="number">0</span>), b = e.get(<span class="number">1</span>);</span><br><span class="line">            <span class="type">String</span> <span class="variable">pa</span> <span class="operator">=</span> find(a), pb = find(b);</span><br><span class="line">            <span class="keyword">if</span> (Objects.equals(pa, pb)) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            p.put(pa, pb);</span><br><span class="line">            w.put(pa, w.get(b) * values[i] / w.get(a));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">m</span> <span class="operator">=</span> queries.size();</span><br><span class="line">        <span class="type">double</span>[] ans = <span class="keyword">new</span> <span class="title class_">double</span>[m];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> queries.get(i).get(<span class="number">0</span>), d = queries.get(i).get(<span class="number">1</span>);</span><br><span class="line">            ans[i] = !p.containsKey(c) || !p.containsKey(d) || !Objects.equals(find(c), find(d))</span><br><span class="line">                ? -<span class="number">1.0</span></span><br><span class="line">                : w.get(c) / w.get(d);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String <span class="title function_">find</span><span class="params">(String x)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (!Objects.equals(p.get(x), x)) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">origin</span> <span class="operator">=</span> p.get(x);</span><br><span class="line">            p.put(x, find(p.get(x)));</span><br><span class="line">            w.put(x, w.get(x) * w.get(origin));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> p.get(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="c">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    unordered_map&lt;string, string&gt; p;</span><br><span class="line">    unordered_map&lt;string, <span class="type">double</span>&gt; w;</span><br><span class="line"></span><br><span class="line">    <span class="function">vector&lt;<span class="type">double</span>&gt; <span class="title">calcEquation</span><span class="params">(vector&lt;vector&lt;string&gt;&gt;&amp; equations, vector&lt;<span class="type">double</span>&gt;&amp; values, vector&lt;vector&lt;string&gt;&gt;&amp; queries)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = equations.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> e : equations) &#123;</span><br><span class="line">            p[e[<span class="number">0</span>]] = e[<span class="number">0</span>];</span><br><span class="line">            p[e[<span class="number">1</span>]] = e[<span class="number">1</span>];</span><br><span class="line">            w[e[<span class="number">0</span>]] = <span class="number">1.0</span>;</span><br><span class="line">            w[e[<span class="number">1</span>]] = <span class="number">1.0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            vector&lt;string&gt; e = equations[i];</span><br><span class="line">            string a = e[<span class="number">0</span>], b = e[<span class="number">1</span>];</span><br><span class="line">            string pa = <span class="built_in">find</span>(a), pb = <span class="built_in">find</span>(b);</span><br><span class="line">            <span class="keyword">if</span> (pa == pb) <span class="keyword">continue</span>;</span><br><span class="line">            p[pa] = pb;</span><br><span class="line">            w[pa] = w[b] * values[i] / w[a];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> m = queries.<span class="built_in">size</span>();</span><br><span class="line">        <span class="function">vector&lt;<span class="type">double</span>&gt; <span class="title">ans</span><span class="params">(m)</span></span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            string c = queries[i][<span class="number">0</span>], d = queries[i][<span class="number">1</span>];</span><br><span class="line">            ans[i] = p.<span class="built_in">find</span>(c) == p.<span class="built_in">end</span>() || p.<span class="built_in">find</span>(d) == p.<span class="built_in">end</span>() || <span class="built_in">find</span>(c) != <span class="built_in">find</span>(d) ? <span class="number">-1.0</span> : w[c] / w[d];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">string <span class="title">find</span><span class="params">(string x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (p[x] != x) &#123;</span><br><span class="line">            string origin = p[x];</span><br><span class="line">            p[x] = <span class="built_in">find</span>(p[x]);</span><br><span class="line">            w[x] *= w[origin];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> p[x];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="go">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">calcEquation</span><span class="params">(equations [][]<span class="type">string</span>, values []<span class="type">float64</span>, queries [][]<span class="type">string</span>)</span></span> []<span class="type">float64</span> &#123;</span><br><span class="line">	p := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">string</span>]<span class="type">string</span>)</span><br><span class="line">	w := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">string</span>]<span class="type">float64</span>)</span><br><span class="line">	<span class="keyword">for</span> _, e := <span class="keyword">range</span> equations &#123;</span><br><span class="line">		a, b := e[<span class="number">0</span>], e[<span class="number">1</span>]</span><br><span class="line">		p[a], p[b] = a, b</span><br><span class="line">		w[a], w[b] = <span class="number">1.0</span>, <span class="number">1.0</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> find <span class="function"><span class="keyword">func</span><span class="params">(x <span class="type">string</span>)</span></span> <span class="type">string</span></span><br><span class="line">	find = <span class="function"><span class="keyword">func</span><span class="params">(x <span class="type">string</span>)</span></span> <span class="type">string</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> p[x] != x &#123;</span><br><span class="line">			origin := p[x]</span><br><span class="line">			p[x] = find(p[x])</span><br><span class="line">			w[x] *= w[origin]</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> p[x]</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> i, v := <span class="keyword">range</span> values &#123;</span><br><span class="line">		a, b := equations[i][<span class="number">0</span>], equations[i][<span class="number">1</span>]</span><br><span class="line">		pa, pb := find(a), find(b)</span><br><span class="line">		<span class="keyword">if</span> pa == pb &#123;</span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		&#125;</span><br><span class="line">		p[pa] = pb</span><br><span class="line">		w[pa] = w[b] * v / w[a]</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> ans []<span class="type">float64</span></span><br><span class="line">	<span class="keyword">for</span> _, e := <span class="keyword">range</span> queries &#123;</span><br><span class="line">		c, d := e[<span class="number">0</span>], e[<span class="number">1</span>]</span><br><span class="line">		<span class="keyword">if</span> p[c] == <span class="string">&quot;&quot;</span> || p[d] == <span class="string">&quot;&quot;</span> || find(c) != find(d) &#123;</span><br><span class="line">			ans = <span class="built_in">append</span>(ans, <span class="number">-1.0</span>)</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			ans = <span class="built_in">append</span>(ans, w[c]/w[d])</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="rust">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::collections::HashMap;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[derive(Debug)]</span></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">DSUNode</span> &#123;</span><br><span class="line">    parent: <span class="type">String</span>,</span><br><span class="line">    weight: <span class="type">f64</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">DisjointSetUnion</span> &#123;</span><br><span class="line">    nodes: HashMap&lt;<span class="type">String</span>, DSUNode&gt;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">DisjointSetUnion</span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(equations: &amp;<span class="type">Vec</span>&lt;<span class="type">Vec</span>&lt;<span class="type">String</span>&gt;&gt;) <span class="punctuation">-&gt;</span> DisjointSetUnion &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">nodes</span> = HashMap::<span class="title function_ invoke__">new</span>();</span><br><span class="line">        <span class="keyword">for</span> <span class="variable">equation</span> <span class="keyword">in</span> equations.<span class="title function_ invoke__">iter</span>() &#123;</span><br><span class="line">            <span class="keyword">for</span> <span class="variable">iter</span> <span class="keyword">in</span> equation.<span class="title function_ invoke__">iter</span>() &#123;</span><br><span class="line">                nodes.<span class="title function_ invoke__">insert</span>(</span><br><span class="line">                    iter.<span class="title function_ invoke__">clone</span>(),</span><br><span class="line">                    DSUNode &#123;</span><br><span class="line">                        parent: iter.<span class="title function_ invoke__">clone</span>(),</span><br><span class="line">                        weight: <span class="number">1.0</span>,</span><br><span class="line">                    &#125;,</span><br><span class="line">                );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        DisjointSetUnion &#123; nodes &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">find</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, v: &amp;<span class="type">String</span>) <span class="punctuation">-&gt;</span> <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">origin</span> = <span class="keyword">self</span>.nodes[v].parent.<span class="title function_ invoke__">clone</span>();</span><br><span class="line">        <span class="keyword">if</span> origin == *v &#123;</span><br><span class="line">            <span class="keyword">return</span> origin;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> <span class="variable">root</span> = <span class="keyword">self</span>.<span class="title function_ invoke__">find</span>(&amp;origin);</span><br><span class="line">        <span class="keyword">self</span>.nodes.<span class="title function_ invoke__">get_mut</span>(v).<span class="title function_ invoke__">unwrap</span>().parent = root.<span class="title function_ invoke__">clone</span>();</span><br><span class="line">        <span class="keyword">self</span>.nodes.<span class="title function_ invoke__">get_mut</span>(v).<span class="title function_ invoke__">unwrap</span>().weight *= <span class="keyword">self</span>.nodes[&amp;origin].weight;</span><br><span class="line">        root</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">union</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, a: &amp;<span class="type">String</span>, b: &amp;<span class="type">String</span>, v: <span class="type">f64</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">pa</span> = <span class="keyword">self</span>.<span class="title function_ invoke__">find</span>(a);</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">pb</span> = <span class="keyword">self</span>.<span class="title function_ invoke__">find</span>(b);</span><br><span class="line">        <span class="keyword">if</span> pa == pb &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> (wa, wb) = (<span class="keyword">self</span>.nodes[a].weight, <span class="keyword">self</span>.nodes[b].weight);</span><br><span class="line">        <span class="keyword">self</span>.nodes.<span class="title function_ invoke__">get_mut</span>(&amp;pa).<span class="title function_ invoke__">unwrap</span>().parent = pb;</span><br><span class="line">        <span class="keyword">self</span>.nodes.<span class="title function_ invoke__">get_mut</span>(&amp;pa).<span class="title function_ invoke__">unwrap</span>().weight = (wb * v) / wa;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">exist</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, k: &amp;<span class="type">String</span>) <span class="punctuation">-&gt;</span> <span class="type">bool</span> &#123;</span><br><span class="line">        <span class="keyword">self</span>.nodes.<span class="title function_ invoke__">contains_key</span>(k)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">calc_value</span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, a: &amp;<span class="type">String</span>, b: &amp;<span class="type">String</span>) <span class="punctuation">-&gt;</span> <span class="type">f64</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> !<span class="keyword">self</span>.<span class="title function_ invoke__">exist</span>(a) || !<span class="keyword">self</span>.<span class="title function_ invoke__">exist</span>(b) || <span class="keyword">self</span>.<span class="title function_ invoke__">find</span>(a) != <span class="keyword">self</span>.<span class="title function_ invoke__">find</span>(b) &#123;</span><br><span class="line">            -<span class="number">1.0</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> <span class="variable">wa</span> = <span class="keyword">self</span>.nodes[a].weight;</span><br><span class="line">            <span class="keyword">let</span> <span class="variable">wb</span> = <span class="keyword">self</span>.nodes[b].weight;</span><br><span class="line">            wa / wb</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">calc_equation</span>(</span><br><span class="line">        equations: <span class="type">Vec</span>&lt;<span class="type">Vec</span>&lt;<span class="type">String</span>&gt;&gt;,</span><br><span class="line">        values: <span class="type">Vec</span>&lt;<span class="type">f64</span>&gt;,</span><br><span class="line">        queries: <span class="type">Vec</span>&lt;<span class="type">Vec</span>&lt;<span class="type">String</span>&gt;&gt;,</span><br><span class="line">    ) <span class="punctuation">-&gt;</span> <span class="type">Vec</span>&lt;<span class="type">f64</span>&gt; &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">dsu</span> = DisjointSetUnion::<span class="title function_ invoke__">new</span>(&amp;equations);</span><br><span class="line">        <span class="title function_ invoke__">for</span> (i, &amp;v) <span class="keyword">in</span> values.<span class="title function_ invoke__">iter</span>().<span class="title function_ invoke__">enumerate</span>() &#123;</span><br><span class="line">            <span class="keyword">let</span> (a, b) = (&amp;equations[i][<span class="number">0</span>], &amp;equations[i][<span class="number">1</span>]);</span><br><span class="line">            dsu.<span class="title function_ invoke__">union</span>(a, b, v);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">ans</span> = <span class="built_in">vec!</span>[];</span><br><span class="line">        <span class="keyword">for</span> <span class="variable">querie</span> <span class="keyword">in</span> queries &#123;</span><br><span class="line">            <span class="keyword">let</span> (c, d) = (&amp;querie[<span class="number">0</span>], &amp;querie[<span class="number">1</span>]);</span><br><span class="line">            ans.<span class="title function_ invoke__">push</span>(dsu.<span class="title function_ invoke__">calc_value</span>(c, d));</span><br><span class="line">        &#125;</span><br><span class="line">        ans</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="typescript">TypeScript</h4>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">calcEquation</span>(<span class="params">equations: <span class="built_in">string</span>[][], values: <span class="built_in">number</span>[], queries: <span class="built_in">string</span>[][]</span>): <span class="built_in">number</span>[] &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="attr">g</span>: <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, [<span class="built_in">string</span>, <span class="built_in">number</span>][]&gt; = &#123;&#125;;</span><br><span class="line">    <span class="keyword">const</span> ans = <span class="title class_">Array</span>.<span class="title function_">from</span>(&#123; <span class="attr">length</span>: queries.<span class="property">length</span> &#125;, <span class="function">() =&gt;</span> -<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; equations.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">const</span> [a, b] = equations[i];</span><br><span class="line">        (g[a] ??= []).<span class="title function_">push</span>([b, values[i]]);</span><br><span class="line">        (g[b] ??= []).<span class="title function_">push</span>([a, <span class="number">1</span> / values[i]]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; queries.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">const</span> [c, d] = queries[i];</span><br><span class="line">        <span class="keyword">const</span> vis = <span class="keyword">new</span> <span class="title class_">Set</span>&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">        <span class="keyword">const</span> <span class="attr">q</span>: [<span class="built_in">string</span>, <span class="built_in">number</span>][] = [[c, <span class="number">1</span>]];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!g[c] || !g[d]) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> (c === d) &#123;</span><br><span class="line">            ans[i] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> [current, v] <span class="keyword">of</span> q) &#123;</span><br><span class="line">            <span class="keyword">if</span> (vis.<span class="title function_">has</span>(current)) <span class="keyword">continue</span>;</span><br><span class="line">            vis.<span class="title function_">add</span>(current);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">const</span> [intermediate, multiplier] <span class="keyword">of</span> g[current]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (vis.<span class="title function_">has</span>(intermediate)) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (intermediate === d) &#123;</span><br><span class="line">                    ans[i] = v * multiplier;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                q.<span class="title function_">push</span>([intermediate, v * multiplier]);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (ans[i] !== -<span class="number">1</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<!-- tabs:end -->
+<!-- solution:end -->
+<!-- problem:end -->
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" rel="tag"># 广度优先搜索</a>
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"># 字符串</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/%E4%B8%AD%E7%AD%89/" rel="tag"># 中等</a>
+              <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" rel="tag"># 深度优先搜索</a>
+              <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" rel="tag"># 并查集</a>
+              <a href="/tags/%E5%9B%BE/" rel="tag"># 图</a>
+              <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" rel="tag"># 最短路</a>
+          </div>
+
+        
+
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/zh/398-random-pick-index.html" rel="prev" title="398. Random Pick Index">
+                  <i class="fa fa-chevron-left"></i> 398. Random Pick Index
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/zh/399-evaluate-division.html" rel="next" title="399. Evaluate Division">
+                  399. Evaluate Division <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+	
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class=""></i>
+  </span>
+  
+  <span class="author" itemprop="copyrightHolder">Yuoek</span>
+  
+</div><script color="255,165,0" opacity="0.7" zIndex="-2" count="110" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.7/pdfobject.min.js","integrity":"sha256-ph3Dk89VmuTVXG6x/RDzk53SU9LPdAh1tpv0UvnDZ2I="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js","integrity":"sha256-7wT34TI0pEBeEFoi4z+vhuSddGh6vUTMWdqJ2SDe2jg="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+
+<canvas
+    id="background"
+    style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1"
+></canvas>
+<script src="/js/background.js"></script>
+
+<canvas
+    id="fireworks"
+    style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:2147483647"
+></canvas>
+<script src="/js/fireworks.js"></script>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: true,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+</html>

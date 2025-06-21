@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/fly32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/fly16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/pink/pace-theme-bounce.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yuoek.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","width":200,"display":"always","padding":8,"offset":8},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"livere","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="第二章: 逻辑代数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Logic">
+<meta property="og:url" content="https://yuoek.github.io/zh/logic.html">
+<meta property="og:site_name" content="Sophie">
+<meta property="og:description" content="第二章: 逻辑代数">
+<meta property="og:locale">
+<meta property="article:published_time" content="2025-03-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-21T02:42:30.291Z">
+<meta property="article:author" content="Yuoek">
+<meta property="article:tag" content="Logic">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yuoek.github.io/zh/logic.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh","comments":true,"permalink":"https://yuoek.github.io/zh/logic.html","path":"zh/logic.html","title":"Logic"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Logic | Sophie</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Sophie</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">136</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">35</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">233</span></a></li><li class="menu-item menu-item-life"><a href="/life/" rel="section"><i class="fa fa-happy fa-fw"></i>生活0123</a></li><li class="menu-item menu-item-quotes"><a href="/quotes/" rel="section"><i class="fa fa-pen fa-fw"></i>一言一行</a></li><li class="menu-item menu-item-poetry"><a href="/poetry/" rel="section"><i class="fa fa-book fa-fw"></i>诗歌美文</a></li><li class="menu-item menu-item-paint"><a href="/paint/" rel="section"><i class="fa fa-paint-brush fa-fw"></i>审美绘画</a></li><li class="menu-item menu-item-music"><a href="/music/" rel="section"><i class="fa fa-music fa-fw"></i>声音乐章</a></li><li class="menu-item menu-item-film"><a href="/film/" rel="section"><i class="fa fa-film fa-fw"></i>光影视听</a></li><li class="menu-item menu-item-switch_lang"><a href="/en" rel="section"><i class="fa fa-language fa-fw"></i>switch_lang</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          Yuoek部屋
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#week2"><span class="nav-number">1.</span> <span class="nav-text">Week2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#work"><span class="nav-number">1.1.</span> <span class="nav-text">work</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.</span> <span class="nav-text">1. 基本逻辑运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%BB%E8%BE%91%E5%B8%B8%E9%87%8F"><span class="nav-number">2.1.</span> <span class="nav-text">2. 常用逻辑常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%9B%B8%E5%85%B3%E7%AC%A6%E5%8F%B7"><span class="nav-number">2.2.</span> <span class="nav-text">3. 集合相关符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-latex-%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.3.</span> <span class="nav-text">4. 使用 LaTeX 表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="nav-number">2.4.</span> <span class="nav-text">5. 示例完整代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97"><span class="nav-number">2.5.</span> <span class="nav-text">1. 基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%81%92%E7%AD%89%E5%BC%8F"><span class="nav-number">2.6.</span> <span class="nav-text">2. 基本恒等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E5%81%B6%E6%80%A7%E5%8E%9F%E5%88%99"><span class="nav-number">2.7.</span> <span class="nav-text">3. 对偶性原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%B7%E6%91%A9%E6%A0%B9%E5%AE%9A%E5%BE%8Bde-morgans-laws"><span class="nav-number">2.8.</span> <span class="nav-text">4. 德摩根定律（De Morgan&#39;s
+Laws）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E9%87%8D%E8%A6%81%E5%85%AC%E5%BC%8F"><span class="nav-number">2.9.</span> <span class="nav-text">5. 其他重要公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9C%9F%E5%80%BC%E8%A1%A8%E9%AA%8C%E8%AF%81"><span class="nav-number">2.10.</span> <span class="nav-text">6. 真值表验证</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yuoek"
+      src="/images/fly512.png">
+  <p class="site-author-name" itemprop="name">Yuoek</p>
+  <div class="site-description" itemprop="description">遇光见影, 遇你见爱</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">233</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">136</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jeanyng" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jeanyng" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2055048783@qq.com" title="E-Mail → mailto:2055048783@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+	  <br>
+	   <br>
+	   <p>
+	   <br>
+	   </p>
+	   <p style="margin-top: 0px; margin-bottom: 0px; color:#ff013c; font-size: 14px;">💮一上一上又一上🌸</p>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh">
+    <link itemprop="mainEntityOfPage" href="https://yuoek.github.io/zh/logic.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/fly512.png">
+      <meta itemprop="name" content="Yuoek">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sophie">
+      <meta itemprop="description" content="遇光见影, 遇你见爱">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Logic | Sophie">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Logic
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-03-13 00:00:00" itemprop="dateCreated datePublished" datetime="2025-03-13T00:00:00+08:00">2025-03-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-21 10:42:30" itemprop="dateModified" datetime="2025-06-21T10:42:30+08:00">2025-06-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSClass/" itemprop="url" rel="index"><span itemprop="name">CSClass</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSClass/Logic/" itemprop="url" rel="index"><span itemprop="name">Logic</span></a>
+        </span>
+    </span>
+
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>第二章: 逻辑代数</p>
+<span id="more"></span>
+<h2 id="week2">Week2</h2>
+<h3 id="work">work</h3>
+<p>P54 --&gt; 2.11 --&gt; (5), (6)</p>
+<p><span class="math display">\[
+\(A \oplus B\) \oplus C = A \oplus \(B \oplus C\)  的真值表证明如下:
+\]</span></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 15%" />
+<col style="width: 25%" />
+<col style="width: 15%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th><span class="math inline">\(A\)</span></th>
+<th><span class="math inline">\(B\)</span></th>
+<th><span class="math inline">\(C\)</span></th>
+<th><span class="math inline">\(A \oplus B\)</span></th>
+<th><span class="math inline">\((A \oplus B) \oplus C\)</span></th>
+<th><span class="math inline">\(B \oplus C\)</span></th>
+<th><span class="math inline">\(A \oplus (B \oplus C)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+\overline{A \oplus B} = \overline{A} \overline{B} + AB
+的真值表证明如下:    
+\]</span></p>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 10%" />
+<col style="width: 16%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 17%" />
+<col style="width: 4%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr>
+<th>$ A $</th>
+<th>$ B $</th>
+<th>$ A B $</th>
+<th>$ $</th>
+<th>$ $</th>
+<th>$ $</th>
+<th>$ $</th>
+<th>$ AB $</th>
+<th>$ + AB $</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>P54 --&gt; 2.13,
+应用反常规则和对偶规则，求下列函数的非函数和对偶函数( 用与,
+或非表达式表示)</p>
+<ol type="1">
+<li>$ L = A B + $</li>
+</ol>
+<p><strong>非函数:</strong></p>
+<p>$ = ( + ) ( A + B ) $</p>
+<p><strong>对偶函数:</strong></p>
+<p>$ L' = ( A + B ) ( + ) $</p>
+<ol start="2" type="1">
+<li>$ L = A B + $</li>
+</ol>
+<p><strong>非函数:</strong></p>
+<p>$ = ( + ) ( C + D ) $</p>
+<p><strong>偶函数:</strong> $ L' = ( A + B) $</p>
+<ol start="3" type="1">
+<li>$ L = + D $</li>
+</ol>
+<p><strong>非函数:</strong> $ = ( A + B) ( ) $</p>
+<p><strong>偶函数:</strong> $ L' = ( + )( ) + D $</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">要解决这个问题，我们需要应用 <span class="strong">**反常规则**</span> 和 <span class="strong">**对偶规则**</span>。以下是具体步骤和解答：</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">### 反常规则</span></span><br><span class="line">反常规则是指将逻辑表达式中的所有变量取反，并将表达式的结果取反。即：</span><br><span class="line"><span class="bullet">-</span> \( a \rightarrow \overline&#123;a&#125; \)</span><br><span class="line"><span class="bullet">-</span> \( \cdot \rightarrow + \)</span><br><span class="line"><span class="bullet">-</span> \( + \rightarrow \cdot \)</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">### 对偶规则</span></span><br><span class="line">对偶规则是指将逻辑表达式中的所有运算符对换：</span><br><span class="line"><span class="bullet">-</span> \( \cdot \leftrightarrow + \)</span><br><span class="line"><span class="bullet">-</span> \( 0 \leftrightarrow 1 \)</span><br><span class="line"></span><br><span class="line">变量本身保持不变。</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">### 解答</span></span><br><span class="line"></span><br><span class="line"><span class="section">#### (1) \( l = a \cdot b + \overline&#123;a&#125; \cdot \overline&#123;b&#125; \)</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> <span class="strong">**非函数 (反常规则)**</span>：</span><br><span class="line"><span class="bullet">   -</span> 将所有变量取反：\( a \rightarrow \overline&#123;a&#125; \), \( b \rightarrow \overline&#123;b&#125; \)</span><br><span class="line"><span class="bullet">   -</span> 将运算符对换：\( \cdot \leftrightarrow + \), \( + \leftrightarrow \cdot \)</span><br><span class="line"><span class="bullet">   -</span> 表达式变为：</span><br><span class="line"><span class="code">     \[</span></span><br><span class="line"><span class="code">     \overline&#123;a&#125; + \overline&#123;b&#125; \cdot a + b</span></span><br><span class="line"><span class="code">     \]</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="bullet">2.</span> <span class="strong">**对偶函数 (对偶规则)**</span>：</span><br><span class="line"><span class="bullet">   -</span> 将运算符对换：\( \cdot \leftrightarrow + \), \( + \leftrightarrow \cdot \)</span><br><span class="line"><span class="bullet">   -</span> 表达式变为：</span><br><span class="line"><span class="code">     \[</span></span><br><span class="line"><span class="code">     A + B \cdot \overline&#123;A&#125; + \overline&#123;B&#125;</span></span><br><span class="line"><span class="code">     \]</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">#### (2) \( L = A \cdot B + \overline&#123;C + D&#125; \)</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> <span class="strong">**非函数 (反常规则)**</span>：</span><br><span class="line"><span class="bullet">   -</span> 将所有变量取反：\( A \rightarrow \overline&#123;A&#125; \), \( B \rightarrow \overline&#123;B&#125; \), \( C \rightarrow \overline&#123;C&#125; \), \( D \rightarrow \overline&#123;D&#125; \)</span><br><span class="line"><span class="bullet">   -</span> 将运算符对换：\( \cdot \leftrightarrow + \), \( + \leftrightarrow \cdot \)</span><br><span class="line"><span class="bullet">   -</span> 表达式变为：</span><br><span class="line"><span class="code">     \[</span></span><br><span class="line"><span class="code">     \overline&#123;A&#125; + \overline&#123;B&#125; \cdot C \cdot D</span></span><br><span class="line"><span class="code">     \]</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="bullet">2.</span> <span class="strong">**对偶函数 (对偶规则)**</span>：</span><br><span class="line"><span class="bullet">   -</span> 将运算符对换：\( \cdot \leftrightarrow + \), \( + \leftrightarrow \cdot \)</span><br><span class="line"><span class="bullet">   -</span> 表达式变为：</span><br><span class="line"><span class="code">     \[</span></span><br><span class="line"><span class="code">     A + B \cdot \overline&#123;C&#125; \cdot \overline&#123;D&#125;</span></span><br><span class="line"><span class="code">     \]</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">#### (3) \( L = \overline&#123;A&#125; \cdot \overline&#123;B&#125; + \overline&#123;\overline&#123;A&#125; \cdot B \cdot \overline&#123;C&#125;&#125; \cdot D \)</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> <span class="strong">**非函数 (反常规则)**</span>：</span><br><span class="line"><span class="bullet">   -</span> 将所有变量取反：\( A \rightarrow \overline&#123;A&#125; \), \( B \rightarrow \overline&#123;B&#125; \), \( C \rightarrow \overline&#123;C&#125; \), \( D \rightarrow \overline&#123;D&#125; \)</span><br><span class="line"><span class="bullet">   -</span> 将运算符对换：\( \cdot \leftrightarrow + \), \( + \leftrightarrow \cdot \)</span><br><span class="line"><span class="bullet">   -</span> 表达式变为：</span><br><span class="line"><span class="code">     \[</span></span><br><span class="line"><span class="code">     A + B \cdot \overline&#123;\overline&#123;A&#125; + \overline&#123;B&#125; + C&#125; + \overline&#123;D&#125;</span></span><br><span class="line"><span class="code">     \]</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="bullet">2.</span> <span class="strong">**对偶函数 (对偶规则)**</span>：</span><br><span class="line"><span class="bullet">   -</span> 将运算符对换：\( \cdot \leftrightarrow + \), \( + \leftrightarrow \cdot \)</span><br><span class="line"><span class="bullet">   -</span> 表达式变为：</span><br><span class="line"><span class="code">     \[</span></span><br><span class="line"><span class="code">     \overline&#123;A&#125; + \overline&#123;B&#125; \cdot \overline&#123;\overline&#123;A&#125; + B + \overline&#123;C&#125;&#125; \cdot D</span></span><br><span class="line"><span class="code">     \]</span></span><br><span class="line"><span class="code"></span></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">### 总结</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**(1)**</span>：</span><br><span class="line"><span class="bullet">  -</span> 非函数：\( \overline&#123;A&#125; + \overline&#123;B&#125; \cdot A + B \)</span><br><span class="line"><span class="bullet">  -</span> 对偶函数：\( A + B \cdot \overline&#123;A&#125; + \overline&#123;B&#125; \)</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**(2)**</span>：</span><br><span class="line"><span class="bullet">  -</span> 非函数：\( \overline&#123;A&#125; + \overline&#123;B&#125; \cdot C \cdot D \)</span><br><span class="line"><span class="bullet">  -</span> 对偶函数：\( A + B \cdot \overline&#123;C&#125; \cdot \overline&#123;D&#125; \)</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**(3)**</span>：</span><br><span class="line"><span class="bullet">  -</span> 非函数：\( A + B \cdot \overline&#123;\overline&#123;A&#125; + \overline&#123;B&#125; + C&#125; + \overline&#123;D&#125; \)</span><br><span class="line"><span class="bullet">  -</span> 对偶函数：\( \overline&#123;A&#125; + \overline&#123;B&#125; \cdot \overline&#123;\overline&#123;A&#125; + B + \overline&#123;C&#125;&#125; \cdot D \)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="基本逻辑运算符">1. 基本逻辑运算符</h2>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 21%" />
+<col style="width: 38%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>Markdown 表示</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¬</td>
+<td>非（NOT）</td>
+<td><code>¬</code> 或 <code>\neg</code></td>
+<td><code>¬A</code> 或 <code>\neg A</code></td>
+</tr>
+<tr>
+<td>∧</td>
+<td>与（AND）</td>
+<td><code>∧</code> 或 <code>\land</code></td>
+<td><code>A ∧ B</code> 或 <code>A \land B</code></td>
+</tr>
+<tr>
+<td>∨</td>
+<td>或（OR）</td>
+<td><code>∨</code> 或 <code>\lor</code></td>
+<td><code>A ∨ B</code> 或 <code>A \lor B</code></td>
+</tr>
+<tr>
+<td>⊕</td>
+<td>异或（XOR）</td>
+<td><code>⊕</code> 或 <code>\oplus</code></td>
+<td><code>A ⊕ B</code> 或 <code>A \oplus B</code></td>
+</tr>
+<tr>
+<td>→</td>
+<td>蕴含（IMPLIES）</td>
+<td><code>→</code> 或 <code>\rightarrow</code></td>
+<td><code>A → B</code> 或 <code>A \rightarrow B</code></td>
+</tr>
+<tr>
+<td>↔︎</td>
+<td>双蕴含（IFF）</td>
+<td><code>↔︎</code> 或 <code>\leftrightarrow</code></td>
+<td><code>A ↔︎ B</code> 或 <code>A \leftrightarrow B</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="常用逻辑常量">2. 常用逻辑常量</h3>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>Markdown 表示</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⊤</td>
+<td>恒真（TRUE）</td>
+<td><code>⊤</code> 或 <code>\top</code></td>
+<td><code>⊤</code> 或 <code>\top</code></td>
+</tr>
+<tr>
+<td>⊥</td>
+<td>恒假（FALSE）</td>
+<td><code>⊥</code> 或 <code>\bot</code></td>
+<td><code>⊥</code> 或 <code>\bot</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="集合相关符号">3. 集合相关符号</h3>
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 31%" />
+<col style="width: 33%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>Markdown 表示</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>∈</td>
+<td>属于</td>
+<td><code>∈</code> 或 <code>\in</code></td>
+<td><code>x ∈ A</code> 或 <code>x \in A</code></td>
+</tr>
+<tr>
+<td>∉</td>
+<td>不属于</td>
+<td><code>∉</code> 或 <code>\notin</code></td>
+<td><code>x ∉ A</code> 或 <code>x \notin A</code></td>
+</tr>
+<tr>
+<td>⊆</td>
+<td>子集</td>
+<td><code>⊆</code> 或 <code>\subseteq</code></td>
+<td><code>A ⊆ B</code> 或 <code>A \subseteq B</code></td>
+</tr>
+<tr>
+<td>⊂</td>
+<td>真子集</td>
+<td><code>⊂</code> 或 <code>\subset</code></td>
+<td><code>A ⊂ B</code> 或 <code>A \subset B</code></td>
+</tr>
+<tr>
+<td>∪</td>
+<td>并集</td>
+<td><code>∪</code> 或 <code>\cup</code></td>
+<td><code>A ∪ B</code> 或 <code>A \cup B</code></td>
+</tr>
+<tr>
+<td>∩</td>
+<td>交集</td>
+<td><code>∩</code> 或 <code>\cap</code></td>
+<td><code>A ∩ B</code> 或 <code>A \cap B</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="使用-latex-表达式">4. 使用 LaTeX 表达式</h3>
+<p>如果你的 Markdown 渲染器支持 LaTeX 数学公式（例如 MathJax 或
+KaTeX），可以直接使用 <code>$...$</code> 或 <code>$$...$$</code>
+包裹公式。例如：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">逻辑表达式：$A \land (B \lor \neg C)$</span><br></pre></td></tr></table></figure>
+<p>渲染后显示为：<br />
+逻辑表达式：<em>A ∧ (B ∨ ¬C)</em></p>
+<hr />
+<h3 id="示例完整代码">5. 示例完整代码</h3>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">### 数字逻辑符号示例</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 非（NOT）：<span class="code">`¬A`</span> 或 <span class="code">`\neg A`</span></span><br><span class="line"><span class="bullet">2.</span> 与（AND）：<span class="code">`A ∧ B`</span> 或 <span class="code">`A \land B`</span></span><br><span class="line"><span class="bullet">3.</span> 或（OR）：<span class="code">`A ∨ B`</span> 或 <span class="code">`A \lor B`</span></span><br><span class="line"><span class="bullet">4.</span> 蕴含（IMPLIES）：<span class="code">`A → B`</span> 或 <span class="code">`A \rightarrow B`</span></span><br><span class="line"><span class="bullet">5.</span> 双蕴含（IFF）：<span class="code">`A ↔ B`</span> 或 <span class="code">`A \leftrightarrow B`</span></span><br><span class="line"><span class="bullet">6.</span> 恒真（TRUE）：<span class="code">`⊤`</span> 或 <span class="code">`\top`</span></span><br><span class="line"><span class="bullet">7.</span> 恒假（FALSE）：<span class="code">`⊥`</span> 或 <span class="code">`\bot`</span></span><br></pre></td></tr></table></figure>
+<p>希望这对你有帮助！</p>
+<p>逻辑代数基本公式
+逻辑代数（布尔代数）是数字电路和计算机科学中的基础理论之一，其基本公式和定律主要包括以下几类：</p>
+<hr />
+<h3 id="基本运算"><strong>1. 基本运算</strong></h3>
+<p>逻辑代数中有三种基本运算： - <strong>与运算（AND）</strong>：用符号
+<code>·</code> 或省略符号表示（如 ( A B ) 或 ( AB )）。 -
+<strong>或运算（OR）</strong>：用符号 <code>+</code> 表示（如 ( A + B
+)）。 - <strong>非运算（NOT）</strong>：用符号 <code>\overline&#123;A&#125;</code>
+或 <code>A'</code> 表示。</p>
+<hr />
+<h3 id="基本恒等式"><strong>2. 基本恒等式</strong></h3>
+<p>以下是逻辑代数的基本恒等式： 1. <strong>幂等律</strong>： <span
+class="math display">\[
+   A + A = A, \quad A \cdot A = A
+   \]</span></p>
+<ol start="2" type="1">
+<li><p><strong>交换律</strong>： <span class="math display">\[
+A + B = B + A, \quad A \cdot B = B \cdot A
+\]</span></p></li>
+<li><p><strong>结合律</strong>： <span class="math display">\[
+(A + B) + C = A + (B + C), \quad (A \cdot B) \cdot C = A \cdot (B \cdot
+C)
+\]</span></p></li>
+<li><p><strong>分配律</strong>： <span class="math display">\[
+A \cdot (B + C) = (A \cdot B) + (A \cdot C), \quad A + (B \cdot C) = (A
++ B) \cdot (A + C)
+\]</span></p></li>
+<li><p><strong>零和一律</strong>： <span class="math display">\[
+A + 0 = A, \quad A \cdot 1 = A
+\]</span></p></li>
+<li><p><strong>吸收律</strong>： <span class="math display">\[
+A + (A \cdot B) = A, \quad A \cdot (A + B) = A
+\]</span></p></li>
+<li><p><strong>双重否定律</strong>： <span class="math display">\[
+\overline{\overline{A}} = A
+\]</span></p></li>
+</ol>
+<hr />
+<h3 id="对偶性原则"><strong>3. 对偶性原则</strong></h3>
+<p>对偶性是逻辑代数的一个重要性质：将公式中的 <code>+</code> 和
+<code>·</code> 互换，同时将 <code>0</code> 和 <code>1</code>
+互换，公式仍然成立。例如： $ ( A + 0 = A ) 的对偶是 ( A = A $</p>
+<hr />
+<h3 id="德摩根定律de-morgans-laws"><strong>4. 德摩根定律（De Morgan's
+Laws）</strong></h3>
+<p>德摩根定律是逻辑代数中非常重要的公式： 1. <span
+class="math display">\[
+   \overline{A \cdot B} = \overline{A} + \overline{B}
+   \]</span> 2. <span class="math display">\[
+   \overline{A + B} = \overline{A} \cdot \overline{B}
+   \]</span></p>
+<hr />
+<h3 id="其他重要公式"><strong>5. 其他重要公式</strong></h3>
+<ol type="1">
+<li><p><strong>补运算</strong>： <span class="math display">\[
+A + \overline{A} = 1, \quad A \cdot \overline{A} = 0
+\]</span></p></li>
+<li><p><strong>恒等式</strong>： <span class="math display">\[
+A + 1 = 1, \quad A \cdot 0 = 0
+\]</span></p></li>
+<li><p><strong>消去律</strong>： <span class="math display">\[
+A + \overline{A} \cdot B = A + B
+\]</span></p></li>
+<li><p><strong>反演律</strong>： <span class="math display">\[
+\overline{A + B} = \overline{A} \cdot \overline{B}, \quad \overline{A
+\cdot B} = \overline{A} + \overline{B}
+\]</span></p></li>
+</ol>
+<hr />
+<h3 id="真值表验证"><strong>6. 真值表验证</strong></h3>
+<p>逻辑代数公式可以通过真值表进行验证。每个变量 ( A ) 或 ( B )
+只有两种可能值（0 或
+1），通过列举所有可能的输入组合，可以验证公式是否成立。</p>
+<hr />
+<p>这些公式和定律是逻辑代数的核心，广泛应用于数字电路设计、逻辑优化和计算机科学中。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Logic/" rel="tag"># Logic</a>
+          </div>
+
+        
+
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/zh/diary.html" rel="prev" title="Diary">
+                  <i class="fa fa-chevron-left"></i> Diary
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/zh/algorithms.html" rel="next" title="Algorithms">
+                  Algorithms <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+	
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class=""></i>
+  </span>
+  
+  <span class="author" itemprop="copyrightHolder">Yuoek</span>
+  
+</div><script color="255,165,0" opacity="0.7" zIndex="-2" count="110" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.7/pdfobject.min.js","integrity":"sha256-ph3Dk89VmuTVXG6x/RDzk53SU9LPdAh1tpv0UvnDZ2I="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js","integrity":"sha256-7wT34TI0pEBeEFoi4z+vhuSddGh6vUTMWdqJ2SDe2jg="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+
+<canvas
+    id="background"
+    style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1"
+></canvas>
+<script src="/js/background.js"></script>
+
+<canvas
+    id="fireworks"
+    style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:2147483647"
+></canvas>
+<script src="/js/fireworks.js"></script>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: true,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+</html>
