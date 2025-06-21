@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/pink/pace-theme-bounce.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yuoek.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","width":200,"display":"always","padding":8,"offset":8},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"livere","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yuoek.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","width":200,"display":"always","padding":8,"offset":8},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"livere","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="358. K 距离间隔重排字符串 🔒 English Version 题目描述">
 <meta property="og:type" content="article">
@@ -36,8 +36,8 @@
 <meta property="article:tag" content="字符串">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="哈希表">
-<meta property="article:tag" content="贪心">
 <meta property="article:tag" content="排序">
+<meta property="article:tag" content="贪心">
 <meta property="article:tag" content="计数">
 <meta property="article:tag" content="堆（优先队列）">
 <meta name="twitter:card" content="summary">
@@ -95,9 +95,9 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">136</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">35</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">233</span></a></li><li class="menu-item menu-item-life"><a href="/life/" rel="section"><i class="fa fa-happy fa-fw"></i>生活0123</a></li><li class="menu-item menu-item-quotes"><a href="/quotes/" rel="section"><i class="fa fa-pen fa-fw"></i>一言一行</a></li><li class="menu-item menu-item-poetry"><a href="/poetry/" rel="section"><i class="fa fa-book fa-fw"></i>诗歌美文</a></li><li class="menu-item menu-item-paint"><a href="/paint/" rel="section"><i class="fa fa-paint-brush fa-fw"></i>审美绘画</a></li><li class="menu-item menu-item-music"><a href="/music/" rel="section"><i class="fa fa-music fa-fw"></i>声音乐章</a></li><li class="menu-item menu-item-film"><a href="/film/" rel="section"><i class="fa fa-film fa-fw"></i>光影视听</a></li><li class="menu-item menu-item-switch_lang"><a href="/en" rel="section"><i class="fa fa-language fa-fw"></i>switch_lang</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">137</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">36</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">233</span></a></li><li class="menu-item menu-item-life"><a href="/life/" rel="section"><i class="fa fa-happy fa-fw"></i>生活0123</a></li><li class="menu-item menu-item-quotes"><a href="/quotes/" rel="section"><i class="fa fa-pen fa-fw"></i>一言一行</a></li><li class="menu-item menu-item-poetry"><a href="/poetry/" rel="section"><i class="fa fa-book fa-fw"></i>诗歌美文</a></li><li class="menu-item menu-item-paint"><a href="/paint/" rel="section"><i class="fa fa-paint-brush fa-fw"></i>审美绘画</a></li><li class="menu-item menu-item-music"><a href="/music/" rel="section"><i class="fa fa-music fa-fw"></i>声音乐章</a></li><li class="menu-item menu-item-film"><a href="/film/" rel="section"><i class="fa fa-film fa-fw"></i>光影视听</a></li><li class="menu-item menu-item-switch_lang"><a href="/en" rel="section"><i class="fa fa-language fa-fw"></i>switch_lang</a></li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -112,7 +112,7 @@
   </span>
   <div class="search-input-container">
     <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="搜索..." spellcheck="false"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close" role="button">
@@ -170,18 +170,18 @@ K 距离间隔重排字符串 🔒</span></a><ol class="nav-child"><li class="na
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
           <span class="site-state-item-count">233</span>
-          <span class="site-state-item-name">日志</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">35</span>
-        <span class="site-state-item-name">分类</span></a>
+        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">136</span>
-        <span class="site-state-item-name">标签</span></a>
+        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -382,8 +382,8 @@ target="_blank" rel="noopener" href="https://github.com/doocs/leetcode/blob/main
               <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"># 字符串</a>
               <a href="/tags/leetcode/" rel="tag"># leetcode</a>
               <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" rel="tag"># 哈希表</a>
-              <a href="/tags/%E8%B4%AA%E5%BF%83/" rel="tag"># 贪心</a>
               <a href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag"># 排序</a>
+              <a href="/tags/%E8%B4%AA%E5%BF%83/" rel="tag"># 贪心</a>
               <a href="/tags/%E8%AE%A1%E6%95%B0/" rel="tag"># 计数</a>
               <a href="/tags/%E5%A0%86%EF%BC%88%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%EF%BC%89/" rel="tag"># 堆（优先队列）</a>
           </div>
